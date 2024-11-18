@@ -1,0 +1,42 @@
+mixin sAwards(data)
+	// start sAwards
+	+b.SECTION.sAwards.section#sAwards&attributes(attributes)
+		.container
+			+b.section-title
+				.d-lg-none: h2 36 победителей
+				.d-none.d-lg-block: h2 Награды
+				.text-large Определим по 3 победителя в каждой из 4 номинаций в своей категории.
+			+e.row.row
+				- const wrapClass="col-lg-4"
+				+e.col(class= wrapClass)
+					+awardCard('Первое место', '').--yellow
+						ul
+							li.span #[span 4 миллиона ₽]
+							li Диплом 1-й степени
+							li Фирменная статуэтка
+							li Приглашение на церемонию награждения
+							li Публикация видео и проекта
+				+e.col(class= wrapClass)
+					+awardCard('Второе место', '')
+						+img(src="img/svg/stars.svg", alt="").stars
+						ul
+							li Диплом 2-й степени
+							li Фирменная статуэтка
+							li Приглашение на церемонию награждения
+							li Публикация видео и проекта
+				+e.col(class= wrapClass)
+					+awardCard('Третье место', '')
+						+img(src="img/svg/stars.svg", alt="").stars.stars_rotate
+						ul
+							li Диплом 3-й степени
+							li Фирменная статуэтка
+							li Приглашение на церемонию награждения
+							li Публикация видео и проекта
+			.text-large Подробнее о распределении призового фонда можно узнать в #[a(href='#') правилах участия].
+	// end sAwards
+
+mixin awardCard(t, img)
+	+b.award-card&attributes(attributes)
+		.h3.fw-500=t
+		if block
+			block

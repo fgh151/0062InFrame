@@ -162,6 +162,9 @@ main{
 .fw-400 {
 	font-weight: 400;
 }
+.fw-700 {
+	font-weight: 700;
+}
 
 .fw-900 {
 	font-weight: 900;
@@ -471,4 +474,42 @@ iframe {
 		height: 100%;
 		object-fit: cover;
 	}
+}
+
+h1, .h1 {
+	@include media-breakpoint-down(md) {
+    font-size: rem(28);
+  }
+}
+
+h2, .h2 {
+	@include media-breakpoint-down(md) {
+    font-size: rem(32);
+  }
+}
+
+h3, .h3 {
+	@include media-breakpoint-down(md) {
+    font-size: rem(28);
+  }
+}
+
+.text-large {
+  
+	@include media-breakpoint-up(md) {
+    font-size: rem(24);
+  }
+}
+
+.inner-wrapper {
+  padding: rem(24) rem(16);
+  border-top-right-radius: rem(32);
+	@include media-breakpoint-up(md) {
+    padding: rem(24) rem(24) rem(48);
+    border-top-right-radius: rem(64);
+  }
+
+  &_white {
+    background: $white;
+  }
 }

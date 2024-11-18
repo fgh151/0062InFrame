@@ -1,0 +1,19 @@
+mixin sHeroes(data)
+	// start sHeroes
+	+b.SECTION.sHeroes.section#sHeroes&attributes(attributes)
+		.container
+			.inner-wrapper.inner-wrapper_white
+				+b.section-title
+					h2 Главные герои
+					.text-large Команды соревнуются только внутри своей категории.
+				+e.grid
+					+heroesCard('ФЕДЕРАЦИЯ','Федеральные ведомства и госкорпорации','1')
+					+heroesCard('СТРАНА','Региональные и муниципальные органы власти России','2')
+					+heroesCard('СТОЛИЦА','органы власти и подведомственные организации Правительства Москвы','3')
+	// end sHeroes
+
+mixin heroesCard(title, p, img)
+	+b.heroes-card 
+		.h3.ttu= title 
+		+e.text.text-large= p
+		+img(src=`img/svg/sHeroes-card-bg-${img}.svg`, alt="").img

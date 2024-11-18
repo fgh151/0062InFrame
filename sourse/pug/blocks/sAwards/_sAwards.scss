@@ -1,0 +1,105 @@
+// start .sAwards
+.sAwards {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: #{rem(24)};
+	}
+	.section-title{
+		
+	}
+  --border-lg: 56px;
+	&__col {
+    @include media-breakpoint-up(lg) {
+      &:nth-child(even) .award-card {
+        border-radius:  0 var(--border-lg) 0 0;
+      }
+      &:nth-child(odd) .award-card {
+        border-radius:  var(--border-lg) 0 var(--border-lg) 0;
+      }
+    }
+	}
+	&__item{
+		
+	}
+  .text-large a {
+    text-decoration: underline;
+  }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAwards
+
+.award-card {
+  background: $blue;
+  padding: rem(32) rem(16);
+  border-radius: rem(32) 0 0 0;
+	@include media-breakpoint-up(lg) {
+    padding: rem(40);
+  }
+  height: 100%;
+  li span {
+    font-weight: 500;
+    font-size: rem(24px);
+    @include media-breakpoint-between(md, xl) {
+      font-size: rem(30px);
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: rem(44px);
+    }
+  }
+
+  li.span {
+    @include media-breakpoint-up(xl) {
+      list-style-type: none;
+      margin-left: 0;
+    }
+  }
+
+  li {
+    margin-left: rem(30);
+    margin-bottom: rem(10);
+  }
+
+  min-height: rem(381);
+	@include media-breakpoint-up(lg) {
+    min-height: rem(490);
+  }
+
+  ul {
+    @extend .text-large;
+    line-height: 1.2;
+  }
+
+  &--yellow {
+
+  }
+  &:not(.award-card--yellow) {
+    color: $white;
+  }
+  
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  .stars {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    filter: blur(8px);
+    transform: translateY(10%);
+  }
+
+  .stars_rotate {
+    
+  }
+
+}
