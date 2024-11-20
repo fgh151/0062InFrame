@@ -14,6 +14,7 @@ include ../blocks/sFirstRusAward/_sFirstRusAward.pug
 include ../blocks/sJury/_sJury.pug
 include ../blocks/sExperts/_sExperts.pug
 include ../blocks/sAbility/_sAbility.pug
+include ../blocks/sNews/_sNews.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sCatalog/_sCatalog.pug
 
@@ -33,16 +34,19 @@ block pagecontent
 		+headerBlock 
 		//- +sCatalog
 		+sHeroes
-		//- +sNominations
+		+sNominations
 		+sAwards
 		+sFrameSlider
 		+sAbility
 		+sFirstRusAward
 		+sJury
 		+sExperts
+		+sHeroes2
+		+sNews
+		+sContent
 
 
-		+sForm()
-		+sContact()
+		//- +sForm()
+		+sContent2
 		
 	+parts('footer')

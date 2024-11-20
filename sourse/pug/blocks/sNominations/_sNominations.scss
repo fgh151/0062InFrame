@@ -3,20 +3,82 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+    @include media-breakpoint-up(lg) {
+      --sTPB: #{rem(56)};
+    }
 	
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 	}
 	.section-title{
-		
+		max-width: rem(1080);
 	}
-	&__col{
-		
+	&__item {
+    position: relative;
+
+    &:nth-child(odd) .nomination-card {
+      border-radius:  0 var(--card-bord) 0 0;
+      &:before {
+        --bg-before: #{$blue};
+      }
+    }
+
+    &:nth-child(even) .nomination-card {
+      border-radius: var(--card-bord) 0 0 0;
+      &:before {
+        --bg-before: #7F30FF;
+      }
+    }
+    &:nth-child(3) {
+      border-radius:  0 0 0 var(--card-bord);
+    }
+
+    .nomination-card--hide {
+      opacity: var(--op);
+      visibility: hidden;
+      --op: 0;
+    }
+
+    &.active {
+      .nomination-card--hide {
+        --op: 1;
+        visibility: visible;
+      }
+
+      .nomination-card:not(.nomination-card--hide) {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
 	}
-	&__item{
-		
+
+	&__grid {
+		display: grid;
+    gap: rem(24);
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2,1fr);
+      .wrapper {
+        grid-column: span 2;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(3,1fr);
+      gap: rem(32);
+    }
 	}
+
+  .nomination-card {
+    --card-bord: #{rem(32)};
+    @include media-breakpoint-up(lg) {
+      --card-bord: #{rem(56)};
+    }
+
+  }
+  .wrapper {
+    overflow: hidden;
+  }
+
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -26,3 +88,166 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sNominations
+
+.nomination-card {
+  .h3 {
+    max-width: 90%;
+    @include media-breakpoint-up(lg) {
+      max-width: rem(348);
+      margin-bottom: rem(12);
+    }
+  }
+  &__text {
+    opacity: 0.7;
+  }
+
+  .h3 {
+    margin-bottom: rem(4);
+  }
+
+  min-height: rem(279);
+  height: 100%;
+  @include media-breakpoint-up(lg) {
+    min-height: rem(344);
+  }
+  padding: rem(28) rem(16);
+	@include media-breakpoint-up(xl) {
+    padding: rem(26) rem(24);
+  }
+
+  position: relative;
+
+  &:not(.nomination-card--white) {
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    color: $white;
+    overflow: hidden;
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: -10%;
+      left: -5%;
+      border-radius: 100%;
+      filter: blur(48px);
+      width: 130%;
+      height: 150%;
+      transform: rotate(10deg);
+      background: var(--bg-before);
+      @include media-breakpoint-up(lg) {
+        left: -20%;
+      }
+    }
+  }
+
+  .img {
+    position: absolute;
+    bottom: 6px;
+    right: 10px;
+    width: 58%;
+  }
+
+  .icon {
+    fill: none;
+    stroke-width: 3px;
+    stroke: white;
+    stroke-linecap: round;
+  }
+
+  .icon-x {
+    opacity: .4;
+  }
+
+  &__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 2;
+  }
+
+
+  &--white {
+    background: $white;
+    margin: rem(2);
+    height: calc(100% - rem(4));
+
+    .content {
+      @include media-breakpoint-up(lg) {
+        align-items: flex-start;
+      }
+    }
+
+    .h3 {
+      color: $purple-300;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      z-index: -1;
+      background: $gradient;
+      border-top-right-radius: calc(var(--card-bord) + 2px);
+    }
+
+    .img {
+      z-index: 0;
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+      width: 74%;
+      max-height: 100%;
+      transform: translateX(18%);
+      opacity: 0.4;
+      @include media-breakpoint-up(lg) {
+        max-height: none;
+        height: 120%;
+        transform: translate(20%,10%);
+      }
+    }
+  }
+
+
+  &--hide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // background: blue;
+    z-index: 5;
+
+    p {
+      @include media-breakpoint-up(xl) {
+        font-size: rem(20);
+      }
+    }
+  }
+
+  .title {
+    margin-bottom: rem(10);
+  }
+
+  // &__wrap {
+  //   overflow-y: auto;
+  // }
+}
+
+// .btn-gradient {
+//   --bs-btn-color: #{$white};
+//   --bs-btn-hover-color: #{$white};
+
+//   background:  $gradient-dark;
+//   transition: background-color 0.7s ease;
+
+//   &:hover {
+//     background: linear-gradient(162deg, #2B4ACC 0%, #0198E3 100%);
+//   }
+// }

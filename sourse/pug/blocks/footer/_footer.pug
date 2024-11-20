@@ -1,9 +1,34 @@
 mixin footer()
 	+b.FOOTER.footer.section
+		.bg-additional
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				+e.col.col-lg-6
+					+e.wrap
+						+e.logo-wrap
+							a(href="#"): +img(src="img/svg/logo-white.svg", alt="")
+							a(href="#"): +img(src="img/svg/hr-white.svg", alt="")
+						ul 
+							li: a(href="#").link Положение о Премии
+							li: a(href="#").link Политика обработки персональных данных
+				+e.col.col-lg-6
+					+linkItem('Адрес')
+						a(href="#") Москва, Тверская 13
+					+linkItem('Контактный телефон')
+						a(href="tel:+74959577575") +7 (495) 957-75-75
+					+linkItem('Общие вопросы')
+						a(href="mailto:vkadre@mos.ru") vkadre@mos.ru
+					+linkItem('Пиар и партнерство')
+						a(href="mailto:pr-vkadre@mos.ru") pr-vkadre@mos.ru
+
+			+e.bottom-row.row
+				+e.col.col-lg-6
+					+e.copyr.small © 2025 Управление кадровых сервисов Правительства Москвы
+				+e.col.col-lg-6
+					a(href="#").small Версия для слабовидящих
+						+icon('noun-glasses') 
+
+mixin linkItem(t)
+	+b.link-item 
+		+e.title= t
+		block

@@ -2,8 +2,38 @@ mixin sContent()
 	// start sContent
 	+b.SECTION.sContent.section#sContent&attributes(attributes)
 		.container
-			+b.section-title
-				h2 sContent
-				
-			+e.row.row
+			.inner-wrapper.inner-wrapper_white
+				+b.section-title--flex
+					+img(src="img/svg/hr.svg", alt="").logo
+					h2 Организатор
+				+e.item
+					.text.text-large Мы, так же как и вы, стремимся формировать лучшую систему поддержки для своих команд. Ведь динамика, скорость, актуальность, клиентоцентричность и высокие стандарты качества — это #[span ориентиры, которые важны тысячам] наших коллег по всей стране.
+					.h3 И мы готовы вместе с вами развиваться, обмениваться знаниями и находить новые решения в сфере работы с людьми.
+				+e.btn.btn.btn-outline-primary(href='#') Об Управлении кадровых сервисов
 	// end sContent
+	
+mixin sContent2()
+	// start sContent
+	+b.SECTION.sContent.section#sContent2&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Полезные материалы
+			+e.row.row
+				+e.col.col-lg-6
+					+cardLinkMaterials('Положение о Премии')
+				+e.col.col-lg-6
+					+cardLinkMaterials('Положение об экспертной комиссии и жюри')
+				+e.col.col-lg-6
+					+cardLinkMaterials('Чек-лист участника')
+				+e.col.col-lg-6
+					+cardLinkMaterials('Презентация Премии')
+				+e.col.col-lg-6
+					+b.card-material(href='#')
+						+e.text.text-large Политика<br>Конфиденциальности
+						+icon('arr-next')
+
+
+mixin cardLinkMaterials(t)
+	+b.card-material(href='#')&attributes(attributes)
+		+e.text.text-large= t
+		+icon('arr-next')

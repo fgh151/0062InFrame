@@ -10,6 +10,8 @@ mixin sAwards(data)
 				- const wrapClass="col-lg-4"
 				+e.col(class= wrapClass)
 					+awardCard('Первое место', '').--yellow
+						+img(src="img/award.png", alt="").award
+						+img(src="img/svg/stars-yellow.svg", alt="").stars-yellow
 						ul
 							li.span #[span 4 миллиона ₽]
 							li Диплом 1-й степени
@@ -26,7 +28,8 @@ mixin sAwards(data)
 							li Публикация видео и проекта
 				+e.col(class= wrapClass)
 					+awardCard('Третье место', '')
-						+img(src="img/svg/stars.svg", alt="").stars.stars_rotate
+						+img(src="img/svg/stars.svg", alt="").stars.stars_rotate.d-lg-none
+						+img(src="img/svg/star-big.svg", alt="").stars.star-big.d-none.d-lg-inline
 						ul
 							li Диплом 3-й степени
 							li Фирменная статуэтка

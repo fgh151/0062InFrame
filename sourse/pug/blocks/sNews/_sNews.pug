@@ -1,0 +1,34 @@
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		.container
+			+b.section-title
+				+e.title-wrap
+					h2 За кадром
+					a(href='#') Все новости
+						+icon('arr-next')
+			+e.row.row
+				+e.col.col-md-6.col-lg-4
+					+e.img-wrap.A(href='#')
+						+img(src="img/sNews-img.png", alt="").img-bg
+						+e.content
+							+e.data 12.12.2024
+							.text.text-large Заявки на участие<br>в премии открыты
+				+e.col.col-md-6.col-lg-4.hide-lg
+					+e.img-wrap.A(href='#')
+						+e.content
+							+e.data 12.12.2024
+							.text.text-large Заявки на участие<br>в премии открыты
+				+e.col.col-md-6.col-lg-4.hide-md
+					+e.wrap
+						+e.item
+							+e.data 1 ноября 2024
+							.text.text-large Победители премии: кто возглавил рейтинг?
+						+e.item
+							+e.data 10 ноября 2024
+							.text.text-large Вебинар: как разработать эффективную стратегию удержания талантов
+						+e.item
+							+e.data 12 ноября 2024
+							.text.text-large Новые номинации и критерии оценки
+
+	// end sNews

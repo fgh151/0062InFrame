@@ -97,11 +97,11 @@ $indigo-800: shade-color($indigo, 60%) !default;
 $indigo-900: shade-color($indigo, 80%) !default;
 
 $purple-100: #DDC9FF;
-$purple-200: tint-color($purple, 60%) !default;
-$purple-300: tint-color($purple, 40%) !default;
+$purple-200: #7f30ff;
+$purple-300: #6E00C4;
 $purple-400: #5600E0;
 $purple-500: $purple !default;
-$purple-600: shade-color($purple, 20%) !default;
+$purple-600: #2C1551;
 $purple-700: shade-color($purple, 40%) !default;
 $purple-800: shade-color($purple, 60%) !default;
 $purple-900: shade-color($purple, 80%) !default;
@@ -398,6 +398,7 @@ $prefix:                      $variable-prefix !default;
 // This gradient is also added to elements with `.bg-gradient`
 // scss-docs-start variable-gradient
 $gradient: linear-gradient(148deg, #5206b9 0%, #74d1ff 100%);
+$gradient-p-p: linear-gradient(148deg, #7F30FF 0%, #B176FF 100%);;
 $gradient-dark: linear-gradient(148deg, #5400b7 0%, #0098e3 100%);
 // scss-docs-end variable-gradient
 

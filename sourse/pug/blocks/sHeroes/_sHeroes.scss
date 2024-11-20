@@ -4,9 +4,9 @@
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
+	&__row {
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(32)};
 	}
 	.section-title{
 		
@@ -25,6 +25,13 @@
       gap: rem(60);
     }
 	}
+
+  &.bg-before.section .container {
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -68,6 +75,52 @@
       bottom: 0;
       right: 0;
       height: rem(157);
+    }
+  }
+}
+
+.card-heroes-icon {
+  img {
+    margin-bottom: rem(18);
+    width: rem(40);
+  }
+  &__text {
+    font-size: rem(24);
+  }
+}
+
+.bg-before.section {
+  position: relative;
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  .inner-wrapper.inner-wrapper_white {
+    // backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -45%) rotate(5deg);
+    background: $blue;
+    width: 300vw;
+    height: rem(500);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(52px);
+
+    @include media-breakpoint-up(sm) {
+      filter: blur(102px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      top: 50%;
+      width: 110vw;
+      height: 80%;
     }
   }
 }

@@ -110,8 +110,37 @@ body {
 	
 	
 }
-main{
+main .section:last-child {
+  background: $body-bg;
+	@include media-breakpoint-up(xl) {
+    border-radius: 0 0 rem(80) rem(80);
+  }
+}
+main {
 	flex-grow: 1;
+	@include media-breakpoint-up(xl) {
+    border-radius: 0 0 rem(80) rem(80);
+    position: relative;
+    z-index: 1;
+  
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+      bottom: -1px;
+			height: 130px;
+			width: 200px;
+			background: var(--bg-footer);
+		}
+		&:before {
+			left: 0;
+			--bg-footer: #{$indigo};
+		}
+		&:after {
+			right: 0;
+			--bg-footer: #{$purple-600};
+		}
+  }
 }
 
 
@@ -512,4 +541,21 @@ h3, .h3 {
   &_white {
     background: $white;
   }
+}
+
+.btn-primary {
+  // --bs-btn-color: #fff;
+  // --bs-btn-bg: #1a1230;
+  // --bs-btn-border-color: #1a1230;
+  // --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #{$purple-600};
+  --bs-btn-hover-border-color: #{$purple-600};
+  // --bs-btn-focus-shadow-rgb: 60, 54, 79;
+  // --bs-btn-active-color: #fff;
+  // --bs-btn-active-bg: #150e26;
+  // --bs-btn-active-border-color: #140e24;
+  // --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  // --bs-btn-disabled-color: #fff;
+  // --bs-btn-disabled-bg: #1a1230;
+  // --bs-btn-disabled-border-color: #1a1230;
 }

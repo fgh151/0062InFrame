@@ -17,3 +17,27 @@ mixin heroesCard(title, p, img)
 		.h3.ttu= title 
 		+e.text.text-large= p
 		+img(src=`img/svg/sHeroes-card-bg-${img}.svg`, alt="").img
+
+mixin sHeroes2(data)
+	// start sHeroes
+	+b.SECTION.sHeroes.bg-before.section#sHeroes&attributes(attributes)
+		.container
+			.inner-wrapper.inner-wrapper_white
+				+b.section-title
+					h2 Премия «В кадре» это
+				+e.row.row
+					+e.col.col-lg-4
+						+cardHeroesIcon(1, 'Возможность занять почетное место среди ведущих команд России в госсекторе')
+					+e.col.col-lg-4
+						+cardHeroesIcon(2, 'Признание экспертизы сотрудников государственных организаций')
+					+e.col.col-lg-4
+						+cardHeroesIcon(3, 'Экспертное мнение и ценная обратная связь для проектов')
+					+e.col.col-lg-4
+						+cardHeroesIcon(4, 'Поддержка на крупнейших информационных площадках')
+					+e.col.col-lg-4
+						+cardHeroesIcon(5, 'Возможности для партнерства с лидерами отрасли и их командами')
+
+mixin cardHeroesIcon(i, text)
+	+b.card-heroes-icon 
+		+img(src=`img/svg/sHeroes-img-${i}.svg`, alt="")
+		+e.text= text

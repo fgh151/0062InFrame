@@ -12,6 +12,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(15 / #{$h} *1em );
 }
+.icon-arrowUpRight {
+	$h: 40;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(40 / #{$h} *1em );
+}
 .icon-basket {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -37,6 +42,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-noun-glasses {
+	$h: 21;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
+}
 .icon-telegram {
 	$h: 16;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -56,4 +66,9 @@
 	$h: 16;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(16 / #{$h} *1em );
+}
+.icon-x {
+	$h: 40;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(40 / #{$h} *1em );
 }

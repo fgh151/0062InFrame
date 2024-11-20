@@ -4,19 +4,27 @@
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	
+	@include media-breakpoint-up(lg) {
+    --sTPB: #{rem(44)};
+    }
+    @include media-breakpoint-up(xl) {
+      --sPT: #{rem(0)};
+    }
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 	}
-	.section-title{
-		
-	}
-	&__col{
-		
-	}
-	&__item{
-		
-	}
+  .swiper-slide {
+    width: auto;
+    &:not(:last-child) {
+      margin-right: rem(32);
+    }
+    
+  }
+
+  .swiper {
+    overflow: visible;
+  }
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -26,3 +34,69 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sExperts
+
+.gray-filter {
+  filter: grayscale(1);
+}
+
+.person-card {
+	height: 100%;
+  width: rem(184);
+	img {
+		max-width: 100%;
+	}
+
+	&__img-wrap {
+		margin-bottom: rem(10);
+		position: relative;
+		z-index: 1;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-left: auto;
+		margin-right: auto;
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+      height: 100%;
+			background: $blue-200;
+			border-radius: 50%;
+			z-index: -1;
+		}
+	}
+	&__name {
+    line-height: 120%;
+    font-size: rem(24);
+	}
+
+	&__text {
+    line-height: 120%;
+	}
+}
+
+
+.section-title {
+  &__title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: rem(10);
+    }
+
+    a {
+      text-decoration: underline;
+      @include media-breakpoint-up(md) {
+        font-size: rem(20px);
+      }
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+  }
+}

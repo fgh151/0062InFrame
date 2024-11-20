@@ -59,6 +59,26 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
 	});
+
+  const cardsFlip = document.querySelectorAll('.item-nomin--js')
+  if (cardsFlip.length) {
+    cardsFlip.forEach(card => {
+      card.addEventListener('click', () => card.classList.toggle('active'))
+    })
+  }
+
+  
+	new Swiper(".sExperts__slider--js", {
+		slidesPerView: "auto",
+		freeMode: true,
+		watchOverflow: true,
+	});
+  
+	new Swiper(".sJury__slider--js", {
+		slidesPerView: "auto",
+		freeMode: true,
+		watchOverflow: true,
+	});
 }
 if (document.readyState !== "loading") {
 	eventHandler();

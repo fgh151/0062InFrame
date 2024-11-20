@@ -2,15 +2,14 @@
 .sAwards {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	--sTPB: #{rem(20)};
 	
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: #{rem(24)};
+    margin-bottom: rem(28);
 	}
-	.section-title{
-		
-	}
+
   --border-lg: 56px;
 	&__col {
     @include media-breakpoint-up(lg) {
@@ -22,9 +21,7 @@
       }
     }
 	}
-	&__item{
-		
-	}
+
   .text-large a {
     text-decoration: underline;
   }
@@ -39,10 +36,9 @@
 } // end.sAwards
 
 .award-card {
-  background: $blue;
   padding: rem(32) rem(16);
   border-radius: rem(32) 0 0 0;
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xl) {
     padding: rem(40);
   }
   height: 100%;
@@ -78,14 +74,66 @@
     @extend .text-large;
     line-height: 1.2;
   }
+  
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -10%;
+    left: -5%;
+    border-radius: 100%;
+    filter: blur(48px);
+    width: 130%;
+    height: 150%;
+    transform: rotate(10deg);
+    @include media-breakpoint-up(lg) {
+      left: -20%;
+    }
+  }
+
+  .stars-yellow {
+    position: absolute;
+    bottom: 0;
+    left: rem(10px);
+    z-index: -1;
+    max-width: 50%;
+    width: rem(150px);
+    filter: blur(4px);
+    @include media-breakpoint-up(lg) {
+      width: rem(200);
+      transform: translateY(30%);
+    }
+  }
 
   &--yellow {
+    &:before {
+      background: $yellow;
+    }
 
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   z-index: -1;
+    //   bottom: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 30%;
+    //   background: #fabd12;
+    //   mix-blend-mode: color;
+    // }
   }
   &:not(.award-card--yellow) {
     color: $white;
+    background: $white;
+
+    &:before {
+      background: linear-gradient(180deg, #5f11bc 0%, #5b9de4 100%);
+      @include media-breakpoint-up(lg) {
+        background: linear-gradient(72deg, #5f11bc 0%, #5b9de4 100%);
+      }
+    }
   }
-  
+
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -94,12 +142,37 @@
     bottom: 0;
     right: 0;
     z-index: -1;
-    filter: blur(8px);
+    filter: blur(6px);
     transform: translateY(10%);
+    @include media-breakpoint-up(lg) {
+      width: rem(250px);
+      bottom: rem(-30);
+    }
+  }
+
+  .stars.star-big {
+    width: rem(220);
+    bottom: 0;
   }
 
   .stars_rotate {
-    
+    transform: translateY(10%) scale(-1, 1);
   }
 
+  .award {
+    position: absolute;
+    bottom: 0;
+    right: rem(-10px);
+    z-index: -1;
+    width: rem(154);
+    transform: translateY(40%);
+    @include media-breakpoint-up(lg) {
+      // width: rem(200);
+    transform: translateY(30%);
+    }
+  }
+
+  .h3 {
+    margin-bottom: rem(39);
+  }
 }

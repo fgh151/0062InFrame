@@ -3,7 +3,55 @@ mixin sNominations(data)
 	+b.SECTION.sNominations.section#sNominations&attributes(attributes)
 		.container
 			+b.section-title
-				h2 sNominations
-				
-			+e.row.row
+				h2 Номинации
+				.text-large Подать заявку может сотрудник от организации или команда из госсектора, которая успешно реализовала один или несколько проектов в сфере управления людьми
+			+e.grid
+				+e.item.item-nomin--js: +nominationCard('Привлечение', '2')
+					+b.nomination-card.nomination-card--hide
+						+e.content
+							+e.wrap
+								.title.text-large Молодежный карьерный проект:
+								p Присуждается организации или HR-команде, которая разработала и внедрила программу, направленную на обучение и профессиональное развитие сотрудников
+							+icon('x')
+				+e.item.item-nomin--js: +nominationCard('Удержание', '1')
+					+b.nomination-card.nomination-card--hide
+						+e.content
+							+e.wrap
+								.title.text-large Молодежный карьерный проект:
+								p Присуждается организации или HR-команде, которая разработала и внедрила программу, направленную на обучение и профессиональное развитие сотрудников
+							+icon('x')
+				+e.item.item-nomin--js: +nominationCard('Развитие', '2')
+					+b.nomination-card.nomination-card--hide
+						+e.content
+							+e.wrap
+								.title.text-large Молодежный карьерный проект:
+								p Присуждается организации или HR-команде, которая разработала и внедрила программу
+							+icon('x')
+				+e.item.item-nomin--js: +nominationCard('HR Инновации', '1')
+					+b.nomination-card.nomination-card--hide
+						+e.content
+							+e.wrap
+								.title.text-large Молодежный карьерный проект:
+								p Присуждается организации или HR-команде, которая разработала и внедрила программу, направленную на обучение и профессиональное развитие сотрудников
+							+icon('x')
+				+e.item.wrapper: +b.nomination-card--white
+					+img(src=`img/svg/sNomination-2.svg`, alt="").img
+					+e.content.content
+						+e.wrap
+							.h3 У вас возник вопрос?
+						//- +e.btn.btn.btn-gradient(href='#') Получить консультацию
+
+
 	// end sNominations
+
+
+mixin nominationCard(t, i)
+	+b.nomination-card&attributes(attributes)
+		+img(src=`img/svg/sNomination-${i}.svg`, alt="").img
+		+e.content
+			+e.wrap
+				.h3=t
+				+e.text.text-large Какой-то текст
+			+icon('arrowUpRight')
+	if block
+		block

@@ -3,7 +3,24 @@ mixin sExperts(data)
 	+b.SECTION.sExperts.section#sExperts&attributes(attributes)
 		.container
 			+b.section-title
-				h2 sExperts
-				
-			+e.row.row
+				+e.title-wrap
+					h2 Эксперты
+					a(href='#') Посмотреть экспертов
+						+icon('arr-next')
+				.text-large Рекомендуют топ-36 финалистов — <br>по 5 в каждой номинации
+			+e.slider--js.swiper
+				.swiper-wrapper
+					.swiper-slide: +expertCard('Виктор Смородинов', 'Директор международного направления, Банк Первый', '1')
+					.swiper-slide: +expertCard('Виктор Смородинов', 'Директор международного направления, Банк Первый', '2')
+					.swiper-slide: +expertCard('Виктор Смородинов', 'Директор международного направления', '3')
+					.swiper-slide: +expertCard('Виктор Смородинов', 'Директор международного направления, Банк Первый', '4')
+					.swiper-slide: +expertCard('Виктор Смородинов', 'Директор международного направления, Банк Первый', '1')
+					.swiper-slide: +expertCard('Виктор Смородинов', 'Директор международного направления, Банк Первый', '2')
 	// end sExperts
+
+mixin expertCard(name, text, i)
+	+b.person-card
+		+e.img-wrap.text-center: +img(`img/expert-${i}.png`).gray-filter
+		+e.content
+			+e.name!= name
+			+e.text!= text
