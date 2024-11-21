@@ -11,8 +11,8 @@ $gray-100: #F5F5F5;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
+$gray-500: #d5d9dc;
+$gray-600: #818181;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #1A1230;
@@ -40,7 +40,7 @@ $blue:    #0098E3;
 $indigo:  #5400B7;
 $purple:  #7305EF;
 $pink:    #d63384 !default;
-$red:     #dc3545 !default;
+$red:     #ff0f43;
 $orange:  #fd7e14 !default;
 $yellow:  #FAB906;
 $green:   #198754 !default;
@@ -109,7 +109,7 @@ $purple-900: shade-color($purple, 80%) !default;
 $pink-100: tint-color($pink, 80%) !default;
 $pink-200: tint-color($pink, 60%) !default;
 $pink-300: tint-color($pink, 40%) !default;
-$pink-400: tint-color($pink, 20%) !default;
+$pink-400: #B390EE;
 $pink-500: $pink !default;
 $pink-600: shade-color($pink, 20%) !default;
 $pink-700: shade-color($pink, 40%) !default;
@@ -632,7 +632,7 @@ $line-height-base:            1.4;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
+$h1-font-size:                rem(64);
 $h2-font-size:                rem(72);
 $h3-font-size:                rem(40);
 $h4-font-size:                rem(32);
@@ -899,17 +899,17 @@ $input-padding-y-lg:                    $input-btn-padding-y-lg !default;
 $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
-$input-bg:                              var(--#{$prefix}body-bg) !default;
+$input-bg:                              transparent;
 $input-disabled-color:                  null !default;
 $input-disabled-bg:                     var(--#{$prefix}secondary-bg) !default;
 $input-disabled-border-color:           null !default;
 
 $input-color:                           var(--#{$prefix}body-color) !default;
-$input-border-color:                    var(--#{$prefix}border-color) !default;
+$input-border-color:                    #{$gray-500};
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      var(--#{$prefix}box-shadow-inset) !default;
 
-$input-border-radius:                   var(--#{$prefix}border-radius) !default;
+$input-border-radius:                   rem(12);
 $input-border-radius-sm:                var(--#{$prefix}border-radius-sm) !default;
 $input-border-radius-lg:                var(--#{$prefix}border-radius-lg) !default;
 
@@ -919,7 +919,7 @@ $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
 
-$input-placeholder-color:               var(--#{$prefix}secondary-color) !default;
+$input-placeholder-color:               #{$secondary};
 $input-plaintext-color:                 var(--#{$prefix}body-color) !default;
 
 $input-height-border:                   calc(#{$input-border-width} * 2) !default; // stylelint-disable-line function-disallowed-list

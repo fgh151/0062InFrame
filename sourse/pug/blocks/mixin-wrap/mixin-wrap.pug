@@ -44,3 +44,10 @@ mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+  
+mixin gradientBtn(text)
+	+e.btn.btn.btn-gradient(href='#')&attributes(attributes)
+		span=text
+			if block
+				block

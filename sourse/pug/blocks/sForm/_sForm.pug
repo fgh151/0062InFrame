@@ -2,15 +2,37 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title
-				h2 sForm
-				
-			+e.row.row
-			+form-wrap
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+e.btn.btn.btn-primary(type="submit") Submit
-				+policy
+			.inner-wrapper.inner-wrapper_white: +e.row.row
+				+e.col.col-lg-6 
+					+b.section-title
+						h2 Связаться с нами
+						.text-large Расскажем, как заполнить и подать заявку, проконсультируем по проекту и ответим на все вопросы
+					+img(src="img/sForm-bg.png", alt="").img.d-none.d-lg-block
+				+e.col.col-lg-6
+					.title.text-secondary.required Как вы хотите получить консультацию?
+					.tabs
+						.item.tabs__caption.small
+							.tabs__btn.active По телефону
+							.tabs__btn Письмом на почту
+
+						.tabs__content.active
+							+form-wrap
+								+input("Ваше Ф.И.О.",'text')(required)
+								+input("Телефон",'tel')(required)
+									.text.text-indigo.small Если вы вписываете рабочий телефон с добавочным номером, укажите его в поле ниже.
+								+input("Напишите сообщение",'textarea')
+								.title.text-secondary.required Введите символы с картинки
+								.capture-wrap
+								+policy
+								+e.btn.btn.btn-primary(type="submit") Отправить
+						.tabs__content
+							+form-wrap
+								+input("Ваше Ф.И.О.",'text')(required)
+								+input("Адрес вашей почты",'email')(required)
+									.text.text-indigo.small Пожалуйста, указывайте только почтовый адрес с доменом .ru
+								+input("Напишите сообщение",'textarea')
+								.title.text-secondary.required Введите символы с картинки
+								.capture-wrap
+								+policy
+								+e.btn.btn.btn-primary(type="submit") Отправить
 	// end sForm

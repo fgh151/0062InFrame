@@ -24,3 +24,43 @@ mixin expertCard(name, text, i)
 		+e.content
 			+e.name!= name
 			+e.text!= text
+
+mixin sExperts2(data)
+	// start sExperts
+	+b.SECTION.sExperts.partners.section#sExperts&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Партнеры Премии
+				.d-lg-none: a(href='#') Все партнеры
+					+icon('arr-next')
+			+e.slider--js.swiper
+				.swiper-wrapper
+					.swiper-slide: +partnerCard('Стратегический<br>партнер', 1)
+					.swiper-slide: +partnerCard('Стратегический<br>партнер', 2)
+					.swiper-slide: +partnerCard('Генеральный информационный партнер', 3)
+					.swiper-slide
+						+b.partner-card--purple
+							.text-large Стать партнером премии
+							+e.btn.btn.btn-light.small(href='#') Связаться с нами
+			+e.additional-partners.row
+				+e.col.col-lg-4.col-xl
+					+partnerCard('Стратегический информационный партнер', 4).--white
+				+e.col.col-lg-4.col-xl
+					+partnerCard('Стратегический<br>партнер', 4).--white
+				+e.col.col-lg-4.col-xl
+					+partnerCard('Стратегический<br>партнер', 4).--white
+				+e.col.col-lg-4.col-xl
+					+partnerCard('Стратегический информационный партнер', 4).--white
+				+e.col.col-lg-4.col-xl
+					+partnerCard('Стратегический<br>партнер', 4).--white
+				+e.col.col-lg-4.col-xl
+					+partnerCard('Стратегический<br>партнер', 4).--white
+
+	// end sExperts
+
+
+mixin partnerCard(name, i)
+	+b.partner-card&attributes(attributes)
+		+e.img-wrap.img-wrap-center: +img(`img/svg/partner-${i}.svg`)
+		+e.content
+			+e.name.small.fw-700.text-center!= name

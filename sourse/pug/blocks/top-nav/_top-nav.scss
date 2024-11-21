@@ -6,9 +6,11 @@
 		// --bs-gutter-x: #{rem()};
 		// @include media-breakpoint-up(md) {
 			--bs-gutter-y: var(--bs-gutter-x);
+      align-items: center;
 		// }
 
 	}
+  background: linear-gradient(180deg, rgba(85,1,183,1) 0%, rgba(85,1,183,1) 60%, rgba(85,1,183,0.8324579831932774) 85%, rgba(114,44,202,0.8576680672268908) 100%);
 	.section-title{
 		
 	}

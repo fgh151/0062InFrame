@@ -7,23 +7,67 @@
 	@include media-breakpoint-up(lg) {
     --sTPB: #{rem(44)};
     }
-    @include media-breakpoint-up(xl) {
-      --sPT: #{rem(0)};
+    &:not(.partners) {
+      @include media-breakpoint-up(xl) {
+        --sPT: #{rem(0)};
+      }
     }
+
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 	}
   .swiper-slide {
+    height: auto;
     width: auto;
     &:not(:last-child) {
       margin-right: rem(32);
     }
-    
   }
 
   .swiper {
     overflow: visible;
+  }
+
+  &.partners {
+
+	@include media-breakpoint-down(lg) {
+    --sPB: #{rem(40)};
+  }
+	@include media-breakpoint-up(lg) {
+    --sTPB: #{rem(54)};
+    }
+    .swiper-slide:nth-child(3n)  {
+      .partner-card {
+        border-radius: 16px 16px 0 16px;
+        background: linear-gradient(300deg, #0098e3 0%, #99ddfe 100%);
+      }
+    }
+
+    .swiper {
+      margin-top: rem(-10);
+    }
+  
+    .swiper-slide {
+      &:not(:last-child) {
+        @include media-breakpoint-down(lg) {
+          margin-right: rem(16);
+        }
+      }
+    }
+
+    .section-title {
+      margin-right: rem(-3);
+    }
+  }
+
+  &__additional-partners {
+    margin-top: rem(0);
+		--bs-gutter-y: var(--bs-gutter-x);
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
   }
 
 	@include media-breakpoint-up(xl) {}
@@ -98,5 +142,67 @@
         display: none;
       }
     }
+  }
+}
+
+
+.partner-card {
+  border-radius: 0 16px 16px 16px;
+  height: 100%;
+
+  &:not(.partner-card--white) {
+    background: linear-gradient(150deg, #0098e3 0%, #99ddfe 100%);
+    color: $white;
+    padding: rem(26) rem(17);
+    width: rem(184);
+
+    @include media-breakpoint-up(md) {
+      width: rem(292);
+      padding: rem(38) rem(17) rem(30);
+    }
+  }
+
+  img {
+    max-width: 90%;
+  }
+
+  &__img-wrap {
+    height: 60%;
+    position: relative;
+  }
+
+  &--white {
+    background: $white;
+    padding: rem(18) rem(17);
+    img {
+      max-width: 96%;
+    }
+  }
+
+  &.partner-card--purple {
+    padding: rem(15) rem(20) rem(32) !important;
+    border-radius: $border-radius $border-radius 0 $border-radius;
+    background: linear-gradient(219deg, #b390ee 0%, #5400b7 100%);
+  }
+
+  &__btn {
+    --bs-btn-padding-x: #{rem(5)};
+    @include media-breakpoint-down(md) {
+      --bs-btn-padding-y: #{rem(10)};
+    }
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: rem(10);
+  @include media-breakpoint-up(md) {
+    gap: rem(20);
+  }
+
+
+  &__content {
+    max-width: 80%;
+    margin: 0 auto;
   }
 }

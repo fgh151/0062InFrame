@@ -1,7 +1,7 @@
 .form-wrap {
 	&__input-wrap {
 		// @extend .form-group;
-		margin-bottom: rem(15);
+		margin-bottom: rem(20);
 	}
 	&__input {
 		// @extend .form-control;
@@ -57,4 +57,29 @@ input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 	/* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.required {
+  position: relative;
+  &:after {
+    content: '*';
+    color: $danger;
+  }
+}
+
+.form-group:has(input[required]) {
+    position: relative;
+    &:after {
+      content: '*';
+      display: inline-block;
+      position: absolute;
+      top: 11px;
+      left: -5px;
+      color: $danger;
+      // transform: translateY(-50%);
+      // height: 7px;
+      // width: 7px;
+      // background-image: url(../img/svg/required.svg);
+      // background-repeat: no-repeat;
+    }
 }

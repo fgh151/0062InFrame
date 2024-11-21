@@ -21,6 +21,7 @@
 	}
 	a {
 		display: block;
+    color: $white;
 		padding: rem(20) calc(var(--bs-gutter-x) / 2);
 	}
 }
@@ -28,7 +29,7 @@
 .toggle-menu-mobile {
 	& {
 		--h: #{em(2)};
-		--color: #{$primary};
+		--color: #{$white};
 		--position: calc(var(--h) * 2);
 
 		display: block;

@@ -37,3 +37,13 @@ mixin cardLinkMaterials(t)
 	+b.card-material(href='#')&attributes(attributes)
 		+e.text.text-large= t
 		+icon('arr-next')
+
+
+mixin sContent3()
+	// start sContent
+	+b.SECTION.sContent.section#sContent3&attributes(attributes)
+		.container
+			+b.section-title.section-title_smaller
+				.h3 Расскажите об HR-проекте своей команды — станьте лидерами в области управления персоналом в госсекторе
+				+gradientBtn('Чек-лист участника')(download)
+					+icon('download')
