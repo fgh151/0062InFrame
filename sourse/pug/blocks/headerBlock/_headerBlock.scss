@@ -15,7 +15,7 @@
     margin-bottom: rem(60);
   }
 
-  background: $purple;
+  background: var(--header-block-bg);
   color: $white;
 	min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
@@ -109,7 +109,7 @@
       width: 100vw;
       height: 100px;
       z-index: 1;
-      background: linear-gradient(180deg, $purple 0%, rgba(127, 48, 255, 0.86) 35.31%, rgba(127, 48, 255, 0.55) 66.12%, rgba(127, 48, 255, 0) 100%);
+      background: linear-gradient(180deg, var(--header-block-bg) 0%, rgba(127, 48, 255, 0.86) 35.31%, rgba(127, 48, 255, 0.55) 66.12%, rgba(127, 48, 255, 0) 100%);
     }
   }
 
@@ -132,3 +132,31 @@
 }
 
 // end.headerBlock
+
+
+.wrap-btn-apply {
+  position: fixed;
+  padding: rem(16) rem(6) rem(28);
+  border-radius: $border-radius $border-radius 0 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: $white;
+  z-index: 10;
+
+  .btn {
+    width: 100%;
+    line-height: 1;
+    --bs-btn-font-size: 16px;
+  }
+}
+
+.btn--js {
+  opacity: 0;
+  visibility: hidden;
+  @include mt;
+  &.show-btn {
+    opacity: 1;
+    visibility: visible;
+  }
+}

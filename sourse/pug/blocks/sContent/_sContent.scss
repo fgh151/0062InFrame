@@ -37,6 +37,9 @@
         display: flex;
         justify-content: space-between;
         align-items: start;
+        gap: rem(32);
+      }
+      @include media-breakpoint-up(xl) {
         gap: rem(100);
       }
       @include media-breakpoint-down(md) {
