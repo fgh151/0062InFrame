@@ -3,7 +3,7 @@
 		{ "name":"Правила участия", "url":"#"},
 		{	"name":"Жюри и эксперты", "url":"#"},
 		{"name":"Новости", "url":"#"},
-		{"name":"Партнеры", "url":"#"} 
+		{"name":"Партнеры", "url":"#sPartners"} 
 	],
 	"social":[
 		"fb","instagram","telegram"

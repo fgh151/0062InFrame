@@ -80,30 +80,80 @@ function eventHandler() {
 		watchOverflow: true,
     speed: 600,
     parallax: true,
+
+    // on: {
+    //   reachEnd: function () {
+    //     this.slideTo(0);
+    //   },
+    // },
 	});
 
-  const firstSectionHeight = document.querySelector('.headerBlock')
+  /* hide btn after scroll main page */
+  // const firstSectionHeight = document.querySelector('.headerBlock')
 
-  if(firstSectionHeight) {
-    const headerBlockHeight = firstSectionHeight.offsetHeight;
-    let btnElements = document.querySelectorAll('.btn-wr--js');
+  // if(firstSectionHeight) {
+  //   const headerBlockHeight = firstSectionHeight.offsetHeight;
+  //   let btnElements = document.querySelectorAll('.btn-wr--js');
 
-    document.addEventListener('scroll', () => {
-      if(btnElements.length < 2) {
-        btnElements = document.querySelectorAll('.btn-wr--js');
+  //   document.addEventListener('scroll', () => {
+  //     if(btnElements.length < 2) {
+  //       btnElements = document.querySelectorAll('.btn-wr--js');
+  //     }
+  //     btnElements.forEach(btnElement => {
+  //       if (window.scrollY >= headerBlockHeight) {
+  //         btnElement.classList.add('show-btn');
+  //       } else {
+  //         btnElement.classList.remove('show-btn');
+  //       }
+  //     });
+  //   });
+  // }
+
+
+  /* hide btn after scroll main page */
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  let requiredCountOfBtns = 3;
+
+  let buttons = document.querySelectorAll('.btn-wr--js');
+  let headerSection = document.querySelector(".headerBlock");
+
+  if (buttons.length < requiredCountOfBtns) {
+    const onScroll = () => {
+      buttons = document.querySelectorAll('.btn-wr--js');
+
+      if (buttons.length >= requiredCountOfBtns) {
+        setBtnsTrigger()
+        document.removeEventListener('scroll', onScroll);
       }
-      btnElements.forEach(btnElement => {
-        if (window.scrollY >= headerBlockHeight) {
-          btnElement.classList.add('show-btn');
-        } else {
-          btnElement.classList.remove('show-btn');
-        }
+    };
+
+    document.addEventListener('scroll', onScroll);
+  }
+
+  setBtnsTrigger()
+
+  function setBtnsTrigger() {
+    if (headerSection && buttons.length) {
+
+    let sectionHeight = headerSection.offsetHeight;
+
+    buttons.forEach(button => {
+      ScrollTrigger.create({
+        trigger: headerSection,
+        start: `top top+=${sectionHeight / 2}`,
+        end: "bottom top",
+        onEnter: () => button.classList.remove("show-btn"),
+        onEnterBack: () => button.classList.remove("show-btn"),
+        onLeaveBack: () => button.classList.add("show-btn"),
+        onLeave: () => button.classList.add("show-btn"),
       });
     });
   }
-
-
+  }
 }
+
 if (document.readyState !== "loading") {
 	eventHandler();
 } else {

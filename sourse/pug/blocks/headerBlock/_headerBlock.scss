@@ -86,7 +86,6 @@
     }
   }
   position: relative;
-  z-index: 9;
 
   .container {
     position: relative;
@@ -177,7 +176,7 @@
 
 .question-wrap {
   position: fixed;
-  z-index: 8;
+  z-index: 10;
   right: rem(16);
   bottom: rem(107);
 
@@ -188,11 +187,12 @@
   --q-width: 44px;
   font-size: 24px;
 	@include media-breakpoint-up(lg) {
-    z-index: 11;
     --q-width: 72px;
     font-size: 40px;
     right: rem(40);
     bottom: rem(32);
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
   color: white;
