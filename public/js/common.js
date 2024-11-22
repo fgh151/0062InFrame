@@ -80,6 +80,9 @@ function eventHandler() {
 		watchOverflow: true,
     speed: 600,
     parallax: true,
+    breakpoints: {
+      
+    }
 
     // on: {
     //   reachEnd: function () {

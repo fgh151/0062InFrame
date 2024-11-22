@@ -12,7 +12,7 @@
 		--bs-gutter-y: #{rem(20)};
 	}
 
-  .span {
+  h2 span {
     border-radius: 12px 12px 12px 0;
     background: #fff;
     font-size: 18px;
@@ -23,6 +23,9 @@
     
     padding: rem(8px) rem(14px);
     margin-top: rem(5);
+    @include media-breakpoint-up(md) {
+      margin-left: rem(10);
+    }
     @include media-breakpoint-up(xl) {
       transform: translateY(-10px);
     }
