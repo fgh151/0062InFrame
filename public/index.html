@@ -39,14 +39,11 @@
 									</div>
 								</div>
 								<div class="headerBlock__content"> 
-									<div class="headerBlock__apply text-large d-lg-none"><span>Прием заявок до 11 июля</span>
+									<div class="headerBlock__apply text-large order-lg-2"><span>Прием заявок до 11 июля</span>
 									</div>
-									<div class="text-large d-lg-none">Церемония награждения — 2 октября 2025</div>
+									<div class="text-large order-lg-3 span">Церемония награждения — 2 октября 2025</div>
 									<a class="headerBlock__btn btn btn-primary" href="#">Подать заявку
 									</a>
-									<div class="headerBlock__apply text-large d-none d-lg-inline-block">Прием заявок до 11 июля
-									</div>
-									<div class="text-large d-none d-lg-block">Церемония награждения — 2 октября 2025</div>
 								</div>
 							</div>
 							<div class="headerBlock__col col-lg-4">
@@ -312,9 +309,105 @@
 				<section class="sFrameSlider section" id="sFrameSlider">
 					<div class="container">
 						<div class="section-title">
-							<h2>sFrameSlider</h2>
+							<h2>Раскадровка</h2>
 						</div>
-						<div class="sFrameSlider__row row">
+						<div class="sFrameSlider__slider sFrameSlider__slider--js swiper">
+							<div class="parallax-bg d-none d-lg-block" style="background-image: url('img/svg/parallax.svg')" data-swiper-parallax="-28%"></div>
+							<div class="parallax-bg d-lg-none" style="background-image: url('img/svg/parallax-mob.svg')" data-swiper-parallax="-28%"></div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" data-swiper-parallax="-300">
+									<div class="frame-slider">
+										<div class="frame-slider__top">
+											<div class="frame-slider__nav">
+												<div class="text-large">Кадр 1</div>
+												<div class="text-large">148 дней</div>
+											</div>
+											<div class="frame-slider__date text-large">13 февраля — 11 июля
+											</div>
+										</div>
+										<div class="frame-slider__bottom">
+											<div class="frame-slider__title h3">Прием заявок
+											</div>
+											<div class="frame-slider__text">Узнайте об этапах и правилах подачи заявок в <a href="#">чек-листе участника</a>
+											</div>
+											<a class="frame-slider__btn btn btn-light" href="#">Подать заявку
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide" data-swiper-parallax="-300">
+									<div class="frame-slider">
+										<div class="frame-slider__top">
+											<div class="frame-slider__nav">
+												<div class="text-large">Кадр 2</div>
+												<div class="text-large">20 дней</div>
+											</div>
+											<div class="frame-slider__date text-large">14 июля — 3 августа
+											</div>
+										</div>
+										<div class="frame-slider__bottom">
+											<div class="frame-slider__title h3">Техническая экспертиза
+											</div>
+											<div class="frame-slider__text">Убедимся, что все проекты соответствуют критериям премии
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide" data-swiper-parallax="-300">
+									<div class="frame-slider">
+										<div class="frame-slider__top">
+											<div class="frame-slider__nav">
+												<div class="text-large">Кадр 3</div>
+												<div class="text-large">27 дней</div>
+											</div>
+											<div class="frame-slider__date text-large">4 августа — 31 августа
+											</div>
+										</div>
+										<div class="frame-slider__bottom">
+											<div class="frame-slider__title h3">Экспертная комиссия
+											</div>
+											<div class="frame-slider__text">Эксперты отберут 60 финалистов — топ-5 в каждой из 4 номинаций в 3 блоках
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide" data-swiper-parallax="-300">
+									<div class="frame-slider">
+										<div class="frame-slider__top">
+											<div class="frame-slider__nav">
+												<div class="text-large">Кадр 4</div>
+												<div class="text-large">13 дней</div>
+											</div>
+											<div class="frame-slider__date text-large">8 сентября — 21 сентября
+											</div>
+										</div>
+										<div class="frame-slider__bottom">
+											<div class="frame-slider__title h3">Голосование жюри
+											</div>
+											<div class="frame-slider__text">Какой-то другой текст Какой-то другой текстКакой-то другой текст
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide" data-swiper-parallax="-300">
+									<div class="frame-slider frame-slider--primary">
+										<div class="frame-slider__top">
+											<div class="frame-slider__nav">
+												<div class="text-large">Кадр 5</div>
+												<div class="text-large">Очно в Москве</div>
+											</div>
+											<div class="frame-slider__date text-large">2 октября
+											</div>
+										</div>
+										<div class="frame-slider__bottom">
+											<div class="frame-slider__title h3">Премьера
+											</div>
+											<div class="frame-slider__text">Торжественная церемония награждения пройдет в Москве
+											</div><img class="stars stars_rotate" src="img/svg/stars.svg" alt="" loading="lazy"/>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -405,7 +498,7 @@
 								<use xlink:href="img/svg/sprite.svg#arr-next"></use>
 							</svg>
 						</a>
-						<div class="sJury__slider sJury__slider--js swiper">
+						<div class="sJury__slider sJury__slider--js swiper auto-slider auto-slider--js">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<div class="jury-card jury-card--gradient">
@@ -568,7 +661,7 @@
 							</div>
 							<div class="text-large">Рекомендуют топ-36 финалистов — <br>по 5 в каждой номинации</div>
 						</div>
-						<div class="sExperts__slider sExperts__slider--js swiper">
+						<div class="sExperts__slider sExperts__slider--js swiper auto-slider auto-slider--js">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<div class="person-card">
@@ -769,7 +862,7 @@
 										<use xlink:href="img/svg/sprite.svg#arr-next"></use>
 									</svg></a></div>
 						</div>
-						<div class="sExperts__slider sExperts__slider--js swiper">
+						<div class="sExperts__slider sExperts__slider--js swiper auto-slider auto-slider--js">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<div class="partner-card">

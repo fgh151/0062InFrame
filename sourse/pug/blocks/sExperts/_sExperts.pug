@@ -8,7 +8,7 @@ mixin sExperts(data)
 					a(href='#') Посмотреть экспертов
 						+icon('arr-next')
 				.text-large Рекомендуют топ-36 финалистов — <br>по 5 в каждой номинации
-			+e.slider--js.swiper
+			+e.slider--js.swiper.auto-slider--js
 				.swiper-wrapper
 					.swiper-slide: +expertCard('Виктор Смородинов', 'Директор международного направления, Банк Первый', '1')
 					.swiper-slide: +expertCard('Виктор Смородинов', 'Директор международного направления, Банк Первый', '2')
@@ -33,7 +33,7 @@ mixin sExperts2(data)
 				h2 Партнеры Премии
 				.d-lg-none: a(href='#') Все партнеры
 					+icon('arr-next')
-			+e.slider--js.swiper
+			+e.slider--js.swiper.auto-slider--js
 				.swiper-wrapper
 					.swiper-slide: +partnerCard('Стратегический<br>партнер', 1)
 					.swiper-slide: +partnerCard('Стратегический<br>партнер', 2)

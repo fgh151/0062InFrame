@@ -58,7 +58,20 @@
     .text-large {
       margin-bottom: rem(20);
       line-height: 110%;
-      &:last-child {
+    }
+
+    display: grid;
+    grid-template-columns: 1fr;
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: max-content max-content;
+      // align-items: end;
+
+      .btn {
+        margin-top: rem(10);
+      }
+
+      .span {
+        grid-column: span 2;
         @include media-breakpoint-up(lg) {
           margin-top: rem(128);
         }

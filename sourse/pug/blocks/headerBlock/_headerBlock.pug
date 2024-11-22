@@ -8,11 +8,11 @@ mixin headerBlock()
 						.h1.fw-700 Премия Правительства Москвы «В кадре»
 						+e.sub Всероссийская HR-премия для госсектора
 					+e.content 
-						+e.apply.text-large.d-lg-none #[span Прием заявок до 11 июля]
-						.text-large.d-lg-none Церемония награждения — 2 октября 2025
+						+e.apply.text-large.order-lg-2 #[span Прием заявок до 11 июля]
+						.text-large.order-lg-3.span Церемония награждения — 2 октября 2025
 						+e.btn.btn.btn-primary(href='#') Подать заявку
-						+e.apply.text-large.d-none.d-lg-inline-block Прием заявок до 11 июля
-						.text-large.d-none.d-lg-block Церемония награждения — 2 октября 2025
+						//- +e.apply.text-large.d-none.d-lg-inline-block Прием заявок до 11 июля
+						//- .text-large.d-none.d-lg-block Церемония награждения — 2 октября 2025
 				+e.col.col-lg-4
 		+img(src="img/headerBlock-bg.png", alt="").section-img-bg.d-none.d-lg-block
 		+e.img-wrap-mob.d-lg-none.ms-auto

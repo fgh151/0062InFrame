@@ -68,16 +68,18 @@ function eventHandler() {
   }
 
   
-	new Swiper(".sExperts__slider--js", {
+	new Swiper(".auto-slider--js", {
 		slidesPerView: "auto",
 		freeMode: true,
 		watchOverflow: true,
 	});
   
-	new Swiper(".sJury__slider--js", {
+	new Swiper(".sFrameSlider__slider--js", {
 		slidesPerView: "auto",
 		freeMode: true,
 		watchOverflow: true,
+    speed: 600,
+    parallax: true,
 	});
 
   const firstSectionHeight = document.querySelector('.headerBlock')
@@ -93,10 +95,8 @@ function eventHandler() {
       btnElements.forEach(btnElement => {
         if (window.scrollY >= headerBlockHeight) {
           btnElement.classList.add('show-btn');
-          console.log('add');
         } else {
           btnElement.classList.remove('show-btn');
-          console.log('remove');
         }
       });
     });
