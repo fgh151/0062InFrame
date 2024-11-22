@@ -1,11 +1,14 @@
 // start .sNominations
 .sNominations {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(20)};
+	--sPB: #{rem(20)};
 	// --sTPB: #{rem()};
     @include media-breakpoint-up(lg) {
       --sTPB: #{rem(56)};
     }
+    @include media-breakpoint-up(lg) {
+      --sPB: #{rem(50)};
+      }
 	
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -213,6 +216,15 @@
         height: 120%;
         transform: translate(20%,10%);
       }
+    }
+  }
+  &__btn {
+    --bs-btn-padding-x: #{rem(32)};
+    @include media-breakpoint-down(lg) {
+    --bs-btn-font-size: #{rem(16)};
+    line-height: 1;
+    --bs-btn-padding-x: #{rem(16)};
+    margin-bottom: rem(-8);
     }
   }
 

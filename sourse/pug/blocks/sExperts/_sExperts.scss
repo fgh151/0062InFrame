@@ -36,6 +36,7 @@
   }
 	@include media-breakpoint-up(lg) {
     --sTPB: #{rem(54)};
+    --sPB: #{rem(66)};
     }
     .swiper-slide:nth-child(3n)  {
       .partner-card {

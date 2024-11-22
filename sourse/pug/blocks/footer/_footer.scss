@@ -7,6 +7,9 @@
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(56)};
 		}
+    @include media-breakpoint-down(lg) {
+      --sPB: #{rem(130)};
+    }
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: #{rem(20)};

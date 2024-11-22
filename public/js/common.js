@@ -86,11 +86,11 @@ function eventHandler() {
 
   if(firstSectionHeight) {
     const headerBlockHeight = firstSectionHeight.offsetHeight;
-    let btnElements = document.querySelectorAll('.btn--js');
+    let btnElements = document.querySelectorAll('.btn-wr--js');
 
     document.addEventListener('scroll', () => {
       if(btnElements.length < 2) {
-        btnElements = document.querySelectorAll('.btn--js');
+        btnElements = document.querySelectorAll('.btn-wr--js');
       }
       btnElements.forEach(btnElement => {
         if (window.scrollY >= headerBlockHeight) {

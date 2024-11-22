@@ -21,6 +21,9 @@
 	}
   .inner-wrapper {
     position: relative;
+    @include media-breakpoint-up(lg) {
+      padding-bottom: rem(56);
+    }
   }
 
 	&__logo-wrap {
@@ -70,8 +73,9 @@
 		.text-large:not(:last-child) {
       margin-bottom: rem(24);
     }
-    @include media-breakpoint-down(lg) {
-      line-height: 136%;
+    line-height: 136%;
+    @include media-breakpoint-up(lg) {
+      line-height: 1.45;
     }
 
     .text-large {

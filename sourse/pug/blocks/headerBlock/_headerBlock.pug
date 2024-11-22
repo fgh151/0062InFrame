@@ -11,12 +11,11 @@ mixin headerBlock()
 						+e.apply.text-large.order-lg-2 #[span Прием заявок до 11 июля]
 						.text-large.order-lg-3.span Церемония награждения — 2 октября 2025
 						+e.btn.btn.btn-primary(href='#') Подать заявку
-						//- +e.apply.text-large.d-none.d-lg-inline-block Прием заявок до 11 июля
-						//- .text-large.d-none.d-lg-block Церемония награждения — 2 октября 2025
 				+e.col.col-lg-4
 		+img(src="img/headerBlock-bg.png", alt="").section-img-bg.d-none.d-lg-block
 		+e.img-wrap-mob.d-lg-none.ms-auto
 			.bg-gr
 			+img(src="img/headerBlock-bg-mob.png", alt="")
-		+b.wrap-btn-apply.btn--js.d-lg-none: .container: .btn.btn-primary(href='#') Подать заявку
+		+b.wrap-btn-apply.btn-wr--js.d-lg-none: .container: .btn.btn-primary(href='#') Подать заявку
+	+b.question-wrap.fw-700(href='#') ?
 	// end headerBlock
