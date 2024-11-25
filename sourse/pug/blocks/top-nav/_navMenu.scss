@@ -27,12 +27,18 @@
 	a {
 		display: block;
 
-	  @include media-breakpoint-between(lg, xxl) {
+    @include media-breakpoint-between(lg, xxl) {
       font-size: 16px;
     }
     font-size: 18px;
     color: $white;
 		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+    @include mt;
+
+    // &:hover,
+    &.active {
+      text-decoration: underline;
+    }
 	}
 }
 

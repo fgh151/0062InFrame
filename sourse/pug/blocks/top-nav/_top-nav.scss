@@ -29,6 +29,10 @@
     }
 
     &.wrap-header {
+      .btn-light {
+        --bs-btn-padding-x: #{rem(48)};
+        margin-right: rem(4);
+      }
     }
 
 	}

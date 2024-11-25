@@ -17,7 +17,7 @@ mixin mob-mnu()
 		+e.inner
 			+mnu()
 	//  мобильное меню
-mixin top-nav() 
+mixin top-nav(main) 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
@@ -29,14 +29,17 @@ mixin top-nav()
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+mnu()
-							.menu-wrap.d-lg-none
+							.menu-wrap.d-xl-none
 								+e.btns-wrap
 									+e.btn.btn.btn-outline-light.small(href='#') Личный кабинет
 									+e.btn.btn.btn-primary(href='#') Подать заявку
 								+e.apply.text-center.fw-600 Прием заявок до 11 июля
 				.col-auto
 					+e.btns-wrap.wrap-header.d-none.d-xl-block
-						+e.btn.btn.btn-light.small.btn-wr--js(href='#') Подать заявку
+						if main
+							+e.btn.btn.btn-light.small.btn-wr--js(href='#') Подать заявку
+						else
+							+e.btn.btn.btn-light.small(href='#') Подать заявку
 						+e.btn.btn.btn-outline-light.small(href='#') Личный кабинет
 				.col-auto.d-xl-none
 					+menu-toggle()
