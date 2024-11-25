@@ -1,7 +1,7 @@
 // start .sRules
 .sRules {
 	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPB: #{rem(30)};
 	// --sTPB: #{rem()};
 	
 	&__row{
@@ -14,9 +14,18 @@
 	&__col{
 		
 	}
-	&__item{
-		
-	}
+	.dd-group {
+    &__item {
+      margin-bottom: rem(24);
+    }
+  }
+
+  li {
+    margin-bottom: rem(16);
+  }
+  ul, ol {
+    padding-left: rem(32);
+  }
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -26,3 +35,99 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sRules
+
+.dd-group {
+
+  &__badge-wrap {
+    display: flex;
+    gap: rem(10);
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: rem(28);
+    @include media-breakpoint-up(md) {
+      margin-right: rem(28);
+    }
+    &:after {
+      @include mt;
+      content: '';
+      display: inline-block;
+      width: rem(30);
+      height: rem(30);
+      background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 12.8L13.36 23.16V1L16.64 1V23.16L27 12.8V17.4L15 29.4L3 17.4L3 12.8Z' fill='%231A1230' /%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin-left: rem(4);
+      flex-shrink: 0;
+      vertical-align: middle;
+    }
+  }
+
+  &__head {
+    font-size: rem(18);
+    cursor: pointer;
+    padding: rem(24) rem(16);
+    @include media-breakpoint-up(md) {
+      padding: rem(32) rem(24);
+    }
+    line-height: 111%;
+  }
+
+  .h3 {
+    margin-bottom: 0;
+    @include media-breakpoint-up(lg) {
+      max-width: calc(100% - rem(200));
+    }
+  }
+
+  &__item {
+    background: $white;
+    border-top-right-radius: rem(32);
+    @include media-breakpoint-up(lg) {
+      border-top-right-radius: rem(56);
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.active {
+      .dd-group__badge-wrap:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__content {
+    padding: rem(0) rem(16);
+    padding-bottom: rem(24);
+    @include media-breakpoint-up(md) {
+      max-width: rem(1040);
+      padding: 0 rem(24);
+      padding-bottom: rem(24);
+    }
+    @include media-breakpoint-up(sm) {
+      // padding: 0 rem(44) rem(22) rem(36);
+    }
+  }
+  .text-large  {
+    margin-bottom: rem(16);
+    @include media-breakpoint-down(lg) {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    span {
+      font-weight: 700;
+    }
+
+    .span.text-purple {
+      display: inline;
+    }
+  }
+}
+
+.dd-group__content {
+  display: none;
+  &.active {
+    display: block;
+  }
+}

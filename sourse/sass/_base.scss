@@ -115,6 +115,10 @@ main .section:last-child {
 	@include media-breakpoint-up(xl) {
     border-radius: 0 0 rem(80) rem(80);
   }
+	--sPB: #{rem(60)};
+  @include media-breakpoint-up(lg) {
+    --sPB: #{rem(190)};
+  }
 }
 main {
 	flex-grow: 1;
@@ -585,4 +589,30 @@ h3, .h3 {
 .text-indigo {
   color: $indigo;
   line-height: 130%;
+}
+
+.text-purple {
+  color: $purple;
+}
+
+.badge {
+  &:not(.text-bg-light) {
+    color: var(--bs-badge-color) !important;
+  }
+  text-align: start;
+  display: inline-block;
+  // width: auto;
+  // vertical-align: baseline;
+  white-space: unset;
+
+	@include media-breakpoint-up(md) {
+    --bs-badge-font-size: #{rem(18)};
+  }
+}
+.text-bg-dark {
+  background-color: rgba(128, 49, 255, 1) !important;
+}
+
+.text-bg-light {
+  background-color: #EFE8FF !important;
 }

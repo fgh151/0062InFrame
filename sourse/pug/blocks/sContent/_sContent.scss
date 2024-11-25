@@ -1,9 +1,9 @@
 #sContent2 {
 	--sTPB: #{rem(26)};
-	--sPB: #{rem(60)};
+	// --sPB: #{rem(60)};
   @include media-breakpoint-up(lg) {
     --sTPB: #{rem(40)};
-    --sPB: #{rem(190)};
+    // --sPB: #{rem(190)};
   }
 }
 	// start .sContent

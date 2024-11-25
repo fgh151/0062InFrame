@@ -8,11 +8,15 @@ mixin ddGroup()
 			+ddGroupItem('вопрос2')
 			+ddGroupItem('вопрос3')
 
-mixin ddGroupItem(txt, activeClasses='')
+mixin ddGroupItem(txt, badge, badgeClass, activeClasses='')
 	//-хедеру и контенту => .dd-head-js, .dd-content-js
 	//-!!! они должни вкладиваться в 1 контейнер(+e.item) header стилизируеться от етого контейнера, внутри хедера втавлять что душе угодно
 	+e.item(class=activeClasses)
-		+e.head.dd-head-js=txt
+		+e.head.dd-head-js
+			if badge
+				+e.badge-wrap
+					span.badge(class=badgeClass)= badge
+				.h3=txt
 		+e.content.dd-content-js(class=activeClasses)
 			if block
 				block
