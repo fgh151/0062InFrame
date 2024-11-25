@@ -21,13 +21,23 @@ block pagecontent
 	
 	
 	+parts('header')
-	main
+	main.modal
 		.section.container 
-		+page-head(title,title, title, title , title,title, title, title, title,title, title, title)
+		//- +page-head(title,title, title, title , title,title, title, title, title,title, title, title)
 		.section.container
+			h2 Main page
 			mixin btn(a, t)
 				a( href= a).btn.btn-primary.link-modal-js= t
 			+btn("#modal-question", 'Задать вопрос')
+			+btn("#modal-auth", 'Личный кабинет')
+			+btn("#modal-auth-success", 'Успешная Регистрация')
+			+btn("#modal-mail-confirmed", 'Почта подтверждена!')
+			+btn("#modal-partner", 'Стать партнером')
+			h3 Сброс пароля
+			+btn("#modal-reset-1", 'Сброс пароля 1')
+			+btn("#modal-reset-2", 'Сброс пароля 2')
+			+btn("#modal-reset-info", 'Войти')
+			+btn("#modal-reset-success", 'Пароль успешно изменен')
 		.section.container
 			.col-8
 				+form-wrap

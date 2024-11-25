@@ -17,21 +17,169 @@ mixin modal()
 	// #modal-call
 	div(id="modal-question"  style="display: none" )
 		+b.modal-win
-			+form-wrap
-				//- .text-center
-				//- 	+e.title.form-data.h3 Задать вопрос
-				//- 	p.after-headline Если у вас возник вопрос о Премии, пожалуйста, заполните короткую форму ниже. Наши специалисты свяжутся с вами в ближайшее время
-				//- +input("",'text', 'Ф.И.О.')(required)
-				//- .tabs
-				//- 	.item.tabs__caption.small
-				//- 		.tabs__btn.active По телефону
-				//- 		.tabs__btn Письмом на почту
-				//- 	.tabs__content.active
-				//- 		+input("Введите текст",'text', 'Ваше сообщение')(required)
-				//- 		+input("Ваше телефон",'tel')(required)
-				//- 		+input("Ваше телефон",'tel')(required)
-				//- 		+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить
+			+e.title-wrap.text-center
+				+e.title.form-data.h2 Задать вопрос
+				.after-headline Если у вас возник вопрос о Премии,<br>пожалуйста, заполните короткую форму ниже. Наши специалисты свяжутся с вами в ближайшее время
+			.tabs.tabs-form
+				.form-wrap__input-title.title.small.text-secondary.required Как вы хотите получить консультацию?
+				.item.tabs__caption.small
+					.tabs__btn По телефону
+					.tabs__btn.active Письмом на почту
+				.tabs__content
+					+form-wrap
+						+input("",'text', 'Ф.И.О.')(required)
+						+input("Телефон",'tel',"Телефон")(required)
+						+input("Введите текст",'text', 'Ваше сообщение')(required)
+						.title.text-secondary.small.required Подтвердите, что вы не робот, введите символы с картинки
+						.capture-wrap
+						+policy
+						+e.btn-wrap.text-center: +e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить
+				.tabs__content.active
+					+form-wrap
+						+input("",'text', 'Ф.И.О.')(required)
+						+input("PM@mail.ru",'email',"Почта")(required)
+							.error-feedback.text.text-indigo Пожалуйста, указывайте только почтовый адрес с доменом .ru
+						+input("Введите текст",'text', 'Ваше сообщение')(required)
+						.title.text-secondary.small.required Подтвердите, что вы не робот, введите символы с картинки
+						.capture-wrap
+						+policy
+						+e.btn-wrap.text-center: +e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить
 	// #modal-call
+	div(id="modal-auth"  style="display: none" )
+		+b.modal-win
+			.tabs.tabs-auth
+				.item.tabs__caption
+					.tabs__btn.active Войти
+					.tabs__btn Зарегистрироваться
+				.tabs__content.active
+					+e.title-wrap.text-center
+						.after-headline Авторизуйтесь и управляйте заявками в личном кабинете — номинируйте проекты, сохраняйте черновики и редактируйте их #[span до 11 июля].
+					+form-wrap
+						+input("PM@mail.ru",'email',"Почта")(required).is-invalid
+						+input('Заполните поле', 'password', 'Пароль')(required).is-invalid
+							+b.btn-toggle-type-input--js
+								+icon("eye-off")
+						+e.forgot-passw: a(href="#") Не помню пароль
+						+e.bottom-wrap.text-center
+							.error-feedback.text-indigo.text.small Пожалуйста, укажите данные для входа.
+							+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Войти
+				.tabs__content
+					+e.title-wrap.text-center
+						.after-headline.smaller Создание личного кабинета — ваш первый шаг к подаче заявки.
+					+form-wrap
+						+input("Заполните поле",'text', 'Фамилия')(required)
+						+input("Заполните поле",'text', 'Имя')(required)
+						+input("Заполните поле",'text', 'Отчество')(required)
+						+input("PM@mail.ru",'email',"Почта")(required)
+							.error-feedback.text.text-indigo Пожалуйста, указывайте только почтовый адрес с доменом .ru
+						.tabs.tabs-form.tabs-form--phone
+							.item.tabs__caption.small
+								.tabs__btn Рабочий телефон
+								.tabs__btn Мобильный телефон
+							.tabs__content.active
+								+e.tel-wrap.row
+									+e.col.col: +input("+7 (___) ___-__-__",'tel',"Телефон")(required)
+									+e.col.col-sm-auto: +input("Доб.",'text').additional
+							.tabs__content
+								+input("+7 (___) ___-__-__",'tel',"Телефон")(required)
+						//- +e.radio-wrap.small
+						//- 	+in-c('radio', 'Рабочий телефон')
+						//- 	+in-c('radio', 'Мобильный телефон')
+						+input("Заполните поле",'text', 'Ваша организация')(required)
+							.error-feedback.text.text-indigo Пожалуйста, указывайте организацию, от которой вы подаете заявку на участие в премии
+						+input("_ _ _ _ _ _ _ _ _ _",'text', 'ИНН организации').mask-firm(required)
+						+input("Заполните поле",'text', 'Должность')(required)
+						+policy
+						+e.bottom-wrap.text-center
+							+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Войти
+	div(id="modal-auth-success"  style="display: none" )
+		+b.modal-win
+			+e.img-top-wrap.text-center: +img(src="img/svg/success.svg", alt="")
+			+e.title-wrap.text-center
+				.h5 Благодарим за интерес к HR-премии Правительства Москвы «В кадре»!
+				p Пожалуйста, подтвердите регистрацию в письме, которое мы отправили вам на почту.
+	div(id="modal-mail-confirmed"  style="display: none" )
+		+b.modal-win
+			+e.img-top-wrap.smaller.text-center: +img(src="img/svg/success.svg", alt="")
+			+e.title-wrap.text-center
+				+e.title.form-data.h2 Почта подтверждена!
+				p Вы создали личный кабинет участника HR-премии Правительства Москвы «В кадре». Пожалуйста, войдите с логином и паролем, который указали при регистрации.
+			+form-wrap
+				+input("PM@mail.ru",'email',"Почта")(required).is-invalid
+				+input('Заполните поле', 'password', 'Пароль')(required).is-invalid
+					+b.btn-toggle-type-input--js
+						+icon("eye-off")
+				+e.forgot-passw: a(href="#") Не помню пароль
+				+e.bottom-wrap.text-center
+					.error-feedback.text-indigo.text.small Почта или пароль указаны неверно.
+					+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Войти
+
+	div(id="modal-partner"  style="display: none" )
+		+b.modal-win
+			+e.title-wrap.text-center
+				+e.title.form-data.h2 Стать партнером премии
+				.after-headline Пожалуйста, оставьте контактные данные —<br>мы свяжемся с вами в ближайшее время.
+			+form-wrap
+				+input("Заполните поле",'text', 'Ф.И.О.')(required)
+				+input("PM@mail.ru",'email',"Почта")(required)
+				+input("+7 (___) ___-__-__",'tel',"Телефон")(required)
+				+input("Заполните поле",'text', 'Ваша организация*')(required)
+				.title.text-secondary.small.required Подтвердите, что вы не робот, введите символы с картинки
+				.capture-wrap
+				+policy
+				+e.btn-wrap.text-center: +e.BUTTON.btn.btn.btn-primary(type="submit"  ) Войти
+
+	//- Пароль
+	div(id="modal-reset-1"  style="display: none" )
+		+b.modal-win
+			+e.back-link(href='#'): +icon('arr-back')
+			+e.title-wrap.text-center
+				+e.title.form-data.h2 Сброс пароля
+				p Пожалуйста, укажите почту, с которой вы создавали личный кабинет.
+			+form-wrap
+				+input("PM@mail.ru",'email',"Почта")
+				+e.bottom-wrap.text-center
+					+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Войти
+
+	div(id="modal-reset-2"  style="display: none" )
+		+b.modal-win
+			+e.title-wrap.text-center
+				+e.title.form-data.h2 Сброс пароля
+				p Установите новый пароль для своего<br>личного&nbsp;кабинета. 
+			+form-wrap
+				+input('Заполните поле', 'password', 'Придумайте пароль')(required).is-invalid
+					+b.btn-toggle-type-input--js
+						+icon("eye-off")
+				+input('Заполните поле', 'password', 'Повторите пароль')(required).is-invalid
+					+b.btn-toggle-type-input--js
+						+icon("eye-off")
+				+e.bottom-wrap.text-center
+					.error-feedback.text-indigo.text.small Пароли не совпадают
+					+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Войти
+
+	div(id="modal-reset-info"  style="display: none" )
+		+b.modal-win
+			+e.back-link(href='#'): +icon('arr-back')
+			+e.img-top-wrap.text-center: +img(src="img/svg/success.svg", alt="")
+			+e.title-wrap.text-center
+				.h5 Мы направили на почту #[span PM@mail.ru] письмо с дальнейшими инструкциями для сброса пароля.
+
+	div(id="modal-reset-success"  style="display: none" )
+		+b.modal-win
+			+e.img-top-wrap.smaller.text-center: +img(src="img/svg/success.svg", alt="")
+			+e.title-wrap.text-center
+				+e.title.form-data.h2 Пароль успешно изменен
+				p Вы можете авторизоваться на сайте Премии с&nbsp;новым&nbsp;паролем.
+			+form-wrap
+				+input("PM@mail.ru",'email',"Почта")(required).is-invalid
+				+input('Заполните поле', 'password', 'Пароль')(required).is-invalid
+					+b.btn-toggle-type-input--js
+						+icon("eye-off")
+				+e.forgot-passw: a(href="#") Не помню пароль
+				+e.bottom-wrap.text-center
+					.error-feedback.text-indigo.text.small Почта или пароль указаны неверно.
+					+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Войти
+
 
 	
 	// end modals

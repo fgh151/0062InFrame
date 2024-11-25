@@ -91,6 +91,20 @@ function eventHandler() {
     // },
 	});
 
+  $(".btn-toggle-type-input").click(function(){
+    let icon = $(this).find("svg.icon use")
+    let iconId = $(this).find("svg.icon use").attr("xlink:href").split("#")[1];
+
+
+    const opt = {
+      'eye-off':  ['eye','password'],
+      'eye':  ['eye-off','text'],
+    }
+    $(this).parent().find("input").attr("type", opt[iconId][1]);
+    icon.attr("xlink:href",`img/svg/sprite.svg#${opt[iconId][0]}`)
+  })
+
+
   /* hide btn after scroll main page */
   // const firstSectionHeight = document.querySelector('.headerBlock')
 

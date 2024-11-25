@@ -190,6 +190,20 @@ class JSCCommon {
 		Inputmask({mask: "+9(999)999-99-99", showMaskOnHover: false}).mask(
 			InputTel
 		);
+
+    
+		let InputFirm = [].slice.call(
+			document.querySelectorAll('input.mask-firm')
+		);
+		InputFirm.forEach(element =>
+			element.setAttribute(
+				"pattern",
+				"[0-9]"
+			)
+		);
+		Inputmask({mask: "9999999999", showMaskOnHover: false}).mask(
+			InputFirm
+		);
 	}
 	// /inputMask
 	static sendForm() {

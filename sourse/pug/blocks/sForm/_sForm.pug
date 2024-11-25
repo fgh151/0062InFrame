@@ -10,7 +10,7 @@ mixin sForm()
 					+img(src="img/sForm-bg.png", alt="").img.d-none.d-lg-block
 				+e.col.col-lg-6
 					.title.text-secondary.required Как вы хотите получить консультацию?
-					.tabs
+					.tabs.tabs-form
 						.item.tabs__caption.small
 							.tabs__btn.active По телефону
 							.tabs__btn Письмом на почту
@@ -29,7 +29,6 @@ mixin sForm()
 							+form-wrap
 								+input("Ваше Ф.И.О.",'text')(required)
 								+input("Адрес вашей почты",'email')(required)
-									.text.text-indigo.small Пожалуйста, указывайте только почтовый адрес с доменом .ru
 								+input("Напишите сообщение",'textarea')
 								.title.text-secondary.required Введите символы с картинки
 								.capture-wrap

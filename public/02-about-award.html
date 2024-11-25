@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Modals page </title>
+		<title>Главная</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
@@ -23,48 +23,148 @@
 			}
 		</script>
 	</head>
-	<body class="main-page">
+	<body class="О премии">
 		<div class="main-wrapper">
-			<script>addBlock(`header`)</script>
-			<div id="headerWrap"></div>
-			<main class="modal">
-				<div class="section container"> </div>
-				<div class="section container">
-					<h2>Main page</h2><a class="btn btn-primary link-modal-js" href="#modal-question">Задать вопрос</a><a class="btn btn-primary link-modal-js" href="#modal-auth">Личный кабинет</a><a class="btn btn-primary link-modal-js" href="#modal-auth-success">Успешная Регистрация</a><a class="btn btn-primary link-modal-js" href="#modal-mail-confirmed">Почта подтверждена!</a><a class="btn btn-primary link-modal-js" href="#modal-partner">Стать партнером</a>
-					<h3>Сброс пароля</h3><a class="btn btn-primary link-modal-js" href="#modal-reset-1">Сброс пароля 1</a><a class="btn btn-primary link-modal-js" href="#modal-reset-2">Сброс пароля 2</a><a class="btn btn-primary link-modal-js" href="#modal-reset-info">Войти</a><a class="btn btn-primary link-modal-js" href="#modal-reset-success">Пароль успешно изменен</a>
-				</div>
-				<div class="section container">
-					<div class="col-8">
-						<div class="form-wrap">
-							<form>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="input"/>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group custom-select-wrap">
-									<select class="form-wrap__input form-select custom-select-js" name="select" data-placeholder="select">
-										<option value="select">select</option>
-										<option value="select1">select1</option>
-										<option value="select2">select2</option>
-										<option value="select3">select3</option>
-										<option value="select4">select4</option>
-									</select>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group custom-select-wrap">
-									<select class="form-wrap__input form-select custom-select-js" name="select" data-placeholder="select" multiple="multiple">
-										<option value="select">select</option>
-										<option value="select1">select1</option>
-										<option value="select2">select2</option>
-										<option value="select3">select3</option>
-										<option value="select4">select4</option>
-									</select>
-								</div>
-								<!-- +e.input-wrap-->
-								<button class="btn btn-primary" type="submit">submit</button>
-							</form>
+			<script>addBlock(`header-main`)</script>
+			<div id="header-mainWrap"></div>
+			<main>
+				<!-- start sRules-->
+				<section class="sRules section" id="sRules">
+					<div class="container">
+						<div class="section-title">
+							<h2>Правила</h2>
+							<div class="text-large">Узнайте все о самом масштабном ежегодном событии HR-отрасли в госсекторе.</div>
+						</div>
+						<div class="sRules__row row">
 						</div>
 					</div>
-				</div>
+				</section>
+				<!-- end sRules-->
+				<!-- start sForm-->
+				<section class="sForm section" id="sForm">
+					<div class="container">
+						<div class="inner-wrapper inner-wrapper_white">
+							<div class="sForm__row row">
+								<div class="sForm__col col-lg-6"> 
+									<div class="section-title">
+										<h2>Связаться с нами</h2>
+										<div class="text-large">Расскажем, как заполнить и подать заявку, проконсультируем по проекту и ответим на все вопросы</div>
+									</div><img class="img d-none d-lg-block" src="img/sForm-bg.png" alt="" loading="lazy"/>
+								</div>
+								<div class="sForm__col col-lg-6">
+									<div class="title text-secondary required">Как вы хотите получить консультацию?</div>
+									<div class="tabs tabs-form">
+										<div class="item tabs__caption small">
+											<div class="tabs__btn active">По телефону</div>
+											<div class="tabs__btn">Письмом на почту</div>
+										</div>
+										<div class="tabs__content active">
+											<div class="form-wrap">
+												<form>
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Ваше Ф.И.О." required="required"/>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Телефон" required="required"/>
+														<div class="text text-indigo small">Если вы вписываете рабочий телефон с добавочным номером, укажите его в поле ниже.</div>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Напишите сообщение"></textarea>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="title text-secondary required">Введите символы с картинки</div>
+													<div class="capture-wrap"></div>
+													<div class="form-wrap__policy">
+														<div class="small text text-secondary">Нажимая на кнопку, я соглашаюсь с <a href="#"> условиями обработки персональных данных</a></div>
+													</div>
+													<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
+													</button>
+												</form>
+											</div>
+										</div>
+										<div class="tabs__content">
+											<div class="form-wrap">
+												<form>
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Ваше Ф.И.О." required="required"/>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="Адрес вашей почты" required="required"/>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Напишите сообщение"></textarea>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="title text-secondary required">Введите символы с картинки</div>
+													<div class="capture-wrap"></div>
+													<div class="form-wrap__policy">
+														<div class="small text text-secondary">Нажимая на кнопку, я соглашаюсь с <a href="#"> условиями обработки персональных данных</a></div>
+													</div>
+													<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
+													</button>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sForm-->
+				<!-- start sContent-->
+				<section class="sContent section" id="sContent2">
+					<div class="container">
+						<div class="section-title">
+							<h2>Полезные материалы</h2>
+						</div>
+						<div class="sContent__row row">
+							<div class="sContent__col col-lg-6">
+								<a class="card-material" href="#">
+									<div class="card-material__text text-large">Положение о Премии
+									</div>
+									<svg class="icon icon-arr-next ">
+										<use xlink:href="img/svg/sprite.svg#arr-next"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="sContent__col col-lg-6">
+								<a class="card-material" href="#">
+									<div class="card-material__text text-large">Положение об экспертной комиссии и жюри
+									</div>
+									<svg class="icon icon-arr-next ">
+										<use xlink:href="img/svg/sprite.svg#arr-next"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="sContent__col col-lg-6">
+								<a class="card-material" href="#">
+									<div class="card-material__text text-large">Чек-лист участника
+									</div>
+									<svg class="icon icon-arr-next ">
+										<use xlink:href="img/svg/sprite.svg#arr-next"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="sContent__col col-lg-6">
+								<a class="card-material" href="#">
+									<div class="card-material__text text-large">Презентация Премии
+									</div>
+									<svg class="icon icon-arr-next ">
+										<use xlink:href="img/svg/sprite.svg#arr-next"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="sContent__col col-lg-6">
+								<a class="card-material" href="#">
+									<div class="card-material__text text-large">Политика<br>Конфиденциальности
+									</div>
+									<svg class="icon icon-arr-next ">
+										<use xlink:href="img/svg/sprite.svg#arr-next"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
 			<script>addBlock(`footer`)</script>
 			<div id="footerWrap"></div>

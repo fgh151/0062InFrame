@@ -1,0 +1,25 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sRules/_sRules.pug
+include ../blocks/sContent/_sContent.pug
+ 
+
+block variables
+	- let  mainPage= 'О премии' 
+	- let  bg= null
+
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header-main')
+	main
+		+sRules
+		+sForm()
+		+sContent2
+		
+	+parts('footer')

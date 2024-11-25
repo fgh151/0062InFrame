@@ -6,9 +6,11 @@
 			@include roww(20px);
 			flex-wrap: wrap;
       margin-left: 10px;
+      
+      justify-content: center;
 		}
 		@include media-breakpoint-up(xxl) {
-      margin-left: 18%;
+      // margin-left: 18%;
       gap: rem(2);
     }
 	}
