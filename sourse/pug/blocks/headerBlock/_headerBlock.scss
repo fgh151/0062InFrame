@@ -18,7 +18,7 @@
 
   background: var(--header-block-bg);
   color: $white;
-	min-height: 100vh;
+	height: 100vh;
 	--sPB: #{rem(0)};
   @include media-breakpoint-up(lg) {
     max-height: rem(800);
