@@ -141,10 +141,15 @@
       height: 150%;
       transform: rotate(10deg);
       background: var(--bg-before);
+      @include mt;
       @include media-breakpoint-up(lg) {
         left: -20%;
       }
     }
+  }
+
+  &:hover::before {
+    left: -10% !important;
   }
 
   .img {
