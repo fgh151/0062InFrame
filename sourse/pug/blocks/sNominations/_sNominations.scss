@@ -93,6 +93,7 @@
 } // end.sNominations
 
 .nomination-card {
+  @include mt;
   .h3 {
     max-width: 90%;
     @include media-breakpoint-up(lg) {

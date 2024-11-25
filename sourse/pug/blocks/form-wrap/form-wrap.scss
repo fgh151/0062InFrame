@@ -67,7 +67,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.form-group:has(input[required]) {
+.sForm .form-group:has(input[required]) {
     position: relative;
     &:after {
       content: '*';

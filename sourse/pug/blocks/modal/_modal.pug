@@ -15,6 +15,23 @@ mixin modal()
 				+policy()
 				+policy()
 	// #modal-call
+	div(id="modal-question"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				//- .text-center
+				//- 	+e.title.form-data.h3 Задать вопрос
+				//- 	p.after-headline Если у вас возник вопрос о Премии, пожалуйста, заполните короткую форму ниже. Наши специалисты свяжутся с вами в ближайшее время
+				//- +input("",'text', 'Ф.И.О.')(required)
+				//- .tabs
+				//- 	.item.tabs__caption.small
+				//- 		.tabs__btn.active По телефону
+				//- 		.tabs__btn Письмом на почту
+				//- 	.tabs__content.active
+				//- 		+input("Введите текст",'text', 'Ваше сообщение')(required)
+				//- 		+input("Ваше телефон",'tel')(required)
+				//- 		+input("Ваше телефон",'tel')(required)
+				//- 		+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить
+	// #modal-call
 
 	
 	// end modals

@@ -47,7 +47,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 162%;
+    width: 145%;
     height: 100%;
     z-index: -1;
     // -webkit-background-size: cover;
@@ -56,10 +56,13 @@
     background-repeat: no-repeat;
     border-top-left-radius: rem(32);
     @include media-breakpoint-up(lg) {
-      width: 152%;
+      width: 122%;
       border-top-left-radius: rem(64);
-
     }
+
+    // @include media-breakpoint-up(xxl) {
+    //   width: 152%;
+    // }
   }
 
 	@include media-breakpoint-up(xl) {}

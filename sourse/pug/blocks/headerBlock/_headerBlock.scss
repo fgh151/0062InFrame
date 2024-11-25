@@ -6,6 +6,7 @@
   @include media-breakpoint-up(lg) {
     --sTPB: #{rem(40)};
     --sPB: #{rem(40)};
+    --sPT: #{rem(142)};
   }
   @include media-breakpoint-up(xxl) {
     --sPT: #{rem(180)};
@@ -18,6 +19,10 @@
   background: var(--header-block-bg);
   color: $white;
 	min-height: 100vh;
+	--sPB: #{rem(0)};
+  @include media-breakpoint-up(lg) {
+    max-height: rem(800);
+  }
 	// min-height: calc(var(--vh, 1vh) * 100);
 
 	&__row{
@@ -163,6 +168,15 @@
     --bs-btn-font-size: 16px;
   }
 }
+.vertical-move.btn-wr--js {
+  
+	@include media-breakpoint-down(xl) {
+    transform: translateY(150%);
+    &.show-btn {
+      transform: translateY(0);
+    }
+  }
+}
 
 .btn-wr--js {
   opacity: 0;
@@ -186,7 +200,7 @@
 
   --q-width: 44px;
   font-size: 24px;
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xl) {
     --q-width: 72px;
     font-size: 40px;
     right: rem(40);
