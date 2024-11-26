@@ -59,13 +59,16 @@
 
   .btn-reset {
     font-size: rem(16);
+    line-height: 1;
     @include media-breakpoint-up(md) {
       background: $gray-400;
+      padding: rem(12) rem(22);
       border-radius: 32px;
+      font-size: rem(14);
+      line-height: 1;
     }
     @include media-breakpoint-up(lg) {
       font-size: rem(24px);
-      padding: rem(12) rem(24);
     }
   }
 
@@ -150,7 +153,7 @@
       display: none;
     }
     @include media-breakpoint-up(md) {
-      display: block;
+      display: block !important;
     }
   }
 
