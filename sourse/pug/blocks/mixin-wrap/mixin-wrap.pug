@@ -51,3 +51,10 @@ mixin gradientBtn(text)
 		span=text
 			if block
 				block
+
+mixin juryCard(name, text, i)
+	+b.jury-card&attributes(attributes)
+		+e.img-wrap: +img(`img/jury-${i}.png`).gray-filter
+		+e.content
+			+e.name!= name
+			+e.text!= text

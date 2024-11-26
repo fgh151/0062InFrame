@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Жюри, эксперты</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">  
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<!-- start sJuryPage-->
+				<section class="sJuryPage section" id="sJuryPage">
+					<div class="container"><svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position: absolute;">
+<defs>
+<clipPath id="custom-clip-path" clipPathUnits="objectBoundingBox">
+<path d="M1 1L0.31 1C0.26 1 0.21 0.9 0.18 0.74L0.13 0.26C0.09 0.1 0.03 -0.003 0 -0.003L-2.8 -0.003C-2.9 -0.003 -3 -0.25 -3 -0.55L-3 -30.25C-3 -31 -2.9 -31.4 -2.8 -31.4L0.82 -31.4C0.92 -31.4 1 -31 1 -30.25L1 1Z"/>
+</clipPath>
+</defs>
+</svg>
+						<div class="tabs">
+							<div class="tabs__caption">
+								<div class="tabs__btn h2 active">Жюри</div>
+								<div class="tabs__btn h2">Эксперты</div>
+							</div>
+							<div class="tabs__content active">
+								<div class="sJuryPage__text"> 
+									<div class="text-large">Для специальной номинации «В кадре» мы сформировали команду признанных экспертов…</div>
+									<div class="text-large">Жюри внимательно изучат топ проектов финалистов в каждой номинации, которых отберут эксперты. Члены комиссии будут ориентироваться на….</div>
+								</div>
+							</div>
+							<div class="tabs__content">
+								<div class="sJuryPage__text"> 
+									<div class="text-large">Главная задача экспертов — объективно оценить проекты участников и сформировать топ-40 финалистов (по 5 в каждой номинации), которые поборются за победу в номинациях.</div>
+									<div class="text-large">Организаторы могут обратиться к следующим в рейтинге за финалистами участникам, если при формировании топ-40 один или несколько проектов не смогут продолжить борьбу за победу в своей номинации.</div>
+								</div>
+							</div>
+						</div>
+						<div class="jury-card jury-card--gradient">
+							<div class="jury-card__img-wrap"><img class="gray-filter" src="img/jury-1.png" alt="" loading="lazy"/>
+							</div>
+							<div class="jury-card__content">
+								<div class="jury-card__name">Тина<br>Канделаки
+								</div>
+								<div class="jury-card__text">Управляющий директор «Газпром-медиа Развлекательное телевидение»
+								</div>
+							</div>
+						</div>
+						<div class="jury-card jury-card--white">
+							<div class="jury-card__img-wrap"><img class="gray-filter" src="img/jury-1.png" alt="" loading="lazy"/>
+							</div>
+							<div class="jury-card__content">
+								<div class="jury-card__name">Тина<br>Канделаки
+								</div>
+								<div class="jury-card__text">Управляющий директор «Газпром-медиа Развлекательное телевидение»
+								</div>
+							</div>
+						</div>
+						<div class="sJuryPage__row row">
+						</div>
+					</div>
+				</section>
+				<!-- end sJuryPage-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<!--  start modals-->
+		<div id="modal-call" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+							</div>
+							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+						</div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Ваше Имя" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Ваше телефон" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Ваше телефон" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn" type="submit">submit
+						</button>
+						<div class="form-wrap__policy">
+							<div class="small text text-secondary">Нажимая на кнопку, я соглашаюсь с <a href="#"> условиями обработки персональных данных</a></div>
+						</div>
+						<div class="form-wrap__policy">
+							<div class="small text text-secondary">Нажимая на кнопку, я соглашаюсь с <a href="#"> условиями обработки персональных данных</a></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-question" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__title-wrap text-center">
+					<div class="modal-win__title form-data h2">Задать вопрос
+					</div>
+					<div class="after-headline">Если у вас возник вопрос о Премии,<br>пожалуйста, заполните короткую форму ниже. Наши специалисты свяжутся с вами в ближайшее время</div>
+				</div>
+				<div class="tabs tabs-form">
+					<div class="form-wrap__input-title title small text-secondary required">Как вы хотите получить консультацию?</div>
+					<div class="item tabs__caption small">
+						<div class="tabs__btn">По телефону</div>
+						<div class="tabs__btn active">Письмом на почту</div>
+					</div>
+					<div class="tabs__content">
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title small text-secondary">Ф.И.О.</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="" required="required"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title small text-secondary">Телефон</span><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Телефон" required="required"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title small text-secondary">Ваше сообщение</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Введите текст" required="required"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="title text-secondary small required">Подтвердите, что вы не робот, введите символы с картинки</div>
+								<div class="capture-wrap"></div>
+								<div class="form-wrap__policy">
+									<div class="small text text-secondary">Нажимая на кнопку, я соглашаюсь с <a href="#"> условиями обработки персональных данных</a></div>
+								</div>
+								<div class="form-wrap__btn-wrap text-center">
+									<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="tabs__content active">
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title small text-secondary">Ф.И.О.</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="" required="required"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title small text-secondary">Почта</span><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/>
+										<div class="error-feedback text text-indigo">Пожалуйста, указывайте только почтовый адрес с доменом .ru</div>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title small text-secondary">Ваше сообщение</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Введите текст" required="required"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="title text-secondary small required">Подтвердите, что вы не робот, введите символы с картинки</div>
+								<div class="capture-wrap"></div>
+								<div class="form-wrap__policy">
+									<div class="small text text-secondary">Нажимая на кнопку, я соглашаюсь с <a href="#"> условиями обработки персональных данных</a></div>
+								</div>
+								<div class="form-wrap__btn-wrap text-center">
+									<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-auth" style="display: none">
+			<div class="modal-win">
+				<div class="tabs tabs-auth">
+					<div class="item tabs__caption">
+						<div class="tabs__btn active">Войти</div>
+						<div class="tabs__btn">Зарегистрироваться</div>
+					</div>
+					<div class="tabs__content active">
+						<div class="modal-win__title-wrap text-center">
+							<div class="after-headline">Авторизуйтесь и управляйте заявками в личном кабинете — номинируйте проекты, сохраняйте черновики и редактируйте их <span>до 11 июля</span>.</div>
+						</div>
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title small text-secondary">Почта</span><input class="form-wrap__input form-control is-invalid" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title small text-secondary">Пароль</span><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/>
+										<div class="btn-toggle-type-input btn-toggle-type-input--js">
+											<svg class="icon icon-eye-off ">
+												<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+											</svg>
+										</div>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__forgot-passw"><a href="#">Не помню пароль</a>
+								</div>
+								<div class="form-wrap__bottom-wrap text-center">
+									<div class="error-feedback text-indigo text small">Пожалуйста, укажите данные для входа.</div>
+									<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="tabs__content">
+						<div class="modal-win__title-wrap text-center">
+							<div class="after-headline smaller">Создание личного кабинета — ваш первый шаг к подаче заявки.</div>
+						</div>
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title small text-secondary">Фамилия</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title small text-secondary">Имя</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title small text-secondary">Отчество</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title small text-secondary">Почта</span><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/>
+										<div class="error-feedback text text-indigo">Пожалуйста, указывайте только почтовый адрес с доменом .ru</div>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="tabs tabs-form tabs-form--phone">
+									<div class="item tabs__caption small">
+										<div class="tabs__btn">Рабочий телефон</div>
+										<div class="tabs__btn">Мобильный телефон</div>
+									</div>
+									<div class="tabs__content active">
+										<div class="form-wrap__tel-wrap row">
+											<div class="form-wrap__col col">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title small text-secondary">Телефон</span><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="form-wrap__col col-sm-auto">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control additional" inputmode="text" name="text" type="text" placeholder="Доб."/>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+										</div>
+									</div>
+									<div class="tabs__content">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title small text-secondary">Телефон</span><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title small text-secondary">Ваша организация</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/>
+										<div class="error-feedback text text-indigo">Пожалуйста, указывайте организацию, от которой вы подаете заявку на участие в премии</div>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title small text-secondary">ИНН организации</span><input class="form-wrap__input form-control mask-firm" inputmode="text" name="text" type="text" placeholder="_ _ _ _ _ _ _ _ _ _" required="required"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title small text-secondary">Должность</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__policy">
+									<div class="small text text-secondary">Нажимая на кнопку, я соглашаюсь с <a href="#"> условиями обработки персональных данных</a></div>
+								</div>
+								<div class="form-wrap__bottom-wrap text-center">
+									<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-auth-success" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__img-top-wrap text-center"><img src="img/svg/success.svg" alt="" loading="lazy"/>
+				</div>
+				<div class="modal-win__title-wrap text-center">
+					<div class="h5">Благодарим за интерес к HR-премии Правительства Москвы «В кадре»!</div>
+					<p>Пожалуйста, подтвердите регистрацию в письме, которое мы отправили вам на почту.</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-mail-confirmed" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__img-top-wrap smaller text-center"><img src="img/svg/success.svg" alt="" loading="lazy"/>
+				</div>
+				<div class="modal-win__title-wrap text-center">
+					<div class="modal-win__title form-data h2">Почта подтверждена!
+					</div>
+					<p>Вы создали личный кабинет участника HR-премии Правительства Москвы «В кадре». Пожалуйста, войдите с логином и паролем, который указали при регистрации.</p>
+				</div>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title small text-secondary">Почта</span><input class="form-wrap__input form-control is-invalid" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title small text-secondary">Пароль</span><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/>
+								<div class="btn-toggle-type-input btn-toggle-type-input--js">
+									<svg class="icon icon-eye-off ">
+										<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+									</svg>
+								</div>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__forgot-passw"><a href="#">Не помню пароль</a>
+						</div>
+						<div class="form-wrap__bottom-wrap text-center">
+							<div class="error-feedback text-indigo text small">Почта или пароль указаны неверно.</div>
+							<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="modal-partner" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__title-wrap text-center">
+					<div class="modal-win__title form-data h2">Стать партнером премии
+					</div>
+					<div class="after-headline">Пожалуйста, оставьте контактные данные —<br>мы свяжемся с вами в ближайшее время.</div>
+				</div>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title small text-secondary">Ф.И.О.</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title small text-secondary">Почта</span><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title small text-secondary">Телефон</span><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title small text-secondary">Ваша организация*</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="title text-secondary small required">Подтвердите, что вы не робот, введите символы с картинки</div>
+						<div class="capture-wrap"></div>
+						<div class="form-wrap__policy">
+							<div class="small text text-secondary">Нажимая на кнопку, я соглашаюсь с <a href="#"> условиями обработки персональных данных</a></div>
+						</div>
+						<div class="form-wrap__btn-wrap text-center">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="modal-reset-1" style="display: none">
+			<div class="modal-win">
+				<a class="modal-win__back-link" href="#">
+					<svg class="icon icon-arr-back ">
+						<use xlink:href="img/svg/sprite.svg#arr-back"></use>
+					</svg>
+				</a>
+				<div class="modal-win__title-wrap text-center">
+					<div class="modal-win__title form-data h2">Сброс пароля
+					</div>
+					<p>Пожалуйста, укажите почту, с которой вы создавали личный кабинет.</p>
+				</div>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title small text-secondary">Почта</span><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__bottom-wrap text-center">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="modal-reset-2" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__title-wrap text-center">
+					<div class="modal-win__title form-data h2">Сброс пароля
+					</div>
+					<p>Установите новый пароль для своего<br>личного&nbsp;кабинета. </p>
+				</div>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title small text-secondary">Придумайте пароль</span><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/>
+								<div class="btn-toggle-type-input btn-toggle-type-input--js">
+									<svg class="icon icon-eye-off ">
+										<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+									</svg>
+								</div>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title small text-secondary">Повторите пароль</span><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/>
+								<div class="btn-toggle-type-input btn-toggle-type-input--js">
+									<svg class="icon icon-eye-off ">
+										<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+									</svg>
+								</div>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__bottom-wrap text-center">
+							<div class="error-feedback text-indigo text small">Пароли не совпадают</div>
+							<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="modal-reset-info" style="display: none">
+			<div class="modal-win">
+				<a class="modal-win__back-link" href="#">
+					<svg class="icon icon-arr-back ">
+						<use xlink:href="img/svg/sprite.svg#arr-back"></use>
+					</svg>
+				</a>
+				<div class="modal-win__img-top-wrap text-center"><img src="img/svg/success.svg" alt="" loading="lazy"/>
+				</div>
+				<div class="modal-win__title-wrap text-center">
+					<div class="h5">Мы направили на почту <span>PM@mail.ru</span> письмо с дальнейшими инструкциями для сброса пароля.</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-reset-success" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__img-top-wrap smaller text-center"><img src="img/svg/success.svg" alt="" loading="lazy"/>
+				</div>
+				<div class="modal-win__title-wrap text-center">
+					<div class="modal-win__title form-data h2">Пароль успешно изменен
+					</div>
+					<p>Вы можете авторизоваться на сайте Премии с&nbsp;новым&nbsp;паролем.</p>
+				</div>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title small text-secondary">Почта</span><input class="form-wrap__input form-control is-invalid" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title small text-secondary">Пароль</span><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/>
+								<div class="btn-toggle-type-input btn-toggle-type-input--js">
+									<svg class="icon icon-eye-off ">
+										<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+									</svg>
+								</div>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__forgot-passw"><a href="#">Не помню пароль</a>
+						</div>
+						<div class="form-wrap__bottom-wrap text-center">
+							<div class="error-feedback text-indigo text small">Почта или пароль указаны неверно.</div>
+							<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- end modals-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/select2/js/select2.min.js"> </script>
+		<script src="libs/select2/js/i18n/ru.js"> </script>
+		<script src="libs/gsap/gsap.min.js"></script>
+		<script src="libs/gsap/ScrollTrigger.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

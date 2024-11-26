@@ -1,10 +1,10 @@
 // start .sRules
 .sRules {
-	--sPT: var(--header-height);
+	--sPT: 0;
 	--sPB: #{rem(30)};
 	// --sTPB: #{rem()};
   @include media-breakpoint-up(md) {
-    --sPT: calc(var(--header-height) + 70px);
+    --sPT: 70px;
 	  --sTPB: #{rem(42)};
     h2 {
       margin-bottom: rem(20);

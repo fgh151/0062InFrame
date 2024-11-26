@@ -120,9 +120,13 @@ main .section:last-child {
     --sPB: #{rem(190)};
   }
 }
+
+main .section:first-child:not(.headerBlock) {
+  margin-top: var(--header-height);
+}
+
 main {
 	flex-grow: 1;
-  // margin-top: var(--header-height);
 	@include media-breakpoint-up(xl) {
     border-radius: 0 0 rem(80) rem(80);
     position: relative;

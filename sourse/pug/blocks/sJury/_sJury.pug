@@ -26,10 +26,3 @@ mixin sJury(data)
 					.swiper-slide: +juryCard('Ксения<br>Власова', 'Директор международного направления, Банк Первый', '3').--white
 	// end sJury
 
-
-mixin juryCard(name, text, i)
-	+b.jury-card&attributes(attributes)
-		+e.img-wrap: +img(`img/jury-${i}.png`).gray-filter
-		+e.content
-			+e.name!= name
-			+e.text!= text
