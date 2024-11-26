@@ -6,6 +6,7 @@
      left: 0;
      width: 100%;
      z-index: 999;
+     min-height: var(--header-height);
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

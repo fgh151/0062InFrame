@@ -25,16 +25,45 @@
 	</head>
 	<body class="main-page">
 		<div class="main-wrapper">
-			<script>addBlock(`header-main`)</script>
-			<div id="header-mainWrap"></div>
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
 			<main>
 				<!-- start sRules-->
 				<section class="sRules section" id="sRules">
 					<div class="container">
-						<div class="section-title">
-							<h2>Правила</h2>
-							<div class="text-large">Узнайте все о самом масштабном ежегодном событии HR-отрасли в госсекторе.</div>
-						</div><span class="badge text-bg-light">Вознаграждение и победители</span>
+						<div class="sRules__flex-top">
+							<div class="sRules__wrap">
+								<div class="sRules__top-btns d-md-none">
+									<button class="btn btn-reset btn-sm">Сбросить фильтр</button>
+									<button class="sRules__filter-btn btn btn-link btn-sm text-purple filter-btn-js"><span>Смотреть все</span><span>
+											<svg class="icon icon-x ">
+												<use xlink:href="img/svg/sprite.svg#x"></use>
+											</svg></span>
+									</button>
+								</div>
+								<div class="sidebar--js">
+									<div class="sRules__filters row">
+										<div class="col-auto"><a href="#" style="--bg-active: #007567;">Кто может участвовать</a></div>
+										<div class="col-auto"><a class="active" href="#" style="--bg-active: #FF9C27">Номинации и критерии</a></div>
+										<div class="col-auto"><a href="#" style="--bg-active: #0098E3;">Подача заявок</a></div>
+										<div class="col-auto"><a class="active" href="#" style="--bg-active: #8031FF;">Этапы премии</a></div>
+										<div class="col-auto"><a href="#" style="--bg-active: #EFE8FF; color: black;">Система судейства</a></div>
+										<div class="col-auto"><a href="#" style="--bg-active: #D70A3F;">Вознаграждение и победители</a></div>
+										<div class="col-auto"><a href="#" style="--bg-active: #007567;">Положение и полезные материалы</a></div>
+										<div class="col-auto d-none d-md-block">
+											<button class="btn btn-reset btn-sm">Сбросить фильтр</button>
+										</div>
+									</div>
+								</div>
+								<div class="sRules__selected-filters d-md-none">
+									<div class="badge text-bg-warning">Номинации и критерии</div>
+								</div>
+							</div>
+							<div class="section-title">
+								<h2>Правила</h2>
+								<div class="text-large">Узнайте все о самом масштабном ежегодном событии HR-отрасли в госсекторе.</div>
+							</div>
+						</div>
 						<div class="dd-group dd-group-js">
 							<div class="dd-group__item active">
 								<div class="dd-group__head dd-head-js">

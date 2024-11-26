@@ -122,6 +122,7 @@ main .section:last-child {
 }
 main {
 	flex-grow: 1;
+  // margin-top: var(--header-height);
 	@include media-breakpoint-up(xl) {
     border-radius: 0 0 rem(80) rem(80);
     position: relative;

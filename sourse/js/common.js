@@ -91,6 +91,13 @@ function eventHandler() {
     // },
 	});
 
+  $('.filter-btn-js').click(function () {
+    $(this).toggleClass('active');
+    $('.sidebar--js').slideToggle(function () {
+      $(this).toggleClass('active');
+    });
+  });
+
   $(".btn-toggle-type-input").click(function(){
     let icon = $(this).find("svg.icon use")
     let iconId = $(this).find("svg.icon use").attr("xlink:href").split("#")[1];

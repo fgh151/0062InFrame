@@ -25,6 +25,9 @@
 		// margin-left: 0;
 		// margin-right: 0;
 		padding: 0;
+    &.active a {
+      text-decoration: underline;
+    }
 	}
 	a {
 		display: block;
@@ -38,9 +41,6 @@
     @include mt;
 
     // &:hover,
-    &.active {
-      text-decoration: underline;
-    }
 	}
 }
 

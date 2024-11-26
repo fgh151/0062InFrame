@@ -2,10 +2,27 @@ mixin sRules(data)
 	// start sRules
 	+b.SECTION.sRules.section#sRules&attributes(attributes)
 		.container
-			+b.section-title
-				h2 Правила
-				.text-large Узнайте все о самом масштабном ежегодном событии HR-отрасли в госсекторе.
-			span.badge.text-bg-light Вознаграждение и победители
+			+e.flex-top
+				+e.wrap
+					+e.top-btns.d-md-none
+						button.btn.btn-reset.btn-sm Сбросить фильтр
+						+e.filter-btn.BUTTON.btn.btn-link.btn-sm.text-purple.filter-btn-js
+							span Смотреть все
+							span: +icon('x')
+					.sidebar--js: +e.filters.row
+						.col-auto: a(href="#", style="--bg-active: #007567;") Кто может участвовать
+						.col-auto: a.active(href="#", style="--bg-active: #FF9C27") Номинации и критерии
+						.col-auto: a(href="#", style="--bg-active: #0098E3;") Подача заявок
+						.col-auto: a.active(href="#", style="--bg-active: #8031FF;") Этапы премии
+						.col-auto: a(href="#", style="--bg-active: #EFE8FF; color: black;") Система судейства
+						.col-auto: a(href="#", style="--bg-active: #D70A3F;") Вознаграждение и победители
+						.col-auto: a(href="#", style="--bg-active: #007567;") Положение и полезные материалы
+						.col-auto.d-none.d-md-block: button.btn.btn-reset.btn-sm Сбросить фильтр
+					+e.selected-filters.d-md-none
+						.badge.text-bg-warning Номинации и критерии
+				+b.section-title
+					h2 Правила
+					.text-large Узнайте все о самом масштабном ежегодном событии HR-отрасли в госсекторе.
 			+ddGroup
 				+ddGroupItem('Кто может подать заявку на участие в премии?', 'Кто может участвовать', 'text-bg-success', 'active')
 					.text-large Номинировать проекты могут сотрудники или команды из федеральных государственных органов, органов государственной власти субъектов Российской Федерации, органов местного самоуправления и подведомственных им организаций, которые успешно реализовали проекты в сфере управления персоналом.

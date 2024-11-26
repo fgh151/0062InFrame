@@ -28,7 +28,10 @@ mixin top-nav(main)
 				.col.order-lg-0
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
-							+mnu()
+							if main
+								+mnu(true)
+							if !main
+								+mnu(false)
 							.menu-wrap.d-xl-none
 								+e.btns-wrap
 									+e.btn.btn.btn-outline-light.small(href='#') Личный кабинет
