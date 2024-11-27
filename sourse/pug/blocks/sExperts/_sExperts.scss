@@ -86,7 +86,9 @@
 
 .person-card {
 	height: 100%;
-  width: rem(184);
+  &:not(.person-card--horiz) {
+    width: rem(184);
+  }
 	img {
 		max-width: 100%;
 	}
@@ -120,6 +122,36 @@
 	&__text {
     line-height: 120%;
 	}
+
+  &--horiz {
+    display: flex;
+    gap: rem(12);
+
+    --img-w: 90px;
+    @include media-breakpoint-up(md) {
+      gap: rem(16);
+      --img-w: 120px;
+    }
+
+    .person-card {
+
+      &__img-wrap {
+        flex-shrink: 0;
+        height: var(--img-w);
+        width: var(--img-w);
+        margin-bottom: 0;
+      }
+
+      &__name {
+        margin-bottom: rem(8);
+      }
+
+      &__content {
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
 }
 
 

@@ -58,3 +58,13 @@ mixin juryCard(name, text, i)
 		+e.content
 			+e.name!= name
 			+e.text!= text
+
+
+mixin expertCard(name, text, i)
+	+b.person-card&attributes(attributes)
+		+e.img-wrap.text-center
+			if i
+				+img(`img/expert-${i}.png`).gray-filter
+		+e.content
+			+e.name!= name
+			+e.text!= text
