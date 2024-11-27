@@ -18,6 +18,16 @@ mixin sJuryPage(data)
 						+e.text 
 							.text-large Для специальной номинации «В кадре» мы сформировали команду признанных экспертов…
 							.text-large Жюри внимательно изучат топ проектов финалистов в каждой номинации, которых отберут эксперты. Члены комиссии будут ориентироваться на….
+					+e.wrap
+						+e.item.item-nomin--js: +juryCardExtend('Тина Канделаки', '1')
+						+e.item.item-nomin--js: +juryCardExtend('Ксения Власова', '1')
+						+e.item.item-nomin--js: +juryCardExtend('Виктор Смородинов', '2')
+						+e.item.item-nomin--js: +juryCardExtend('Ксения Власова', '1')
+						+e.item.item-nomin--js: +juryCardExtend('Виктор Смородинов', '2')
+						+e.item.item-nomin--js: +juryCardExtend('Виктор Смородинов', '2')
+						+e.item.item-nomin--js: +juryCardExtend('Ксения Власова', '1')
+						+e.item.item-nomin--js: +juryCardExtend('Виктор Смородинов', '2')
+						+e.item.item-nomin--js: +juryCardExtend('Ксения Власова', '1')
 				.tabs__content
 					+e.content-wrap
 						+e.text 
@@ -38,20 +48,21 @@ mixin sJuryPage(data)
 						+expertCard('Ксения<br>Власова', 'Директор международного направления, Банк Первый', '2').--horiz
 						+expertCard('Виктор<br>Смородинов', 'Директор международного направления, Банк Первый', '3').--horiz
 						+expertCard('Виктор<br>Смородинов', 'Директор международного направления, Банк Первый', '4').--horiz
-			+juryCardExtend('Тина<br>Канделаки', '1').--purple
+
 
 	// end sJuryPage
 
 
 mixin juryCardExtend(name, i)
-	+b.jury-card&attributes(attributes)
-		+e.img-wrap
-			+img(`img/jury-${i}.png`)
+	+b.jury-card-content&attributes(attributes)
 		+e.content
 			+icon('arrowUpRight')
-			+e.name!= name
+			.h3 Тина<br>Канделаки
+			+e.img-wrap: +img(`img/jury-c-${i}.png`).img
+	+b.jury-card-content--hide
 		+e.content
 			+icon('x')
-			+e.name-t!= name
-			+e.text.small Начальник Управления кадровых сервисов Правительства Москвы, заслуженный работник государственной службы Российской Федерации, кандидат экономических наук, член Экспертного совета по вопросам развития системы государственного управления при Правительстве Российской Федерации
+			.h4= name
+			+e.descr.small Начальник Управления кадровых сервисов Правительства Москвы, заслуженный работник государственной службы Российской Федерации, кандидат экономических наук, член Экспертного совета по вопросам развития системы государственного управления при Правительстве Российской Федерации
 			p «Мы, так же как и вы, стремимся формировать лучшую систему поддержки для своих команд. Мы знаем, что динамика, скорость, актуальность»
+

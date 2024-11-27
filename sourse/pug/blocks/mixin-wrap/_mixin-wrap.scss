@@ -160,6 +160,10 @@
   @include media-breakpoint-up(xl) {
     width: auto;
   }
+  
+  .content {
+    padding: rem(24);
+  }
 
   &__img-wrap {
 		margin-bottom: rem(14);
@@ -203,45 +207,4 @@
     }
   }
 
-  &--purple {
-    img {
-      @include mt;
-      filter: grayscale(1);
-      @include media-breakpoint-down(md) {
-        position: static;
-      }
-    }
-
-    &:hover {
-      img {
-        filter: grayscale(0);
-      }
-
-      .jury-card {
-        &__img-wrap {
-          background: linear-gradient(180deg, #7e2fff 0%, #d9bcff 100%);
-        }
-      }
-    }
-
-    .jury-card {
-      &__img-wrap {
-        @include mt;
-        border-radius: 0 0 22px 0;
-        background: linear-gradient(180deg, #8134fe 0%, #b176ff 100%);
-      }
-    }
-
-    .icon {
-      fill: none;
-      stroke-width: 3px;
-      stroke: white;
-      stroke-linecap: round;
-      font-size: rem(24);
-    }
-
-    .icon-x {
-      stroke: $body-color;
-    }
-  }
 }
