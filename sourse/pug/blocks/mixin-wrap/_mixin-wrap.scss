@@ -48,6 +48,9 @@ ul.page-numbers {
 	.page-numbers {
 		padding: rem(8) rem(10);
 		font-size: rem(18);
+    @include media-breakpoint-up(md) {
+      font-size: rem(20);
+    }
 		&:hover {
 			color: $black;
 		}
@@ -59,6 +62,12 @@ ul.page-numbers {
 
   li:last-child {
     margin-left: rem(20);
+  }
+
+  .icon {
+    @include media-breakpoint-up(md) {
+      font-size: rem(32);
+    }
   }
 }
 
