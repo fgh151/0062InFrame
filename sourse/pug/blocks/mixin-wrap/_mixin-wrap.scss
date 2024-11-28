@@ -35,6 +35,32 @@
 }
 
 
+ul.page-numbers {
+	display: flex;
+	// gap: rem(6);
+  margin-bottom: 0;
+	justify-content: center;
+  align-items: center;
+	list-style-type: none;
+	.page-numbers:not(.current) {
+		color: #b6b6b6;
+	}
+	.page-numbers {
+		padding: rem(8) rem(10);
+		font-size: rem(18);
+		&:hover {
+			color: $black;
+		}
+	}
+
+  li:first-child {
+    margin-right: rem(20);
+  }
+
+  li:last-child {
+    margin-left: rem(20);
+  }
+}
 
 
 .addBlock{
