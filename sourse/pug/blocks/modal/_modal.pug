@@ -57,7 +57,7 @@ mixin modal()
 					+form-wrap
 						+input("PM@mail.ru",'email',"Почта")(required).is-invalid
 						+input('Заполните поле', 'password', 'Пароль')(required).is-invalid
-							+b.btn-toggle-type-input--js
+							+b.btn-toggle-type-input--js(data-href="")
 								+icon("eye-off")
 						+e.forgot-passw: a(href="#") Не помню пароль
 						+e.bottom-wrap.text-center
@@ -107,7 +107,7 @@ mixin modal()
 			+form-wrap
 				+input("PM@mail.ru",'email',"Почта")(required).is-invalid
 				+input('Заполните поле', 'password', 'Пароль')(required).is-invalid
-					+b.btn-toggle-type-input--js
+					+b.btn-toggle-type-input--js(data-href="")
 						+icon("eye-off")
 				+e.forgot-passw: a(href="#") Не помню пароль
 				+e.bottom-wrap.text-center
@@ -148,10 +148,10 @@ mixin modal()
 				p Установите новый пароль для своего<br>личного&nbsp;кабинета. 
 			+form-wrap
 				+input('Заполните поле', 'password', 'Придумайте пароль')(required).is-invalid
-					+b.btn-toggle-type-input--js
+					+b.btn-toggle-type-input--js(data-href="")
 						+icon("eye-off")
 				+input('Заполните поле', 'password', 'Повторите пароль')(required).is-invalid
-					+b.btn-toggle-type-input--js
+					+b.btn-toggle-type-input--js(data-href="")
 						+icon("eye-off")
 				+e.bottom-wrap.text-center
 					.error-feedback.text-indigo.text.small Пароли не совпадают
@@ -173,7 +173,7 @@ mixin modal()
 			+form-wrap
 				+input("PM@mail.ru",'email',"Почта")(required).is-invalid
 				+input('Заполните поле', 'password', 'Пароль')(required).is-invalid
-					+b.btn-toggle-type-input--js
+					+b.btn-toggle-type-input--js(data-href="")
 						+icon("eye-off")
 				+e.forgot-passw: a(href="#") Не помню пароль
 				+e.bottom-wrap.text-center
