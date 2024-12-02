@@ -35,6 +35,41 @@
 }
 
 
+ul.page-numbers {
+	display: flex;
+	// gap: rem(6);
+  margin-bottom: 0;
+	justify-content: center;
+  align-items: center;
+	list-style-type: none;
+	.page-numbers:not(.current) {
+		color: #b6b6b6;
+	}
+	.page-numbers {
+		padding: rem(8) rem(10);
+		font-size: rem(18);
+    @include media-breakpoint-up(md) {
+      font-size: rem(20);
+    }
+		&:hover {
+			color: $black;
+		}
+	}
+
+  li:first-child {
+    margin-right: rem(20);
+  }
+
+  li:last-child {
+    margin-left: rem(20);
+  }
+
+  .icon {
+    @include media-breakpoint-up(md) {
+      font-size: rem(32);
+    }
+  }
+}
 
 
 .addBlock{
@@ -152,4 +187,59 @@
   &:hover:before {
     opacity: 1;
   }
+}
+
+
+.jury-card {
+  width: rem(270);
+  @include media-breakpoint-up(xl) {
+    width: auto;
+  }
+  
+  .content {
+    padding: rem(24);
+  }
+
+  &__img-wrap {
+		margin-bottom: rem(14);
+    position: relative;
+    height: rem(240);
+    &:before {
+      content: '';
+      position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+      height: 100%;
+
+      --card-bord: #{rem(56)};
+      background: var(--bg-before);
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  
+	img {
+		max-width: 100%;
+    max-height: 100%;
+	}
+	&__name {
+    line-height: 120%;
+    font-size: rem(28px);
+    margin-bottom: rem(8);
+    @include media-breakpoint-up(xl) {
+      font-size: rem(32px);
+    }
+	}
+
+  &__text {
+    @include media-breakpoint-up(xl) {
+      font-size: rem(20px);
+    }
+  }
+
 }

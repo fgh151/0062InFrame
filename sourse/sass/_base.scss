@@ -114,11 +114,22 @@ main .section:last-child {
   background: $body-bg;
 	@include media-breakpoint-up(xl) {
     border-radius: 0 0 rem(80) rem(80);
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      height: 130px;
+      width: 100vw;
+      background: inherit;
+      border-radius: inherit;
+    }
   }
 	--sPB: #{rem(60)};
   @include media-breakpoint-up(lg) {
     --sPB: #{rem(190)};
   }
+
 }
 
 main .section:first-child:not(.headerBlock) {
@@ -131,11 +142,11 @@ main {
     border-radius: 0 0 rem(80) rem(80);
     position: relative;
     z-index: 1;
-  
+
 		&:before, &:after {
 			content: '';
 			position: absolute;
-			z-index: -1;
+			z-index: -2;
       bottom: -1px;
 			height: 130px;
 			width: 200px;
@@ -151,6 +162,7 @@ main {
 		}
   }
 }
+
 
 
 

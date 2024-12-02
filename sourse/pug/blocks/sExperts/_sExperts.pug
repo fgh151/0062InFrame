@@ -18,12 +18,6 @@ mixin sExperts(data)
 					.swiper-slide: +expertCard('Виктор Смородинов', 'Директор международного направления, Банк Первый', '2')
 	// end sExperts
 
-mixin expertCard(name, text, i)
-	+b.person-card
-		+e.img-wrap.text-center: +img(`img/expert-${i}.png`).gray-filter
-		+e.content
-			+e.name!= name
-			+e.text!= text
 
 mixin sExperts2(data)
 	// start sExperts
@@ -43,17 +37,19 @@ mixin sExperts2(data)
 							.text-large Стать партнером премии
 							+e.btn.btn.btn-light.small.link-modal-js(href='#modal-partner') Связаться с нами
 			+e.additional-partners.row
-				+e.col.col-lg-4.col-xl
+				+e.col.col-lg-4.col-xl-2
 					+partnerCard('Стратегический информационный партнер', 4).--white
-				+e.col.col-lg-4.col-xl
+				+e.col.col-lg-4.col-xl-2
 					+partnerCard('Стратегический<br>партнер', 4).--white
-				+e.col.col-lg-4.col-xl
+				+e.col.col-lg-4.col-xl-2
 					+partnerCard('Стратегический<br>партнер', 4).--white
-				+e.col.col-lg-4.col-xl
+				+e.col.col-lg-4.col-xl-2
 					+partnerCard('Стратегический информационный партнер', 4).--white
-				+e.col.col-lg-4.col-xl
+				+e.col.col-lg-4.col-xl-2
 					+partnerCard('Стратегический<br>партнер', 4).--white
-				+e.col.col-lg-4.col-xl
+				+e.col.col-lg-4.col-xl-2
+					+partnerCard('Стратегический<br>партнер', 4).--white
+				+e.col.col-lg-4.col-xl-2
 					+partnerCard('Стратегический<br>партнер', 4).--white
 
 	// end sExperts

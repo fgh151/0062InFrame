@@ -58,3 +58,25 @@ mixin juryCard(name, text, i)
 		+e.content
 			+e.name!= name
 			+e.text!= text
+
+
+mixin expertCard(name, text, i)
+	+b.person-card&attributes(attributes)
+		+e.img-wrap.text-center
+			if i
+				+img(`img/expert-${i}.png`).gray-filter
+		+e.content
+			+e.name!= name
+			+e.text!= text
+
+
+mixin blogCard(img, title, text, date)
+	+b.A.blog-card(href='#')&attributes(attributes)
+		+e.content
+			if img
+				+e.img-wrap
+					+img(`img/${img}.png`, 'bg')
+			+e.title.fw-500!= title
+			+e.text!= text
+		+e.footer
+			+e.date.fw-500!= date

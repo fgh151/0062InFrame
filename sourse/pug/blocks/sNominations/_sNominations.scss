@@ -36,24 +36,6 @@
     &:nth-child(3) {
       border-radius:  0 0 0 var(--card-bord);
     }
-
-    .nomination-card--hide {
-      opacity: var(--op);
-      visibility: hidden;
-      --op: 0;
-    }
-
-    &.active {
-      .nomination-card--hide {
-        --op: 1;
-        visibility: visible;
-      }
-
-      .nomination-card:not(.nomination-card--hide) {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
 	}
 
 	&__grid {

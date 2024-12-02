@@ -1,0 +1,23 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sArticle/_sArticle.pug
+include ../blocks/sContent/_sContent.pug
+ 
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Статья'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+sArticle()
+		
+	+parts('footer')

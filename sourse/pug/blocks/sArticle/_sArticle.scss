@@ -1,0 +1,111 @@
+// start .sArticle
+.sArticle {
+	--sPT: #{rem(50)};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+
+	@include media-breakpoint-up(md) {
+    --sPT: #{rem(70)};
+  }
+	@include media-breakpoint-up(lg) {
+    --sPT: #{rem(86)};
+    --sTPB: #{rem(52)};
+  }
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: #{rem(40)};
+	}
+
+	.section-title{
+		&__date {
+      letter-spacing: -0.05em;
+      font-size: rem(20px);
+      margin-bottom: rem(20);
+      @include media-breakpoint-up(lg) {
+        margin-bottom: rem(10);
+      }
+    }
+	}
+  .h1 {
+    @include media-breakpoint-down(sm) {
+      font-size: rem(30);
+    }
+  }
+  p {
+    line-height: 1.37;
+    @include media-breakpoint-up(lg) {
+      font-size: rem(20);
+      margin-bottom: rem(26);
+    }
+  }
+
+	&__aside {
+		display: flex;
+    flex-direction: column;
+	}
+
+	&__title {
+    .h5 {
+      line-height: 140%;
+      @include media-breakpoint-down(sm) {
+        font-size: rem(20);
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(40);
+      .h5 {
+        margin-bottom: 0;
+      }
+    }
+	}
+
+  .blog-card__text {
+    opacity: .7;
+  }
+
+  .blog-card {
+    height: auto;
+    min-height: auto;
+    margin-bottom: rem(18);
+    @include media-breakpoint-up(md) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  .link-next {
+    color: $secondary;
+    text-decoration: underline;
+    font-size: rem(20px);
+  }
+
+  .btn-gradient {
+    border-radius: 8px;
+    --bs-btn-padding-x: #{rem(24)};
+    @include media-breakpoint-down(md) {
+      --bs-btn-font-size: #{rem(16)};
+      --bs-btn-padding-y: #{rem(14)};
+      --bs-btn-padding-x: #{rem(10)};
+      width: 100%;
+      line-height: 1;
+      .icon {
+        font-size: rem(24);
+        margin-left: rem(10);
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: rem(24);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sArticle
