@@ -6,6 +6,10 @@
 2. <https://megafronteam.github.io/0062InFrame/04-article-2.html>
 4. <https://megafronteam.github.io/0062InFrame/05-news.html>
 
+#### Cabinet
+1. <https://megafronteam.github.io/0062InFrame/06-auth-success.html>
+1. <https://megafronteam.github.io/0062InFrame/06-auth-apply.html>
+
 
 #### In progress
 1. <https://megafronteam.github.io/0062InFrame/00-modal.html>

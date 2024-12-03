@@ -5,6 +5,13 @@
 		{"name":"Новости", "url":"#"},
 		{"name":"Партнеры", "url":"#sPartners"} 
 	],
+	"cabinetNav":[
+		{	"name":"Подать заявку", "url":"#"},
+		{	"name":"Мои заявки", "url":"#"},
+		{ "name":"Правила", "url":"#"},
+		{"name":"Профиль", "url":"#"},
+		{"name":"На главную", "url":""} 
+	],
 	"social":[
 		"fb","instagram","telegram"
 	],

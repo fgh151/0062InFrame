@@ -27,7 +27,7 @@
   color: $white;
 	position: relative;
 	@include media-breakpoint-up(lg) {
-		background: $body-bg;
+		background: var(--bg, $body-bg);
 	}
 	.container {
 		position: relative;

@@ -16,4 +16,15 @@ mixin mnu(main)
 							a(href=link.url itemprop="url")= link.name
 
 
+mixin mnuCabinet()
+	nav
+		ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+
+			each link in cabinetNav
+				if link.name == "Подать заявку"
+					li.menu-item.gradient(itemprop="item")
+						a(href=link.url itemprop="url")= link.name
+				else
+					li.menu-item(itemprop="item")
+						a(href=link.url itemprop="url")= link.name
 //- menu

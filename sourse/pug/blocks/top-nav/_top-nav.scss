@@ -51,6 +51,83 @@
   //   line-height: 1;
   // }
 
+  &--cabinet {
+    box-shadow: 0 2px 12px 0 rgba(125, 42, 250, 0.15);
+    background: #fff;
+    .menu-mobile {
+      @include media-breakpoint-down(xl) {
+        background: $white;
+        box-shadow: 0 2px 12px 0 rgba(125, 42, 250, 0.15);
+      }
+    }
+
+    a {
+      color: $body-color;
+    }
+    .menu {
+      justify-content: flex-end;
+      @include media-breakpoint-up(lg) {
+        column-gap: rem(33);
+        margin-right: rem(4);
+        a {
+          font-size: rem(16);
+        }
+      }
+    }
+    .toggle-menu-mobile {
+      --color: #{$primary};
+    }
+    .toggle-menu-mobile.on span:before,
+    .toggle-menu-mobile.on span:after {
+      --color: #{$primary};
+  }
+  .row {
+    @include media-breakpoint-down(sm) {
+    --bs-gutter-x: #{rem(10)};
+    }
+  }
+
+    .top-nav {
+      &__logo {
+        display: flex;
+        align-items: center;
+        gap: rem(8);
+        line-height: 110%;
+        @include media-breakpoint-down(sm) {
+          .logo-text {
+            font-size: rem(10);
+            line-height: 100%;
+          }
+          img {
+            max-width: 22vw;
+          }
+        }
+      }
+
+      &__cabinet-nav {
+        .icon {
+          fill: none;
+        }
+
+        .icon-exit {
+          stroke-width: 2px;
+          stroke: $secondary;
+          margin-left: rem(12);
+          @include media-breakpoint-up(sm) {
+            margin-left: rem(44);
+          }
+        }
+      }
+    }
+  }
+
+  .menu-item.gradient {
+    background: linear-gradient(148deg, #5400b7 0%, #0098e3 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
 
 
 	@include media-breakpoint-up(sm) {}
