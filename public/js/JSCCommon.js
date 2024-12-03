@@ -18,6 +18,11 @@ class JSCCommon {
 		Fancybox.defaults.autoFocus = false;
 		Fancybox.defaults.placeFocusBack = false;
 
+    Fancybox.bind("[data-fancybox]", {
+      autoFocus: false,
+      placeFocusBack: false,
+    });
+
 		Fancybox.bind(link, {
 			arrows: false,
 			// // infobar: false,
@@ -310,6 +315,14 @@ class JSCCommon {
 			}
 		});
 	}
+
+  static setCustomScrollbar() {
+		$(".custom-scroll").mCustomScrollbar({
+			theme: "minimal-dark",
+			alwaysShowScrollbar: true,
+		});
+	}
+
 	static getCurrentYear(el) {
 		let now = new Date();
 		let currentYear = document.querySelector(el);
@@ -438,6 +451,7 @@ class JSCCommon {
 		this.disabledBtn();
 		this.customSelect();
 		this.setScreen();
+		this.setCustomScrollbar();
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 		JSCCommon.animateScroll();
 

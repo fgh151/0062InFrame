@@ -8,7 +8,8 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">  
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+		<link href="libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<script>
 			function addBlock(elem) {
@@ -42,13 +43,37 @@
 									<div class="h5 fw-500">Это первая всероссийская премия Правительства Москвы</div>
 								</div>
 								<div class="sArticle__item">
+									<div class="sArticle__img-wrap-main"><img class="img-bg" src="img/sArticle-main.png" alt="" loading="lazy"/>
+									</div>
 								</div>
 								<div class="sArticle__item">
 									<p>В минувшие выходные в культурном центре "Арбат" прошла уникальная выставка, которая привлекла внимание как любителей искусства, так и поклонников пушистых хвостатых — "КоШарики шоу". Это мероприятие собрало более 1000 посетителей, став настоящим праздником для всех, кто ценит домашних питомцев, искусство и креативные выставочные проекты.</p>
 									<p>Основная идея выставки заключалась в том, чтобы показать кошек в самых разных формах искусства. Здесь были представлены не только портреты и фотографии животных, но и инсталляции, выполненные из шерсти, ткани и даже металла. Но, пожалуй, самым главным «экспонатом» стали сами пушистики, которые радовали зрителей своими грациозными движениями и игривым поведением.</p>
 									<p>Особенностью "КоШарики шоу" стало то, что на выставке не только показывали искусство, но и знакомили с породами кошек. Посетители могли узнать больше о характерах различных пород, получить рекомендации по уходу за питомцами, а также поучаствовать в мастер-классах по рисованию кошек и созданию игрушек для домашних животных.</p>
 								</div>
-								<div class="sArticle__item">video
+								<div class="sArticle__item">
+									<div class="sArticle__inner-row row">
+										<div class="sArticle__col col-md-6"><a data-fancybox="img" href="img/sNews-img.png">
+												<div class="sArticle__img-wrap"><img class="img-bg" src="img/sNews-img.png" alt="" loading="lazy"/>
+												</div></a>
+										</div>
+										<div class="sArticle__col col-md-6"><a data-fancybox="img" href="img/sNewsPage-img.png">
+												<div class="sArticle__img-wrap"><img class="img-bg" src="img/sNewsPage-img.png" alt="" loading="lazy"/>
+												</div></a>
+										</div>
+									</div>
+								</div>
+								<div class="sArticle__item">
+									<p>В минувшие выходные в культурном центре "Арбат" прошла уникальная выставка, которая привлекла внимание как любителей искусства, так и поклонников пушистых хвостатых — "КоШарики шоу". Это мероприятие собрало более 1000 посетителей, став настоящим праздником для всех, кто ценит домашних питомцев, искусство и креативные выставочные проекты.</p>
+									<p>Основная идея выставки заключалась в том, чтобы показать кошек в самых разных формах искусства. Здесь были представлены не только портреты и фотографии животных, но и инсталляции, выполненные из шерсти, ткани и даже металла. Но, пожалуй, самым главным «экспонатом» стали сами пушистики, которые радовали зрителей своими грациозными движениями и игривым поведением.</p>
+									<p>Особенностью "КоШарики шоу" стало то, что на выставке не только показывали искусство, но и знакомили с породами кошек. Посетители могли узнать больше о характерах различных пород, получить рекомендации по уходу за питомцами, а также поучаствовать в мастер-классах по рисованию кошек и созданию игрушек для домашних животных.</p>
+								</div>
+								<div class="sArticle__item">
+									<div class="sArticle__video-wrap video-wrap">
+										<video class="video img-bg" src="img/video.mp4"></video>
+										<div class="play-wrap"><img src="img/svg/play.svg" alt="" loading="lazy"/>
+										</div>
+									</div>
 								</div>
 								<div class="sArticle__item">
 									<p>Особенностью "КоШарики шоу" стало то, что на выставке не только показывали искусство, но и знакомили с породами кошек. Посетители могли узнать больше о характерах различных пород, получить рекомендации по уходу за питомцами, а также поучаствовать в мастер-классах по рисованию кошек и созданию игрушек для домашних животных.</p>
@@ -58,7 +83,54 @@
 											</svg></span>
 									</a>
 								</div>
-								<div class="sArticle__item">slider
+								<div class="sArticle__item">
+									<div class="sArticle__slider-wrap">
+										<div class="swiper sProdCard-slider-js">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<a class="sArticle__s-img" href="img/sNewsPage-img.png" data-fancybox="sProdCardSlide"><img class="img-bg" loading="lazy" src="img/sNewsPage-img.png" alt=""/>
+													</a>
+												</div>
+												<div class="swiper-slide">
+													<a class="sArticle__s-img" href="img/sNews-img.png" data-fancybox="sProdCardSlide"><img class="img-bg" loading="lazy" src="img/sNews-img.png" alt=""/>
+													</a>
+												</div>
+												<div class="swiper-slide">
+													<a class="sArticle__s-img" href="img/sNewsPage-img.png" data-fancybox="sProdCardSlide"><img class="img-bg" loading="lazy" src="img/sNewsPage-img.png" alt=""/>
+													</a>
+												</div>
+												<div class="swiper-slide">
+													<a class="sArticle__s-img" href="img/sNewsPage-img.png" data-fancybox="sProdCardSlide"><img class="img-bg" loading="lazy" src="img/sNewsPage-img.png" alt=""/>
+													</a>
+												</div>
+												<div class="swiper-slide">
+													<a class="sArticle__s-img" href="img/sNewsPage-img.png" data-fancybox="sProdCardSlide"><img class="img-bg" loading="lazy" src="img/sNewsPage-img.png" alt=""/>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sArticle__thumb-wrap">
+										<div class="swiper sProdCard-thumb-js">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="slide-item-1"><img class="img-bg" loading="lazy" src="img/sNewsPage-img.png" alt=""/></div>
+												</div>
+												<div class="swiper-slide">
+													<div class="slide-item-1"><img class="img-bg" loading="lazy" src="img/sNews-img.png" alt=""/></div>
+												</div>
+												<div class="swiper-slide">
+													<div class="slide-item-1"><img class="img-bg" loading="lazy" src="img/sNewsPage-img.png" alt=""/></div>
+												</div>
+												<div class="swiper-slide">
+													<div class="slide-item-1"><img class="img-bg" loading="lazy" src="img/sNewsPage-img.png" alt=""/></div>
+												</div>
+												<div class="swiper-slide">
+													<div class="slide-item-1"><img class="img-bg" loading="lazy" src="img/sNewsPage-img.png" alt=""/></div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="sArticle__col col-lg-4">
@@ -562,6 +634,7 @@
 		<script src="libs/select2/js/i18n/ru.js"> </script>
 		<script src="libs/gsap/gsap.min.js"></script>
 		<script src="libs/gsap/ScrollTrigger.min.js"> </script>
+		<script src="libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"> </script>
 		<script src="js/JSCCommon.js"></script>
 		<script src="js/common.js"></script>
 	</body>
