@@ -180,6 +180,11 @@ mixin modal()
 					.error-feedback.text-indigo.text.small Почта или пароль указаны неверно.
 					+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Войти
 
+mixin modalMob() 
+	div(id="modal-mob"  style="display: none" )
+		+b.modal-win
+			+e.title-wrap
+				p Рекомендуем заполнять заявку на компьютере для максимального удобства и функциональности.
 
 	
 	// end modals

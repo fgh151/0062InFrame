@@ -1,0 +1,26 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sNewsPage/_sNewsPage.pug
+include ../blocks/sContent/_sContent.pug
+ 
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Личный кабинет'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		section.section
+			mixin btn(a, t)
+				a( href= a).btn.btn-primary.link-modal-js= t
+			+btn("#modal-mob", 'Окно')
+	+modalMob() 
+	+parts('footer')
