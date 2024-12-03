@@ -23,6 +23,10 @@
     padding: rem(50) rem(76);
   }
 
+  &--mob {
+    min-height: 70dvh;
+  }
+
   &__back-link {
     position: absolute;
     top: rem(12);

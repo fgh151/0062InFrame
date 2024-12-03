@@ -182,7 +182,21 @@ function eventHandler() {
   }
 
   if (isMobile() && document.getElementById('modal-mob')) {
-    document.getElementById('modal-mob').style.display = 'block';
+    Fancybox.show([{
+      src: "#modal-mob",
+      type: "inline"
+    }], {
+      touch: false,
+      dragToClose: false,
+      autoFocus: false,
+      trapFocus: false,
+      placeFocusBack: false,
+      groupAll: false,
+      showClass: "fancybox-throwOutUp",
+      hideClass: "fancybox-throwOutDown",
+      compact: false,
+      arrows: false
+    });
   }
 }
 

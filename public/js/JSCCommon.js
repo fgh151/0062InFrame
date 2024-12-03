@@ -71,6 +71,7 @@ class JSCCommon {
 			setValue(data.btn, ".btn");
 			setValue(data.order, ".order");
 		});
+
 	}
 	// /modalCall
 
