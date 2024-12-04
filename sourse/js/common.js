@@ -194,27 +194,27 @@ function eventHandler() {
   }
   }
 
-  function isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  }
+  // function isMobile() {
+  //   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  // }
 
-  if (isMobile() && document.getElementById('modal-mob')) {
-    Fancybox.show([{
-      src: "#modal-mob",
-      type: "inline"
-    }], {
-      touch: false,
-      dragToClose: false,
-      autoFocus: false,
-      trapFocus: false,
-      placeFocusBack: false,
-      groupAll: false,
-      showClass: "fancybox-throwOutUp",
-      hideClass: "fancybox-throwOutDown",
-      compact: false,
-      arrows: false
-    });
-  }
+  // if (isMobile() && document.getElementById('modal-mob')) {
+  //   Fancybox.show([{
+  //     src: "#modal-mob",
+  //     type: "inline"
+  //   }], {
+  //     touch: false,
+  //     dragToClose: false,
+  //     autoFocus: false,
+  //     trapFocus: false,
+  //     placeFocusBack: false,
+  //     groupAll: false,
+  //     showClass: "fancybox-throwOutUp",
+  //     hideClass: "fancybox-throwOutDown",
+  //     compact: false,
+  //     arrows: false
+  //   });
+  // }
 
     /* video*/
     const videoWrap = document.querySelector('.video-wrap')

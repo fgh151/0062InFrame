@@ -13,9 +13,6 @@
 	&__col{
 		
 	}
-	&__item{
-		
-	}
 
   p {
     a {
@@ -93,13 +90,64 @@
     }
   }
 
-  .btn {
+  .btn:not(.btn-sm) {
     font-size: rem(16);
     line-height: 1;
     min-width: rem(238);
     @include media-breakpoint-down(md) {
       width: 100%;
     }
+  }
+
+  /* profile info */
+
+  .profile-info {
+		--bs-gutter-y: var(--bs-gutter-x);
+    @include media-breakpoint-down(md) {
+      --bs-gutter-x: #{rem(26)};
+    }
+  }
+
+  label {
+    width: 100%;
+
+    .profile-info__input-title {
+      display: inline-block;
+      margin-bottom: rem(12);
+    }
+
+    .profile-info__input {
+      background-color: $gray-100;
+      border-color: transparent;
+    }
+  }
+
+	&__item {
+		margin-bottom: rem(26);
+	}
+
+  /* .applies-row */
+  .applies-row {
+		--bs-gutter-y: var(--bs-gutter-x);
+    @include media-breakpoint-down(md) {
+      --bs-gutter-x: #{rem(26)};
+    }
+  }
+
+  .legend-row.row {
+		--bs-gutter-y: var(--bs-gutter-x);
+    @include media-breakpoint-down(md) {
+      --bs-gutter-x: #{rem(26)};
+    }
+  }
+
+  .legend {
+    padding: rem(20) rem(10);
+    @include media-breakpoint-up(md) {
+      padding: rem(20);
+    }
+    border-radius: 16px;
+    background: $gray-100;
   }
 
 	@include media-breakpoint-up(xl) {}
@@ -110,3 +158,163 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sAuth
+
+/* my applies */
+.apply-card {
+  padding: rem(16);
+  border: 1px solid #1d174b;
+  border-radius: 16px;
+  line-height: 1.3;
+  min-height: rem(192);
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: rem(8);
+
+  &__content {
+    max-width: rem(310);
+  }
+
+  &__title {
+    margin-top: rem(4);
+  }
+
+  .row-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(8);
+  }
+
+  &__top {
+    margin-bottom: rem(8);
+    .icon {
+      fill: none;
+      stroke-width: rem(1.3px);
+      stroke: $secondary;
+
+      font-size: rem(22);
+    }
+    .icon-download {
+      stroke-width: rem(2px);
+    }
+  }
+
+  &__link {
+    &:not(:last-child) {
+      margin-right: rem(16);
+    }
+  }
+
+  &__btn {
+    border-radius: 24px;
+    min-width: rem(171);
+    width: max-content;
+    color: white;
+    line-height: 1.2;
+  }
+
+  .btn-primary {
+    --bs-btn-bg: #{$indigo};
+    --bs-btn-border-color: #{$indigo};
+  }
+
+  &--empty {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    border: none;
+    background: white;
+
+    .h5 {
+      background-clip: text;
+      background: $gradient-dark;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      z-index: 5;
+
+      margin: 0;
+      @include media-breakpoint-down(sm) {
+        font-size: rem(19);
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      background: $gradient-dark;
+      border-radius: inherit;
+      z-index: -1;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100%);
+      height: calc(100%);
+      background: white;
+      border-radius: rem(14);
+      z-index: 0;
+    }
+
+    .plus {
+      margin-left: rem(12);
+    }
+
+  }
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  margin-bottom: rem(16);
+
+  @include media-breakpoint-up(md) {
+    gap: rem(18);
+    margin-bottom: rem(8);
+  }
+
+  &:before {
+    @include media-breakpoint-up(sm) {
+    content: '—';
+    }
+    order: 1;
+  }
+
+  &__badge-wrap {
+    min-width: rem(138);
+    @include media-breakpoint-down(sm) {
+      min-width: rem(110);
+      .badge {
+        font-size: rem(11);
+      }
+    }
+  }
+
+  &__text {
+    max-width: rem(328);
+    line-height: 1.3;
+  }
+
+  .icon {
+    fill: none;
+    stroke-width: rem(1.3px);
+    stroke: $secondary;
+
+    font-size: rem(24);
+  }
+  .icon-download {
+    stroke-width: rem(2px);
+  }
+
+}

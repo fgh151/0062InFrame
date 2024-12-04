@@ -37,6 +37,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(32 / #{$h} *1em );
 }
+.icon-edit {
+	$h: 23;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(22 / #{$h} *1em );
+}
 .icon-exit {
 	$h: 23;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
