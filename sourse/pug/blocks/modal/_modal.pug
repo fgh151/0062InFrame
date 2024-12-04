@@ -180,6 +180,84 @@ mixin modal()
 					.error-feedback.text-indigo.text.small Почта или пароль указаны неверно.
 					+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Войти
 
+	//- cabinet
+	div(id="modal-exit"  style="display: none" )
+		+b.modal-win--big
+			+e.title-wrap
+				+e.t.h5 Вы действительно хотите выйти из личного кабинета?
+				p Вам нужно будет авторизоваться повторно.
+			+e.btns-wrap.row
+				+e.col.col-sm-6: +e.btn.btn.btn-outline-primary.modal-close-js(href='#') Нет
+				+e.col.col-sm-6: +e.btn.btn.btn-primary(href='#') Выйти
+	div(id="modal-cancel"  style="display: none" )
+		+b.modal-win--big
+			+e.title-wrap
+				+e.t.h5 Вы не подтвердили изменения в заявке.
+				p Хотите их сохранить?
+			+e.btns-wrap.row
+				+e.col.col-sm-6: +e.btn.btn.btn-outline-primary(href='#') Не сохранять
+				+e.col.col-sm-6: +e.btn.btn.btn-primary(href='#') Войти
+	div(id="modal-cancel-1"  style="display: none" )
+		+b.modal-win--big
+			+e.title-wrap
+				+e.t.h5 Вы уверены, что хотите прервать заполнение заявки?
+				p Мы сохраним все заполненные поля в «черновике» — вы сможете найти его во вкладке «Все заявки» и продолжить заполнение.
+			+e.btns-wrap.row
+				+e.col.col-sm-6: +e.btn.btn.btn-outline-primary(href='#') Сохранить как черновик
+				+e.col.col-sm-6: +e.btn.btn.btn-primary(href='#') Продолжить
+	div(id="modal-cancel-2"  style="display: none" )
+		+b.modal-win--big
+			+e.title-wrap
+				+e.t.h5 Вы не заполнили все обязательные поля
+				p Хотите сохранить черновик заявки и вернуться к заполнению позже?
+			+e.btns-wrap.row
+				+e.col.col-sm-6: +e.btn.btn.btn-outline-primary(href='#') Сохранить как черновик
+				+e.col.col-sm-6: +e.btn.btn.btn-primary(href='#') Продолжить
+	div(id="modal-criteria-1"  style="display: none" )
+		+b.modal-win--big
+			+e.title-wrap
+				+e.t.h5 Требования к презентации
+			+e.content
+				p Допустимый объем текста на одном слайде #[span не более 700 знаков без пробелов.]
+				p Предоставляется в формате PDF или PPT (при наличии интерактивных слайдов).
+				p Объем презентации: от 10 до 15 слайдов. 
+				p Соотношение сторон: 16:9.
+				p #[span Обязательная структура презентации:]
+				ul
+					li 1-2 слайда об организации
+					li 1 слайд о роли заявителя
+					li 1-2 слайда о проблеме
+					li 1-2 слайда идея и суть решения
+					li 1-2 слайда команда, ресурсы
+					li 1-3 слайда план проекта и яркие элементы реализации
+					li 1 слайд количественные результаты
+					li 1 слайд качественные результаты
+					li 1 слайд - дополнительные выгоды
+	div(id="modal-criteria-2"  style="display: none" )
+		+b.modal-win--big
+			+e.title-wrap
+				+e.t.h5 Первичные критерии
+			+e.content
+				p После тех экспертизы. Презентация о проекте
+				p Допустимый объем текста на одном слайде не более 700 зн. без пробелов.
+				p Предоставляется в формате PDF или PPT (при наличии интерактивных слайдов).
+				p Объем презентации – от 10 до 15 слайдов. Соотношение сторон 16:9.
+				p Обязательная структура презентации:
+	div(id="modal-info"  style="display: none" )
+		+b.modal-win--big
+			+img(src="img/svg/modal-bg.svg", alt="").modal-img
+			+e.title-wrap
+				+e.t.h5 Секрет удачного кадра: привлечение
+			+e.content.content-img
+				p Отмечаются проекты, которые помогают привлечь в организацию талантливых сотрудников и сделать это максимально эффективно. 
+				p Поделитесь практическими решениями, которые позволяют привлекать кадры с комфортом как для команды, так и для кандидатов!
+
+
+mixin modalMob() 
+	div(id="modal-mob"  style="display: none" )
+		+b.modal-win--mob
+			+e.title-wrap
+				p Рекомендуем заполнять заявку на компьютере для максимального удобства и функциональности.
 
 	
 	// end modals

@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Modals page </title>
+		<title>Личный кабинет</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
@@ -24,63 +24,70 @@
 			}
 		</script>
 	</head>
-	<body class="main-page">
+	<body class="main-page white-bg">
 		<div class="main-wrapper">
-			<script>addBlock(`header`)</script>
-			<div id="headerWrap"></div>
-			<main class="modal">
-				<div id="modal-mob" style="display: none">
-					<div class="modal-win modal-win--mob">
-						<div class="modal-win__title-wrap">
-							<p>Рекомендуем заполнять заявку на компьютере для максимального удобства и функциональности.</p>
+			<script>addBlock(`header-cabinet`)</script>
+			<div id="header-cabinetWrap"></div>
+			<main>
+				<!-- start sAuth-->
+				<section class="sAuth section">
+					<div class="container">
+						<div class="sAuth__wrap-success text-center">
+							<div class="sAuth__img-top-wrap text-center"><img src="img/svg/success.svg" alt="" loading="lazy"/>
+							</div>
+							<div class="h3">Вы успешно активировали личный кабинет участника премии и можете приступить к подаче заявок!</div>
+							<a class="sAuth__btn btn btn-primary" href="#">Продолжить
+							</a>
 						</div>
 					</div>
-				</div>
-				<!-- end modals-->
-				<div class="section container"> </div>
-				<div class="section container">
-					<h2>Main page</h2><a class="btn btn-primary link-modal-js" href="#modal-question">Задать вопрос</a><a class="btn btn-primary link-modal-js" href="#modal-auth">Личный кабинет</a><a class="btn btn-primary link-modal-js" href="#modal-auth-success">Успешная Регистрация</a><a class="btn btn-primary link-modal-js" href="#modal-mail-confirmed">Почта подтверждена!</a><a class="btn btn-primary link-modal-js" href="#modal-partner">Стать партнером</a>
-					<h3>Сброс пароля</h3><a class="btn btn-primary link-modal-js" href="#modal-reset-1">Сброс пароля 1</a><a class="btn btn-primary link-modal-js" href="#modal-reset-2">Сброс пароля 2</a><a class="btn btn-primary link-modal-js" href="#modal-reset-info">Войти</a><a class="btn btn-primary link-modal-js" href="#modal-reset-success">Пароль успешно изменен</a>
-				</div>
-				<div class="section container">
-					<h2>Cabinet</h2><a class="btn btn-primary link-modal-js" href="#modal-exit">Выйти</a><a class="btn btn-primary link-modal-js" href="#modal-criteria-1">Критерии 1</a><a class="btn btn-primary link-modal-js" href="#modal-criteria-2">Критерии 2</a><a class="btn btn-primary link-modal-js" href="#modal-info">Инфо</a>
-					<h3>Модальное если зашел в моб</h3><a class="btn btn-primary link-modal-js" href="#modal-mob">Окно</a>
-				</div>
-				<div class="section container">
-					<div class="col-8">
-						<div class="form-wrap">
-							<form>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="input"/>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group custom-select-wrap">
-									<select class="form-wrap__input form-select custom-select-js" name="select" data-placeholder="select">
-										<option value="select">select</option>
-										<option value="select1">select1</option>
-										<option value="select2">select2</option>
-										<option value="select3">select3</option>
-										<option value="select4">select4</option>
-									</select>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group custom-select-wrap">
-									<select class="form-wrap__input form-select custom-select-js" name="select" data-placeholder="select" multiple="multiple">
-										<option value="select">select</option>
-										<option value="select1">select1</option>
-										<option value="select2">select2</option>
-										<option value="select3">select3</option>
-										<option value="select4">select4</option>
-									</select>
-								</div>
-								<!-- +e.input-wrap-->
-								<button class="btn btn-primary" type="submit">submit</button>
-							</form>
-						</div>
-					</div>
-				</div>
+				</section>
+				<!-- end sAuth-->
 			</main>
-			<script>addBlock(`footer`)</script>
-			<div id="footerWrap"></div>
+			<footer class="footer section">
+				<div class="container">
+					<div class="footer__row row">
+						<div class="footer__col col-lg-6">
+							<div class="footer__wrap">
+								<div class="footer__logo-wrap"><a href="#"><img src="img/svg/logo-white.svg" alt="" loading="lazy"/></a><a href="#"><img src="img/svg/hr-white.svg" alt="" loading="lazy"/></a>
+								</div>
+								<ul> 
+									<li><a class="link" href="#">Положение о Премии</a></li>
+									<li><a class="link" href="#">Политика обработки персональных данных</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__col col-lg-6">
+							<div class="link-item"> 
+								<div class="link-item__title">Адрес
+								</div><a href="#">Москва, Тверская 13</a>
+							</div>
+							<div class="link-item"> 
+								<div class="link-item__title">Контактный телефон
+								</div><a href="tel:+74959577575">+7 (495) 957-75-75</a>
+							</div>
+							<div class="link-item"> 
+								<div class="link-item__title">Общие вопросы
+								</div><a href="mailto:vkadre@mos.ru">vkadre@mos.ru</a>
+							</div>
+							<div class="link-item"> 
+								<div class="link-item__title">Пиар и партнерство
+								</div><a href="mailto:pr-vkadre@mos.ru">pr-vkadre@mos.ru</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bottom-row row">
+						<div class="footer__col col-lg-6">
+							<div class="footer__copyr small">© 2025 Управление кадровых сервисов Правительства Москвы
+							</div>
+						</div>
+						<div class="footer__col col-lg-6"><a class="small" href="#">Версия для слабовидящих
+								<svg class="icon icon-noun-glasses ">
+									<use xlink:href="img/svg/sprite.svg#noun-glasses"></use>
+								</svg></a>
+						</div>
+					</div>
+				</div>
+			</footer>
 		</div>
 		<!--  start modals-->
 		<div id="modal-call" style="display: none">

@@ -60,6 +60,23 @@ function eventHandler() {
 		freeModeMomentum: true,
 	});
 
+	let prodCardThumb = new Swiper(".sProdCard-thumb-js", {
+		slidesPerView: "auto",
+		spaceBetween: 0,
+	});
+	let prodCardSlider = new Swiper(".sProdCard-slider-js", {
+		slidesPerView: "auto",
+		spaceBetween: 10,
+		thumbs: {
+			swiper: prodCardThumb,
+		},
+		breakpoints: {
+      992: {
+        slidesPerView: 1,
+      }
+    }
+	});
+
   const cardsFlip = document.querySelectorAll('.item-nomin--js')
   if (cardsFlip.length) {
     cardsFlip.forEach(card => {
@@ -176,6 +193,44 @@ function eventHandler() {
     });
   }
   }
+
+  function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
+
+  if (isMobile() && document.getElementById('modal-mob')) {
+    Fancybox.show([{
+      src: "#modal-mob",
+      type: "inline"
+    }], {
+      touch: false,
+      dragToClose: false,
+      autoFocus: false,
+      trapFocus: false,
+      placeFocusBack: false,
+      groupAll: false,
+      showClass: "fancybox-throwOutUp",
+      hideClass: "fancybox-throwOutDown",
+      compact: false,
+      arrows: false
+    });
+  }
+
+    /* video*/
+    const videoWrap = document.querySelector('.video-wrap')
+    if (videoWrap) {
+      videoWrap.addEventListener('click', function() {
+  
+      const video = document.querySelector('.video');
+        if (video.paused) {
+          video.play();
+          video.classList.add('is-playing');
+      } else {
+          video.pause();
+          video.classList.remove('is-playing');
+      }
+      });
+    }
 }
 
 if (document.readyState !== "loading") {

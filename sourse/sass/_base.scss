@@ -96,6 +96,10 @@ body {
 	}
 }
 
+.white-bg {
+  --bg: white;
+  background: var(--bg, $body-bg);
+}
 .main-wrapper { 
 	position: relative;
 	width: 100%;
@@ -111,7 +115,7 @@ body {
 	
 }
 main .section:last-child {
-  background: $body-bg;
+  background: var(--bg, $body-bg);
 	@include media-breakpoint-up(xl) {
     border-radius: 0 0 rem(80) rem(80);
     &:after {

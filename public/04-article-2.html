@@ -8,7 +8,8 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">  
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+		<link href="libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<script>
 			function addBlock(elem) {
@@ -42,13 +43,37 @@
 									<div class="h5 fw-500">Это первая всероссийская премия Правительства Москвы</div>
 								</div>
 								<div class="sArticle__item">
+									<div class="sArticle__img-wrap-main"><img class="img-bg" src="img/sArticle-main.png" alt="" loading="lazy"/>
+									</div>
 								</div>
 								<div class="sArticle__item">
 									<p>В минувшие выходные в культурном центре "Арбат" прошла уникальная выставка, которая привлекла внимание как любителей искусства, так и поклонников пушистых хвостатых — "КоШарики шоу". Это мероприятие собрало более 1000 посетителей, став настоящим праздником для всех, кто ценит домашних питомцев, искусство и креативные выставочные проекты.</p>
 									<p>Основная идея выставки заключалась в том, чтобы показать кошек в самых разных формах искусства. Здесь были представлены не только портреты и фотографии животных, но и инсталляции, выполненные из шерсти, ткани и даже металла. Но, пожалуй, самым главным «экспонатом» стали сами пушистики, которые радовали зрителей своими грациозными движениями и игривым поведением.</p>
 									<p>Особенностью "КоШарики шоу" стало то, что на выставке не только показывали искусство, но и знакомили с породами кошек. Посетители могли узнать больше о характерах различных пород, получить рекомендации по уходу за питомцами, а также поучаствовать в мастер-классах по рисованию кошек и созданию игрушек для домашних животных.</p>
 								</div>
-								<div class="sArticle__item">video
+								<div class="sArticle__item">
+									<div class="sArticle__inner-row row">
+										<div class="sArticle__col col-md-6"><a data-fancybox="img" href="img/sNews-img.png">
+												<div class="sArticle__img-wrap"><img class="img-bg" src="img/sNews-img.png" alt="" loading="lazy"/>
+												</div></a>
+										</div>
+										<div class="sArticle__col col-md-6"><a data-fancybox="img" href="img/sNewsPage-img.png">
+												<div class="sArticle__img-wrap"><img class="img-bg" src="img/sNewsPage-img.png" alt="" loading="lazy"/>
+												</div></a>
+										</div>
+									</div>
+								</div>
+								<div class="sArticle__item">
+									<p>В минувшие выходные в культурном центре "Арбат" прошла уникальная выставка, которая привлекла внимание как любителей искусства, так и поклонников пушистых хвостатых — "КоШарики шоу". Это мероприятие собрало более 1000 посетителей, став настоящим праздником для всех, кто ценит домашних питомцев, искусство и креативные выставочные проекты.</p>
+									<p>Основная идея выставки заключалась в том, чтобы показать кошек в самых разных формах искусства. Здесь были представлены не только портреты и фотографии животных, но и инсталляции, выполненные из шерсти, ткани и даже металла. Но, пожалуй, самым главным «экспонатом» стали сами пушистики, которые радовали зрителей своими грациозными движениями и игривым поведением.</p>
+									<p>Особенностью "КоШарики шоу" стало то, что на выставке не только показывали искусство, но и знакомили с породами кошек. Посетители могли узнать больше о характерах различных пород, получить рекомендации по уходу за питомцами, а также поучаствовать в мастер-классах по рисованию кошек и созданию игрушек для домашних животных.</p>
+								</div>
+								<div class="sArticle__item">
+									<div class="sArticle__video-wrap video-wrap">
+										<video class="video img-bg" src="img/video.mp4"></video>
+										<div class="play-wrap"><img src="img/svg/play.svg" alt="" loading="lazy"/>
+										</div>
+									</div>
 								</div>
 								<div class="sArticle__item">
 									<p>Особенностью "КоШарики шоу" стало то, что на выставке не только показывали искусство, но и знакомили с породами кошек. Посетители могли узнать больше о характерах различных пород, получить рекомендации по уходу за питомцами, а также поучаствовать в мастер-классах по рисованию кошек и созданию игрушек для домашних животных.</p>
@@ -58,7 +83,54 @@
 											</svg></span>
 									</a>
 								</div>
-								<div class="sArticle__item">slider
+								<div class="sArticle__item">
+									<div class="sArticle__slider-wrap">
+										<div class="swiper sProdCard-slider-js">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<a class="sArticle__s-img" href="img/sNewsPage-img.png" data-fancybox="sProdCardSlide"><img class="img-bg" loading="lazy" src="img/sNewsPage-img.png" alt=""/>
+													</a>
+												</div>
+												<div class="swiper-slide">
+													<a class="sArticle__s-img" href="img/sNews-img.png" data-fancybox="sProdCardSlide"><img class="img-bg" loading="lazy" src="img/sNews-img.png" alt=""/>
+													</a>
+												</div>
+												<div class="swiper-slide">
+													<a class="sArticle__s-img" href="img/sNewsPage-img.png" data-fancybox="sProdCardSlide"><img class="img-bg" loading="lazy" src="img/sNewsPage-img.png" alt=""/>
+													</a>
+												</div>
+												<div class="swiper-slide">
+													<a class="sArticle__s-img" href="img/sNewsPage-img.png" data-fancybox="sProdCardSlide"><img class="img-bg" loading="lazy" src="img/sNewsPage-img.png" alt=""/>
+													</a>
+												</div>
+												<div class="swiper-slide">
+													<a class="sArticle__s-img" href="img/sNewsPage-img.png" data-fancybox="sProdCardSlide"><img class="img-bg" loading="lazy" src="img/sNewsPage-img.png" alt=""/>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sArticle__thumb-wrap">
+										<div class="swiper sProdCard-thumb-js">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="slide-item-1"><img class="img-bg" loading="lazy" src="img/sNewsPage-img.png" alt=""/></div>
+												</div>
+												<div class="swiper-slide">
+													<div class="slide-item-1"><img class="img-bg" loading="lazy" src="img/sNews-img.png" alt=""/></div>
+												</div>
+												<div class="swiper-slide">
+													<div class="slide-item-1"><img class="img-bg" loading="lazy" src="img/sNewsPage-img.png" alt=""/></div>
+												</div>
+												<div class="swiper-slide">
+													<div class="slide-item-1"><img class="img-bg" loading="lazy" src="img/sNewsPage-img.png" alt=""/></div>
+												</div>
+												<div class="swiper-slide">
+													<div class="slide-item-1"><img class="img-bg" loading="lazy" src="img/sNewsPage-img.png" alt=""/></div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="sArticle__col col-lg-4">
@@ -554,7 +626,135 @@
 				</div>
 			</div>
 		</div>
-		<!-- end modals-->
+		<div id="modal-exit" style="display: none">
+			<div class="modal-win modal-win--big">
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">Вы действительно хотите выйти из личного кабинета?
+					</div>
+					<p>Вам нужно будет авторизоваться повторно.</p>
+				</div>
+				<div class="modal-win__btns-wrap row">
+					<div class="modal-win__col col-sm-6">
+						<a class="modal-win__btn btn btn-outline-primary modal-close-js" href="#">Нет
+						</a>
+					</div>
+					<div class="modal-win__col col-sm-6">
+						<a class="modal-win__btn btn btn-primary" href="#">Выйти
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-cancel" style="display: none">
+			<div class="modal-win modal-win--big">
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">Вы не подтвердили изменения в заявке.
+					</div>
+					<p>Хотите их сохранить?</p>
+				</div>
+				<div class="modal-win__btns-wrap row">
+					<div class="modal-win__col col-sm-6">
+						<a class="modal-win__btn btn btn-outline-primary" href="#">Не сохранять
+						</a>
+					</div>
+					<div class="modal-win__col col-sm-6">
+						<a class="modal-win__btn btn btn-primary" href="#">Войти
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-cancel-1" style="display: none">
+			<div class="modal-win modal-win--big">
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">Вы уверены, что хотите прервать заполнение заявки?
+					</div>
+					<p>Мы сохраним все заполненные поля в «черновике» — вы сможете найти его во вкладке «Все заявки» и продолжить заполнение.</p>
+				</div>
+				<div class="modal-win__btns-wrap row">
+					<div class="modal-win__col col-sm-6">
+						<a class="modal-win__btn btn btn-outline-primary" href="#">Сохранить как черновик
+						</a>
+					</div>
+					<div class="modal-win__col col-sm-6">
+						<a class="modal-win__btn btn btn-primary" href="#">Продолжить
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-cancel-2" style="display: none">
+			<div class="modal-win modal-win--big">
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">Вы не заполнили все обязательные поля
+					</div>
+					<p>Хотите сохранить черновик заявки и вернуться к заполнению позже?</p>
+				</div>
+				<div class="modal-win__btns-wrap row">
+					<div class="modal-win__col col-sm-6">
+						<a class="modal-win__btn btn btn-outline-primary" href="#">Сохранить как черновик
+						</a>
+					</div>
+					<div class="modal-win__col col-sm-6">
+						<a class="modal-win__btn btn btn-primary" href="#">Продолжить
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-criteria-1" style="display: none">
+			<div class="modal-win modal-win--big">
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">Требования к презентации
+					</div>
+				</div>
+				<div class="modal-win__content">
+					<p>Допустимый объем текста на одном слайде <span>не более 700 знаков без пробелов.</span></p>
+					<p>Предоставляется в формате PDF или PPT (при наличии интерактивных слайдов).</p>
+					<p>Объем презентации: от 10 до 15 слайдов. </p>
+					<p>Соотношение сторон: 16:9.</p>
+					<p><span>Обязательная структура презентации:</span></p>
+					<ul>
+						<li>1-2 слайда об организации</li>
+						<li>1 слайд о роли заявителя</li>
+						<li>1-2 слайда о проблеме</li>
+						<li>1-2 слайда идея и суть решения</li>
+						<li>1-2 слайда команда, ресурсы</li>
+						<li>1-3 слайда план проекта и яркие элементы реализации</li>
+						<li>1 слайд количественные результаты</li>
+						<li>1 слайд качественные результаты</li>
+						<li>1 слайд - дополнительные выгоды</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="modal-criteria-2" style="display: none">
+			<div class="modal-win modal-win--big">
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">Первичные критерии
+					</div>
+				</div>
+				<div class="modal-win__content">
+					<p>После тех экспертизы. Презентация о проекте</p>
+					<p>Допустимый объем текста на одном слайде не более 700 зн. без пробелов.</p>
+					<p>Предоставляется в формате PDF или PPT (при наличии интерактивных слайдов).</p>
+					<p>Объем презентации – от 10 до 15 слайдов. Соотношение сторон 16:9.</p>
+					<p>Обязательная структура презентации:</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-info" style="display: none">
+			<div class="modal-win modal-win--big"><img class="modal-img" src="img/svg/modal-bg.svg" alt="" loading="lazy"/>
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">Секрет удачного кадра: привлечение
+					</div>
+				</div>
+				<div class="modal-win__content content-img">
+					<p>Отмечаются проекты, которые помогают привлечь в организацию талантливых сотрудников и сделать это максимально эффективно. </p>
+					<p>Поделитесь практическими решениями, которые позволяют привлекать кадры с комфортом как для команды, так и для кандидатов!</p>
+				</div>
+			</div>
+		</div>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
@@ -563,6 +763,7 @@
 		<script src="libs/select2/js/i18n/ru.js"> </script>
 		<script src="libs/gsap/gsap.min.js"></script>
 		<script src="libs/gsap/ScrollTrigger.min.js"> </script>
+		<script src="libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"> </script>
 		<script src="js/JSCCommon.js"></script>
 		<script src="js/common.js"></script>
 	</body>

@@ -22,6 +22,7 @@ block pagecontent
 	
 	+parts('header')
 	main.modal
+		+modalMob() 
 		.section.container 
 		//- +page-head(title,title, title, title , title,title, title, title, title,title, title, title)
 		.section.container
@@ -38,6 +39,14 @@ block pagecontent
 			+btn("#modal-reset-2", 'Сброс пароля 2')
 			+btn("#modal-reset-info", 'Войти')
 			+btn("#modal-reset-success", 'Пароль успешно изменен')
+		.section.container
+			h2 Cabinet
+			+btn("#modal-exit", 'Выйти')
+			+btn("#modal-criteria-1", 'Критерии 1')
+			+btn("#modal-criteria-2", 'Критерии 2')
+			+btn("#modal-info", 'Инфо')
+			h3 Модальное если зашел в моб
+			+btn("#modal-mob", 'Окно')
 		.section.container
 			.col-8
 				+form-wrap

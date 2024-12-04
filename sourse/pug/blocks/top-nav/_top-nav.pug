@@ -47,3 +47,26 @@ mixin top-nav(main)
 				.col-auto.d-xl-none
 					+menu-toggle()
 	// end top-nav
+
+
+mixin top-nav-cabinet() 
+	// start top-nav
+	+b.top-nav--cabinet.block-with-lazy
+		.container
+			+e.row.row
+				.col-auto
+					+e.logo.A(href="#")
+						.small.logo-text Личный<br>кабинет
+						+e.logo-wrap
+							+img(src="img/svg/logo-cabinet.svg", alt="")
+				.col.order-lg-0
+					.menu-mobile.menu-mobile--js
+						.menu-mobile__inner
+							+mnuCabinet()
+				.col-auto
+					+e.cabinet-nav
+						+e.btn(href='#'): +img(src="img/svg/question.svg", alt="")
+						+e.btn(href='#modal-exit').link-modal-js: +icon('exit')
+				.col-auto.d-xl-none
+					+menu-toggle()
+	// end top-nav
