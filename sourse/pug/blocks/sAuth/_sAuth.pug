@@ -26,13 +26,55 @@ mixin prifileInfo
 		+e.col.col-lg-6
 			+input("",'text', 'Должность')(value='Директор по развитию' disabled)
 
+mixin prifileInfo2
+	+b.profile-info.row 
+		+e.col.col-lg-4
+			+input("",'text', 'Имя')(value='Алексей' disabled)
+		+e.col.col-lg-4
+			+input("",'text', 'Отчество')(value='Игоревич' disabled)
+		+e.col.col-lg-4
+			+input("",'text', 'Фамилия')(value='Кондратьев' disabled)
+		+e.col.col-lg-4
+			+input("",'email', 'E-mail')(value='kondratPM@mail.ru' disabled)
+		+e.col.col-lg-4
+			+input("",'tel', 'Контактный телефон')(value='+7 (999) 765-56-53' disabled)
+		+e.col.col-lg-4
+			+input("",'number', 'ИНН организации')(value='1234567890' disabled)
+		+e.col.col-lg-6
+			+input("",'text', 'Ваша организация')(value='ООО «Ромашки»' disabled)
+		+e.col.col-lg-6
+			+input("",'text', 'Должность')(value='Директор по развитию' disabled)
+
+mixin partsItem(date, t, i)
+	+b.parts-item.tinny-item-js&attributes(attributes)
+		+img(src="img/svg/chain.svg", alt="").chain
+		+e.date.small=date
+		+e.t.fw-600=t
+		if i
+			.tinny-template.d-none=i
+		if block
+			.tinny-template.d-none
+				block
+
+
 mixin sAuth3(data)
 	// start sAuth
 	+b.SECTION.sAuth.section#sAuth&attributes(attributes)
 		.container
 			+e.item
 				h3=data
-			+e.item pfzdrb
+			+e.item.parts
+				+partsItem('13 февраля — 11 июля', 'Прием заявок', 'Чтобы подать заявку, нажмите на раздел «Подать заявку» в верхнем меню. Формировать заявку можно постепенно — даже если вы не заполните все поля, черновик отобразится в этом разделе, и вы сможете продолжить заполнение в любой момент до 11 июля.').active
+				+partsItem('14 июля — 3 августа', 'Техническая экспертиза', 'Мы проверим ваши заявки на соответствие критериям премии. Вам в это время ничего делать не нужно. Если у нас возникнут вопросы или рекомендации по вашей заявке — мы свяжемся с вами.')
+				+partsItem('4 августа —31 августа', 'Экспертная комиссия')
+					p На этом этапе заявки будут изучать эксперты Премии. Они отберут топ-5 проектов в каждой номинации по каждой из 3-х категорий и сформируют топ-60 для рассмотрения жюри.
+					p В целях безопасности все данные передаются экспертам в обобщенном виде, а участники не знают, кто из экспертов рассматривает их проект.
+				+partsItem('8 сентября — 21 сентября ', 'Голосование жюри', 'Жюри изучат топ-60 проектов, рекомендованных экспертами, и отберут топ-3 в каждой номинации по каждой из 3-категорий — именно эти проекты станут победителями премии!')
+				+b.parts-item.tinny-item-js
+					+img(src="img/svg/chain.svg", alt="").chain
+					+e.date.small 2 октября #[span очно в Москве]
+					+e.t.fw-600 Премьера
+					.tinny-template.d-none Торжественная церемония оглашения победителей пройдет в Москва-Сити, башня «Федерация». Обратите внимание, что организатор не оплачивает трансфер для участия в мероприятии.
 			+e.item.applies-row.row
 				+applyCard('Лучшие спецэффекты: технологическое решение года', 'Больше чем ты думал')
 					+e.badge.small.badge.text-bg-secondary Черновик
@@ -67,6 +109,241 @@ mixin sAuth3(data)
 				+e.item: +legend
 	// end sAuth
 
+//- Моя заявкка
+mixin sAuth4(data)
+	// start sAuth
+	+b.SECTION.sAuth.section#sAuth&attributes(attributes)
+		.container
+			+e.top-row.row.item-large
+				.col-md-auto.order-md-last
+					+e.date.text-secondary 11.10.2024
+				.col-md-auto
+					h3=data
+				.col-md
+					+e.badge-wrap
+						.badge.text-bg-success На рассмотрении
+						.descr.text-success Отлично, вы заполнили все обязательные поля! Организаторы приступят к проверке заявки в течение двух недель и свяжутся с вами при необходимости.
+			.item-large
+				.h5.span-gradient
+					span Категория
+					+img(src="img/svg/bank.svg", alt="")
+					| Федерация
+			.item-large
+				.h5.span-gradient
+					span Номинация
+					+img(src="img/svg/frame.svg", alt="")
+					| В фокусе: удержание
+			+e.item.item-large
+				.h5.span-gradient
+					span Контактное лицо
+				p Если вы хотите изменить данные о контактном лице, пожалуйста, напишите на #[a(href="mailto:vkadre-info@mos.ru") vkadre-info@mos.ru].
+				+prifileInfo2
+			+e.item.item-large
+				.item-large-inner
+					.h5.span-gradient
+						span О проекте
+					button.btn.btn-outline-secondary.btn-sm.small Редактировать
+						+icon('edit')
+				+e.large-form.FORM
+					+input("Введите текст",'textarea', 'Организация, реализовавшая проект')(value='Введенный текст' disabled required)
+						span.text-secondary.small Текст пояснения для поля, который даст представление о том, что именно здесь нужно писать.
+					+input("Введите текст",'text', 'ИНН организации')(value='1234567890' disabled required)
+					+input("Введите текст",'textarea', 'Название проекта')(value='Введенный текст' disabled required)
+						span.text-secondary.small Текст пояснения для поля, который даст представление о том, что именно здесь нужно писать.
+					+input("Введите текст",'textarea', 'Краткое описание проекта')(value='' disabled required)
+						span.text-secondary.small Организаторы будут опираться на него при подготовке публикаций о проекте, если он войдет в топ-40.
+					+input("Введите текст",'textarea', 'Краткое описание задачи / проблемы, которую проект призван решить')( disabled required)
+					+input("Введите текст",'textarea', 'Краткое описание сути решения')(disabled required)
+						span.text-secondary.small Текст пояснения для поля, который даст представление о том, что именно здесь нужно писать.
+					+input("Введите текст",'textarea', 'Ресурсы')(disabled required)
+						span.text-secondary.small (например, количество участников, роли, техническое обеспечение, инвестиции/ бюджет)
+					+input("Введите текст",'textarea', 'Плановые KPI на 2024 год')(value='Подробно опишите его влияние на улучшение работы вашей организации или команды. Опишите вклад в улучшение эффективности управления человеческими ресурсами, а также достигнутые результаты и изменения, произошедшие благодаря вашим действиям. Подкрепите ответ количественными и качественными показателями. Опишите, как ваши достижения повлияли на повышение профессиональных стандартов и совершенствование HR-направления в вашей организации или отрасли.' disabled required)
+						span.text-secondary.small довольно подробное пояснение (1-3 предложения, можно с примером)
+					+input("Введите текст",'textarea', 'Фактические количественные показатели оценки эффективности на момент подачи заявки')(disabled required)
+						span.text-secondary.small довольно подробное пояснение (1-3 предложения, можно с примером)
+					+input("Введите текст",'textarea', 'Фактические качественные показатели оценки эффективности проекта на момент подачи заявки')(disabled required)
+						span.text-secondary.small довольно подробное пояснение (1-3 предложения, можно с примером)
+					+e.input-row.row 
+						.col-lg-4
+							.sAuth__input-wrap.form-group
+								.sAuth__input-title Другие подтверждающие документы при наличии:
+								span.text-secondary.small подтверждающие документы и материалы, такие как отчёты, аналитика, отзывы сотрудников, фотографии, сертификаты и прочие материалы, которые подтверждают достигнутые результаты и успех проекта и (или) управленческого решения.
+						.col-lg
+							span.small.text-secondary Поддерживаются файлы в формате pdf., jpeg., png.
+							+uploadFile
+					+input("Введите текст",'textarea', 'Ссылки на соцсети или публикации о проекте в СМИ')(disabled)
+						span.text-secondary.small Не обязательный шаг, который поможет узнать ваш проект лучше.
+					+input("Введите текст",'textarea', 'Ссылка на видео о проекте — если они есть')(disabled)
+						span.text-secondary.small Длительность видео — до 5 минут. подводка про то, что данный пукнт необязательный, нов случае победы в премии видео могут быть использованы для презентации вашего проекта  (по желанию)
+					+e.input-row.row 
+						.col-lg-4
+							.sAuth__input-wrap.form-group
+								.sAuth__input-title Окно для прикрепления рекомендательного письма
+								span.text-secondary.small Текст пояснения для поля, который даст представление о том, что именно здесь нужно писать.
+								span.text-purple.small Если ваш проект пройдет техническую экспертизу, пункт станет обязательным к заполнению до 3 августа
+						.col-lg
+							span.small.text-secondary Поддерживаются файлы в формате pdf., jpeg., png.
+							+uploadFile
+					+e.input-row.row 
+						.col-lg-4
+							.sAuth__input-wrap.form-group
+								.sAuth__input-title Презентация проекта
+								span.text-secondary.small Презентация должна быть сделана в соответствии с #[a(href='#') требованиями.]
+								span.text-purple.small Если ваш проект пройдет техническую экспертизу, пункт станет обязательным к заполнению до 3 августа
+						.col-lg
+							span.small.text-secondary Поддерживаются файлы в формате pptx, pdf, docx, .... .
+							+uploadFileSingle
+					+e.input-row.row 
+						.col-lg-4
+							.sAuth__input-wrap.form-group
+								.sAuth__input-title.required Добавьте информацию о команде. Укажите сотрудников, которые внесли наибольший вклад при реализации проекта
+								.text-secondary.small Текст пояснения для поля, который даст представление о том, что именно здесь нужно писать.
+								.text-purple.small Если ваш проект пройдет техническую экспертизу, данный пункт можно будет редактировать до 3 августа
+						.col-lg
+							+e.inputs
+								.input-wrap 
+									button.icon-delete: +icon('x')
+									input(type="text" placeholder="Ф.И.О." value="Ф.И.О." required).form-control
+									input(type="text" placeholder="Роль в проекте" value="Роль в проекте" required).form-control
+								.input-wrap 
+									button.icon-delete: +icon('x')
+									input(type="text" placeholder="Ф.И.О." value="Ф.И.О." required).form-control
+									input(type="text" placeholder="Роль в проекте" value="Роль в проекте" required).form-control
+							+e.btns 
+								span.small.text-secondary Можно добавить не более 5 человек.
+				+e.bottom-btns
+					+e.btn.btn.btn-link.text-secondary.small(href='#' download) Скачать заявку
+						+icon('download')
+					button.btn.btn-outline-primary.small Сохранить черновик
+					button.btn.btn-outline-primary.small Редактировать
+	// end sAuth
+
+mixin sAuth5(data)
+	// start sAuth
+	+b.SECTION.sAuth.section#sAuth&attributes(attributes)
+		.container
+			+e.top-row.row.sAuth__item
+				.col-md-auto.order-md-last
+					+e.date.text-secondary 11.10.2024
+				.col-md-auto
+					h3=data
+				.col-md
+					+e.badge-wrap
+						.badge.text-bg-secondary Черновик
+						.descr.text-danger Проект не номинирован. Пожалуйста, заполните все поля,<br>чтобы завершить формирование заявки.
+			+e.item-md.item_gray
+				.row
+					.col-lg-8
+						+e.item-wrap
+							p Успейте внести данные в обязательные поля#[span.text-danger *] #[span.fw-600 до 11 июля], чтобы номинировать проект на премию! 
+							p Вы сможете в любой момент отредактировать заявку, а также сохранить ее в черновик и продолжить заполнение в удобное для вас время  во вкладке «Мои заявки».
+						+e.item-wrap.item-wrap_white
+							p Ознакомьтесь с образцом заполнения заявки. 
+							p В качестве примера в нем описан реальный проект команды Управления кадровых сервисов Правительства Москвы.
+							a(href="#" download).download-link.tdu.text-large Скачать образец
+								+icon('download')
+					.col-lg
+						.text-end: +img(src="img/manager.png", alt="").manager-img
+						.item-wrap_white.manager
+							.fw-700 Сергей Журихин
+							.small.text-secondary Руководитель отдела по работе с заявками
+			.item-large
+				.h5.span-gradient
+					span Категория
+					+img(src="img/svg/bank.svg", alt="")
+					| Федерация
+			.item-large
+				.h5.span-gradient
+					span Номинация
+					+img(src="img/svg/frame.svg", alt="")
+					| В фокусе: удержание
+			+e.item.item-large
+				.h5.span-gradient
+					span Контактное лицо
+				p Если вы хотите изменить данные о контактном лице, пожалуйста, напишите на #[a(href="mailto:vkadre-info@mos.ru") vkadre-info@mos.ru].
+				+prifileInfo2
+			+e.item.item-large
+				.item-large-inner
+					.h5.span-gradient
+						span О проекте
+					button.btn.btn-primary.btn-sm.small Сохранить изменения
+						+icon('check-white')
+				+e.large-form.FORM
+					+input("Введите текст",'textarea', 'Организация, реализовавшая проект')(value='Введенный текст' required)
+						span.text-secondary.small Текст пояснения для поля, который даст представление о том, что именно здесь нужно писать.
+					+input("Введите текст",'text', 'ИНН организации')(value='1234567890' required)
+					+input("Введите текст",'textarea', 'Название проекта')(value='Введенный текст' required)
+						span.text-secondary.small Текст пояснения для поля, который даст представление о том, что именно здесь нужно писать.
+					+input("Введите текст",'textarea', 'Краткое описание проекта')(value='' required)
+						span.text-secondary.small Организаторы будут опираться на него при подготовке публикаций о проекте, если он войдет в топ-40.
+					+input("Введите текст",'textarea', 'Краткое описание задачи / проблемы, которую проект призван решить')( required)
+					+input("Введите текст",'textarea', 'Краткое описание сути решения')( required)
+						span.text-secondary.small Текст пояснения для поля, который даст представление о том, что именно здесь нужно писать.
+					+input("Введите текст",'textarea', 'Ресурсы')( required)
+						span.text-secondary.small (например, количество участников, роли, техническое обеспечение, инвестиции/ бюджет)
+					+input("Введите текст",'textarea', 'Плановые KPI на 2024 год')(value='Подробно опишите его влияние на улучшение работы вашей организации или команды. Опишите вклад в улучшение эффективности управления человеческими ресурсами, а также достигнутые результаты и изменения, произошедшие благодаря вашим действиям. Подкрепите ответ количественными и качественными показателями. Опишите, как ваши достижения повлияли на повышение профессиональных стандартов и совершенствование HR-направления в вашей организации или отрасли.'  required)
+						span.text-secondary.small довольно подробное пояснение (1-3 предложения, можно с примером)
+					+input("Введите текст",'textarea', 'Фактические количественные показатели оценки эффективности на момент подачи заявки')( required)
+						span.text-secondary.small довольно подробное пояснение (1-3 предложения, можно с примером)
+					+input("Введите текст",'textarea', 'Фактические качественные показатели оценки эффективности проекта на момент подачи заявки')( required)
+						span.text-secondary.small довольно подробное пояснение (1-3 предложения, можно с примером)
+					+e.input-row.row 
+						.col-lg-4
+							.sAuth__input-wrap.form-group
+								.sAuth__input-title Другие подтверждающие документы при наличии:
+								span.text-secondary.small подтверждающие документы и материалы, такие как отчёты, аналитика, отзывы сотрудников, фотографии, сертификаты и прочие материалы, которые подтверждают достигнутые результаты и успех проекта и (или) управленческого решения.
+						.col-lg
+							span.small.text-secondary Поддерживаются файлы в формате pdf., jpeg., png.
+							+uploadFile
+					+input("Введите текст",'textarea', 'Ссылки на соцсети или публикации о проекте в СМИ')
+						span.text-secondary.small Не обязательный шаг, который поможет узнать ваш проект лучше.
+					+input("Введите текст",'textarea', 'Ссылка на видео о проекте — если они есть')
+						span.text-secondary.small Длительность видео — до 5 минут. подводка про то, что данный пукнт необязательный, нов случае победы в премии видео могут быть использованы для презентации вашего проекта  (по желанию)
+					+e.input-row.row 
+						.col-lg-4
+							.sAuth__input-wrap.form-group
+								.sAuth__input-title Окно для прикрепления рекомендательного письма
+								span.text-secondary.small Текст пояснения для поля, который даст представление о том, что именно здесь нужно писать.
+								span.text-purple.small Если ваш проект пройдет техническую экспертизу, пункт станет обязательным к заполнению до 3 августа
+						.col-lg
+							span.small.text-secondary Поддерживаются файлы в формате pdf., jpeg., png.
+							+uploadFile
+					+e.input-row.row 
+						.col-lg-4
+							.sAuth__input-wrap.form-group
+								.sAuth__input-title Презентация проекта
+								span.text-secondary.small Презентация должна быть сделана в соответствии с #[a(href='#') требованиями.]
+								span.text-purple.small Если ваш проект пройдет техническую экспертизу, пункт станет обязательным к заполнению до 3 августа
+						.col-lg
+							span.small.text-secondary Поддерживаются файлы в формате pptx, pdf, docx, .... .
+							+uploadFileSingle
+					+e.input-row.row 
+						.col-lg-4
+							.sAuth__input-wrap.form-group
+								.sAuth__input-title.required Добавьте информацию о команде. Укажите сотрудников, которые внесли наибольший вклад при реализации проекта
+								.text-secondary.small Текст пояснения для поля, который даст представление о том, что именно здесь нужно писать.
+								.text-purple.small Если ваш проект пройдет техническую экспертизу, данный пункт можно будет редактировать до 3 августа
+						.col-lg
+							+e.inputs.inputs-js
+								.input-wrap 
+									button.icon-delete: +icon('x')
+									input(type="text" placeholder="Ф.И.О." value="Ф.И.О." required).form-control
+									input(type="text" placeholder="Роль в проекте" value="Роль в проекте" required).form-control
+								.input-wrap 
+									button.icon-delete: +icon('x')
+									input(type="text" placeholder="Ф.И.О." ).form-control
+									input(type="text" placeholder="Роль в проекте").form-control
+							+e.btns 
+								button.btn.btn-sm.btn-secondary.btn-icon.small.add-input-js Добавить еще
+									span: +icon('plus')
+								span.small.text-secondary Можно добавить не более 5 человек.
+				+e.bottom-btns
+					+e.btn.btn.btn-link.text-secondary.small(href='#' download) Скачать заявку
+						+icon('download')
+					button.btn.btn-outline-primary.small Сохранить черновик
+					button.btn.btn-primary.small Сохранить изменения
+	// end sAuth
+
 mixin legend 
 	+b.legend: .legend-row.row 
 		+e.col.col-lg-6 
@@ -97,7 +374,6 @@ mixin legendItem(p)
 		block 
 		+e.text.small.text-secondary.order-last= p
 
-
 mixin applyCard(p, t, btn, grad)
 	+e.col.col-md-6.col-xl-4
 		+b.apply-card
@@ -125,7 +401,7 @@ mixin sAuth2(data)
 						h3 Подать заявку
 					+e.text
 						.h5 Номинируйте свой проект на HR-премию Правительства Москвы «В кадре».
-						p Подача заявки проходит в несколько этапов — вы можете заполнять данные постепенно или #[span отредактировать заявку до 11 июля.]
+						p Подача заявки проходит в несколько этапов — вы можете заполнять данные постепенно или #[span отредактировать заявку до 11 июля.]
 						p Если у вас возникнут вопросы или трудности при заполнении заявки, пожалуйста, #[a(href='#') свяжитесь с нами] — мы проконсультируем вас по каждому пункту и ответим на любой вопрос.
 					+e.btn.btn.btn-primary(href='#') Начать
 				+e.col.col-lg-6

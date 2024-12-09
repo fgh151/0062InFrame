@@ -10,8 +10,10 @@
 1. <https://megafronteam.github.io/0062InFrame/06-auth-profile.html>
 1. <https://megafronteam.github.io/0062InFrame/06-auth-success.html>
 1. <https://megafronteam.github.io/0062InFrame/06-auth-apply.html>
+1. <https://megafronteam.github.io/0062InFrame/06-auth-applies.html>
 
 
 #### In progress
 1. <https://megafronteam.github.io/0062InFrame/00-modal.html>
-1. <https://megafronteam.github.io/0062InFrame/06-auth-applies.html>
+1. <https://megafronteam.github.io/0062InFrame/06-auth-my-apply.html>
+1. <https://megafronteam.github.io/0062InFrame/06-auth-my-apply-2.html>

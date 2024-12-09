@@ -216,6 +216,119 @@ function eventHandler() {
   //   });
   // }
 
+  const activeItems = document.querySelectorAll('.parts-item.active');
+
+  if (activeItems.length > 0) {
+      const lastActiveItem = activeItems[activeItems.length - 1];
+
+      lastActiveItem.insertAdjacentHTML(
+          'beforeend',
+          `<div class="current">
+              <span>Текущий этап</span>
+              <img src="img/svg/arr-top.svg" alt="">
+          </div>`
+      );
+  }
+
+  const tiny = document.querySelectorAll('.tinny-item-js');
+  tiny.forEach((el) => {
+    const template = el.querySelector('.tinny-template');
+
+    tippy(el, {
+      content: template.innerHTML,
+      allowHTML: true,
+      interactive: true,
+      placement: 'bottom-start',
+    });
+  });
+
+  /* input-wrap */
+  document.addEventListener('click', function (event) {
+    if (event.target.closest('.icon-delete')) {
+      const inputWrap = event.target.closest('.input-wrap');
+      if (inputWrap) {
+        inputWrap.remove();
+      }
+    }
+  });
+  
+  const addBtn = document.querySelector('.add-input-js')
+  if (addBtn) {
+    addBtn.addEventListener('click', (e) => {
+      e.preventDefault()
+      const inputsContainer = document.querySelector('.inputs-js');
+
+      if (inputsContainer) {
+
+      const inputCount = inputsContainer.querySelectorAll('.input-wrap').length;
+
+      if (inputCount >= 5) {
+        return;
+      }
+        const newInputWrap = `
+          <div class="input-wrap">
+            <button class="icon-delete">
+              <svg class="icon icon-x ">
+                <use xlink:href="img/svg/sprite.svg#x"></use>
+              </svg>
+            </button>
+            <input type="text" placeholder="Ф.И.О." class="form-control">
+            <input type="text" placeholder="Роль в проекте" class="form-control">
+          </div>
+        `;
+
+        inputsContainer.insertAdjacentHTML('beforeend', newInputWrap);
+      }
+    })
+  }
+
+  /* file upload */
+  const fileUploads = document.querySelectorAll('.file-container--js');
+
+  if (fileUploads.length) {
+    fileUploads.forEach((element) => {
+      const fileInput = element.querySelector('.file-upload');
+      const filesContainer = element.querySelector('.files');
+  
+      fileInput.addEventListener('change', () => {
+        const isMultiple = fileInput.hasAttribute('multiple');
+        const files = Array.from(fileInput.files);
+  
+        if (!isMultiple) {
+          filesContainer.innerHTML = '';
+        }
+
+        files.forEach((file) => {
+          const existingFile = Array.from(filesContainer.querySelectorAll('.file-name'))
+            .some((fileNameEl) => fileNameEl.textContent === file.name);
+  
+          if (!existingFile) {
+            const fileInfo = document.createElement('div');
+            fileInfo.classList.add('file-info');
+  
+            const fileElement = document.createElement('span');
+            fileElement.classList.add('file-name');
+            fileElement.textContent = file.name;
+  
+            const removeButton = document.createElement('span');
+            removeButton.classList.add('remove-file');
+            removeButton.innerHTML = `<svg class="icon icon-x"><use xlink:href="img/svg/sprite.svg#x"></use></svg>`;
+  
+            removeButton.addEventListener('click', () => {
+              fileInfo.remove();
+            });
+  
+            fileInfo.appendChild(fileElement);
+            fileInfo.appendChild(removeButton);
+  
+            filesContainer.appendChild(fileInfo);
+          }
+        });
+
+      });
+    });
+  }
+
     /* video*/
     const videoWrap = document.querySelector('.video-wrap')
     if (videoWrap) {
