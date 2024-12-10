@@ -175,7 +175,7 @@ ul.page-numbers {
     border-radius: inherit;
     @include mt;
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
     background: linear-gradient(90deg, #2B4ACC 0%, #0198E3 60%);
   }
 
@@ -239,6 +239,61 @@ ul.page-numbers {
   &__text {
     @include media-breakpoint-up(xl) {
       font-size: rem(20px);
+    }
+  }
+
+}
+
+
+.file-container {
+  margin-top: rem(12);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+
+  .file-label {
+    @extend .btn-icon;
+    @extend .btn-sm;
+    min-width: auto !important;
+    width: auto;
+    margin-bottom: rem(12);
+  }
+  .upload {
+    position: relative;
+    width: max-content;
+  }
+  .files {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: rem(12);
+  }
+  input::file-selector-button {
+    cursor: pointer;
+  }
+  .file-info {
+    border: 1px solid #d5d9dc;
+    border-radius: 32px;
+    padding: 8px 16px;
+    width: max-content;
+    @extend .small;
+  }
+
+  .file-upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .remove-file {
+    cursor: pointer;
+    margin-left: rem(8);
+    .icon {
+      font-size: rem(20);
     }
   }
 

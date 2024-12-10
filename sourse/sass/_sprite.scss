@@ -32,10 +32,20 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(27 / #{$h} *1em );
 }
+.icon-check-white {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
 .icon-download {
 	$h: 32;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(32 / #{$h} *1em );
+}
+.icon-edit {
+	$h: 23;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(22 / #{$h} *1em );
 }
 .icon-exit {
 	$h: 23;
@@ -69,6 +79,11 @@
 }
 .icon-noun-glasses {
 	$h: 21;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
+}
+.icon-plus {
+	$h: 20;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(20 / #{$h} *1em );
 }

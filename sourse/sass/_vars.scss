@@ -398,7 +398,7 @@ $prefix:                      $variable-prefix !default;
 // This gradient is also added to elements with `.bg-gradient`
 // scss-docs-start variable-gradient
 $gradient: linear-gradient(148deg, #5206b9 0%, #74d1ff 100%);
-$gradient-p-p: linear-gradient(148deg, #7F30FF 0%, #B176FF 100%);;
+$gradient-p-p: linear-gradient(148deg, #7F30FF 0%, #B176FF 100%);
 $gradient-dark: linear-gradient(148deg, #5400b7 0%, #0098e3 100%);
 // scss-docs-end variable-gradient
 
@@ -901,7 +901,7 @@ $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
 $input-bg:                              transparent;
 $input-disabled-color:                  null !default;
-$input-disabled-bg:                     var(--#{$prefix}secondary-bg) !default;
+$input-disabled-bg:                     #f5f5f5;
 $input-disabled-border-color:           null !default;
 
 $input-color:                           var(--#{$prefix}body-color) !default;

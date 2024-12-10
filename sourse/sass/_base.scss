@@ -595,6 +595,40 @@ h3, .h3 {
   --bs-btn-hover-border-color: #{$purple-600};
 }
 
+.btn-outline-secondary {
+  --bs-btn-color: #818181;
+  --bs-btn-border-color: #818181;
+  --bs-btn-hover-color: #818181;
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: #818181;
+  // --bs-btn-focus-shadow-rgb: 129, 129, 129;
+  // --bs-btn-active-color: #000;
+  // --bs-btn-active-bg: #818181;
+  // --bs-btn-active-border-color: #818181;
+  // --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  // --bs-btn-disabled-color: #818181;
+  // --bs-btn-disabled-bg: transparent;
+  // --bs-btn-disabled-border-color: #818181;
+  // --bs-gradient: none;
+}
+
+.btn-secondary {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #{$gray-100};
+  --bs-btn-border-color: #{$gray-100};
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #{$gray-100};
+  --bs-btn-hover-border-color: #{$gray-100};
+  // --bs-btn-focus-shadow-rgb: 110, 110, 110;
+  // --bs-btn-active-color: #000;
+  // --bs-btn-active-bg: #9a9a9a;
+  // --bs-btn-active-border-color: #8e8e8e;
+  // --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  // --bs-btn-disabled-color: #000;
+  // --bs-btn-disabled-bg: #818181;
+  // --bs-btn-disabled-border-color: #818181;
+}
+
 .btn-primary {
   // --bs-btn-color: #fff;
   // --bs-btn-bg: #1a1230;
@@ -605,6 +639,23 @@ h3, .h3 {
   --bs-btn-disabled-color: #{$gray-700};
   --bs-btn-disabled-bg: #{$gray-400};
   --bs-btn-disabled-border-color: #{$gray-400};
+}
+
+.btn-info {
+  --bs-btn-color:white;
+  --bs-btn-hover-color: white;
+  // --bs-btn-bg: #0098e3;
+  // --bs-btn-border-color: #0098e3;
+  // --bs-btn-hover-bg: #26a7e7;
+  // --bs-btn-hover-border-color: #1aa2e6;
+  // --bs-btn-focus-shadow-rgb: 0, 129, 193;
+  // --bs-btn-active-color: #000;
+  // --bs-btn-active-bg: #33ade9;
+  // --bs-btn-active-border-color: #1aa2e6;
+  // --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  // --bs-btn-disabled-color: #000;
+  // --bs-btn-disabled-bg: #0098e3;
+  // --bs-btn-disabled-border-color: #0098e3;
 }
 
 .text-indigo {
@@ -632,6 +683,14 @@ h3, .h3 {
 }
 .text-bg-dark {
   background-color: rgba(128, 49, 255, 1) !important;
+}
+
+
+.text-bg-gradient {
+  background: $gradient-dark;
+}
+.text-bg-black {
+  background: $purple-600;
 }
 
 .text-bg-light {

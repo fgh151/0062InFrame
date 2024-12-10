@@ -80,3 +80,20 @@ mixin blogCard(img, title, text, date)
 			+e.text!= text
 		+e.footer
 			+e.date.fw-500!= date
+
+
+mixin uploadFile
+	.file-container.file-container--js
+		.upload
+			label.file-label.btn.btn-secondary Прикрепить
+				+icon('plus')
+			input.file-upload(type='file' multiple)
+		.files
+
+mixin uploadFileSingle
+	.file-container.file-container--js
+		.upload
+			label.file-label.btn.btn-secondary Прикрепить
+				+icon('plus')
+			input.file-upload(type='file')
+		.files
