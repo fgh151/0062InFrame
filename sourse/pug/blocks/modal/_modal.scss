@@ -229,6 +229,7 @@
       .error-feedback {
         margin-top: rem(6);
         font-size: rem(12);
+        display: inline-block;
       }
     }
 
@@ -344,9 +345,6 @@
     &:after {
       content: '*';
       display: inline-block;
-      // position: absolute;
-      // top: 11px;
-      // left: -5px;
       color: $danger;
     }
   }

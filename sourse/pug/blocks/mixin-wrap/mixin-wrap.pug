@@ -83,7 +83,7 @@ mixin blogCard(img, title, text, date)
 
 
 mixin uploadFile
-	.file-container.file-container--js
+	.file-container.file-container--js&attributes(attributes)
 		.upload
 			label.file-label.btn.btn-secondary Прикрепить
 				+icon('plus')
@@ -91,7 +91,7 @@ mixin uploadFile
 		.files
 
 mixin uploadFileSingle
-	.file-container.file-container--js
+	.file-container.file-container--js&attributes(attributes)
 		.upload
 			label.file-label.btn.btn-secondary Прикрепить
 				+icon('plus')

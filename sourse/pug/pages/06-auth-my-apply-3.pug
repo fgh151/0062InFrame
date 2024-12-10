@@ -13,7 +13,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'Мой профиль'
+	- let  title= 'Моя заявка'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -21,5 +21,6 @@ block pagecontent
 	
 	+parts('header')
 	main
-		+sAuth(title)
+		+sAuth6(title)
+	+modalMob() 
 	+footer

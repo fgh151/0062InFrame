@@ -1,0 +1,141 @@
+mixin sSteps(data)
+	// start sSteps
+	+b.SECTION.sSteps.section#sSteps&attributes(attributes)
+		.container
+			+e.top-wrap
+				h3=data
+				+stepsLine(data-step="1")
+			+e.item
+				+e.descr
+					p Какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст
+			+e.item: +e.row.row
+				+e.col.col-lg-4: +categoryCard('Федерация', 'Проекты федеральных органов государственной власти и подведомственных им организаций, госкорпораций и компаний с госучастием.')
+				+e.col.col-lg-4: +categoryCard('Регионы', 'Проекты региональных органов государственной власти и подведомственных им организаций, а также органов местного самоуправления и подведомственных им учреждений.')
+				+e.col.col-lg-4: +categoryCard('Столица', 'Проекты органов власти и подведомственных им организаций города Москвы.')
+			+e.bottom-row
+				+e.left 
+					a(href="#").cancel-btn.small
+						+icon('x')
+						| Отменить заполнение заявки
+				+e.right 
+					+e.btn.btn.btn-primary(href='#') Следующий шаг
+						+icon('arr-next')
+	// end sSteps
+
+mixin categoryCard(title, text)
+	+b.category-card
+		+in-c('radio', title, 'text')
+			span.custom-input__text=title
+			span.content=text
+		+img(src="img/svg/bank-bg.svg", alt="").bg
+
+mixin sSteps2(data)
+	// start sSteps
+	+b.SECTION.sSteps.section#sSteps&attributes(attributes)
+		.container
+			+e.top-wrap
+				h3=data
+				+stepsLine(data-step="2")
+			+e.item
+				+e.descr
+					p Ознакомтесь с кратким описанием номинации нажав на иконку со знаком вопроса. И говорим что все критерии общие ознакомьтесь. Более подробную информацию вы можете найти в #[a(href="#") Правилах.]
+			+e.item: +e.row.row
+				+e.col.col-md-6.col-lg-3: +categoryCard2('Секрет удачного кадра: привлечение')
+				+e.col.col-md-6.col-lg-3: +categoryCard2('Академия талантов: развитие')
+				+e.col.col-md-6.col-lg-3: +categoryCard2('В фокусе: удержание')
+				+e.col.col-md-6.col-lg-3: +categoryCard2('Новый ракурс: HR-инновации')
+			+e.bottom-row
+				+e.left 
+					a(href="#").cancel-btn.small
+						+icon('x')
+						| Отменить заполнение заявки
+				+e.right 
+					+e.btn.btn.btn-primary(href='#') Следующий шаг
+						+icon('arr-next')
+	// end sSteps
+
+
+mixin sSteps3(data)
+	// start sSteps
+	+b.SECTION.sSteps.section#sSteps&attributes(attributes)
+		.container
+			+e.top-wrap
+				h3=data
+				+stepsLine(data-step="3")
+			+e.item
+				+e.descr--sm
+					.text-large Вы хотите быть контактным лицом по этой заявке?
+					p Нажмите «Да», и мы заполним поля данными из вашего профиля, чтобы сэкономить ваше время.
+					p Контактное лицо по заявке — представитель реализовавшей проект организации. Именно с ним мы будем связываться, если возникнут уточняющие вопросы или рекомендации по заявке.
+			+e.btns
+				+e.btn.btn.btn-outline-primary(href='#') Указать другого человека
+				+e.btn.btn.btn-primary(href='#') Да
+	// end sSteps
+
+mixin sSteps31(data)
+	// start sSteps
+	+b.SECTION.sSteps.section#sSteps&attributes(attributes)
+		.container
+			+e.top-wrap
+				h3=data
+				+stepsLine(data-step="3")
+			+e.item
+				+e.descr
+					p Впишите данные о человеке, который выступит контактным лицом по заявке. Пожалуйста, указывайте только сотрудника организации, реализовавшей проект.
+			+e.item
+				+b.profile-info.row.FORM
+					+e.col.col-lg-4
+						+input("Заполните поле",'text', 'Имя')(required)
+					+e.col.col-lg-4
+						+input("Заполните поле",'text', 'Отчество')(required)
+					+e.col.col-lg-4
+						+input("Заполните поле",'text', 'Фамилия')(required)
+					+e.col.col-lg-6
+						+input("PM@mail.ru",'email', 'E-mail')(required)
+							span.error-feedback.text.text-indigo.small Пожалуйста, указывайте только почтовый адрес с доменом .ru
+					+e.col.col-lg-6
+						.tabs.tabs-form.tabs-form--phone
+							span.profile-info__input-title.small.text-secondary.required Контактный телефон
+							.item.tabs__caption.small
+								.tabs__btn Рабочий
+								.tabs__btn.active Мобильный
+							.tabs__content
+								+e.tel-wrap.row
+									+e.col.col: +input("+7 (___) ___-__-__",'tel',"")
+									+e.col.col-sm-auto: +input("Доб.",'text').additional
+							.tabs__content.active
+								+input("+7 (___) ___-__-__",'tel',"")
+					+e.col.col-lg-6
+						+input("Заполните поле",'text', 'Организация')(required)
+					+e.col.col-lg-6
+						+input("Заполните поле",'text', 'Должность')(required)
+			+e.bottom-row
+				+e.left 
+					+e.btn.btn.btn-outline-primary(href='#') 
+						+icon('arr-back') 
+						| Назад
+					a(href="#").cancel-btn.small
+						+icon('x')
+						| Отменить заполнение заявки
+				+e.right 
+					+e.btn.btn.btn-primary.BUTTON( disabled) Следующий шаг
+						+icon('arr-next')
+	// end sSteps
+
+mixin stepsLine 
+	+b.steps-line.swiper.breadcrumb-slider--js&attributes(attributes)
+		.swiper-wrapper
+			.swiper-slide: a(href="#") Шаг 1
+			.swiper-slide: a(href="#") Шаг 2
+			.swiper-slide: a(href="#") Шаг 3
+			.swiper-slide: a(href="#") Шаг 4
+			.swiper-slide: a(href="#") Финал
+
+
+mixin categoryCard2(title)
+	+b.category-card--sm
+		+in-c('radio', title, 'text')
+			span.custom-input__text=title
+		+img(src="img/svg/step-bg.svg", alt="").step-bg
+		a(href="#modal-info").link-modal-js
+			+img(src="img/svg/question-info.svg", alt="")
