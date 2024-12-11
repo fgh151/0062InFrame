@@ -194,27 +194,31 @@ function eventHandler() {
   }
   }
 
-  // function isMobile() {
-  //   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  // }
+  function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
 
-  // if (isMobile() && document.getElementById('modal-mob')) {
-  //   Fancybox.show([{
-  //     src: "#modal-mob",
-  //     type: "inline"
-  //   }], {
-  //     touch: false,
-  //     dragToClose: false,
-  //     autoFocus: false,
-  //     trapFocus: false,
-  //     placeFocusBack: false,
-  //     groupAll: false,
-  //     showClass: "fancybox-throwOutUp",
-  //     hideClass: "fancybox-throwOutDown",
-  //     compact: false,
-  //     arrows: false
-  //   });
-  // }
+  let wasShown = false
+
+  if (isMobile() && document.getElementById('modal-mob') && !wasShown) {
+    wasShown = true
+
+    Fancybox.show([{
+      src: "#modal-mob",
+      type: "inline"
+    }], {
+      touch: false,
+      dragToClose: false,
+      autoFocus: false,
+      trapFocus: false,
+      placeFocusBack: false,
+      groupAll: false,
+      showClass: "fancybox-throwOutUp",
+      hideClass: "fancybox-throwOutDown",
+      compact: false,
+      arrows: false
+    });
+  }
 
   const activeItems = document.querySelectorAll('.parts-item.active');
 
@@ -325,6 +329,38 @@ function eventHandler() {
           }
         });
 
+      });
+    });
+  }
+
+
+  const allTextareas = document.querySelectorAll('textarea[data-value]');
+  
+  if (allTextareas.length) {
+    allTextareas.forEach(textarea => {
+
+      const dataValue = textarea.getAttribute('data-value');
+      textarea.value = dataValue;
+    })
+  }
+
+  /* textarea maxlength */
+  const textareas = document.querySelectorAll('textarea[maxlength]');
+
+  if (textareas.length) {
+    textareas.forEach((textarea) => {
+      const maxLength = textarea.getAttribute('maxlength');
+  
+      const charCounter = document.createElement('div');
+      const currentLength = textarea.value.length;
+      charCounter.classList.add('char-counter', 'small', 'text-secondary');
+      charCounter.textContent = `${currentLength}/${maxLength}`;
+  
+      textarea.insertAdjacentElement('afterend', charCounter);
+  
+      textarea.addEventListener('input', () => {
+        const currentLength = textarea.value.length;
+        charCounter.textContent = `${currentLength}/${maxLength}`;
       });
     });
   }

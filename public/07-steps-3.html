@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Личный кабинет</title>
+		<title>Контактное лицо</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
@@ -29,41 +29,38 @@
 			<script>addBlock(`header`)</script>
 			<div id="headerWrap"></div>
 			<main>
-				<!-- start sAuth-->
-				<section class="sAuth section" id="sAuth">
+				<!-- start sSteps-->
+				<section class="sSteps section" id="sSteps">
 					<div class="container">
-						<div class="sAuth__row row">
-							<div class="sAuth__col col-lg-6">
-								<div class="section-title">
-									<h3>Подать заявку</h3>
-								</div>
-								<div class="sAuth__text">
-									<div class="h5">Номинируйте свой проект на HR-премию Правительства Москвы «В кадре».</div>
-									<p>Подача заявки проходит в несколько этапов — вы можете заполнять данные постепенно или <span>отредактировать заявку до 11 июля.</span></p>
-									<p>Если у вас возникнут вопросы или трудности при заполнении заявки, пожалуйста, <a href="#">свяжитесь с нами</a> — мы проконсультируем вас по каждому пункту и ответим на любой вопрос.</p>
-								</div>
-								<a class="sAuth__btn btn btn-primary" href="#">Начать
-								</a>
-							</div>
-							<div class="sAuth__col col-lg-6">
-								<div class="sAuth__card-info"><img class="info" src="img/svg/info.svg" alt="" loading="lazy"/>
-									<p>Продолжая заполнение данной заявки, вы даете свое согласие на сбор и обработку предоставленной информации, а также подтверждаете свое право указывать информацию об организации, ее проектах или сотрудниках.</p>
-									<p>Все данные будут использоваться исключительно в целях обработки заявки и не будут переданы третьим лицам без вашего предварительного согласия, за исключением случаев, предусмотренных <a href="#">Положением премии</a>.</p>
+						<div class="sSteps__top-wrap">
+							<h3>Контактное лицо</h3>
+							<div class="steps-line swiper breadcrumb-slider breadcrumb-slider--js" data-step="3">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><a href="#">Шаг 1</a></div>
+									<div class="swiper-slide"><a href="#">Шаг 2</a></div>
+									<div class="swiper-slide"><a href="#">Шаг 3</a></div>
+									<div class="swiper-slide"><a href="#">Шаг 4</a></div>
+									<div class="swiper-slide"><a href="#">Финал</a></div>
 								</div>
 							</div>
 						</div>
+						<div class="sSteps__item">
+							<div class="sSteps__descr sSteps__descr--sm">
+								<div class="text-large">Вы хотите быть контактным лицом по этой заявке?</div>
+								<p>Нажмите «Да», и мы заполним поля данными из вашего профиля, чтобы сэкономить ваше время.</p>
+								<p>Контактное лицо по заявке — представитель реализовавшей проект организации. Именно с ним мы будем связываться, если возникнут уточняющие вопросы или рекомендации по заявке.</p>
+							</div>
+						</div>
+						<div class="sSteps__btns">
+							<a class="sSteps__btn btn btn-outline-primary" href="#">Указать другого человека
+							</a>
+							<a class="sSteps__btn btn btn-primary" href="#">Да
+							</a>
+						</div>
 					</div>
 				</section>
-				<!-- end sAuth-->
+				<!-- end sSteps-->
 			</main>
-			<div id="modal-mob" style="display: none">
-				<div class="modal-win modal-win--mob">
-					<div class="modal-win__title-wrap">
-						<p>Рекомендуем заполнять заявку на компьютере для максимального удобства и функциональности.</p>
-					</div>
-				</div>
-			</div>
-			<!-- end modals-->
 			<footer class="footer section">
 				<div class="container">
 					<div class="footer__row row">
@@ -194,8 +191,7 @@
 								</div>
 								<!-- +e.input-wrap-->
 								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__input-title small text-secondary">Почта</span><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/>
-										<div class="error-feedback text text-indigo">Пожалуйста, указывайте только почтовый адрес с доменом .ru</div>
+									<label><span class="form-wrap__input-title small text-secondary">Почта</span><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="error-feedback text text-indigo">Пожалуйста, указывайте только почтовый адрес с доменом .ru</span>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
@@ -280,8 +276,7 @@
 								</div>
 								<!-- +e.input-wrap-->
 								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__input-title small text-secondary">Почта</span><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/>
-										<div class="error-feedback text text-indigo">Пожалуйста, указывайте только почтовый адрес с доменом .ru</div>
+									<label><span class="form-wrap__input-title small text-secondary">Почта</span><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="error-feedback text text-indigo">Пожалуйста, указывайте только почтовый адрес с доменом .ru</span>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
@@ -315,8 +310,7 @@
 									</div>
 								</div>
 								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__input-title small text-secondary">Ваша организация</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/>
-										<div class="error-feedback text text-indigo">Пожалуйста, указывайте организацию, от которой вы подаете заявку на участие в премии</div>
+									<label><span class="form-wrap__input-title small text-secondary">Ваша организация</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="error-feedback text text-indigo">Пожалуйста, указывайте организацию, от которой вы подаете заявку на участие в премии</span>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->

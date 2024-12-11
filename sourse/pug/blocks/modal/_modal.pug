@@ -38,7 +38,7 @@ mixin modal()
 					+form-wrap
 						+input("",'text', 'Ф.И.О.')(required)
 						+input("PM@mail.ru",'email',"Почта")(required)
-							.error-feedback.text.text-indigo Пожалуйста, указывайте только почтовый адрес с доменом .ru
+							span.error-feedback.text.text-indigo Пожалуйста, указывайте только почтовый адрес с доменом .ru
 						+input("Введите текст",'text', 'Ваше сообщение')(required)
 						.title.text-secondary.small.required Подтвердите, что вы не робот, введите символы с картинки
 						.capture-wrap
@@ -71,7 +71,7 @@ mixin modal()
 						+input("Заполните поле",'text', 'Имя')(required)
 						+input("Заполните поле",'text', 'Отчество')(required)
 						+input("PM@mail.ru",'email',"Почта")(required)
-							.error-feedback.text.text-indigo Пожалуйста, указывайте только почтовый адрес с доменом .ru
+							span.error-feedback.text.text-indigo Пожалуйста, указывайте только почтовый адрес с доменом .ru
 						.tabs.tabs-form.tabs-form--phone
 							.item.tabs__caption.small
 								.tabs__btn Рабочий телефон
@@ -86,7 +86,7 @@ mixin modal()
 						//- 	+in-c('radio', 'Рабочий телефон')
 						//- 	+in-c('radio', 'Мобильный телефон')
 						+input("Заполните поле",'text', 'Ваша организация')(required)
-							.error-feedback.text.text-indigo Пожалуйста, указывайте организацию, от которой вы подаете заявку на участие в премии
+							span.error-feedback.text.text-indigo Пожалуйста, указывайте организацию, от которой вы подаете заявку на участие в премии
 						+input("_ _ _ _ _ _ _ _ _ _",'text', 'ИНН организации').mask-firm(required)
 						+input("Заполните поле",'text', 'Должность')(required)
 						+policy

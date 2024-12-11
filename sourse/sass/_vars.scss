@@ -103,7 +103,7 @@ $purple-400: #5600E0;
 $purple-500: $purple !default;
 $purple-600: #2C1551;
 $purple-700: shade-color($purple, 40%) !default;
-$purple-800: shade-color($purple, 60%) !default;
+$purple-800: #230078;
 $purple-900: shade-color($purple, 80%) !default;
 
 $pink-100: tint-color($pink, 80%) !default;
@@ -122,7 +122,7 @@ $red-300: tint-color($red, 40%) !default;
 $red-400: tint-color($red, 20%) !default;
 $red-500: $red !default;
 $red-600: shade-color($red, 20%) !default;
-$red-700: shade-color($red, 40%) !default;
+$red-700: #B30A3F;
 $red-800: shade-color($red, 60%) !default;
 $red-900: shade-color($red, 80%) !default;
 

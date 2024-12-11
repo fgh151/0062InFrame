@@ -250,13 +250,13 @@ ul.page-numbers {
   display: flex;
   flex-wrap: wrap;
   align-items: start;
+  gap: rem(12);
 
   .file-label {
     @extend .btn-icon;
     @extend .btn-sm;
     min-width: auto !important;
     width: auto;
-    margin-bottom: rem(12);
   }
   .upload {
     position: relative;
@@ -295,6 +295,10 @@ ul.page-numbers {
     .icon {
       font-size: rem(20);
     }
+  }
+  &.is-invalid .btn {
+    border-color: $danger;
+    background: white;
   }
 
 }
