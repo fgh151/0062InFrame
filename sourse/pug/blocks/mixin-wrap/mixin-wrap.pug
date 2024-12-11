@@ -97,3 +97,13 @@ mixin uploadFileSingle
 				+icon('plus')
 			input.file-upload(type='file')
 		.files
+
+mixin stepsLine 
+	+b.steps-line.swiper.breadcrumb-slider--js&attributes(attributes)
+		.swiper-wrapper
+			.swiper-slide: a(href="#") Шаг 1
+			.swiper-slide: a(href="#") Шаг 2
+			.swiper-slide: a(href="#") Шаг 3
+			.swiper-slide: a(href="#") Шаг 4
+			.swiper-slide: a(href="#") Финал
+

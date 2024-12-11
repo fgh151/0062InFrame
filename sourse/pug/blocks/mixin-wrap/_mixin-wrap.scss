@@ -302,3 +302,77 @@ ul.page-numbers {
   }
 
 }
+
+
+.steps-line {
+  --def-color: #{$secondary};
+  --gap: #{rem(10)};
+  a {
+    color: var(--def-color);
+    font-size: rem(24);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap);
+
+    &:before {
+      filter: grayscale(1);
+      content: '';
+      border-radius: 5px;
+      width: 70px;
+      height: 4px;
+      background: #{$purple-800};
+      display: inline-block;
+      opacity: .2;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .swiper-slide {
+    width: auto;
+    &:not(:last-child) {
+      margin-right: var(--gap);
+    }
+
+    &:nth-child(2) {
+      a:before {
+        background: #3212B1;
+      }
+    }
+    &:nth-child(3) {
+      a:before {
+        background: #434DD9;
+      }
+    }
+    &:nth-child(4) {
+      a:before {
+        background: #2D59D5;
+      }
+    }
+    &:nth-child(5n) {
+      a:before {
+        background: #0F69D0;
+      }
+    }
+  }
+
+  &.swiper  {
+    margin: 0;
+    // overflow: visible;
+  }
+}
+
+@for $n from 1 through 5 {
+  .steps-line[data-step="#{$n}"] {
+    .swiper-slide:nth-child(-n + #{$n}) a {
+      --def-color: #{$purple-800};
+
+      &:before {
+        filter: grayscale(0);
+        opacity: 1;
+      }
+    }
+  }
+}
