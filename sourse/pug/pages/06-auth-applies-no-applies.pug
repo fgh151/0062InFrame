@@ -19,8 +19,13 @@ block pagecontent
 	//- +mob-mnu()
 	
 	
-	+parts('header')
+	+parts('header-cabinet')
 	main
 		+sAuth7(title)
-	+modalMob() 
+	+modalMob()
+	+b.info-window--js
+		+e.content.d-flex
+			+img(src="img/svg/success.svg", alt="")
+			.small Спасибо, мы скоро свяжемся с вами по контактным данным которые вы указали при регистрации личного кабинета
+			.close-btn: +icon('x')
 	+footer

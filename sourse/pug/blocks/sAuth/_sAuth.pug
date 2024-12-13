@@ -224,7 +224,6 @@ mixin sAuth4(data)
 mixin sAuth5(data)
 	// start sAuth
 	+b.SECTION.sAuth.section#sAuth&attributes(attributes)
-		+infoSmall('Изменения сохранены. Организаторы увидят их и свяжутся с вами при необходимости')
 		.container
 			+e.top-row.row.sAuth__item
 				.col-md-auto.order-md-last
@@ -464,11 +463,6 @@ mixin sAuth6(data)
 mixin sAuth7(data)
 	// start sAuth
 	+b.SECTION.sAuth.section#sAuth&attributes(attributes)
-		+b.info-window--js
-			+e.content.d-flex
-				+img(src="img/svg/success.svg", alt="")
-				.small Спасибо, мы скоро свяжемся с вами по контактным данным которые вы указали при регистрации личного кабинета
-				.close-btn: +icon('x')
 		.container
 			+e.item
 				h3=data
