@@ -86,7 +86,9 @@
     --bs-gutter-x: #{rem(10)};
     }
   }
-
+  .tinny-item-js {
+    display: inline-block;
+  }
     .top-nav {
       &__logo {
         display: flex;
@@ -104,6 +106,13 @@
         }
       }
 
+      &__btn.tinny-item-js {
+        margin-right: rem(12);
+        @include media-breakpoint-up(sm) {
+          margin-right: rem(44);
+        }
+      }
+
       &__cabinet-nav {
         .icon {
           fill: none;
@@ -112,10 +121,6 @@
         .icon-exit {
           stroke-width: 2px;
           stroke: $secondary;
-          margin-left: rem(12);
-          @include media-breakpoint-up(sm) {
-            margin-left: rem(44);
-          }
         }
       }
     }
@@ -127,7 +132,36 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .consult-info {
+    display: none;
+    position: relative;
+    z-index: 1;
+  }
 
+  .tippy-box {
+    padding: rem(16);
+    padding-bottom: rem(30);
+    box-shadow: 0 0 8px 0 rgba(29, 23, 75, 0.15);
+    background: #fff;
+    border-radius: rem(12px) 0 rem(12px) rem(12px);
+    color: $body-color;
+
+    .btn {
+      font-size: 16px;
+      --bs-btn-padding-x: #{rem(16)};
+      --bs-btn-padding-y: #{rem(13)};
+      line-height: 120%;
+
+      margin-top: rem(20);
+    }
+    overflow: hidden;
+    .info-bg {
+      position: absolute;
+      bottom: -40px;
+      right: -30px;
+      z-index: -1;
+    }
+  }
 
 
 	@include media-breakpoint-up(sm) {}
@@ -140,4 +174,3 @@
 
 	@include media-breakpoint-down(xs) {}
 }
-

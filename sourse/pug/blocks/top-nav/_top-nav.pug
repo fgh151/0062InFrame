@@ -65,7 +65,13 @@ mixin top-nav-cabinet()
 							+mnuCabinet()
 				.col-auto
 					+e.cabinet-nav
-						+e.btn(href='#'): +img(src="img/svg/question.svg", alt="")
+						+e.btn.tinny-item-js
+							+img(src="img/svg/question.svg", alt="")
+							.tinny-template.consult-info
+								p Готовы проконсультировать вас и помочь заполнить заявку.
+								p Нажмите кнопку, и мы свяжемся с вами в ближайшее время.
+								+e.btn.btn.btn-outline-primary(href='#') Получить консультацию
+								+img(src="img/svg/question-i.svg", alt="").info-bg
 						+e.btn(href='#modal-exit').link-modal-js: +icon('exit')
 				.col-auto.d-xl-none
 					+menu-toggle()

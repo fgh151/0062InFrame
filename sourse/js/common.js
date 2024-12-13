@@ -233,6 +233,18 @@ function eventHandler() {
           </div>`
       );
   }
+  
+  const infoWindows = document.querySelectorAll('.info-window--js')
+  if (infoWindows) {
+    infoWindows.forEach(el => {
+      const closeBtn = el.querySelector('.close-btn')
+      if (!closeBtn) return
+      closeBtn.addEventListener('click', () => {
+        el.classList.add('hidden')
+      })
+    })
+  }
+
 
   const tiny = document.querySelectorAll('.tinny-item-js');
   tiny.forEach((el) => {

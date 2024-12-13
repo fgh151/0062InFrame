@@ -107,3 +107,10 @@ mixin stepsLine
 			.swiper-slide: a(href="#") Шаг 4
 			.swiper-slide: a(href="#") Финал
 
+
+mixin infoSmall(text)
+	+b.info-window--js.info-window_small&attributes(attributes)
+		+e.content.d-flex
+			+img(src="img/svg/success.svg", alt="")
+			.small.text-secondary=text
+			//- .close-btn: +icon('x')
