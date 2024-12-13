@@ -42,40 +42,10 @@
 					<h2>Main page</h2><a class="btn btn-primary link-modal-js" href="#modal-question">Задать вопрос</a><a class="btn btn-primary link-modal-js" href="#modal-auth">Личный кабинет</a><a class="btn btn-primary link-modal-js" href="#modal-auth-success">Успешная Регистрация</a><a class="btn btn-primary link-modal-js" href="#modal-mail-confirmed">Почта подтверждена!</a><a class="btn btn-primary link-modal-js" href="#modal-partner">Стать партнером</a>
 					<h3>Сброс пароля</h3><a class="btn btn-primary link-modal-js" href="#modal-reset-1">Сброс пароля 1</a><a class="btn btn-primary link-modal-js" href="#modal-reset-2">Сброс пароля 2</a><a class="btn btn-primary link-modal-js" href="#modal-reset-info">Войти</a><a class="btn btn-primary link-modal-js" href="#modal-reset-success">Пароль успешно изменен</a>
 				</div>
-				<div class="section container">
-					<h2>Cabinet</h2><a class="btn btn-primary link-modal-js" href="#modal-frames">Раскадровка</a><a class="btn btn-primary link-modal-js" href="#modal-exit">Выйти</a><a class="btn btn-primary link-modal-js" href="#modal-cancel">Отменить заполнение заявки</a><a class="btn btn-primary link-modal-js" href="#modal-cancel-1">Отменить 1</a><a class="btn btn-primary link-modal-js" href="#modal-cancel-2">Отменить 2</a><a class="btn btn-primary link-modal-js" href="#modal-criteria-1">Критерии 1</a><a class="btn btn-primary link-modal-js" href="#modal-criteria-2">Критерии 2</a><a class="btn btn-primary link-modal-js" href="#modal-info">Инфо</a>
-					<h3>Модальное если зашел в моб</h3><a class="btn btn-primary link-modal-js" href="#modal-mob">Окно</a>
-				</div>
-				<div class="section container">
-					<div class="col-8">
-						<div class="form-wrap">
-							<form>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="input"/>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group custom-select-wrap">
-									<select class="form-wrap__input form-select custom-select-js" name="select" data-placeholder="select">
-										<option value="select">select</option>
-										<option value="select1">select1</option>
-										<option value="select2">select2</option>
-										<option value="select3">select3</option>
-										<option value="select4">select4</option>
-									</select>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group custom-select-wrap">
-									<select class="form-wrap__input form-select custom-select-js" name="select" data-placeholder="select" multiple="multiple">
-										<option value="select">select</option>
-										<option value="select1">select1</option>
-										<option value="select2">select2</option>
-										<option value="select3">select3</option>
-										<option value="select4">select4</option>
-									</select>
-								</div>
-								<!-- +e.input-wrap-->
-								<button class="btn btn-primary" type="submit">submit</button>
-							</form>
-						</div>
+				<div class="section">
+					<div class="container">
+						<h2>Cabinet</h2><a class="btn btn-primary link-modal-js" href="#modal-frames">Раскадровка</a><a class="btn btn-primary link-modal-js" href="#modal-exit">Выйти</a><a class="btn btn-primary link-modal-js" href="#modal-cancel">Отменить заполнение заявки</a><a class="btn btn-primary link-modal-js" href="#modal-cancel-1">Отменить 1</a><a class="btn btn-primary link-modal-js" href="#modal-cancel-2">Отменить 2</a><a class="btn btn-primary link-modal-js" href="#modal-criteria-1">Критерии 1</a><a class="btn btn-primary link-modal-js" href="#modal-criteria-2">Критерии 2</a><a class="btn btn-primary link-modal-js" href="#modal-info">Инфо</a>
+						<h3>Модальное если зашел в моб</h3><a class="btn btn-primary link-modal-js" href="#modal-mob">Окно</a>
 					</div>
 				</div>
 			</main>
@@ -210,12 +180,10 @@
 								</div>
 								<!-- +e.input-wrap-->
 								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__input-title small text-secondary">Пароль</span><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/>
-										<div class="btn-toggle-type-input btn-toggle-type-input--js">
-											<svg class="icon icon-eye-off ">
-												<use xlink:href="img/svg/sprite.svg#eye-off"></use>
-											</svg>
-										</div>
+									<label><span class="form-wrap__input-title small text-secondary">Пароль</span><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="btn-toggle-type-input btn-toggle-type-input--js">
+										<svg class="icon icon-eye-off ">
+											<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+										</svg></span>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
@@ -339,12 +307,10 @@
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group">
-							<label><span class="form-wrap__input-title small text-secondary">Пароль</span><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/>
-								<div class="btn-toggle-type-input btn-toggle-type-input--js">
-									<svg class="icon icon-eye-off ">
-										<use xlink:href="img/svg/sprite.svg#eye-off"></use>
-									</svg>
-								</div>
+							<label><span class="form-wrap__input-title small text-secondary">Пароль</span><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="btn-toggle-type-input btn-toggle-type-input--js">
+								<svg class="icon icon-eye-off ">
+									<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+								</svg></span>
 							</label>
 						</div>
 						<!-- +e.input-wrap-->
@@ -438,22 +404,18 @@
 				<div class="form-wrap">
 					<form>
 						<div class="form-wrap__input-wrap form-group">
-							<label><span class="form-wrap__input-title small text-secondary">Придумайте пароль</span><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/>
-								<div class="btn-toggle-type-input btn-toggle-type-input--js">
-									<svg class="icon icon-eye-off ">
-										<use xlink:href="img/svg/sprite.svg#eye-off"></use>
-									</svg>
-								</div>
+							<label><span class="form-wrap__input-title small text-secondary">Придумайте пароль</span><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="btn-toggle-type-input btn-toggle-type-input--js">
+								<svg class="icon icon-eye-off ">
+									<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+								</svg></span>
 							</label>
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group">
-							<label><span class="form-wrap__input-title small text-secondary">Повторите пароль</span><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/>
-								<div class="btn-toggle-type-input btn-toggle-type-input--js">
-									<svg class="icon icon-eye-off ">
-										<use xlink:href="img/svg/sprite.svg#eye-off"></use>
-									</svg>
-								</div>
+							<label><span class="form-wrap__input-title small text-secondary">Повторите пароль</span><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="btn-toggle-type-input btn-toggle-type-input--js">
+								<svg class="icon icon-eye-off ">
+									<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+								</svg></span>
 							</label>
 						</div>
 						<!-- +e.input-wrap-->
@@ -497,12 +459,10 @@
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group">
-							<label><span class="form-wrap__input-title small text-secondary">Пароль</span><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/>
-								<div class="btn-toggle-type-input btn-toggle-type-input--js">
-									<svg class="icon icon-eye-off ">
-										<use xlink:href="img/svg/sprite.svg#eye-off"></use>
-									</svg>
-								</div>
+							<label><span class="form-wrap__input-title small text-secondary">Пароль</span><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="btn-toggle-type-input btn-toggle-type-input--js">
+								<svg class="icon icon-eye-off ">
+									<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+								</svg></span>
 							</label>
 						</div>
 						<!-- +e.input-wrap-->

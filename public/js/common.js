@@ -119,10 +119,9 @@ function eventHandler() {
     let icon = $(this).find("svg.icon use")
     let iconId = $(this).find("svg.icon use").attr("xlink:href").split("#")[1];
 
-
     const opt = {
-      'eye-off':  ['eye','password'],
-      'eye':  ['eye-off','text'],
+      'eye-off':  ['eye','text'],
+      'eye':  ['eye-off','password'],
     }
     $(this).parent().find("input").attr("type", opt[iconId][1]);
     icon.attr("xlink:href",`img/svg/sprite.svg#${opt[iconId][0]}`)
