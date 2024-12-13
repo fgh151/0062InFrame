@@ -366,6 +366,13 @@
 		font-size: 40px;
 		font-weight: 100;
 	}
+  
+  .text-gradient {
+    background:linear-gradient(92.24deg, #5400B7 0%, #0098E3 150.93%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
 
   .wrapper-scroll {
@@ -596,7 +603,7 @@ main.modal {
   }
   span {
     font-weight: 700;
-    &.text-purple {
+    &.text-gradient {
       font-weight: 400;
     }
   }

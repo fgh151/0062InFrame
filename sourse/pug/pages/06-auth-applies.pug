@@ -22,5 +22,11 @@ block pagecontent
 	+parts('header-cabinet')
 	main
 		+sAuth3(title)
+	+b.info-window--js.consult-info.hidden
+		p Готовы проконсультировать вас и помочь заполнить заявку.
+		p Нажмите кнопку, и мы свяжемся с вами в ближайшее время.
+		+e.btn.btn.btn-outline-primary.consult--js.BUTTON Получить консультацию
+		+img(src="img/svg/question-i.svg", alt="").info-bg
+		.close-btn: +icon('x')
 	+modalMob() 
 	+footer

@@ -232,30 +232,6 @@ function eventHandler() {
           </div>`
       );
   }
-  
-  const infoWindows = document.querySelectorAll('.info-window--js')
-  if (infoWindows) {
-    infoWindows.forEach(el => {
-      const closeBtn = el.querySelector('.close-btn')
-      if (!closeBtn) return
-      closeBtn.addEventListener('click', () => {
-        el.classList.add('hidden')
-      })
-    })
-  }
-
-
-  const tiny = document.querySelectorAll('.tinny-item-js');
-  tiny.forEach((el) => {
-    const template = el.querySelector('.tinny-template');
-
-    tippy(el, {
-      content: template.innerHTML,
-      allowHTML: true,
-      interactive: true,
-      placement: 'bottom-start',
-    });
-  });
 
   /* input-wrap */
   document.addEventListener('click', function (event) {
@@ -391,6 +367,51 @@ function eventHandler() {
       }
       });
     }
+
+      
+  const infoWindows = document.querySelectorAll('.info-window--js')
+  if (infoWindows) {
+    infoWindows.forEach(el => {
+      const closeBtn = el.querySelector('.close-btn')
+      if (!closeBtn) return
+      closeBtn.addEventListener('click', () => {
+        el.classList.add('hidden')
+      })
+    })
+  }
+
+
+  const tiny = document.querySelectorAll('.tinny-item-js');
+  tiny.forEach((el) => {
+    const template = el.querySelector('.tinny-template');
+
+    tippy(el, {
+      content: template.innerHTML,
+      allowHTML: true,
+      interactive: true,
+      placement: 'bottom-start',
+    });
+  });
+
+  const consultBtn = document.querySelector('.consult--js')
+  if (consultBtn) {
+    consultBtn.addEventListener('click', (event) => {
+      const target = document.querySelector('.tinny-item-js.consult-info-js');
+
+      if (target && target._tippy) {
+        target._tippy.show();
+        consultBtn.closest('.info-window--js').classList.add('hidden')
+      }
+    });
+  }
+
+  const infoWindow = document.querySelector('.info-window--js.consult-info.hidden')
+  if (infoWindow) {
+    setTimeout(function () {
+      infoWindow.classList.remove('hidden')
+    }, 5000)
+  }
+
 }
 
 if (document.readyState !== "loading") {
