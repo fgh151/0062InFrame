@@ -1,19 +1,16 @@
 extends ../layout/main.pug
-include ../blocks/footer/_footer.pug
 
-
-include ../blocks/sAuth/_sAuth.pug
 include ../blocks/sForm/_sForm.pug
-include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sRules/_sRules.pug
 include ../blocks/sContent/_sContent.pug
  
 
 block variables
-	- let  mainPage= 'main-page white-bg' 
+	- let  mainPage= 'main-page' 
 	- let  bg= null
 
 block title
-	- let  title= 'Выберите номинацию'
+	- let  title= 'О премии'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -21,5 +18,6 @@ block pagecontent
 	
 	+parts('header-cabinet')
 	main
-		+sSteps2(title)
-	+footer
+		+sRules
+		+sContent2
+	+parts('footer')

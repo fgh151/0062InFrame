@@ -57,7 +57,7 @@ mixin modal()
 					+form-wrap
 						+input("PM@mail.ru",'email',"Почта")(required).is-invalid
 						+input('Заполните поле', 'password', 'Пароль')(required).is-invalid
-							+b.btn-toggle-type-input--js(data-href="")
+							+b.btn-toggle-type-input--js.SPAN
 								+icon("eye-off")
 						+e.forgot-passw: a(href="#") Не помню пароль
 						+e.bottom-wrap.text-center
@@ -107,7 +107,7 @@ mixin modal()
 			+form-wrap
 				+input("PM@mail.ru",'email',"Почта")(required).is-invalid
 				+input('Заполните поле', 'password', 'Пароль')(required).is-invalid
-					+b.btn-toggle-type-input--js(data-href="")
+					+b.btn-toggle-type-input--js.SPAN
 						+icon("eye-off")
 				+e.forgot-passw: a(href="#") Не помню пароль
 				+e.bottom-wrap.text-center
@@ -148,10 +148,10 @@ mixin modal()
 				p Установите новый пароль для своего<br>личного&nbsp;кабинета. 
 			+form-wrap
 				+input('Заполните поле', 'password', 'Придумайте пароль')(required).is-invalid
-					+b.btn-toggle-type-input--js(data-href="")
+					+b.btn-toggle-type-input--js.SPAN
 						+icon("eye-off")
 				+input('Заполните поле', 'password', 'Повторите пароль')(required).is-invalid
-					+b.btn-toggle-type-input--js(data-href="")
+					+b.btn-toggle-type-input--js.SPAN
 						+icon("eye-off")
 				+e.bottom-wrap.text-center
 					.error-feedback.text-indigo.text.small Пароли не совпадают
@@ -173,7 +173,7 @@ mixin modal()
 			+form-wrap
 				+input("PM@mail.ru",'email',"Почта")(required).is-invalid
 				+input('Заполните поле', 'password', 'Пароль')(required).is-invalid
-					+b.btn-toggle-type-input--js(data-href="")
+					+b.btn-toggle-type-input--js.SPAN
 						+icon("eye-off")
 				+e.forgot-passw: a(href="#") Не помню пароль
 				+e.bottom-wrap.text-center
@@ -181,11 +181,34 @@ mixin modal()
 					+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Войти
 
 	//- cabinet
+	div(id="modal-frames"  style="display: none" )
+		+b.modal-win--big
+			+e.title-wrap
+				+e.t.h3 Раскадровка
+			.wrapper-scroll
+				+b.frame-item
+					+e.top
+						+e.title.text-gradient.fw-700 Прием заявок
+						+e.date.small.text-secondary 13 февраля — 11 июля
+					+e.content
+						p Чтобы подать заявку, нажмите на раздел «Подать заявку» в верхнем меню.
+						p Формировать заявку можно постепенно — даже если вы не заполните все поля, черновик отобразится в этом разделе, и вы сможете продолжить заполнение в любой момент #[span до 11 июля.]
+				+frameItem('Техническая экспертиза', '14 июля — 3 августа')
+					p Мы проверим ваши заявки на соответствие  #[span критериям премии]. Вам в это время ничего делать не нужно. Если у нас возникнут вопросы или рекомендации по вашей заявке — мы свяжемся с вами.
+				+frameItem('Экспертная комиссия', '4 августа — 31 августа')
+					p На этом этапе заявки будут изучать эксперты Премии. Они отберут топ-5 проектов в каждой номинации по каждой из 3-х категорий и сформируют #[span топ-60 для рассмотрения жюри].
+					p В целях безопасности все данные передаются экспертам в обобщенном виде, а участники не знают, кто из экспертов рассматривает их проект.
+				+frameItem('Голосование жюри', '8 сентября — 21 сентября ')
+					p Жюри изучат топ-60 проектов, рекомендованных экспертами, и отберут #[span топ-3 в каждой номинации] по каждой из 3-категорий — именно эти проекты станут #[span победителями] Премии!
+				+frameItem('Премьера', '2 октября очно в Москве')
+					p #[span.text-gradient Торжественная церемония] оглашения победителей пройдет в Москва-Сити, башня «Федерация».
+					p #[span Обратите внимание], что организатор не оплачивает трансфер для участия в мероприятии.
+
 	div(id="modal-exit"  style="display: none" )
 		+b.modal-win--big
 			+e.title-wrap
 				+e.t.h5 Вы действительно хотите выйти из личного кабинета?
-				p Вам нужно будет авторизоваться повторно.
+				.after-headline Вам нужно будет авторизоваться повторно.
 			+e.btns-wrap.row
 				+e.col.col-sm-6: +e.btn.btn.btn-outline-primary.modal-close-js(href='#') Нет
 				+e.col.col-sm-6: +e.btn.btn.btn-primary(href='#') Выйти
@@ -193,7 +216,7 @@ mixin modal()
 		+b.modal-win--big
 			+e.title-wrap
 				+e.t.h5 Вы не подтвердили изменения в заявке.
-				p Хотите их сохранить?
+				.after-headline Хотите их сохранить?
 			+e.btns-wrap.row
 				+e.col.col-sm-6: +e.btn.btn.btn-outline-primary(href='#') Не сохранять
 				+e.col.col-sm-6: +e.btn.btn.btn-primary(href='#') Войти
@@ -201,17 +224,17 @@ mixin modal()
 		+b.modal-win--big
 			+e.title-wrap
 				+e.t.h5 Вы уверены, что хотите прервать заполнение заявки?
-				p Мы сохраним все заполненные поля в «черновике» — вы сможете найти его во вкладке «Все заявки» и продолжить заполнение.
+				.after-headline Мы сохраним все заполненные поля в «черновике» — вы сможете найти его во вкладке «Все заявки» и продолжить заполнение.
 			+e.btns-wrap.row
-				+e.col.col-sm-6: +e.btn.btn.btn-outline-primary(href='#') Сохранить как черновик
+				+e.col.col-sm-6: +e.btn.btn.btn-outline-primary.small(href='#') Сохранить как черновик
 				+e.col.col-sm-6: +e.btn.btn.btn-primary(href='#') Продолжить
 	div(id="modal-cancel-2"  style="display: none" )
 		+b.modal-win--big
 			+e.title-wrap
 				+e.t.h5 Вы не заполнили все обязательные поля
-				p Хотите сохранить черновик заявки и вернуться к заполнению позже?
+				p.after-headline Хотите сохранить черновик заявки и вернуться к заполнению позже?
 			+e.btns-wrap.row
-				+e.col.col-sm-6: +e.btn.btn.btn-outline-primary(href='#') Сохранить как черновик
+				+e.col.col-sm-6: +e.btn.btn.btn-outline-primary.small(href='#') Сохранить как черновик
 				+e.col.col-sm-6: +e.btn.btn.btn-primary(href='#') Продолжить
 	div(id="modal-criteria-1"  style="display: none" )
 		+b.modal-win--big
@@ -252,6 +275,13 @@ mixin modal()
 				p Отмечаются проекты, которые помогают привлечь в организацию талантливых сотрудников и сделать это максимально эффективно. 
 				p Поделитесь практическими решениями, которые позволяют привлекать кадры с комфортом как для команды, так и для кандидатов!
 
+mixin frameItem(t,date)
+	+b.frame-item
+		+e.top
+			+e.title.fw-700=t
+			+e.date.small.text-secondary=date
+		+e.content
+			block
 
 mixin modalMob() 
 	div(id="modal-mob"  style="display: none" )

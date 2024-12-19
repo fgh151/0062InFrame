@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Мои заявки</title>
+		<title>Финал</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
@@ -29,101 +29,54 @@
 			<script>addBlock(`header-cabinet`)</script>
 			<div id="header-cabinetWrap"></div>
 			<main>
-				<!-- start sAuth-->
-				<section class="sAuth section" id="sAuth">
+				<!-- start sSteps-->
+				<section class="sSteps section" id="sSteps">
 					<div class="container">
-						<div class="sAuth__item">
-							<h3>Мои заявки</h3>
+						<div class="sSteps__top-wrap">
+							<h3>Финал</h3>
+							<div class="steps-line swiper breadcrumb-slider breadcrumb-slider--js" data-step="5">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><a href="#">Шаг 1</a></div>
+									<div class="swiper-slide"><a href="#">Шаг 2</a></div>
+									<div class="swiper-slide"><a href="#">Шаг 3</a></div>
+									<div class="swiper-slide"><a href="#">Шаг 4</a></div>
+									<div class="swiper-slide"><a href="#">Финал</a></div>
+								</div>
+							</div>
 						</div>
-						<div class="sAuth__item-md item_gray">
-							<div class="row">
-								<div class="col-lg-8">
-									<div class="sAuth__item-wrap">
-										<div class="text-large">Здесь пока ничего нет. Давайте это исправим?</div>
-										<p>Вы сможете в любой момент отредактировать заявку, а также сохранить ее в черновик и продолжить заполнение в удобное для вас время во вкладке «Мои заявки».</p>
-										<p>Для удобства мы разработали <a class="fw-700" href="#">образец заполнения заявки</a>, чтобы вы могли заранее собрать все необходимые данные. Также вы можете скачать <a class="fw-700" href="#" download="download">чек-лист участника</a>.</p>
+						<div class="sSteps__item-sm">
+							<div class="sSteps__item-row row">
+								<div class="sSteps__col col-lg-8">
+									<div class="sSteps__descr sSteps__descr--sm">
+										<div class="text-large">Вы номинировали проект!</div>
+										<p>На вкладке «Мои заявки» вы можете отслеживать статус заявки или вносить изменения в описание проекта <span>до 11 июля.</span></p>
 									</div>
-									<div class="sAuth__item-wrap">
-										<a class="apply-card apply-card--empty apply-card_gray" href="#">
-											<div class="apply-card__title h5">Номинировать проект на Премию<img class="plus" src="img/svg/plus.svg" alt="" loading="lazy"/>
-											</div>
-										</a>
+									<div class="sSteps__descr">
+										<div class="sSteps__wrap wrap-gray"><img src="img/svg/calendar.svg" alt="" loading="lazy"/>
+											<p>В ближайшее время мы проверим вашу заявку на соответствие критериям премии.<br>Вы получите письмо по итогам рассмотрения и дальнейшие инструкции. </p>
+										</div>
+										<p>Если у нас возникнут вопросы по заявке, мы свяжемся с вами и дадим рекомендации, которые помогут сделать ее лучше.</p>
+										<p>Заявка может быть отклонена из-за несоответствия <a href="#"><span>первичным критериям</span></a> отбора заявок.</p>
 									</div>
 								</div>
-								<div class="col-lg">
-									<div class="text-end"><img class="manager-img" src="img/manager.png" alt="" loading="lazy"/>
-									</div>
-									<div class="item-wrap_white manager">
-										<div class="fw-700">Сергей Журихин</div>
-										<div class="small text-secondary">Руководитель отдела по работе с заявками</div>
+								<div class="sSteps__col col-lg-4">
+									<div class="sAuth__card-info"><img class="info" src="img/svg/info.svg" alt="" loading="lazy"/>
+										<p>Вы можете подать проект в несколько номинаций — для этого достаточно заполнить новую заявку.</p>
+										<p>Проект сможет пройти в следующий этап только в одной номинации.</p>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="sAuth__item">
-							<div class="h5">Этапы Премии</div>
-							<div class="parts">
-								<div class="parts-item tinny-item-js active"><img class="chain" src="img/svg/chain.svg" alt="" loading="lazy"/>
-									<div class="parts-item__date small">13 февраля — 11 июля
-									</div>
-									<div class="parts-item__t fw-600">Прием заявок
-									</div><img class="i" src="img/svg/i.svg" alt="" loading="lazy"/>
-									<div class="tinny-template d-none">Чтобы подать заявку, нажмите на раздел «Подать заявку» в верхнем меню. Формировать заявку можно постепенно — даже если вы не заполните все поля, черновик отобразится в этом разделе, и вы сможете продолжить заполнение в любой момент до 11 июля.</div>
-								</div>
-								<div class="parts-item tinny-item-js active"><img class="chain" src="img/svg/chain.svg" alt="" loading="lazy"/>
-									<div class="parts-item__date small">14 июля — 3 августа
-									</div>
-									<div class="parts-item__t fw-600">Техническая экспертиза
-									</div><img class="i" src="img/svg/i.svg" alt="" loading="lazy"/>
-									<div class="tinny-template d-none">Мы проверим ваши заявки на соответствие критериям премии. Вам в это время ничего делать не нужно. Если у нас возникнут вопросы или рекомендации по вашей заявке — мы свяжемся с вами.</div>
-								</div>
-								<div class="parts-item tinny-item-js"><img class="chain" src="img/svg/chain.svg" alt="" loading="lazy"/>
-									<div class="parts-item__date small">4 августа —31 августа
-									</div>
-									<div class="parts-item__t fw-600">Экспертная комиссия
-									</div><img class="i" src="img/svg/i.svg" alt="" loading="lazy"/>
-									<div class="tinny-template d-none">
-										<p>На этом этапе заявки будут изучать эксперты Премии. Они отберут топ-5 проектов в каждой номинации по каждой из 3-х категорий и сформируют топ-60 для рассмотрения жюри.</p>
-										<p>В целях безопасности все данные передаются экспертам в обобщенном виде, а участники не знают, кто из экспертов рассматривает их проект.</p>
-									</div>
-								</div>
-								<div class="parts-item tinny-item-js"><img class="chain" src="img/svg/chain.svg" alt="" loading="lazy"/>
-									<div class="parts-item__date small">8 сентября — 21 сентября 
-									</div>
-									<div class="parts-item__t fw-600">Голосование жюри
-									</div><img class="i" src="img/svg/i.svg" alt="" loading="lazy"/>
-									<div class="tinny-template d-none">Жюри изучат топ-60 проектов, рекомендованных экспертами, и отберут топ-3 в каждой номинации по каждой из 3-категорий — именно эти проекты станут победителями премии!</div>
-								</div>
-								<div class="parts-item tinny-item-js"><img class="chain" src="img/svg/chain.svg" alt="" loading="lazy"/>
-									<div class="parts-item__date small">2 октября <span>очно в Москве</span>
-									</div>
-									<div class="parts-item__t fw-600">Премьера
-									</div><img class="i" src="img/svg/i.svg" alt="" loading="lazy"/>
-									<div class="tinny-template d-none">Торжественная церемония оглашения победителей пройдет в Москва-Сити, башня «Федерация». Обратите внимание, что организатор не оплачивает трансфер для участия в мероприятии.</div>
-								</div>
-							</div>
+						<div class="sSteps__btns">
+							<a class="sSteps__btn btn btn-outline-primary" href="#">Посмотреть мои заявки
+							</a>
+							<a class="sSteps__btn btn btn-primary btn-large" href="#">Подать еще заявку
+							</a>
 						</div>
 					</div>
 				</section>
+				<!-- end sSteps-->
 			</main>
-			<div id="modal-mob" style="display: none">
-				<div class="modal-win modal-win--mob">
-					<div class="modal-win__title-wrap">
-						<p>Рекомендуем заполнять заявку на компьютере для максимального удобства и функциональности.</p>
-					</div>
-				</div>
-			</div>
-			<!-- end modals-->
-			<div class="info-window info-window--js">
-				<div class="info-window__content d-flex"><img src="img/svg/success.svg" alt="" loading="lazy"/>
-					<div class="small">Спасибо, мы скоро свяжемся с вами по контактным данным которые вы указали при регистрации личного кабинета</div>
-					<div class="close-btn">
-						<svg class="icon icon-x ">
-							<use xlink:href="img/svg/sprite.svg#x"></use>
-						</svg>
-					</div>
-				</div>
-			</div>
 			<footer class="footer section">
 				<div class="container">
 					<div class="footer__row row">

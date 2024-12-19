@@ -27,6 +27,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(22 / #{$h} *1em );
 }
+.icon-calendar {
+	$h: 41;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(41 / #{$h} *1em );
+}
 .icon-check {
 	$h: 27;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);

@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Мои заявки</title>
+		<title>О премии</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
@@ -24,151 +24,464 @@
 			}
 		</script>
 	</head>
-	<body class="main-page white-bg">
+	<body class="main-page">
 		<div class="main-wrapper">
 			<script>addBlock(`header-cabinet`)</script>
 			<div id="header-cabinetWrap"></div>
 			<main>
-				<!-- start sAuth-->
-				<section class="sAuth section" id="sAuth">
+				<!-- start sRules-->
+				<section class="sRules section" id="sRules">
 					<div class="container">
-						<div class="sAuth__item">
-							<h3>Мои заявки</h3>
-						</div>
-						<div class="sAuth__item-md item_gray">
-							<div class="row">
-								<div class="col-lg-8">
-									<div class="sAuth__item-wrap">
-										<div class="text-large">Здесь пока ничего нет. Давайте это исправим?</div>
-										<p>Вы сможете в любой момент отредактировать заявку, а также сохранить ее в черновик и продолжить заполнение в удобное для вас время во вкладке «Мои заявки».</p>
-										<p>Для удобства мы разработали <a class="fw-700" href="#">образец заполнения заявки</a>, чтобы вы могли заранее собрать все необходимые данные. Также вы можете скачать <a class="fw-700" href="#" download="download">чек-лист участника</a>.</p>
-									</div>
-									<div class="sAuth__item-wrap">
-										<a class="apply-card apply-card--empty apply-card_gray" href="#">
-											<div class="apply-card__title h5">Номинировать проект на Премию<img class="plus" src="img/svg/plus.svg" alt="" loading="lazy"/>
-											</div>
-										</a>
+						<div class="sRules__flex-top">
+							<div class="sRules__wrap">
+								<div class="sRules__top-btns d-md-none">
+									<button class="btn btn-reset btn-sm">Сбросить фильтр</button>
+									<button class="sRules__filter-btn btn btn-link btn-sm text-purple filter-btn-js"><span>Смотреть все</span><span>
+											<svg class="icon icon-x ">
+												<use xlink:href="img/svg/sprite.svg#x"></use>
+											</svg></span>
+									</button>
+								</div>
+								<div class="sidebar--js">
+									<div class="sRules__filters row">
+										<div class="col-auto"><a href="#" style="--bg-active: #007567;">Кто может участвовать</a></div>
+										<div class="col-auto"><a class="active" href="#" style="--bg-active: #FF9C27">Номинации и критерии</a></div>
+										<div class="col-auto"><a href="#" style="--bg-active: #0098E3;">Подача заявок</a></div>
+										<div class="col-auto"><a class="active" href="#" style="--bg-active: #8031FF;">Этапы премии</a></div>
+										<div class="col-auto"><a href="#" style="--bg-active: #EFE8FF; color: black;">Система судейства</a></div>
+										<div class="col-auto"><a href="#" style="--bg-active: #D70A3F;">Вознаграждение и победители</a></div>
+										<div class="col-auto"><a href="#" style="--bg-active: #007567;">Положение и полезные материалы</a></div>
+										<div class="col-auto d-none d-md-block">
+											<button class="btn btn-reset btn-sm">Сбросить фильтр</button>
+										</div>
 									</div>
 								</div>
-								<div class="col-lg">
-									<div class="text-end"><img class="manager-img" src="img/manager.png" alt="" loading="lazy"/>
+								<div class="sRules__selected-filters d-md-none">
+									<div class="badge text-bg-warning">Номинации и критерии</div>
+								</div>
+							</div>
+							<div class="section-title">
+								<h2>Правила</h2>
+								<div class="text-large">Узнайте все о самом масштабном ежегодном событии HR-отрасли в госсекторе.</div>
+							</div>
+						</div>
+						<div class="dd-group dd-group-js">
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-success">Кто может участвовать</span>
 									</div>
-									<div class="item-wrap_white manager">
-										<div class="fw-700">Сергей Журихин</div>
-										<div class="small text-secondary">Руководитель отдела по работе с заявками</div>
+									<div class="h3">Кто может подать заявку на участие в премии?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Номинировать проекты могут сотрудники или команды из федеральных государственных органов, органов государственной власти субъектов Российской Федерации, органов местного самоуправления и подведомственных им организаций, которые успешно реализовали проекты в сфере управления персоналом.</div>
+									<div class="text-large">В конкурсе не могут принять участие коммерческие организации и предприятия, в которых один из собственников — государство.</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-success">Кто может участвовать</span>
+									</div>
+									<div class="h3">Какие проекты могут принять участие?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Могут быть представлены успешные проекты в отрасли управления персоналом, связанные с подбором и наймом, управлением талантами, обучением и развитием, оценкой персонала, развитием корпоративной культуры и других HR-направлениях.</div>
+									<div class="text-large">В зависимости от номинации критерии отбора проектов могут отличаться.</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-success">Кто может участвовать</span>
+									</div>
+									<div class="h3">Это платно?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Участие в премии является бесплатным для всех сотрудников и команд из госсектора.</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-warning">Номинации и критерии</span>
+									</div>
+									<div class="h3">Какие номинации предусмотрены в рамках премии?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">В премии 8 номинаций: «HR-режиссер: руководитель года», «В главных ролях: Команда года», «В перспективе: молодежный карьерный проект», «Секрет удачного кадра: обучение и развитие», «Лучшие спецэффекты: технологическое решение года», «В фокусе: бренд работодателя», «Новый ракурс: трансформация года» и «Специальная номинация: В кадре», которая присуждается партнерами премии — называем партнеров.</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-success">Кто может участвовать</span>
+									</div>
+									<div class="h3">Кто является участником премии?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Участие в премии является бесплатным для всех сотрудников и команд из госсектора.</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-warning">Номинации и критерии</span>
+									</div>
+									<div class="h3">Как выбрать номинацию для проекта?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Если вы не уверены, какая номинация лучше подходит вашему проекту, вы можете обратиться на линию поддержки по телефону <a href="tel:+99999999">+99999999</a>  или написать на почту <a href="mailto:">mail.ru</a>. Организаторы помогут сделать выбор и порекомендуют подходящую номинацию.</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-warning">Номинации и критерии</span>
+									</div>
+									<div class="h3">Какие требования к участнику для номинации «HR-режиссер: руководитель года»?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Если вы не уверены, какая номинация лучше подходит вашему проекту, вы можете обратиться на линию поддержки по телефону <a href="tel:+99999999">+99999999</a>  или написать на почту <a href="mailto:">mail.ru</a>. Организаторы помогут сделать выбор и порекомендуют подходящую номинацию.</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-info">Подача заявок</span>
+									</div>
+									<div class="h3">Как подать заявку на участие в премии?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Чтобы подать заявку нужно авторизоваться на официальном сайте премии, зайти в личный кабинет и создать заявку в вкладке «Подать заявку». </div>
+									<div class="text-large">Каждый соискатель премии может:</div>
+									<ol class="text-large">
+										<li>Подать несколько заявок с разными проектами в одной номинации.</li>
+										<li>Подать один и тот же проект на несколько номинаций.</li>
+										<li>Подать несколько заявок с разными проектами в разных номинациях.</li>
+									</ol>
+									<div class="text-large">Один проект сможет одержать победу только в одной номинации. После технической экспертизы каждый проект будет допущен к участию по одной заявке в номинации, которая лучше всего соответствует описанию проекта.</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-info">Подача заявок</span>
+									</div>
+									<div class="h3">Что должно быть в заявке?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Соискателям премии необходимо указать в заявке:</div>
+									<ol class="text-large">
+										<li>Информацию о контактном лице, которое сможет ответить на уточняющие вопросы по заявке или проекту. Это может быть только сотрудник организации, которая реализовала проект.</li>
+										<li>Название проекта.</li>
+										<li>Проблемную область или вызов, на который отвечает проект, его цели и задачи.</li>
+									</ol>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-info">Подача заявок</span>
+									</div>
+									<div class="h3">Почему для подачи заявки нужно регистрироваться?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Соискателям премии необходимо указать в заявке:</div>
+									<ol class="text-large">
+										<li>Информацию о контактном лице, которое сможет ответить на уточняющие вопросы по заявке или проекту. Это может быть только сотрудник организации, которая реализовала проект.</li>
+										<li>Название проекта.</li>
+										<li>Проблемную область или вызов, на который отвечает проект, его цели и задачи.</li>
+									</ol>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-danger">Вознаграждение и победители</span>
+									</div>
+									<div class="h3">Как происходит процесс отбора победителей?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">1. Прием заявок проводится с 1 декабря по 1 февраля.</div>
+									<div class="text-large">2. С 3 — по 23 февраля все поданные заявки проходят предварительный отбор на соответствие критериям конкурса.</div>
+									<div class="text-large">3. С 24 февраля по 16 марта проекты оцениваются независимыми экспертами, которые выбирают топ-5 финалистов в каждой номинации на основе установленных в положении критериев.</div>
+									<div class="text-large text-purple">Организаторы могут обратиться к следующим в рейтинге за финалистами участникам, если при формировании топ-40 один или несколько проектов не смогут продолжить борьбу за победу в своей номинации.</div>
+									<div class="text-large">4. 17 марта проекты финалистов будут опубликованы на сайте премии. Организаторы запросят у прошедших в следующий этап участников видеовизитки и дополнительные документы — паспортные данные лидера команды, реквизиты организации.</div>
+									<div class="text-large">5. С 25 по 27 марта пройдет оценка жюри, которые определят по 3 победителя в каждой номинации.</div>
+									<div class="text-large">6. 10 апреля состоится торжественная церемония награждения.</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-danger">Вознаграждение и победители</span>
+									</div>
+									<div class="h3">Какие преимущества получают победители?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large"><span>В каждой номинации будут определены 3 победителя,</span> которые получат денежные призы: 3 000 000 рублей за 1-е место, 2 000 000 за 2-е и 1 000 000 за 3-е соответственно.</div>
+									<div class="text-large">Также все финалисты получат поддержку на информационных площадках страны,  возможность сотрудничества с лидерами отрасли и масштабирования своих проектов, а также признание экспертизы на федеральном уровне.</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-danger">Вознаграждение и победители</span>
+									</div>
+									<div class="h3">Как распределяется денежное вознаграждение внутри команды проекта-победителя?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large"><span>В каждой номинации будут определены 3 победителя,</span> которые получат денежные призы: 3 000 000 рублей за 1-е место, 2 000 000 за 2-е и 1 000 000 за 3-е соответственно.</div>
+									<div class="text-large">Также все финалисты получат поддержку на информационных площадках страны,  возможность сотрудничества с лидерами отрасли и масштабирования своих проектов, а также признание экспертизы на федеральном уровне.</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-warning">Номинации и критерии</span>
+									</div>
+									<div class="h3">Можно ли подать один и тот же проект сразу на несколько номинаций?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large"><span>В каждой номинации будут определены 3 победителя,</span> которые получат денежные призы: 3 000 000 рублей за 1-е место, 2 000 000 за 2-е и 1 000 000 за 3-е соответственно.</div>
+									<div class="text-large">Также все финалисты получат поддержку на информационных площадках страны,  возможность сотрудничества с лидерами отрасли и масштабирования своих проектов, а также признание экспертизы на федеральном уровне.</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-success">Кто может участвовать</span>
+									</div>
+									<div class="h3">Есть ли ограничение по числу проектов-участников премии от одной организации?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large"><span>В каждой номинации будут определены 3 победителя,</span> которые получат денежные призы: 3 000 000 рублей за 1-е место, 2 000 000 за 2-е и 1 000 000 за 3-е соответственно.</div>
+									<div class="text-large">Также все финалисты получат поддержку на информационных площадках страны,  возможность сотрудничества с лидерами отрасли и масштабирования своих проектов, а также признание экспертизы на федеральном уровне.</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-info">Подача заявок</span>
+									</div>
+									<div class="h3">Как внести изменения в заявку?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">До 1 февраля вы можете самостоятельно изменять данные в заявке прямо в личном кабинете участника на вкладке «Мои заявки».</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-info">Подача заявок</span>
+									</div>
+									<div class="h3">Можно ли подать несколько заявок?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Да, можно. Однако каждый проект сможет одержать победу только в одной номинации.</div>
+									<div class="text-large">Если вы создадите несколько заявок с одним проектом в разных номинациях, на технической экспертизе (кадр 2 в Раскадровке) организаторы свяжутся с вами, так как смогут одобрить только одну из них.</div>
+									<div class="text-large">Также вы можете отозвать заявку — для этого, пожалуйста, обратитесь на нашу линию поддержки по телефону …………  или напишите на почту …….. .</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-info">Подача заявок</span>
+									</div>
+									<div class="h3">Какие документы необходимо предоставить при подаче заявки?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Про обязательные и не обязательные документы и всевозможные награды, отдельно про паспортные данные или гражданство?</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-info">Подача заявок</span>
+									</div>
+									<div class="h3">Как стать партнером?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Про обязательные и не обязательные документы и всевозможные награды, отдельно про паспортные данные или гражданство?</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-dark">Этапы премии</span>
+									</div>
+									<div class="h3">Церемония награждения</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Про обязательные и не обязательные документы и всевозможные награды, отдельно про паспортные данные или гражданство?</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-dark">Этапы премии</span>
+									</div>
+									<div class="h3">Будет ли компенсация поездки на церемонию награждения?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Про обязательные и не обязательные документы и всевозможные награды, отдельно про паспортные данные или гражданство?</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-dark">Этапы премии</span>
+									</div>
+									<div class="h3">Сколько человек могут принять участие в церемонии награждения?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Про обязательные и не обязательные документы и всевозможные награды, отдельно про паспортные данные или гражданство?</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-danger">Вознаграждение и победители</span>
+									</div>
+									<div class="h3">Что будет с проектами победителей</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Про обязательные и не обязательные документы и всевозможные награды, отдельно про паспортные данные или гражданство?</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-light">Система судейства</span>
+									</div>
+									<div class="h3">Могу ли я оспорить отклонение заявки?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Про обязательные и не обязательные документы и всевозможные награды, отдельно про паспортные данные или гражданство?</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-light">Система судейства</span>
+									</div>
+									<div class="h3">Чем отличаются жюри от экспертов?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Про обязательные и не обязательные документы и всевозможные награды, отдельно про паспортные данные или гражданство?</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-light">Система судейства</span>
+									</div>
+									<div class="h3">Что оценивают жюри?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Про обязательные и не обязательные документы и всевозможные награды, отдельно про паспортные данные или гражданство?</div>
+								</div>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-light">Система судейства</span>
+									</div>
+									<div class="h3">Что оценивают жюри?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Критерии оценки проектов можно разделить на общие для всех номинаций и уникальные для каждой из них.</div>
+									<div class="text-large"><span>Среди общих критериев:</span> вклад в развитие своей команды и HR-отрасли в целом, а также эффективность и изобретательность решений, использованных в проекте.</div>
+									<div class="text-large"><span>Уникальные критерии: </span></div>
+									<div class="text-large">
+										<div class="span text-purple">HR-режиссер:</div> руководитель года — оцениваются лидерские качества, стратегическое мышление и способность руководителя внедрять инновационные решения, которые значительно улучшают HR-функции и способствуют успеху организации.
+									</div>
+									<div class="text-large">
+										<div class="span text-purple">В главных ролях:</div> Команда года — наибольшее внимание уделяется эффективности организационных процессов и достигнутым результатам, которые стали возможны в первую очередь благодаря совместной работе сотрудников.
+									</div>
+									<div class="text-large">
+										<div class="span text-purple">В перспективе:</div>  молодежный карьерный проект — оцениваются эффективность и инновационность программ для обучения и профессионального развития молодых специалистов, а также их влияние на интеграцию на рынке труда.
+									</div>
+									<div class="text-large">
+										<div class="span text-purple">Секрет удачного кадра:</div> обучение и развитие — жюри рассматривает внедрение передовых технологий и инструментов, которые способствуют эффективному обучению и развитию персонала, в том числе приобретению значимых для отрасли навыков.
+									</div>
+									<div class="text-large">
+										<div class="span text-purple">Лучшие спецэффекты:</div> технологическое решение года — оценивается эффективность внедрения технологий, которые способствуют автоматизации и масштабированию значимых для HR-отрасли или организации решений.
+									</div>
+									<div class="text-large">
+										<div class="span text-purple">В фокусе:</div> бренд работодателя — внимание уделяется HR-практикам и решениям, которые позволили создать привлекательную рабочую среду и сформировать положительный имидж работодателя.
+									</div>
+									<div class="text-large">
+										<div class="span text-purple">Спецпоказ:</div> в кадре — жюри оценивает HR-практики в организации в целом и их вклад в развитие отрасли.
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="sAuth__item">
-							<div class="h5">Этапы Премии</div>
-							<div class="parts">
-								<div class="parts-item tinny-item-js active"><img class="chain" src="img/svg/chain.svg" alt="" loading="lazy"/>
-									<div class="parts-item__date small">13 февраля — 11 июля
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-light">Система судейства</span>
 									</div>
-									<div class="parts-item__t fw-600">Прием заявок
-									</div><img class="i" src="img/svg/i.svg" alt="" loading="lazy"/>
-									<div class="tinny-template d-none">Чтобы подать заявку, нажмите на раздел «Подать заявку» в верхнем меню. Формировать заявку можно постепенно — даже если вы не заполните все поля, черновик отобразится в этом разделе, и вы сможете продолжить заполнение в любой момент до 11 июля.</div>
+									<div class="h3">Что оценивают эксперты?</div>
 								</div>
-								<div class="parts-item tinny-item-js active"><img class="chain" src="img/svg/chain.svg" alt="" loading="lazy"/>
-									<div class="parts-item__date small">14 июля — 3 августа
-									</div>
-									<div class="parts-item__t fw-600">Техническая экспертиза
-									</div><img class="i" src="img/svg/i.svg" alt="" loading="lazy"/>
-									<div class="tinny-template d-none">Мы проверим ваши заявки на соответствие критериям премии. Вам в это время ничего делать не нужно. Если у нас возникнут вопросы или рекомендации по вашей заявке — мы свяжемся с вами.</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Про обязательные и не обязательные документы и всевозможные награды, отдельно про паспортные данные или гражданство?</div>
 								</div>
-								<div class="parts-item tinny-item-js"><img class="chain" src="img/svg/chain.svg" alt="" loading="lazy"/>
-									<div class="parts-item__date small">4 августа —31 августа
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-success">Система судейства</span>
 									</div>
-									<div class="parts-item__t fw-600">Экспертная комиссия
-									</div><img class="i" src="img/svg/i.svg" alt="" loading="lazy"/>
-									<div class="tinny-template d-none">
-										<p>На этом этапе заявки будут изучать эксперты Премии. Они отберут топ-5 проектов в каждой номинации по каждой из 3-х категорий и сформируют топ-60 для рассмотрения жюри.</p>
-										<p>В целях безопасности все данные передаются экспертам в обобщенном виде, а участники не знают, кто из экспертов рассматривает их проект.</p>
-									</div>
+									<div class="h3">От какой организации подавать проект, если его реализовало несколько организаций?</div>
 								</div>
-								<div class="parts-item tinny-item-js"><img class="chain" src="img/svg/chain.svg" alt="" loading="lazy"/>
-									<div class="parts-item__date small">8 сентября — 21 сентября 
-									</div>
-									<div class="parts-item__t fw-600">Голосование жюри
-									</div><img class="i" src="img/svg/i.svg" alt="" loading="lazy"/>
-									<div class="tinny-template d-none">Жюри изучат топ-60 проектов, рекомендованных экспертами, и отберут топ-3 в каждой номинации по каждой из 3-категорий — именно эти проекты станут победителями премии!</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Про обязательные и не обязательные документы и всевозможные награды, отдельно про паспортные данные или гражданство?</div>
 								</div>
-								<div class="parts-item tinny-item-js"><img class="chain" src="img/svg/chain.svg" alt="" loading="lazy"/>
-									<div class="parts-item__date small">2 октября <span>очно в Москве</span>
+							</div>
+							<div class="dd-group__item active">
+								<div class="dd-group__head dd-head-js">
+									<div class="dd-group__badge-wrap"><span class="badge text-bg-success">Система судейства</span>
 									</div>
-									<div class="parts-item__t fw-600">Премьера
-									</div><img class="i" src="img/svg/i.svg" alt="" loading="lazy"/>
-									<div class="tinny-template d-none">Торжественная церемония оглашения победителей пройдет в Москва-Сити, башня «Федерация». Обратите внимание, что организатор не оплачивает трансфер для участия в мероприятии.</div>
+									<div class="h3">Кто должен номинировать проект подведомственной организации?</div>
+								</div>
+								<div class="dd-group__content dd-content-js active">
+									<div class="text-large">Про обязательные и не обязательные документы и всевозможные награды, отдельно про паспортные данные или гражданство?</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
+				<!-- end sRules-->
+				<!-- start sContent-->
+				<section class="sContent section" id="sContent2">
+					<div class="container">
+						<div class="section-title">
+							<h2>Полезные материалы</h2>
+						</div>
+						<div class="sContent__row row">
+							<div class="sContent__col col-lg-6">
+								<a class="card-material" href="#">
+									<div class="card-material__text text-large">Положение о Премии
+									</div>
+									<svg class="icon icon-arr-next ">
+										<use xlink:href="img/svg/sprite.svg#arr-next"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="sContent__col col-lg-6">
+								<a class="card-material" href="#">
+									<div class="card-material__text text-large">Положение об экспертной комиссии и жюри
+									</div>
+									<svg class="icon icon-arr-next ">
+										<use xlink:href="img/svg/sprite.svg#arr-next"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="sContent__col col-lg-6">
+								<a class="card-material" href="#">
+									<div class="card-material__text text-large">Чек-лист участника
+									</div>
+									<svg class="icon icon-arr-next ">
+										<use xlink:href="img/svg/sprite.svg#arr-next"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="sContent__col col-lg-6">
+								<a class="card-material" href="#">
+									<div class="card-material__text text-large">Презентация Премии
+									</div>
+									<svg class="icon icon-arr-next ">
+										<use xlink:href="img/svg/sprite.svg#arr-next"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="sContent__col col-lg-6">
+								<a class="card-material" href="#">
+									<div class="card-material__text text-large">Политика<br>Конфиденциальности
+									</div>
+									<svg class="icon icon-arr-next ">
+										<use xlink:href="img/svg/sprite.svg#arr-next"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
-			<div id="modal-mob" style="display: none">
-				<div class="modal-win modal-win--mob">
-					<div class="modal-win__title-wrap">
-						<p>Рекомендуем заполнять заявку на компьютере для максимального удобства и функциональности.</p>
-					</div>
-				</div>
-			</div>
-			<!-- end modals-->
-			<div class="info-window info-window--js">
-				<div class="info-window__content d-flex"><img src="img/svg/success.svg" alt="" loading="lazy"/>
-					<div class="small">Спасибо, мы скоро свяжемся с вами по контактным данным которые вы указали при регистрации личного кабинета</div>
-					<div class="close-btn">
-						<svg class="icon icon-x ">
-							<use xlink:href="img/svg/sprite.svg#x"></use>
-						</svg>
-					</div>
-				</div>
-			</div>
-			<footer class="footer section">
-				<div class="container">
-					<div class="footer__row row">
-						<div class="footer__col col-lg-6">
-							<div class="footer__wrap">
-								<div class="footer__logo-wrap"><a href="#"><img src="img/svg/logo-white.svg" alt="" loading="lazy"/></a><a href="#"><img src="img/svg/hr-white.svg" alt="" loading="lazy"/></a>
-								</div>
-								<ul> 
-									<li><a class="link" href="#">Положение о Премии</a></li>
-									<li><a class="link" href="#">Политика обработки персональных данных</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="footer__col col-lg-6">
-							<div class="link-item"> 
-								<div class="link-item__title">Адрес
-								</div><a href="#">Москва, Тверская 13</a>
-							</div>
-							<div class="link-item"> 
-								<div class="link-item__title">Контактный телефон
-								</div><a href="tel:+74959577575">+7 (495) 957-75-75</a>
-							</div>
-							<div class="link-item"> 
-								<div class="link-item__title">Общие вопросы
-								</div><a href="mailto:vkadre@mos.ru">vkadre@mos.ru</a>
-							</div>
-							<div class="link-item"> 
-								<div class="link-item__title">Пиар и партнерство
-								</div><a href="mailto:pr-vkadre@mos.ru">pr-vkadre@mos.ru</a>
-							</div>
-						</div>
-					</div>
-					<div class="footer__bottom-row row">
-						<div class="footer__col col-lg-6">
-							<div class="footer__copyr small">© 2025 Управление кадровых сервисов Правительства Москвы
-							</div>
-						</div>
-						<div class="footer__col col-lg-6"><a class="small" href="#">Версия для слабовидящих
-								<svg class="icon icon-noun-glasses ">
-									<use xlink:href="img/svg/sprite.svg#noun-glasses"></use>
-								</svg></a>
-						</div>
-					</div>
-				</div>
-			</footer>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
 		</div>
 		<!--  start modals-->
 		<div id="modal-call" style="display: none">

@@ -34,6 +34,7 @@
 	&__item {
 		padding: rem(8) 0 rem(28);
     border-top: 1px solid $purple-200;
+    display: inline-block;
 
     .text {
       margin-top: rem(6);

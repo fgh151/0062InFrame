@@ -39,21 +39,18 @@ block pagecontent
 			+btn("#modal-reset-2", 'Сброс пароля 2')
 			+btn("#modal-reset-info", 'Войти')
 			+btn("#modal-reset-success", 'Пароль успешно изменен')
-		.section.container
+		.section: .container
 			h2 Cabinet
+			+btn("#modal-frames", 'Раскадровка')
 			+btn("#modal-exit", 'Выйти')
+			+btn("#modal-cancel", 'Отменить заполнение заявки')
+			+btn("#modal-cancel-1", 'Отменить 1')
+			+btn("#modal-cancel-2", 'Отменить 2')
 			+btn("#modal-criteria-1", 'Критерии 1')
 			+btn("#modal-criteria-2", 'Критерии 2')
 			+btn("#modal-info", 'Инфо')
 			h3 Модальное если зашел в моб
 			+btn("#modal-mob", 'Окно')
-		.section.container
-			.col-8
-				+form-wrap
-					+input("input")
-					+input("select",'select')
-					+input("select",'select')(multiple)
-					button.btn.btn-primary(type="submit") submit
 		//- +sCatalog
 	+parts('footer')
       

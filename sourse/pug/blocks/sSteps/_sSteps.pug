@@ -111,7 +111,7 @@ mixin sSteps31(data)
 						+input("Заполните поле",'text', 'Должность')(required)
 			+e.bottom-row
 				+e.left 
-					+e.btn.btn.btn-outline-primary(href='#') 
+					+e.btn.btn.btn-outline-primary.btn-back(href='#') 
 						+icon('arr-back') 
 						| Назад
 					a(href="#").cancel-btn.small
@@ -122,14 +122,35 @@ mixin sSteps31(data)
 						+icon('arr-next')
 	// end sSteps
 
-mixin stepsLine 
-	+b.steps-line.swiper.breadcrumb-slider--js&attributes(attributes)
-		.swiper-wrapper
-			.swiper-slide: a(href="#") Шаг 1
-			.swiper-slide: a(href="#") Шаг 2
-			.swiper-slide: a(href="#") Шаг 3
-			.swiper-slide: a(href="#") Шаг 4
-			.swiper-slide: a(href="#") Финал
+
+mixin sSteps5(data)
+	// start sSteps
+	+b.SECTION.sSteps.section#sSteps&attributes(attributes)
+		.container
+			+e.top-wrap
+				h3=data
+				+stepsLine(data-step="5")
+			+e.item-sm
+				+e.item-row.row
+					+e.col.col-lg-8
+						+e.descr--sm
+							.text-large Вы номинировали проект!
+							p На вкладке «Мои заявки» вы можете отслеживать статус заявки или вносить изменения в описание проекта #[span до 11 июля.]
+						+e.descr
+							+e.wrap.wrap-gray
+								+img(src="img/svg/calendar.svg", alt="")
+								p В ближайшее время мы проверим вашу заявку на соответствие критериям премии.<br>Вы получите письмо по итогам рассмотрения и дальнейшие инструкции. 
+							p Если у нас возникнут вопросы по заявке, мы свяжемся с вами и дадим рекомендации, которые помогут сделать ее лучше.
+							p Заявка может быть отклонена из-за несоответствия #[a(href='#') #[span первичным критериям]] отбора заявок.
+					+e.col.col-lg-4
+						.sAuth__card-info
+							+img(src="img/svg/info.svg", alt="").info
+							p Вы можете подать проект в несколько номинаций — для этого достаточно заполнить новую заявку.
+							p Проект сможет пройти в следующий этап только в одной номинации.
+			+e.btns
+				+e.btn.btn.btn-outline-primary(href='#') Посмотреть мои заявки
+				+e.btn.btn.btn-primary.btn-large(href='#') Подать еще заявку
+	// end sSteps
 
 
 mixin categoryCard2(title)
