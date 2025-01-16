@@ -50,7 +50,7 @@ mixin partsItem(date, t, i)
 		+img(src="img/svg/chain.svg", alt="").chain
 		+e.date.small=date
 		+e.t.fw-600=t
-		+img(src="img/svg/i.svg", alt="").i
+			+img(src="img/svg/i.svg", alt="").i
 		if i
 			.tinny-template.d-none=i
 		if block
@@ -60,7 +60,7 @@ mixin partsItem(date, t, i)
 mixin chronoline
 	+partsItem('13 февраля — 11 июля', 'Прием заявок', 'Чтобы подать заявку, нажмите на раздел «Подать заявку» в верхнем меню. Формировать заявку можно постепенно — даже если вы не заполните все поля, черновик отобразится в этом разделе, и вы сможете продолжить заполнение в любой момент до 11 июля.').active
 	+partsItem('14 июля — 3 августа', 'Техническая экспертиза', 'Мы проверим ваши заявки на соответствие критериям премии. Вам в это время ничего делать не нужно. Если у нас возникнут вопросы или рекомендации по вашей заявке — мы свяжемся с вами.').active
-	+partsItem('4 августа —31 августа', 'Экспертная комиссия')
+	+partsItem('4 августа — 7 сентября', 'Экспертная комиссия')
 		p На этом этапе заявки будут изучать эксперты Премии. Они отберут топ-5 проектов в каждой номинации по каждой из 3-х категорий и сформируют топ-60 для рассмотрения жюри.
 		p В целях безопасности все данные передаются экспертам в обобщенном виде, а участники не знают, кто из экспертов рассматривает их проект.
 	+partsItem('8 сентября — 21 сентября ', 'Голосование жюри', 'Жюри изучат топ-60 проектов, рекомендованных экспертами, и отберут топ-3 в каждой номинации по каждой из 3-категорий — именно эти проекты станут победителями премии!')
@@ -68,7 +68,7 @@ mixin chronoline
 		+img(src="img/svg/chain.svg", alt="").chain
 		+e.date.small 2 октября #[span очно в Москве]
 		+e.t.fw-600 Премьера
-		+img(src="img/svg/i.svg", alt="").i
+			+img(src="img/svg/i.svg", alt="").i
 		.tinny-template.d-none Торжественная церемония оглашения победителей пройдет в Москва-Сити, башня «Федерация». Обратите внимание, что организатор не оплачивает трансфер для участия в мероприятии.
 
 mixin sAuth3(data)
@@ -98,7 +98,7 @@ mixin sAuth3(data)
 					+e.links 
 						+e.link.A(href='#' download): +icon('download')
 				+applyCard('Лучшие спецэффекты: технологическое решение года', 'Больше чем ты думал', 'Скачать сертификат').btn-info
-					+e.badge.small.badge.text-bg-info Участник
+					+e.badge.small.badge.text-bg-info Номинант
 					+e.links 
 						+e.link.A(href='#' download): +icon('download')
 				+applyCard('Лучшие спецэффекты: технологическое решение года', 'Больше чем ты думал')
@@ -107,7 +107,7 @@ mixin sAuth3(data)
 						+e.link.A(href='#' download): +icon('download')
 				+e.col.col-md-6.col-xl-4
 					+b.apply-card--empty(href='#')
-						+e.title.h5 Номинировать проект
+						+e.title.h5 Подать заявку на Премию
 							+img(src="img/svg/plus.svg", alt="").plus
 				+e.item: +legend
 	// end sAuth
@@ -233,7 +233,7 @@ mixin sAuth5(data)
 				.col-md
 					+e.badge-wrap
 						.badge.text-bg-secondary Черновик
-						.descr.text-danger Проект не номинирован. Пожалуйста, заполните все поля,<br>чтобы завершить формирование заявки.
+						.descr.text-danger Пожалуйста, заполните все поля, <br>чтобы завершить формирование заявки.
 			+e.item-md.item_gray
 				.row
 					.col-lg-8
@@ -245,21 +245,23 @@ mixin sAuth5(data)
 							p В качестве примера в нем описан реальный проект команды Управления кадровых сервисов Правительства Москвы.
 							a(href="#" download).download-link.tdu.text-large Скачать образец
 								+icon('download')
-					.col-lg
-						.text-end: +img(src="img/manager.png", alt="").manager-img
-						.item-wrap_white.manager
-							.fw-700 Сергей Журихин
-							.small.text-secondary Руководитель отдела по работе с заявками
+					//- .col-lg
+					//- 	.text-end: +img(src="img/manager.png", alt="").manager-img
+					//- 	.item-wrap_white.manager
+					//- 		.fw-700 Сергей Журихин
+					//- 		.small.text-secondary Руководитель отдела по работе с заявками
 			.item-large
 				.h5.span-gradient
 					span Категория
 					+img(src="img/svg/bank.svg", alt="")
 					| Федерация
+					+e.link.A(href='#'): +icon('edit')
 			.item-large
 				.h5.span-gradient
 					span Номинация
 					+img(src="img/svg/frame.svg", alt="")
 					| В фокусе: удержание
+					+e.link.A(href='#'): +icon('edit')
 			+e.item.item-large
 				.h5.span-gradient
 					span Контактное лицо
@@ -471,45 +473,44 @@ mixin sAuth7(data)
 					.col-lg-8
 						+e.item-wrap
 							.text-large Здесь пока ничего нет. Давайте это исправим?
-							p Вы сможете в любой момент отредактировать заявку, а также сохранить ее в черновик и продолжить заполнение в удобное для вас время во вкладке «Мои заявки».
+							p Вы сможете в любой момент отредактировать заявку с описанием вашего проекта, а также сохранить ее в черновик и продолжить заполнение в удобное для вас время во вкладке «Мои заявки».
 							p Для удобства мы разработали #[a(href="#").fw-700 образец заполнения заявки], чтобы вы могли заранее собрать все необходимые данные. Также вы можете скачать #[a(href="#" download).fw-700 чек-лист участника].
 						+e.item-wrap
 							+b.apply-card--empty.apply-card_gray(href='#')
-								+e.title.h5 Номинировать проект на Премию
+								+e.title.h5 Подать заявку на Премию
 									+img(src="img/svg/plus.svg", alt="").plus
-					.col-lg
-						.text-end: +img(src="img/manager.png", alt="").manager-img
-						.item-wrap_white.manager
-							.fw-700 Сергей Журихин
-							.small.text-secondary Руководитель отдела по работе с заявками
+					//- .col-lg
+					//- 	.text-end: +img(src="img/manager.png", alt="").manager-img
+					//- 	.item-wrap_white.manager
+					//- 		.fw-700 Сергей Журихин
+					//- 		.small.text-secondary Руководитель отдела по работе с заявками
 			+e.item
 				.h5 Этапы Премии
 				.parts: +chronoline
 
 mixin legend 
-	+b.legend: .legend-row.row 
-		+e.col.col-lg-6 
-			+legendItem('Заявка не принята к рассмотрению, так как не заполнены обязательные поля')
-				+e.badge-wrap.text-end: .small.badge.text-bg-secondary Черновик
-			+legendItem('Все обязательные поля заполнены, но вы все еще можете вносить изменения до 11 июля')
-				+e.badge-wrap.text-end: .small.badge.text-bg-success На рассмотрении
-			+legendItem('Заявка соответствует критериям Премии и допущена к рассмотрению экспертами.')
-				+e.badge-wrap.text-end: .small.badge.text-bg-info Участник
-			+legendItem('Ваш проект вошел в топ-5 лучших в своей номинации!')
-				+e.badge-wrap.text-end: .small.badge.text-bg-black Финалист
-			+legendItem('финалист Премии, включенный в ТОП-3 участников, чей проект и (или) управленческое решение, по мнению Экспертной комиссии и по итогам голосования Жюри, является лучшим и заслуживает призового места.')
-				+e.badge-wrap.text-end: .small.badge.text-bg-dark Лауреат
-			+legendItem('Ваш проект попал в топ-3 лучших в своей номинации и стал победителем. Поздравляем!')
-				+e.badge-wrap.text-end: .small.badge.text-bg-gradient Победитель
-			+legendItem('Вы сняли заявку с рассмотрения')
-				+e.badge-wrap.text-end: .small.badge.text-bg-warning Отозвана
-			+legendItem('Заявка отклонена')
-				+e.badge-wrap.text-end: .small.badge.text-bg-danger Отклонена
-		+e.col.col-lg-6 
-			+legendItem('Просматривайте и редактируйте заявки, вносите изменения до 11 июля.')
-				+e.badge-wrap.text-end: +icon('edit')
-			+legendItem('Скачивайте заявку в формате docx, чтобы делиться ей с коллегами в несколько кликов.')
-				+e.badge-wrap.text-end: +icon('download')
+	+b.legend: .legend-row
+		+legendItem('Заявка не принята к рассмотрению, так как не заполнены обязательные поля')
+			+e.badge-wrap.text-end: .small.badge.text-bg-secondary Черновик
+		+legendItem('Все обязательные поля заполнены, но вы все еще можете вносить изменения до 11 июля')
+			+e.badge-wrap.text-end: .small.badge.text-bg-success На рассмотрении
+		+legendItem('Заявка соответствует критериям Премии и допущена к рассмотрению экспертами.')
+			+e.badge-wrap.text-end: .small.badge.text-bg-info Номинант
+		+legendItem('Ваш проект вошел в топ-5 лучших в своей номинации!')
+			+e.badge-wrap.text-end: .small.badge.text-bg-black Финалист
+		+legendItem('Ваш проект вошел в тройку лучших в своей номинации')
+			+e.badge-wrap.text-end: .small.badge.text-bg-dark Лауреат
+		+legendItem('Ваш проект попал в топ-3 лучших в своей номинации и стал победителем. Поздравляем!')
+			+e.badge-wrap.text-end: .small.badge.text-bg-gradient Победитель
+		+legendItem('Вы сняли заявку с рассмотрения')
+			+e.badge-wrap.text-end: .small.badge.text-bg-warning Отозвана
+		+legendItem('Заявка отклонена')
+			+e.badge-wrap.text-end: .small.badge.text-bg-danger Отклонена
+		//- +e.col.col-lg-6 
+		//- 	+legendItem('Просматривайте и редактируйте заявки, вносите изменения до 11 июля.')
+		//- 		+e.badge-wrap.text-end: +icon('edit')
+		//- 	+legendItem('Скачивайте заявку в формате docx, чтобы делиться ей с коллегами в несколько кликов.')
+		//- 		+e.badge-wrap.text-end: +icon('download')
 
 mixin legendItem(p)
 	+b.legend-item 
@@ -543,15 +544,13 @@ mixin sAuth2(data)
 					+b.section-title
 						h3 Подать заявку
 					+e.text
-						.h5 Номинируйте свой проект на HR-премию Правительства Москвы «В кадре».
+						.h5 Заявите свой проект на премию Правительства Москвы в сфере управления «В кадре».
 						p Подача заявки проходит в несколько этапов — вы можете заполнять данные постепенно или #[span отредактировать заявку до 11 июля.]
-						p Если у вас возникнут вопросы или трудности при заполнении заявки, пожалуйста, #[a(href='#') свяжитесь с нами] — мы проконсультируем вас по каждому пункту и ответим на любой вопрос.
 					+e.btn.btn.btn-primary(href='#') Начать
 				+e.col.col-lg-6
 					+e.card-info
 						+img(src="img/svg/info.svg", alt="").info
-						p Продолжая заполнение данной заявки, вы даете свое согласие на сбор и обработку предоставленной информации, а также подтверждаете свое право указывать информацию об организации, ее проектах или сотрудниках.
-						p Все данные будут использоваться исключительно в целях обработки заявки и не будут переданы третьим лицам без вашего предварительного согласия, за исключением случаев, предусмотренных #[a(href='#') Положением премии].
+						p Если у вас возникнут вопросы или трудности при заполнении заявки, пожалуйста, #[a(href='#') свяжитесь с нами] — мы проконсультируем вас по каждому пункту и ответим на любой вопрос.
 
 	// end sAuth
 
@@ -579,17 +578,17 @@ mixin sAuthStep4(data)
 					.col-lg-8
 						+e.item-wrap
 							.text-large Давайте познакомимся с вашим проектом
-							p Успейте внести данные в обязательные поля#[span.text-danger *] #[span.fw-600 до 11 июля], чтобы номинировать проект на премию!<br>Вы сможете в любой момент отредактировать заявку или продолжить заполнение в удобное для вас время во вкладке «Мои заявки». Все заполненные поля сохраняются автоматически. 
+							p Успейте внести данные в обязательные поля#[span.text-danger *] #[span.fw-600 до 11 июля]! Вы сможете в любой момент отредактировать заявку или продолжить заполнение в удобное для вас время во вкладке «Мои заявки». Все заполненные поля сохраняются автоматически. 
 						+e.item-wrap.item-wrap_white
 							p Ознакомьтесь с образцом заполнения заявки. 
 							p В качестве примера в нем описан реальный проект команды Управления кадровых сервисов Правительства Москвы.
 							a(href="#" download).download-link.tdu.text-large Скачать образец
 								+icon('download')
-					.col-lg
-						.text-end: +img(src="img/manager.png", alt="").manager-img
-						.item-wrap_white.manager
-							.fw-700 Сергей Журихин
-							.small.text-secondary Руководитель отдела по работе с заявками
+					//- .col-lg
+					//- 	.text-end: +img(src="img/manager.png", alt="").manager-img
+					//- 	.item-wrap_white.manager
+					//- 		.fw-700 Сергей Журихин
+					//- 		.small.text-secondary Руководитель отдела по работе с заявками
 			+e.item
 				+e.item-large-line
 					.h5.span-gradient

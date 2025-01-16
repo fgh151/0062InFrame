@@ -10,6 +10,8 @@ body {
 }
 
 #preloader {
+  --preloader-anim-duration: 4s;
+
   @include media-breakpoint-down(md) {
     .preloader-logo {
       width: rem(50);
@@ -56,25 +58,25 @@ body {
     filter: blur(80px);
     border-radius: 100%;
 
-    animation: circle-moving 4s linear forwards;
+    animation: circle-moving var(--preloader-anim-duration) linear forwards;
   }
 
   .preloader-logo {
     @include media-breakpoint-up(md) {
-      animation: logo-scale 4s ease-in-out forwards;
+      animation: logo-scale var(--preloader-anim-duration) linear forwards;
     }
-    
+
     @include media-breakpoint-down(md) {
-      animation: logo-scale-mob 4s ease-in-out forwards;
+      animation: logo-scale-mob var(--preloader-anim-duration) linear forwards;
     }
     position: relative;
     width: rem(116);
     height: rem(116);
     flex-shrink: 0;
 
-    svg {
+    .logo-svg {
       transform: scale(.25);
-      animation: svg-scale 4s linear forwards;
+      animation: svg-scale var(--preloader-anim-duration) linear forwards;
       display: block;
       position: absolute;
       &:first-child {
@@ -96,14 +98,13 @@ body {
     align-items: center;
     gap: rem(50);
 
-    animation: preloader-scale 4s ease-in-out forwards;
+    animation: preloader-scale var(--preloader-anim-duration) linear forwards;
   }
 
   .preloader-text-wrapper {
-    // display: none;
     overflow: hidden;
     position: fixed;
-    animation: text-slide 4s ease-in-out forwards;
+    animation: text-slide var(--preloader-anim-duration) linear forwards;
     height: rem(100);
     margin-right: rem(-80);
     @include media-breakpoint-up(md) {
@@ -114,13 +115,13 @@ body {
     @include media-breakpoint-down(md) {
       width: 200px;
     }
-    svg {
+    .svg-text {
       position: absolute;
       top: 50%;
       right: 0;
       transform: translate(-100%, -50%);
       opacity: 0;
-      animation: text-appear 4s ease-in-out forwards;
+      animation: text-appear var(--preloader-anim-duration) linear forwards;
     }
   }
 }
@@ -134,19 +135,12 @@ body {
   }
   100% {
     transform: scale(1);
-    // opacity: 0;
   }
 }
 
 @keyframes logo-scale {
   0% {
     transform: scale(0.25);
-  }
-  20% {
-    transform: scale(0.5);
-  }
-  40% {
-    transform: scale(0.75);
   }
   60% {
     transform: scale(1);
@@ -163,12 +157,6 @@ body {
   0% {
     transform: scale(0.25);
   }
-  20% {
-    transform: scale(0.5);
-  }
-  40% {
-    transform: scale(0.75);
-  }
   60% {
     transform: scale(1);
   }
@@ -183,12 +171,6 @@ body {
 @keyframes svg-scale {
   0% {
     transform: scale(0.25);
-  }
-  20% {
-    transform: scale(0.25);
-  }
-  40% {
-    transform: scale(0.5);
   }
   60% {
     transform: scale(1);
@@ -205,12 +187,6 @@ body {
   30% {
     transform: translate(-80%, -50%) rotate(-6deg);
   }
-  // 50% {
-  //   transform: translate(-50%, -50%) rotate(-6deg);
-  // }
-  // 75% {
-  //   transform: translate(-20%, -50%) rotate(-6deg);
-  // }
   100% {
     transform: translate(-20%, -50%) rotate(-6deg);
   }

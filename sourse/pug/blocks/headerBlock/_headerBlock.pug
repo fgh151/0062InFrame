@@ -12,7 +12,9 @@ mixin headerBlock()
 						.text-large.order-lg-3.span Церемония награждения — 2 октября 2025
 						+e.btn.btn.btn-primary(href='#') Подать заявку
 				+e.col.col-lg-4
-		+img(src="img/headerBlock-bg.png", alt="").section-img-bg.d-none.d-lg-block
+		video(autoplay, muted, loop, playsinline, poster="img/effectsResult.jpg").section-img-bg.d-none.d-lg-block
+			source(src="img/oblojka.mp4", type="video/mp4")
+			source(src="img/oblojka.webm", type="video/webm")
 		+e.img-wrap-mob.d-lg-none.ms-auto
 			.bg-gr
 			+img(src="img/headerBlock-bg-mob.png", alt="")
