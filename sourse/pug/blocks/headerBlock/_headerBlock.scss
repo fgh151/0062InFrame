@@ -101,11 +101,12 @@
     position: absolute;
     right: 0;
     top: 0;
+    // bottom: 0;
     height: 100%;
-    max-width: 90%;
-    
+    // max-width: 90%;
+
 	@include media-breakpoint-between(md, xl) {
-    filter: brightness(.9);
+    // filter: brightness(.9);
   }
   }
 

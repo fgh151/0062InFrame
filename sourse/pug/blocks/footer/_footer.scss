@@ -83,11 +83,11 @@
 	&__copyr {
 		opacity: .3;
 	}
-	.link {
-		@include media-breakpoint-up(lg) {
-			text-decoration: underline;
-		}
-	}
+	// .link {
+	// 	@include media-breakpoint-up(lg) {
+	// 		text-decoration: underline;
+	// 	}
+	// }
 
 	ul {
 		list-style: none;

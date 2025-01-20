@@ -86,7 +86,7 @@
 
   display: flex;
   flex-direction: column;
-  gap: rem(40);
+  gap: rem(20);
   height: 100%;
   min-height: rem(390);
   border-radius: 32px 32px 0 0;
@@ -95,13 +95,16 @@
 
   width: rem(270);
 	@include media-breakpoint-up(lg) {
-    justify-content: space-between;
+    // justify-content: space-between;
+    min-height: rem(380);
+    gap: rem(40);
     width: rem(508);
     padding: rem(20);
   }
 
   &__title {
     margin-bottom: rem(12);
+    max-width: rem(370);
     @include media-breakpoint-up(lg) {
       margin-bottom: rem(20);
     }
@@ -145,7 +148,7 @@
   }
 
   &__bottom {
-    max-width: rem(430);
+    // max-width: rem(440);
   }
 
   &--primary {

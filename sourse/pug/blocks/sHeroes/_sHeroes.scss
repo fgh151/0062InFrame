@@ -48,6 +48,7 @@
 .heroes-card {
   padding: rem(24);
   padding-top: rem(16);
+  padding-bottom: rem(30);
   border-radius: $border-radius;
   overflow: hidden;
   background: $body-bg;
@@ -55,15 +56,24 @@
 
   min-height: rem(178);
 	@include media-breakpoint-up(lg) {
-    min-height: rem(228);
+    min-height: rem(348);
+    padding-bottom: rem(40);
   }
   @include media-breakpoint-up(xxl) {
     padding-right: rem(46);
   }
 
+  .h3 {
+    margin-bottom: rem(16);
+  }
+
   &__text {
     line-height: 1.2;
-    max-width: rem(360);
+    @include media-breakpoint-up(lg) {
+      font-size: rem(20);
+      line-height: 1.4;
+    }
+    max-width: rem(370);
   }
 
   position: relative;

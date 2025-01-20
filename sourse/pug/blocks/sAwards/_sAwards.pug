@@ -4,7 +4,7 @@ mixin sAwards(data)
 		.container
 			+b.section-title
 				h2 Награды
-				.text-large Определим по 3 победителя в каждой из 4 номинаций в своей категории.
+				.text-large Определим 36 лауреатов
 			+e.row.row
 				- const wrapClass="col-lg-4"
 				+e.col(class= wrapClass)
@@ -12,7 +12,7 @@ mixin sAwards(data)
 						+img(src="img/award.png", alt="").award
 						+img(src="img/svg/stars-yellow.svg", alt="").stars-yellow
 						ul
-							li.span #[span 4 миллиона ₽]
+							li.span #[span 48 млн рублей — общий призовой фонд]
 							li Диплом 1-й степени
 							li Фирменная статуэтка
 							li Приглашение на церемонию награждения
@@ -22,19 +22,17 @@ mixin sAwards(data)
 						+img(src="img/svg/stars.svg", alt="").stars
 						ul
 							li Диплом 2-й степени
-							li Фирменная статуэтка
-							li Приглашение на церемонию награждения
-							li Публикация видео и проекта
+							li Статуэтка Премии
+							li Подарки от организаторов и партнеров
 				+e.col(class= wrapClass)
 					+awardCard('Третье место', '')
 						+img(src="img/svg/stars.svg", alt="").stars.stars_rotate.d-lg-none
 						+img(src="img/svg/star-big.svg", alt="").stars.star-big.d-none.d-lg-inline
 						ul
 							li Диплом 3-й степени
-							li Фирменная статуэтка
-							li Приглашение на церемонию награждения
-							li Публикация видео и проекта
-			.text-large Подробнее о распределении призового фонда можно узнать в #[a(href='#') правилах участия].
+							li Статуэтка Премии
+							li Подарки от организаторов и партнеров
+			.text-large Подробнее о распределении призового фонда можно узнать в разделе #[a(href='#') Правила].
 	// end sAwards
 
 mixin awardCard(t, img)

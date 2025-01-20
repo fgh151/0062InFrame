@@ -5,11 +5,11 @@ mixin sJury(data)
 			+b.section-title
 				+e.title-wrap
 					h2 Жюри
+					.text-large Определяет лауреатов и победителей
 					a(href='#') Посмотреть жюри
 						+icon('arr-next')
-				.text-large Определят по 3 победителя<br>в каждой номинации
-			+e.link.A(href='#') Посмотреть всех
-				+icon('arr-next')
+			//- +e.link.A(href='#') Посмотреть всех
+			//- 	+icon('arr-next')
 			+e.slider--js.swiper.auto-slider--js
 				.swiper-wrapper
 					.swiper-slide: +juryCard('Тина<br>Канделаки', 'Управляющий директор «Газпром-медиа Развлекательное телевидение»', '1').--gradient

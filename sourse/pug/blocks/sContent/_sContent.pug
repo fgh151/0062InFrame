@@ -9,7 +9,7 @@ mixin sContent()
 				+e.item
 					.text.text-large Мы, так же как и вы, стремимся формировать лучшую систему поддержки для своих команд. Ведь динамика, скорость, актуальность, клиентоцентричность и высокие стандарты качества — это #[span ориентиры, которые важны тысячам] наших коллег по всей стране.
 					.h3 И мы готовы вместе с вами развиваться, обмениваться знаниями и находить новые решения в сфере работы с людьми.
-				+e.btn.btn.btn-outline-primary(href='#') Об Управлении кадровых сервисов
+				+e.btn.btn.btn-outline-primary(href='https://www.mos.ru/news/item/141828073/') Об Управлении кадровых сервисов
 	// end sContent
 	
 mixin sContent2()
@@ -22,15 +22,15 @@ mixin sContent2()
 				+e.col.col-lg-6
 					+cardLinkMaterials('Положение о Премии')
 				+e.col.col-lg-6
-					+cardLinkMaterials('Положение об экспертной комиссии и жюри')
+					+cardLinkMaterials('Памятка участника')
 				+e.col.col-lg-6
-					+cardLinkMaterials('Чек-лист участника')
+					+cardLinkMaterials('Образец заполненной заявки')
 				+e.col.col-lg-6
-					+cardLinkMaterials('Презентация Премии')
-				+e.col.col-lg-6
-					+b.card-material(href='#')
-						+e.text.text-large Политика<br>Конфиденциальности
-						+icon('arr-next')
+					+cardLinkMaterials('Презентация о Премии')
+				//- +e.col.col-lg-6
+				//- 	+b.card-material(href='#')
+				//- 		+e.text.text-large Политика<br>Конфиденциальности
+				//- 		+icon('arr-next')
 
 
 mixin cardLinkMaterials(t)
@@ -45,5 +45,5 @@ mixin sContent3()
 		.container
 			+b.section-title.section-title_smaller
 				.h3 Расскажите об HR-проекте своей команды — станьте лидерами в области управления персоналом в госсекторе
-				+gradientBtn('Чек-лист участника')(download)
+				+gradientBtn('Памятка участника')(download)
 					+icon('download')

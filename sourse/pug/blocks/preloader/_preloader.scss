@@ -1,0 +1,224 @@
+#preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.5);
+}
+body {
+  &.fixed-preloader {
+    pointer-events: none;
+  }
+}
+
+#preloader {
+  --preloader-anim-duration: 4s;
+
+  @include media-breakpoint-down(md) {
+    .preloader-logo {
+      width: rem(50);
+      height: rem(50);
+    }
+    .logo-svg {
+      max-width: 76%;
+      max-height: 76%;
+    }
+    .svg-text {
+      max-width: 100%;
+    }
+  }
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #DCC8FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9900;
+  pointer-events: none;
+  overflow: hidden;
+  visibility: visible;
+  opacity: 1;
+
+  transition: all .8s;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-6deg);
+
+    width: 66%;
+    height: 200%;
+    background: $purple-200;
+    filter: blur(80px);
+    border-radius: 100%;
+
+    animation: circle-moving var(--preloader-anim-duration) linear forwards;
+  }
+
+  .preloader-logo {
+    @include media-breakpoint-up(md) {
+      animation: logo-scale var(--preloader-anim-duration) linear forwards;
+    }
+
+    @include media-breakpoint-down(md) {
+      animation: logo-scale-mob var(--preloader-anim-duration) linear forwards;
+    }
+    position: relative;
+    width: rem(116);
+    height: rem(116);
+    flex-shrink: 0;
+
+    .logo-svg {
+      transform: scale(.25);
+      animation: svg-scale var(--preloader-anim-duration) linear forwards;
+      display: block;
+      position: absolute;
+      &:first-child {
+        top: 0;
+        left: 0;
+      }
+      &:last-child {
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .preloader-wrapper {
+    position: relative;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    gap: rem(50);
+
+    animation: preloader-scale var(--preloader-anim-duration) linear forwards;
+  }
+
+  .preloader-text-wrapper {
+    overflow: hidden;
+    position: fixed;
+    animation: text-slide var(--preloader-anim-duration) linear forwards;
+    height: rem(100);
+    margin-right: rem(-80);
+    @include media-breakpoint-up(md) {
+      margin-right: rem(-120);
+    }
+    max-width: 70vw;
+    width: 400px;
+    @include media-breakpoint-down(md) {
+      width: 200px;
+    }
+    .svg-text {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(-100%, -50%);
+      opacity: 0;
+      animation: text-appear var(--preloader-anim-duration) linear forwards;
+    }
+  }
+}
+
+@keyframes preloader-scale {
+  0% {
+    transform: scale(.8);
+  }
+  80% {
+    transform: scale(.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes logo-scale {
+  0% {
+    transform: scale(0.25);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1) translateX(-220px);
+  }
+  100% {
+    transform: scale(1) translateX(-220px);
+  }
+}
+
+@keyframes logo-scale-mob {
+  0% {
+    transform: scale(0.25);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1) translateX(-100px);
+  }
+  100% {
+    transform: scale(1) translateX(-100px);
+  }
+}
+
+@keyframes svg-scale {
+  0% {
+    transform: scale(0.25);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes circle-moving {
+  0% {
+    transform: translate(-50%, -50%) rotate(-6deg);
+  }
+  30% {
+    transform: translate(-80%, -50%) rotate(-6deg);
+  }
+  100% {
+    transform: translate(-20%, -50%) rotate(-6deg);
+  }
+}
+
+@keyframes text-slide {
+  0%,
+  60% {
+    transform: scale(.8) translateX(-50%);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(.8) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+
+@keyframes text-appear {
+  0%,
+  50% {
+    transform: translate(-100%, -50%);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(0, -50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, -50%);
+    opacity: 1;
+  }
+}
