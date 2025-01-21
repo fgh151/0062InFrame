@@ -10,19 +10,15 @@ body {
 }
 
 #preloader {
-  --preloader-anim-duration: 4s;
+  --preloader-anim-duration: 1.5s;
 
   @include media-breakpoint-down(md) {
-    .preloader-logo {
-      width: rem(50);
-      height: rem(50);
-    }
     .logo-svg {
-      max-width: 76%;
-      max-height: 76%;
+      max-width: rem(38);
+      max-height: rem(38);
     }
     .svg-text {
-      max-width: 100%;
+      max-width: 200px;
     }
   }
 }
@@ -70,12 +66,10 @@ body {
       animation: logo-scale-mob var(--preloader-anim-duration) linear forwards;
     }
     position: relative;
-    width: rem(116);
-    height: rem(116);
     flex-shrink: 0;
 
     .logo-svg {
-      transform: scale(.25);
+      // transform: scale(.25);
       animation: svg-scale var(--preloader-anim-duration) linear forwards;
       display: block;
       position: absolute;
@@ -104,23 +98,21 @@ body {
   .preloader-text-wrapper {
     overflow: hidden;
     position: fixed;
-    animation: text-slide var(--preloader-anim-duration) linear forwards;
     height: rem(100);
-    margin-right: rem(-80);
     @include media-breakpoint-up(md) {
       margin-right: rem(-120);
+      animation: text-slide var(--preloader-anim-duration) linear forwards;
     }
-    max-width: 70vw;
-    width: 400px;
     @include media-breakpoint-down(md) {
-      width: 200px;
+      margin-right: rem(-80);
+      animation: text-slide-mob var(--preloader-anim-duration) linear forwards;
     }
     .svg-text {
       position: absolute;
       top: 50%;
       right: 0;
-      transform: translate(-100%, -50%);
-      opacity: 0;
+      transform: translate(-100%, -46%);
+      // opacity: 0;
       animation: text-appear var(--preloader-anim-duration) linear forwards;
     }
   }
@@ -140,39 +132,68 @@ body {
 
 @keyframes logo-scale {
   0% {
-    transform: scale(0.25);
+    transform: translateX(0);
+    width: rem(180);
+    height: rem(180);
   }
-  60% {
-    transform: scale(1);
+  25% {
+    transform:translateX(0);
+    width: rem(180);
+    height: rem(180);
+  }
+  50% {
+    transform: translateX(0);
+    width: rem(116);
+    height: rem(116);
   }
   80% {
-    transform: scale(1) translateX(-220px);
+    transform: translateX(-220px);
+    width: rem(116);
+    height: rem(116);
   }
   100% {
-    transform: scale(1) translateX(-220px);
+    transform:  translateX(-220px);
+    width: rem(116);
+    height: rem(116);
   }
 }
 
 @keyframes logo-scale-mob {
   0% {
-    transform: scale(0.25);
+    transform: translateX(0);
+    width: rem(100);
+    height: rem(100);
   }
-  60% {
-    transform: scale(1);
+  20% {
+    transform: translateX(0);
+    width: rem(100);
+    height: rem(100);
+  }
+  50% {
+    transform: translateX(0);
+    width: rem(50);
+    height: rem(50);
   }
   80% {
-    transform: scale(1) translateX(-100px);
+    transform: translateX(-100px);
+    width: rem(50);
+    height: rem(50);
   }
   100% {
-    transform: scale(1) translateX(-100px);
+    transform: translateX(-100px);
+    width: rem(50);
+    height: rem(50);
   }
 }
 
 @keyframes svg-scale {
   0% {
-    transform: scale(0.25);
+    transform: scale(0.1);
   }
-  60% {
+  25% {
+    transform: scale(1);
+  }
+  50% {
     transform: scale(1);
   }
   100% {
@@ -197,28 +218,46 @@ body {
   60% {
     transform: scale(.8) translateX(-50%);
     opacity: 0;
+    width: 50px;
   }
   80% {
     transform: scale(.8) translateX(0);
     opacity: 1;
+    width: 400px;
   }
   100% {
     transform: scale(1) translateX(0);
+    width: 400px;
+  }
+}
+
+@keyframes text-slide-mob {
+  0%,
+  60% {
+    transform: scale(.8) translateX(-100px);
+    opacity: 0;
+    width: 10px;
+  }
+  80% {
+    transform: scale(.8) translateX(0);
+    opacity: 1;
+    width: 200px;
+  }
+  100% {
+    transform: scale(1) translateX(0);
+    width: 200px;
   }
 }
 
 @keyframes text-appear {
   0%,
-  50% {
-    transform: translate(-100%, -50%);
-    opacity: 0;
+  40% {
+    transform: translate(-100%, -46%);
   }
   80% {
-    transform: translate(0, -50%);
-    opacity: 1;
+    transform: translate(0, -46%);
   }
   100% {
-    transform: translate(0, -50%);
-    opacity: 1;
+    transform: translate(0, -46%);
   }
 }
