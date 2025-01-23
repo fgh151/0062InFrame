@@ -242,20 +242,24 @@ function eventHandler() {
       }
     }
   });
-  
-  const addBtn = document.querySelector('.add-input-js')
-  if (addBtn) {
-    addBtn.addEventListener('click', (e) => {
-      e.preventDefault()
-      const inputsContainer = document.querySelector('.inputs-js');
 
-      if (inputsContainer) {
+  const inputsContainers = document.querySelectorAll('.inputs-js');
 
-      const inputCount = inputsContainer.querySelectorAll('.input-wrap').length;
+  if (inputsContainers.length) {
+    inputsContainers.forEach(container => {
+      const btn = container.nextElementSibling.querySelector('.add-input-js')
 
-      if (inputCount >= 5) {
-        return;
-      }
+      btn.addEventListener('click', (e) => {
+        e.preventDefault()
+
+        const inputCount = container.querySelectorAll('.input-wrap').length;
+        const firstWrap = container.querySelectorAll('input')
+
+        const maxLenght = container.getAttribute('data-max')
+
+        if (inputCount >= maxLenght) {
+          return;
+        }
         const newInputWrap = `
           <div class="input-wrap">
             <button class="icon-delete">
@@ -263,14 +267,15 @@ function eventHandler() {
                 <use xlink:href="img/svg/sprite.svg#x"></use>
               </svg>
             </button>
-            <input type="text" placeholder="Ф.И.О." class="form-control">
-            <input type="text" placeholder="Роль в проекте" class="form-control">
+            <input type="text" placeholder=${firstWrap[0].getAttribute('placeholder')} class="form-control">
+            <input type="text" placeholder=${firstWrap[1].getAttribute('placeholder')} class="form-control">
           </div>
         `;
 
-        inputsContainer.insertAdjacentHTML('beforeend', newInputWrap);
-      }
+        container.insertAdjacentHTML('beforeend', newInputWrap);
+      })
     })
+
   }
 
   /* file upload */
@@ -336,8 +341,10 @@ function eventHandler() {
 
   if (textareas.length) {
     textareas.forEach((textarea) => {
-      const maxLength = textarea.getAttribute('maxlength');
-  
+      const maxLength = textarea.getAttribute('maxlength') === 'maxlength' 
+        ? 1000 
+        : textarea.getAttribute('maxlength');
+
       const charCounter = document.createElement('div');
       const currentLength = textarea.value.length;
       charCounter.classList.add('char-counter', 'small', 'text-secondary');

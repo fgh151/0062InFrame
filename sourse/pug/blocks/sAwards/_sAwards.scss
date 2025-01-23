@@ -42,23 +42,23 @@
   border-radius: rem(32) 0 0 0;
 	@include media-breakpoint-up(xl) {
     padding: rem(40);
-    padding-right: rem(20);
+    padding-right: rem(10);
   }
   height: 100%;
 
-  li.span {
-    list-style-type: none;
-    margin-left: rem(10);
-    font-weight: 500;
-    font-size: rem(18px);
-    margin-bottom: rem(20);
-    @include media-breakpoint-up(md) {
-      font-size: rem(28px);
-    }
-  }
+  // li.span {
+  //   list-style-type: none;
+  //   margin-left: rem(10);
+  //   font-weight: 500;
+  //   font-size: rem(18px);
+  //   margin-bottom: rem(20);
+  //   @include media-breakpoint-up(md) {
+  //     font-size: rem(28px);
+  //   }
+  // }
 
   li {
-    margin-left: rem(30);
+    margin-left: rem(24);
     margin-bottom: rem(10);
   }
 
@@ -170,6 +170,6 @@
   }
 
   .h3 {
-    margin-bottom: rem(39);
+    margin-bottom: rem(32);
   }
 }

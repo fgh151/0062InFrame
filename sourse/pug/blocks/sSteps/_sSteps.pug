@@ -7,7 +7,7 @@ mixin sSteps(data)
 				+stepsLine(data-step="1")
 			+e.item
 				+e.descr
-					p Лучшие проекты будут выбираться отдельно среди федеральных ведомств, региональных команд и организаций Москвы.
+					p Лучшие проекты будут выбираться отдельно среди федеральных ведомств, региональных команд и организаций Москвы
 			+e.item: +e.row.row
 				+e.col.col-lg-4: +categoryCard('Федерация', 'Проекты федеральных органов государственной власти и подведомственных им организаций, госкорпораций и компаний с госучастием.')
 				+e.col.col-lg-4: +categoryCard('Регион', 'Проекты региональных органов государственной власти и подведомственных им организаций, а также органов местного самоуправления и подведомственных им учреждений.')
@@ -38,12 +38,12 @@ mixin sSteps2(data)
 				+stepsLine(data-step="2")
 			+e.item
 				+e.descr
-					p Ознакомтесь с кратким описанием номинации нажав на иконку со знаком вопроса. И говорим что все критерии общие ознакомьтесь. Более подробную информацию вы можете найти в #[a(href="#") Правилах.]
+					p Ознакомтесь с кратким описанием номинации нажав на иконку со знаком вопроса. <br>Более подробную информацию вы можете найти в #[a(href="#") Правилах.]
 			+e.item: +e.row.row
-				+e.col.col-md-6.col-lg-3: +categoryCard2('Секрет удачного кадра: привлечение')
-				+e.col.col-md-6.col-lg-3: +categoryCard2('Академия талантов: развитие')
-				+e.col.col-md-6.col-lg-3: +categoryCard2('В фокусе: удержание')
-				+e.col.col-md-6.col-lg-3: +categoryCard2('Новый ракурс: HR-инновации')
+				+e.col.col-md-6.col-lg-3: +categoryCard2('Секрет удачного кадра: привлечение',1)
+				+e.col.col-md-6.col-lg-3: +categoryCard2('Академия талантов: развитие',2)
+				+e.col.col-md-6.col-lg-3: +categoryCard2('В фокусе: удержание',3)
+				+e.col.col-md-6.col-lg-3: +categoryCard2('Новый ракурс: HR-инновации',4)
 			+e.bottom-row
 				+e.left 
 					a(href="#").cancel-btn.small
@@ -54,6 +54,13 @@ mixin sSteps2(data)
 						+icon('arr-next')
 	// end sSteps
 
+mixin categoryCard2(title, i)
+	+b.category-card--sm
+		+in-c('radio', title, 'text')
+			span.custom-input__text=title
+		+img(src="img/svg/step-bg.svg", alt="").step-bg
+		a(href=`#modal-info-${i}`).link-modal-js
+			+img(src="img/svg/question-info.svg", alt="")
 
 mixin sSteps3(data)
 	// start sSteps
@@ -64,7 +71,7 @@ mixin sSteps3(data)
 				+stepsLine(data-step="3")
 			+e.item
 				+e.descr--sm
-					.text-large Вы хотите быть контактным лицом по этой заявке?
+					.h5 Вы хотите быть контактным лицом по этой заявке?
 					p Нажмите «Да», и мы заполним поля данными из вашего профиля, чтобы сэкономить ваше время.
 					p Контактное лицо по заявке — представитель реализовавшей проект организации. Именно с ним мы будем связываться, если возникнут уточняющие вопросы или рекомендации по заявке.
 			+e.btns
@@ -134,7 +141,7 @@ mixin sSteps5(data)
 				+e.item-row.row
 					+e.col.col-lg-8
 						+e.descr--sm
-							.text-large Благодарим вас за подачу заявки
+							.h5 Благодарим вас за подачу заявки
 							p На вкладке «Мои заявки» вы можете отслеживать статус заявки или вносить изменения в описание проекта #[span до 11 июля.]
 						+e.descr
 							+e.wrap.wrap-gray
@@ -150,12 +157,3 @@ mixin sSteps5(data)
 				+e.btn.btn.btn-outline-primary(href='#') Посмотреть мои заявки
 				+e.btn.btn.btn-primary.btn-large(href='#') Подать еще заявку
 	// end sSteps
-
-
-mixin categoryCard2(title)
-	+b.category-card--sm
-		+in-c('radio', title, 'text')
-			span.custom-input__text=title
-		+img(src="img/svg/step-bg.svg", alt="").step-bg
-		a(href="#modal-info").link-modal-js
-			+img(src="img/svg/question-info.svg", alt="")

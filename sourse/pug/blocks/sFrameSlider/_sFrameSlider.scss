@@ -154,6 +154,10 @@
   &--primary {
     background: linear-gradient(49deg, #9664ff 0%, #5400b7 100%);
     color: white;
+
+    .frame-slider__text {
+      max-width: rem(392);
+    }
   }
 
   position: relative;

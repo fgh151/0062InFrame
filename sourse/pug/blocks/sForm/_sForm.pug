@@ -17,20 +17,21 @@ mixin sForm()
 
 						.tabs__content.active
 							+form-wrap
-								+input("Ваше Ф.И.О.",'text')(required)
+								+input("Ф. И. О.",'text')(required)
 								+input("Телефон",'tel')(required)
 									.text.text-indigo.small Если вы вписываете рабочий телефон с добавочным номером, укажите его в поле ниже.
 								+input("Напишите сообщение",'textarea')
-								.title.text-secondary.required Введите символы с картинки
+								.title.text-secondary.required.small Подтвердите, что вы не робот, введите символы с картинки
 								.capture-wrap
 								+policy
 								+e.btn.btn.btn-primary(type="submit") Отправить
 						.tabs__content
 							+form-wrap
-								+input("Ваше Ф.И.О.",'text')(required)
-								+input("Адрес вашей почты",'email')(required)
+								+input("Ф.И.О.",'text')(required)
+								+input("Почта",'email')(required)
+									.text.text-indigo.small Пожалуйста, указывайте только почтовый адрес с доменом .ru
 								+input("Напишите сообщение",'textarea')
-								.title.text-secondary.required Введите символы с картинки
+								.title.text-secondary.required.small Подтвердите, что вы не робот, введите символы с картинки
 								.capture-wrap
 								+policy
 								+e.btn.btn.btn-primary(type="submit") Отправить
