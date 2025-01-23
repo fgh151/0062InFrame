@@ -250,7 +250,7 @@
     }
   }
 
-  span a {
+  .sAuth__input-wrap a {
     text-decoration: underline;
   }
 
@@ -282,6 +282,7 @@
     .sAuth__input-title {
       color: $body-color !important;
       line-height: 120%;
+      font-size: rem(20px);
       @include media-breakpoint-up(md) {
         font-size: rem(24px);
       }

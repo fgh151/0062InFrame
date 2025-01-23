@@ -187,7 +187,7 @@ mixin sAuth4(data)
 						.col-lg-4
 							.sAuth__input-wrap.form-group
 								.sAuth__input-title.required Ссылки на соцсети или публикации о проекте в СМИ
-								.text-secondary.small Пожалуйста, используйте ссылки только на #[a(href='https://rkn.gov.ru/press/news/news74813.html') разрешенные в России] соцсети и платформы.
+								.text-secondary.small Пожалуйста, используйте ссылки только на #[a.text-secondary(href='https://rkn.gov.ru/press/news/news74813.html') разрешенные в России] соцсети и платформы.
 						.col-lg
 							+e.inputs.inputs-js(data-max='3')
 								.input-wrap
@@ -213,7 +213,7 @@ mixin sAuth4(data)
 					+e.input-row.row 
 						.col-lg-4
 							.sAuth__input-wrap.form-group
-								.sAuth__input-title.required Презентация о проекте
+								.sAuth__input-title.required Презентация о проекте
 								span.text-secondary.small Пожалуйста, ознакомьтесь с #[a(href='#') требованиями] к оформлению презентации.
 								span.text-purple.small Если ваш проект пройдет техническую экспертизу, пункт станет обязательным к заполнению до 3 августа
 						.col-lg
@@ -221,7 +221,7 @@ mixin sAuth4(data)
 							+uploadFileSingle.is-invalid
 
 					//- 15
-					+input("Введите текст",'textarea', 'Ссылка на видео о проекте')
+					+input("Введите текст",'textarea', 'Ссылка на видео о проекте')
 						span.text-secondary.small Длительность видео — до 5 минут. Это необязательный пункт, но в случае победы видео может быть использовано в качестве презентации вашего проекта на информационных площадках Премии.
 
 					//- 16
@@ -363,7 +363,7 @@ mixin sAuth5(data)
 					+e.input-row.row 
 						.col-lg-4
 							.sAuth__input-wrap.form-group
-								.sAuth__input-title.required Презентация о проекте
+								.sAuth__input-title.required Презентация о проекте
 								span.text-secondary.small Пожалуйста, ознакомьтесь с #[a(href='#') требованиями] к оформлению презентации.
 								span.text-purple.small Если ваш проект пройдет техническую экспертизу, пункт станет обязательным к заполнению до 3 августа
 						.col-lg
@@ -371,7 +371,7 @@ mixin sAuth5(data)
 							+uploadFileSingle.is-invalid
 
 					//- 15
-					+input("Введите текст",'textarea', 'Ссылка на видео о проекте')
+					+input("Введите текст",'textarea', 'Ссылка на видео о проекте')
 						span.text-secondary.small Длительность видео — до 5 минут. Это необязательный пункт, но в случае победы видео может быть использовано в качестве презентации вашего проекта на информационных площадках Премии.
 
 					//- 16
@@ -493,7 +493,7 @@ mixin sAuth6(data)
 					+e.input-row.row 
 						.col-lg-4
 							.sAuth__input-wrap.form-group
-								.sAuth__input-title.required.text-gradient #[span Презентация о проекте]
+								.sAuth__input-title.required.text-gradient #[span Презентация о проекте]
 								span.text-secondary.small Пожалуйста, ознакомьтесь с #[a(href='#') требованиями] к оформлению презентации.
 								span.text-purple.small Если ваш проект пройдет техническую экспертизу, пункт станет обязательным к заполнению до 3 августа
 						.col-lg
@@ -502,7 +502,7 @@ mixin sAuth6(data)
 
 					.sAuth__input-wrap.form-group
 						label
-							span.sAuth__input-title.text-gradient #[span Ссылка на видео о проекте]
+							span.sAuth__input-title.text-gradient #[span Ссылка на видео о проекте]
 							textarea.sAuth__input.form-control(placeholder="Введите текст")
 							span.text-secondary.small Длительность видео — до 5 минут. Это необязательный пункт, но в случае победы видео может быть использовано в качестве презентации вашего проекта на информационных площадках Премии.
 
@@ -732,7 +732,7 @@ mixin sAuthStep4(data)
 					+e.input-row.row 
 						.col-lg-4
 							.sAuth__input-wrap.form-group
-								.sAuth__input-title.required Презентация о проекте
+								.sAuth__input-title.required Презентация о проекте
 								span.text-secondary.small Пожалуйста, ознакомьтесь с #[a(href='#') требованиями] к оформлению презентации.
 								span.text-purple.small Если ваш проект пройдет техническую экспертизу, пункт станет обязательным к заполнению до 3 августа
 						.col-lg
@@ -740,7 +740,7 @@ mixin sAuthStep4(data)
 							+uploadFileSingle.is-invalid
 
 					//- 15
-					+input("Введите текст",'textarea', 'Ссылка на видео о проекте')
+					+input("Введите текст",'textarea', 'Ссылка на видео о проекте')
 						span.text-secondary.small Длительность видео — до 5 минут. Это необязательный пункт, но в случае победы видео может быть использовано в качестве презентации вашего проекта на информационных площадках Премии.
 
 					//- 16

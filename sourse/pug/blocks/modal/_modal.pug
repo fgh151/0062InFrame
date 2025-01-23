@@ -29,6 +29,7 @@ mixin modal()
 					+form-wrap
 						+input("",'text', 'Ф. И. О.')(required)
 						+input("Телефон",'tel',"Телефон")(required)
+							span.error-feedback.text.text-indigo Если вы вписываете рабочий телефон с добавочным номером, укажите его в поле ниже.
 						+input("Введите текст",'text', 'Ваше сообщение')(required)
 						.title.text-secondary.small.required Подтвердите, что вы не робот, введите символы с картинки
 						.capture-wrap
