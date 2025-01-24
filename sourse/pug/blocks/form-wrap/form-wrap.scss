@@ -89,10 +89,10 @@ input::-webkit-inner-spin-button {
   label:has(input[required]) .form-wrap__input-title {
     position: relative;
     font-size: rem(16);
-    // height: 5px;
-    // transform: translateY(calc(100% + rem(24)));
-    // margin-bottom: -100%;
+    pointer-events: none;
     color: transparent !important;
+    margin-bottom: 0;
+    transform: translateY(rem(10px));
     &:after {
       content: '*';
       display: inline-block;
@@ -101,7 +101,8 @@ input::-webkit-inner-spin-button {
   }
 
   input[required] {
-    
-    margin-top: calc( rem(50) * -1);
+    position: relative;
+    z-index: 2;
+    margin-top: calc( rem(30) * -1);
   }
 }
