@@ -242,24 +242,20 @@ function eventHandler() {
       }
     }
   });
+  
+  const addBtn = document.querySelector('.add-input-js')
+  if (addBtn) {
+    addBtn.addEventListener('click', (e) => {
+      e.preventDefault()
+      const inputsContainer = document.querySelector('.inputs-js');
 
-  const inputsContainers = document.querySelectorAll('.inputs-js');
+      if (inputsContainer) {
 
-  if (inputsContainers.length) {
-    inputsContainers.forEach(container => {
-      const btn = container.nextElementSibling.querySelector('.add-input-js')
+      const inputCount = inputsContainer.querySelectorAll('.input-wrap').length;
 
-      btn.addEventListener('click', (e) => {
-        e.preventDefault()
-
-        const inputCount = container.querySelectorAll('.input-wrap').length;
-        const firstWrap = container.querySelectorAll('input')
-
-        const maxLenght = container.getAttribute('data-max')
-
-        if (inputCount >= maxLenght) {
-          return;
-        }
+      if (inputCount >= 5) {
+        return;
+      }
         const newInputWrap = `
           <div class="input-wrap">
             <button class="icon-delete">
@@ -267,15 +263,14 @@ function eventHandler() {
                 <use xlink:href="img/svg/sprite.svg#x"></use>
               </svg>
             </button>
-            <input type="text" placeholder=${firstWrap[0].getAttribute('placeholder')} class="form-control">
-            <input type="text" placeholder=${firstWrap[1].getAttribute('placeholder')} class="form-control">
+            <input type="text" placeholder="Ф.И.О." class="form-control">
+            <input type="text" placeholder="Роль в проекте" class="form-control">
           </div>
         `;
 
-        container.insertAdjacentHTML('beforeend', newInputWrap);
-      })
+        inputsContainer.insertAdjacentHTML('beforeend', newInputWrap);
+      }
     })
-
   }
 
   /* file upload */
@@ -341,10 +336,8 @@ function eventHandler() {
 
   if (textareas.length) {
     textareas.forEach((textarea) => {
-      const maxLength = textarea.getAttribute('maxlength') === 'maxlength' 
-        ? 1000 
-        : textarea.getAttribute('maxlength');
-
+      const maxLength = textarea.getAttribute('maxlength');
+  
       const charCounter = document.createElement('div');
       const currentLength = textarea.value.length;
       charCounter.classList.add('char-counter', 'small', 'text-secondary');
@@ -403,11 +396,12 @@ function eventHandler() {
   const consultBtn = document.querySelector('.consult--js')
   if (consultBtn) {
     consultBtn.addEventListener('click', (event) => {
-      const target = document.querySelector('.tinny-item-js.consult-info-js');
 
-      if (target && target._tippy) {
-        target._tippy.show();
-        consultBtn.closest('.info-window--js').classList.add('hidden')
+      const thanksWindow = document.querySelector('.info-window--js.hidden')
+
+      if (thanksWindow) {
+        thanksWindow.classList.remove('hidden')
+      consultBtn.closest('.info-window--js').classList.add('hidden')
       }
     });
   }

@@ -396,11 +396,12 @@ function eventHandler() {
   const consultBtn = document.querySelector('.consult--js')
   if (consultBtn) {
     consultBtn.addEventListener('click', (event) => {
-      const target = document.querySelector('.tinny-item-js.consult-info-js');
 
-      if (target && target._tippy) {
-        target._tippy.show();
-        consultBtn.closest('.info-window--js').classList.add('hidden')
+      const thanksWindow = document.querySelector('.info-window--js.hidden')
+
+      if (thanksWindow) {
+        thanksWindow.classList.remove('hidden')
+      consultBtn.closest('.info-window--js').classList.add('hidden')
       }
     });
   }
