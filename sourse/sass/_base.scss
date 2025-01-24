@@ -548,9 +548,13 @@ h3, .h3 {
     font-size: rem(28);
   }
 }
+h5, .h5 {
+	@include media-breakpoint-down(md) {
+    font-size: rem(18);
+  }
+}
 
 .text-large {
-  
 	@include media-breakpoint-up(md) {
     font-size: rem(24);
   }

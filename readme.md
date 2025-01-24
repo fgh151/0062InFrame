@@ -8,6 +8,7 @@
 5. <https://megafronteam.github.io/0062InFrame/04-article-1.html>
 2. <https://megafronteam.github.io/0062InFrame/04-article-2.html>
 4. <https://megafronteam.github.io/0062InFrame/05-news.html>
+1. <https://megafronteam.github.io/0062InFrame/11-organisation.html>
 
 #### Cabinet
 1. <https://megafronteam.github.io/0062InFrame/06-auth-profile.html>
