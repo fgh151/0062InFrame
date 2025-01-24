@@ -17,8 +17,8 @@ mixin sForm()
 
 						.tabs__content.active
 							+form-wrap
-								+input("Ф. И. О.",'text')(required)
-								+input("Телефон",'tel')(required)
+								+input("Ф. И. О.",'text',"Ф. И. О.")(required)
+								+input("Телефон",'tel', "Телефон")(required)
 									.text.text-indigo.small Если вы вписываете рабочий телефон с добавочным номером, укажите его в поле ниже.
 								+input("Напишите сообщение",'textarea')
 								.title.text-secondary.required.small Подтвердите, что вы не робот, введите символы с картинки
@@ -27,8 +27,8 @@ mixin sForm()
 								+e.btn.btn.btn-primary(type="submit") Отправить
 						.tabs__content
 							+form-wrap
-								+input("Ф.И.О.",'text')(required)
-								+input("Почта",'email')(required)
+								+input("Ф. И. О.",'text',"Ф. И. О.")(required)
+								+input("Почта",'email', "Почта")(required)
 									.text.text-indigo.small Пожалуйста, указывайте только почтовый адрес с доменом .ru
 								+input("Напишите сообщение",'textarea')
 								.title.text-secondary.required.small Подтвердите, что вы не робот, введите символы с картинки

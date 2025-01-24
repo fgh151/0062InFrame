@@ -73,13 +73,35 @@ input::-webkit-inner-spin-button {
 }
 
 .sForm .form-group:has(input[required]) {
+    // position: relative;
+    // &:after {
+    //   content: '*';
+    //   display: inline-block;
+    //   position: absolute;
+    //   top: 11px;
+    //   left: -5px;
+    //   color: $danger;
+    // }
+
+}
+
+.sForm {
+  label:has(input[required]) .form-wrap__input-title {
     position: relative;
+    font-size: rem(16);
+    // height: 5px;
+    // transform: translateY(calc(100% + rem(24)));
+    // margin-bottom: -100%;
+    color: transparent !important;
     &:after {
       content: '*';
       display: inline-block;
-      position: absolute;
-      top: 11px;
-      left: -5px;
       color: $danger;
     }
+  }
+
+  input[required] {
+    
+    margin-top: calc( rem(50) * -1);
+  }
 }
