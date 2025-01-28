@@ -174,7 +174,11 @@
 
   .icon {
     font-size: rem(28);
-    transform: rotate(-45deg);
+    transform: rotate(90deg);
     flex-shrink: 0;
+    @include mt;
+  }
+  &:hover .icon {
+    transform: rotate(-45deg);
   }
 }
