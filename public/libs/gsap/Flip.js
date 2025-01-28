@@ -364,10 +364,10 @@
 	}
 
 	/*!
-	 * Flip 3.12.7
+	 * Flip 3.12.5
 	 * https://gsap.com
 	 *
-	 * @license Copyright 2008-2025, GreenSock. All rights reserved.
+	 * @license Copyright 2008-2024, GreenSock. All rights reserved.
 	 * Subject to the terms at https://gsap.com/standard-license or for
 	 * Club GSAP members, the agreement issued with that membership.
 	 * @author: Jack Doyle, jack@greensock.com
@@ -686,7 +686,7 @@
 	      scaleY = toState.scaleY,
 	      rotation = toState.rotation,
 	      bounds = toState.bounds,
-	      styles = vars && _getStyleSaver && _getStyleSaver(element, "transform,width,height"),
+	      styles = vars && _getStyleSaver && _getStyleSaver(element, "transform"),
 	      dimensionState = fromState,
 	      _toState$matrix = toState.matrix,
 	      e = _toState$matrix.e,
@@ -1751,7 +1751,6 @@
 
 	    absolute && _makeAbsolute(after, before);
 	    v = _fit(after, before, scale || fitChild, props, fitChild, v.duration || getVars ? v : 0);
-	    typeof vars === "object" && "zIndex" in vars && (v.zIndex = vars.zIndex);
 	    ctx && !getVars && ctx.add(function () {
 	      return function () {
 	        return _applyInlineStyles(after);
@@ -1813,7 +1812,7 @@
 
 	  return Flip;
 	}();
-	Flip.version = "3.12.7";
+	Flip.version = "3.12.5";
 	typeof window !== "undefined" && window.gsap && window.gsap.registerPlugin(Flip);
 
 	exports.Flip = Flip;

@@ -19,10 +19,10 @@
   }
 
   /*!
-   * GSAP 3.12.7
+   * GSAP 3.12.5
    * https://gsap.com
    *
-   * @license Copyright 2008-2025, GreenSock. All rights reserved.
+   * @license Copyright 2008-2024, GreenSock. All rights reserved.
    * Subject to the terms at https://gsap.com/standard-license or for
    * Club GSAP members, the agreement issued with that membership.
    * @author: Jack Doyle, jack@greensock.com
@@ -364,7 +364,7 @@
     return animation._repeat ? _animationCycle(animation._tTime, animation = animation.duration() + animation._rDelay) * animation : 0;
   },
       _animationCycle = function _animationCycle(tTime, cycleDuration) {
-    var whole = Math.floor(tTime = _roundPrecise(tTime / cycleDuration));
+    var whole = Math.floor(tTime /= cycleDuration);
     return tTime && whole === tTime ? whole - 1 : whole;
   },
       _parentToChildTotalTime = function _parentToChildTotalTime(parentTime, child) {
@@ -1494,7 +1494,7 @@
   })(7.5625, 2.75);
 
   _insertEase("Expo", function (p) {
-    return Math.pow(2, 10 * (p - 1)) * p + p * p * p * p * p * p * (1 - p);
+    return p ? Math.pow(2, 10 * (p - 1)) : 0;
   });
 
   _insertEase("Circ", function (p) {
@@ -1627,7 +1627,7 @@
     };
 
     _proto.totalProgress = function totalProgress(value, suppressEvents) {
-      return arguments.length ? this.totalTime(this.totalDuration() * value, suppressEvents) : this.totalDuration() ? Math.min(1, this._tTime / this._tDur) : this.rawTime() >= 0 && this._initted ? 1 : 0;
+      return arguments.length ? this.totalTime(this.totalDuration() * value, suppressEvents) : this.totalDuration() ? Math.min(1, this._tTime / this._tDur) : this.rawTime() > 0 ? 1 : 0;
     };
 
     _proto.progress = function progress(value, suppressEvents) {
@@ -1767,9 +1767,7 @@
     };
 
     _proto.restart = function restart(includeDelay, suppressEvents) {
-      this.play().totalTime(includeDelay ? -this._delay : 0, _isNotFalse(suppressEvents));
-      this._dur || (this._zTime = -_tinyNum);
-      return this;
+      return this.play().totalTime(includeDelay ? -this._delay : 0, _isNotFalse(suppressEvents));
     };
 
     _proto.play = function play(from, suppressEvents) {
@@ -2006,10 +2004,9 @@
             iteration = this._repeat;
             time = dur;
           } else {
-            prevIteration = _roundPrecise(tTime / cycleDuration);
-            iteration = ~~prevIteration;
+            iteration = ~~(tTime / cycleDuration);
 
-            if (iteration && iteration === prevIteration) {
+            if (iteration && iteration === tTime / cycleDuration) {
               time = dur;
               iteration--;
             }
@@ -2245,7 +2242,7 @@
         return this.killTweensOf(child);
       }
 
-      child.parent === this && _removeLinkedListItem(this, child);
+      _removeLinkedListItem(this, child);
 
       if (child === this._recent) {
         this._recent = this._last;
@@ -3119,7 +3116,7 @@
 
       if (!dur) {
         _renderZeroDurationTween(this, totalTime, suppressEvents, force);
-      } else if (tTime !== this._tTime || !totalTime || force || !this._initted && this._tTime || this._startAt && this._zTime < 0 !== isNegative || this._lazy) {
+      } else if (tTime !== this._tTime || !totalTime || force || !this._initted && this._tTime || this._startAt && this._zTime < 0 !== isNegative) {
         time = tTime;
         timeline = this.timeline;
 
@@ -3136,15 +3133,14 @@
             iteration = this._repeat;
             time = dur;
           } else {
-            prevIteration = _roundPrecise(tTime / cycleDuration);
-            iteration = ~~prevIteration;
+            iteration = ~~(tTime / cycleDuration);
 
-            if (iteration && iteration === prevIteration) {
+            if (iteration && iteration === _roundPrecise(tTime / cycleDuration)) {
               time = dur;
               iteration--;
-            } else if (time > dur) {
-              time = dur;
             }
+
+            time > dur && (time = dur);
           }
 
           isYoyo = this._yoyo && iteration & 1;
@@ -3164,7 +3160,7 @@
           if (iteration !== prevIteration) {
             timeline && this._yEase && _propagateYoyoEase(timeline, isYoyo);
 
-            if (this.vars.repeatRefresh && !isYoyo && !this._lock && time !== cycleDuration && this._initted) {
+            if (this.vars.repeatRefresh && !isYoyo && !this._lock && this._time !== cycleDuration && this._initted) {
               this._lock = force = 1;
               this.render(_roundPrecise(cycleDuration * iteration), true).invalidate()._lock = 0;
             }
@@ -3277,8 +3273,7 @@
 
       if (!targets && (!vars || vars === "all")) {
         this._lazy = this._pt = 0;
-        this.parent ? _interrupt(this) : this.scrollTrigger && this.scrollTrigger.kill(!!_reverting);
-        return this;
+        return this.parent ? _interrupt(this) : this;
       }
 
       if (this.timeline) {
@@ -3880,9 +3875,9 @@
       };
     },
     quickTo: function quickTo(target, property, vars) {
-      var _setDefaults2;
+      var _merge2;
 
-      var tween = gsap.to(target, _setDefaults((_setDefaults2 = {}, _setDefaults2[property] = "+=0.1", _setDefaults2.paused = true, _setDefaults2.stagger = 0, _setDefaults2), vars || {})),
+      var tween = gsap.to(target, _merge((_merge2 = {}, _merge2[property] = "+=0.1", _merge2.paused = true, _merge2), vars || {})),
           func = function func(value, start, startIsRelative) {
         return tween.resetTo(property, value, start, startIsRelative);
       };
@@ -4148,7 +4143,7 @@
       }
     }
   }, _buildModifierPlugin("roundProps", _roundModifier), _buildModifierPlugin("modifiers"), _buildModifierPlugin("snap", snap)) || _gsap;
-  Tween.version = Timeline.version = gsap.version = "3.12.7";
+  Tween.version = Timeline.version = gsap.version = "3.12.5";
   _coreReady = 1;
   _windowExists() && _wake();
   var Power0 = _easeMap.Power0,
@@ -4289,13 +4284,7 @@
         p;
 
     for (i = 0; i < props.length; i += 3) {
-      if (!props[i + 1]) {
-        props[i + 2] ? style[props[i]] = props[i + 2] : style.removeProperty(props[i].substr(0, 2) === "--" ? props[i] : props[i].replace(_capsExp, "-$1").toLowerCase());
-      } else if (props[i + 1] === 2) {
-        target[props[i]](props[i + 2]);
-      } else {
-        target[props[i]] = props[i + 2];
-      }
+      props[i + 1] ? target[props[i]] = props[i + 2] : props[i + 2] ? style[props[i]] = props[i + 2] : style.removeProperty(props[i].substr(0, 2) === "--" ? props[i] : props[i].replace(_capsExp, "-$1").toLowerCase());
     }
 
     if (this.tfm) {
@@ -4331,7 +4320,7 @@
       save: _saveStyle
     };
     target._gsap || gsap.core.getCache(target);
-    properties && target.style && target.nodeType && properties.split(",").forEach(function (p) {
+    properties && properties.split(",").forEach(function (p) {
       return saver.save(p);
     });
     return saver;
@@ -4378,25 +4367,39 @@
       _pluginInitted = 1;
     }
   },
-      _getReparentedCloneBBox = function _getReparentedCloneBBox(target) {
-    var owner = target.ownerSVGElement,
-        svg = _createElement("svg", owner && owner.getAttribute("xmlns") || "http://www.w3.org/2000/svg"),
-        clone = target.cloneNode(true),
+      _getBBoxHack = function _getBBoxHack(swapIfPossible) {
+    var svg = _createElement("svg", this.ownerSVGElement && this.ownerSVGElement.getAttribute("xmlns") || "http://www.w3.org/2000/svg"),
+        oldParent = this.parentNode,
+        oldSibling = this.nextSibling,
+        oldCSS = this.style.cssText,
         bbox;
-
-    clone.style.display = "block";
-    svg.appendChild(clone);
 
     _docElement.appendChild(svg);
 
-    try {
-      bbox = clone.getBBox();
-    } catch (e) {}
+    svg.appendChild(this);
+    this.style.display = "block";
 
-    svg.removeChild(clone);
+    if (swapIfPossible) {
+      try {
+        bbox = this.getBBox();
+        this._gsapBBox = this.getBBox;
+        this.getBBox = _getBBoxHack;
+      } catch (e) {}
+    } else if (this._gsapBBox) {
+      bbox = this._gsapBBox();
+    }
+
+    if (oldParent) {
+      if (oldSibling) {
+        oldParent.insertBefore(this, oldSibling);
+      } else {
+        oldParent.appendChild(this);
+      }
+    }
 
     _docElement.removeChild(svg);
 
+    this.style.cssText = oldCSS;
     return bbox;
   },
       _getAttributeFallbacks = function _getAttributeFallbacks(target, attributesArray) {
@@ -4409,16 +4412,15 @@
     }
   },
       _getBBox = function _getBBox(target) {
-    var bounds, cloned;
+    var bounds;
 
     try {
       bounds = target.getBBox();
     } catch (error) {
-      bounds = _getReparentedCloneBBox(target);
-      cloned = 1;
+      bounds = _getBBoxHack.call(target, true);
     }
 
-    bounds && (bounds.width || bounds.height) || cloned || (bounds = _getReparentedCloneBBox(target));
+    bounds && (bounds.width || bounds.height) || target.getBBox === _getBBoxHack || (bounds = _getBBoxHack.call(target, true));
     return bounds && !bounds.width && !bounds.x && !bounds.y ? {
       x: +_getAttributeFallbacks(target, ["x", "cx", "x1"]) || 0,
       y: +_getAttributeFallbacks(target, ["y", "cy", "y1"]) || 0,
@@ -4498,7 +4500,7 @@
     }
 
     style[horizontal ? "width" : "height"] = amount + (toPixels ? curUnit : unit);
-    parent = unit !== "rem" && ~property.indexOf("adius") || unit === "em" && target.appendChild && !isRootSVG ? target : target.parentNode;
+    parent = ~property.indexOf("adius") || unit === "em" && target.appendChild && !isRootSVG ? target : target.parentNode;
 
     if (isSVG) {
       parent = (target.ownerSVGElement || {}).parentNode;
@@ -4717,7 +4719,6 @@
 
         if (cache) {
           cache.svg && target.removeAttribute("transform");
-          style.scale = style.rotate = style.translate = "none";
 
           _parseTransform(target, 1);
 
@@ -4770,7 +4771,7 @@
       style.display = "block";
       parent = target.parentNode;
 
-      if (!parent || !target.offsetParent && !target.getBoundingClientRect().width) {
+      if (!parent || !target.offsetParent) {
         addedToDOM = 1;
         nextSibling = target.nextElementSibling;
 
@@ -5524,7 +5525,7 @@
             _tweenComplexCSSString.call(this, target, p, startValue, relative ? relative + endValue : endValue);
           }
 
-          isTransformRelated || (p in style ? inlineProps.push(p, 0, style[p]) : typeof target[p] === "function" ? inlineProps.push(p, 2, target[p]()) : inlineProps.push(p, 1, startValue || target[p]));
+          isTransformRelated || (p in style ? inlineProps.push(p, 0, style[p]) : inlineProps.push(p, 1, startValue || target[p]));
           props.push(p);
         }
       }

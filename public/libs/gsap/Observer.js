@@ -21,10 +21,10 @@
   }
 
   /*!
-   * Observer 3.12.7
+   * Observer 3.12.5
    * https://gsap.com
    *
-   * @license Copyright 2008-2025, GreenSock. All rights reserved.
+   * @license Copyright 2008-2024, GreenSock. All rights reserved.
    * Subject to the terms at https://gsap.com/standard-license or for
    * Club GSAP members, the agreement issued with that membership.
    * @author: Jack Doyle, jack@greensock.com
@@ -312,7 +312,7 @@
           self = this,
           prevDeltaX = 0,
           prevDeltaY = 0,
-          passive = vars.passive || !preventDefault && vars.passive !== false,
+          passive = vars.passive || !preventDefault,
           scrollFuncX = _getScrollFunc(target, _horizontal),
           scrollFuncY = _getScrollFunc(target, _vertical),
           scrollX = scrollFuncX(),
@@ -367,9 +367,8 @@
           onMove && onMove(self);
 
           if (dragged) {
-            onDragStart && dragged === 1 && onDragStart(self);
-            onDrag && onDrag(self);
-            dragged = 0;
+            onDrag(self);
+            dragged = false;
           }
 
           moved = false;
@@ -428,10 +427,11 @@
         self.x = x;
         self.y = y;
 
-        if (isDragging || (dx || dy) && (Math.abs(self.startX - x) >= dragMinimum || Math.abs(self.startY - y) >= dragMinimum)) {
-          dragged = isDragging ? 2 : 1;
+        if (isDragging || Math.abs(self.startX - x) >= dragMinimum || Math.abs(self.startY - y) >= dragMinimum) {
+          onDrag && (dragged = true);
           isDragging || (self.isDragging = true);
           onTouchOrPointerDelta(dx, dy);
+          isDragging || onDragStart && onDragStart(self);
         }
       },
           _onPress = self.onPress = function (e) {
@@ -490,7 +490,6 @@
 
         self.isDragging = self.isGesturing = self.isPressed = false;
         onStop && wasDragging && !isNormalizer && onStopDelayedCall.restart(true);
-        dragged && update();
         onDragEnd && wasDragging && onDragEnd(self);
         onRelease && onRelease(self, isDragNotClick);
       },
@@ -584,14 +583,6 @@
           }
 
           self.isEnabled = true;
-          self.isDragging = self.isGesturing = self.isPressed = moved = dragged = false;
-
-          self._vx.reset();
-
-          self._vy.reset();
-
-          scrollX = scrollFuncX();
-          scrollY = scrollFuncY();
           e && e.type && _onPress(e);
           onEnable && onEnable(self);
         }
@@ -671,7 +662,7 @@
 
     return Observer;
   }();
-  Observer.version = "3.12.7";
+  Observer.version = "3.12.5";
 
   Observer.create = function (vars) {
     return new Observer(vars);

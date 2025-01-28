@@ -243,17 +243,22 @@ function eventHandler() {
     }
   });
   
-  const addBtn = document.querySelector('.add-input-js')
-  if (addBtn) {
-    addBtn.addEventListener('click', (e) => {
+  const addBtns = document.querySelectorAll('.add-input-js')
+  if (addBtns.length) {
+    addBtns.forEach(addBtn => {
+      addBtn.addEventListener('click', (e) => {
       e.preventDefault()
-      const inputsContainer = document.querySelector('.inputs-js');
+      const inputsContainer = addBtn.parentElement.previousElementSibling;
+      const maxCount = inputsContainer.getAttribute('data-max');
+      const inputs = inputsContainer.querySelectorAll('input')
+      const firstPlaceholder = inputs[0].getAttribute('placeholder')
+      const secondPlaceholder = inputs[1].getAttribute('placeholder')
 
       if (inputsContainer) {
 
       const inputCount = inputsContainer.querySelectorAll('.input-wrap').length;
 
-      if (inputCount >= 5) {
+      if (inputCount >= maxCount) {
         return;
       }
         const newInputWrap = `
@@ -263,15 +268,17 @@ function eventHandler() {
                 <use xlink:href="img/svg/sprite.svg#x"></use>
               </svg>
             </button>
-            <input type="text" placeholder="Ф.И.О." class="form-control">
-            <input type="text" placeholder="Роль в проекте" class="form-control">
+            <input type="text" placeholder="${firstPlaceholder}" class="form-control">
+            <input type="text" placeholder="${secondPlaceholder}" class="form-control">
           </div>
         `;
 
         inputsContainer.insertAdjacentHTML('beforeend', newInputWrap);
       }
     })
+  })
   }
+
 
   /* file upload */
   const fileUploads = document.querySelectorAll('.file-container--js');
@@ -336,7 +343,10 @@ function eventHandler() {
 
   if (textareas.length) {
     textareas.forEach((textarea) => {
-      const maxLength = textarea.getAttribute('maxlength');
+      let maxLength = textarea.getAttribute('maxlength');
+      if (maxLength === 'maxlength') {
+        maxLength = 1000;
+      }
   
       const charCounter = document.createElement('div');
       const currentLength = textarea.value.length;
