@@ -427,16 +427,19 @@ function eventHandler() {
     }, 5000)
   }
 
-  const questionBtn = document.querySelector('.consult-info-header-btn')
-  if (questionBtn) {
-    questionBtn.addEventListener('click', (event) => {
-      const consultWindow = document.querySelector('.consult-info.hidden')
-      consultWindowIsShown = true
+  const questionBtns = document.querySelectorAll('.consult-info-header-btn')
+  if (questionBtns.length) {
+    questionBtns.forEach(btn => {
+      btn.addEventListener('click', (event) => {
+        event.preventDefault()
+        const consultWindow = document.querySelector('.consult-info.hidden')
+        consultWindowIsShown = true
 
-      if (consultWindow) {
-        consultWindow.classList.remove('hidden')
-      }
-    });
+        if (consultWindow) {
+          consultWindow.classList.remove('hidden')
+        }
+      });
+    })
   }
 
   /* Form inputs */
