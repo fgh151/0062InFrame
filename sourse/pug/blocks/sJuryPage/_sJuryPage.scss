@@ -136,6 +136,7 @@
     border-radius: 0 0 32px 32px;
     @include media-breakpoint-up(lg) {
       border-radius: 0 0 rem(64) rem(64);
+      padding-top: rem(50);
     }
   }
 
@@ -189,7 +190,10 @@
       gap: rem(44);
     }
   }
-  
+  .person-card__img-wrap {
+    // margin-left: 0;
+    // margin-right: 0;
+  }
 
   &__grid {
     --grid-gap: 20px;
@@ -372,16 +376,19 @@
   }
   &__descr {
     margin-bottom: rem(20);
+    color: $gray-600;
+    line-height: 120%;
     @include media-breakpoint-down(lg) {
       font-size: rem(12);
     }
   }
 
   p {
-    font-size: rem(14);
-    @include media-breakpoint-up(xl) {
-      font-size: rem(20);
-    }
+    line-height: 120%;
+    // font-size: rem(14);
+    // @include media-breakpoint-up(xl) {
+    //   font-size: rem(20);
+    // }
   }
   
   .icon {

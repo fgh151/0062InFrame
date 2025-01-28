@@ -54,7 +54,7 @@ mixin gradientBtn(text)
 
 mixin juryCard(name, text, i)
 	+b.jury-card&attributes(attributes)
-		+e.img-wrap: +img(`img/jury-${i}.png`).gray-filter
+		+e.img-wrap.text-center: +img(`img/jury-c-${i}.png`).gray-filter
 		+e.content
 			+e.name!= name
 			+e.text!= text
