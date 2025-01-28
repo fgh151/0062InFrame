@@ -432,7 +432,7 @@
     }
     --bs-btn-padding-x: #{rem(20)};
     @include media-breakpoint-down(md) {
-      --bs-btn-padding-y: #{rem(8)};
+      --bs-btn-padding-y: #{rem(14)};
     }
   }
 
