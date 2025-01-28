@@ -36,3 +36,21 @@ mixin sForm()
 								+policy
 								+e.btn.btn.btn-primary(type="submit") Отправить
 	// end sForm
+
+mixin sForm2()
+	// start sForm
+	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		.container
+			.inner-wrapper.inner-wrapper_white: +e.row.row
+				+e.col.col-lg-6 
+					+b.section-title
+						h2 Связаться с нами
+						.text-large Расскажем, как заполнить и подать заявку, проконсультируем по проекту и ответим на все вопросы
+					+img(src="img/sForm-bg.png", alt="").img.d-none.d-lg-block
+				+e.col.col-lg-6
+					+e.success-wrap.text-center
+						+e.img-top-wrap.smaller: +img(src="img/svg/success-1.svg", alt="").img-success
+						.text-large Спасибо!
+						.text-large Мы скоро свяжемся с вами.
+						.text-large Пожалуйста, обратите внимание, что наша служба поддержки работает с 8:00 до 19:00 МСК.
+	// end sForm

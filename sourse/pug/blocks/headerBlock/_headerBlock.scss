@@ -25,7 +25,23 @@
     height: auto;
   }
 	// min-height: calc(var(--vh, 1vh) * 100);
-
+  overflow: hidden;
+  &:before {
+    @include media-breakpoint-up(xl) {
+      content: '';
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      width: 24%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--header-block-bg) 0%, rgba(127, 48, 255, 0.86) 35.31%, rgba(127, 48, 255, 0.55) 66.12%, rgba(127, 48, 255, 0) 100%);
+      z-index: 1;
+      filter: blur(2px);
+    }
+    @include media-breakpoint-up(xxl) {
+      width: calc(100% - rem(1470) + 10%);
+    }
+  }
 	&__row{
 		--bs-gutter-y: var(--bs-gutter-x);
 	}

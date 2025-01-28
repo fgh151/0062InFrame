@@ -28,13 +28,13 @@
     overflow: visible;
     // position: relative;
     // z-index: 1;
-    transform: translateX(-30px);
+    transform: translateX(-34px);
   }
   .swiper-wrapper {
-    padding: rem(57) rem(32);
+    padding: rem(42) rem(32);
     @include media-breakpoint-up(lg) {
       padding: rem(80) rem(56);
-      padding-bottom: rem(100);}
+      padding-bottom: rem(80);}
   }
 
   // &__slider--js {
@@ -175,7 +175,10 @@
   .stars_rotate {
     transform: translateY(10%);
     @include media-breakpoint-down(lg) {
-      display: none;
+    //   display: none;
+    transform: translateY(20%);
+    right: 0;
+    max-width: 66%;
     }
   }
 }
