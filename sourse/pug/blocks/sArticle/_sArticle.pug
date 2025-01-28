@@ -107,17 +107,7 @@ mixin sArticle3(data)
 			+b.section-title
 				.h1=data
 			+e.row.row
-				+e.col.col-lg-4.order-lg-last
-					+e.cards-wrap
-						+b.side-card.side-card_purple
-							+img(src="img/svg/frame-white.svg", alt="").frame.frame_big
-							+img(src="img/svg/frame-white.svg", alt="").frame.frame_sm
-							+e.content
-								+img(src="img/svg/logo-white.svg" alt="").logo
-								+e.sub Ваша команда знает,<br>как найти лучших из лучших?
-								.h5.fw-700 Номинируйте свой проект на HR-премию Правительства Москвы «В кадре»
-								+e.bg-wrap: +img(src="img/jury-c-2.png", alt="").person
-							+e.btn.btn.btn-light.w-100(href='#') Подать заявку
+				
 				+e.col.col-lg-8
 					+e.title
 						.h5.fw-500 Организатором Премии "В кадре" является Управление кадровых сервисов Правительства Москвы.
@@ -149,4 +139,15 @@ mixin sArticle3(data)
 					+e.item
 						+e.img-wrap-100
 							+img(src="img/organisation.png", alt="").img-bg
+				+e.col.col-lg-4
+					+e.cards-wrap
+						+b.side-card.side-card_purple
+							+img(src="img/svg/frame-white.svg", alt="").frame.frame_big
+							+img(src="img/svg/frame-white.svg", alt="").frame.frame_sm
+							+e.content
+								+img(src="img/svg/logo-white.svg" alt="").logo
+								+e.sub Ваша команда знает,<br>как найти лучших из лучших?
+								.h5.fw-700 Номинируйте свой проект на HR-премию Правительства Москвы «В кадре»
+								+e.bg-wrap: +img(src="img/jury-c-2.png", alt="").person
+							+e.btn.btn.btn-light.w-100(href='#') Подать заявку
 	// end sArticle
