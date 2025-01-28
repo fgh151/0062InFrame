@@ -157,7 +157,7 @@ mixin sAuth4(data)
 					+input("Введите текст",'textarea', 'Организация, реализовавшая проект')(data-value='Введенный текст' disabled required)
 						span.text-secondary.small Напишите полное юридическое название<br>организации.
 					+input("Введите текст",'text', 'ИНН организации')(value='1234567890' disabled required)
-					+input("Введите текст",'textarea', 'Название проекта')(data-value='Введенный текст' disabled required maxlength="300" )
+					+input("Введите текст",'textarea', 'Название проекта')(data-value='Введенный текст' disabled required maxlength="150" )
 						span.text-secondary.small Название отобразится в вашем личном кабинете, а если проект войдет в число лучших — будет использовано для публикаций на сайте и других информационных площадках Премии.
 					+input("Введите текст",'textarea', 'Краткое описание проекта')(data-value='' disabled required maxlength="800" )
 						span.text-secondary.small Опишите суть проекта и его цель в нескольких предложениях.
@@ -307,7 +307,7 @@ mixin sAuth5(data)
 					+input("Введите текст",'textarea', 'Организация, реализовавшая проект')(required).is-invalid
 						span.text-secondary.small Напишите полное юридическое название<br>организации.
 					+input("_ _ _ _ _ _ _ _ _ _",'text', 'ИНН организации').mask-firm(required).is-invalid
-					+input("Введите текст",'textarea', 'Название проекта')(required maxlength="300" ).is-invalid
+					+input("Введите текст",'textarea', 'Название проекта')(required maxlength="150" ).is-invalid
 						span.text-secondary.small Название отобразится в вашем личном кабинете, а если проект войдет в число лучших — будет использовано для публикаций на сайте и других информационных площадках Премии.
 					+input("Введите текст",'textarea', 'Краткое описание проекта')(required maxlength="800" ).is-invalid
 						span.text-secondary.small Опишите суть проекта и его цель в нескольких предложениях.
@@ -439,7 +439,7 @@ mixin sAuth6(data)
 					+input("Введите текст",'textarea', 'Организация, реализовавшая проект')(data-value='Введенный текст' required disabled)
 						span.text-secondary.small Напишите полное юридическое название<br>организации.
 					+input("_ _ _ _ _ _ _ _ _ _",'text', 'ИНН организации').mask-firm(required disabled value='1234567890')
-					+input("Введите текст",'textarea', 'Название проекта')(data-value='Введенный текст' required maxlength="300" disabled)
+					+input("Введите текст",'textarea', 'Название проекта')(data-value='Введенный текст' required maxlength="150" disabled)
 						span.text-secondary.small Название отобразится в вашем личном кабинете, а если проект войдет в число лучших — будет использовано для публикаций на сайте и других информационных площадках Премии.
 					+input("Введите текст",'textarea', 'Краткое описание проекта')(required maxlength="800" disabled data-value='Введенный текст')
 						span.text-secondary.small Опишите суть проекта и его цель в нескольких предложениях.
@@ -676,7 +676,7 @@ mixin sAuthStep4(data)
 					+input("Введите текст",'textarea', 'Организация, реализовавшая проект')(required)
 						span.text-secondary.small Напишите полное юридическое название<br>организации.
 					+input("_ _ _ _ _ _ _ _ _ _",'text', 'ИНН организации').mask-firm(required)
-					+input("Введите текст",'textarea', 'Название проекта')(required maxlength="300" )
+					+input("Введите текст",'textarea', 'Название проекта')(required maxlength="150" )
 						span.text-secondary.small Название отобразится в вашем личном кабинете, а если проект войдет в число лучших — будет использовано для публикаций на сайте и других информационных площадках Премии.
 					+input("Введите текст",'textarea', 'Краткое описание проекта')(required maxlength="800" )
 						span.text-secondary.small Опишите суть проекта и его цель в нескольких предложениях.
