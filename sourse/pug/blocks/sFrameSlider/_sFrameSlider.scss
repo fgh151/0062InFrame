@@ -60,9 +60,9 @@
       border-top-left-radius: rem(64);
     }
 
-    // @include media-breakpoint-up(xxl) {
-    //   width: 152%;
-    // }
+    @include media-breakpoint-up(xxl) {
+      width: 152%;
+    }
   }
 
 	@include media-breakpoint-up(xl) {}

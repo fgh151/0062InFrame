@@ -238,6 +238,12 @@ ul.page-numbers {
 	}
 
   &__text {
+    // display: -webkit-box;
+    //   -webkit-line-clamp: 4;
+    //   -webkit-box-orient: vertical;
+    //   overflow: hidden;
+    //   text-overflow: ellipsis;
+
     @include media-breakpoint-up(xl) {
       font-size: rem(20px);
     }
