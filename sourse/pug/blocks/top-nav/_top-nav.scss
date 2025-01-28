@@ -137,6 +137,9 @@
     position: relative;
     z-index: 1;
   }
+  .consult-info-header-btn {
+    cursor: pointer;
+  }
 
   textarea {
     resize: none;

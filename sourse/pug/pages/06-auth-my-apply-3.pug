@@ -1,0 +1,31 @@
+extends ../layout/main.pug
+include ../blocks/footer/_footer.pug
+
+
+include ../blocks/sAuth/_sAuth.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sNewsPage/_sNewsPage.pug
+include ../blocks/sContent/_sContent.pug
+ 
+
+block variables
+	- let  mainPage= 'main-page white-bg' 
+	- let  bg= null
+
+block title
+	- let  title= 'Моя заявка'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header-cabinet')
+	main
+		+sAuth6(title)
+
+	+b.info-window--js
+		+e.content.d-flex
+			.small.text-secondary Черновик вашей заявки успешно сохранен — его можно найти во вкладке «Мои заявки» и продолжить заполнение в удобное для вас время или скачать в формате .docx.
+		.close-btn: +icon('x')
+	+modalMob() 
+	+footer

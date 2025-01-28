@@ -94,7 +94,10 @@
     .ability-card {
       &__content {
         @include media-breakpoint-up(lg) {
-          width: 72%;
+          width: 68%;
+        }
+        @include media-breakpoint-up(xl) {
+          width: 61%;
         }
       }
     }
@@ -129,6 +132,6 @@
   }
 
   &__text {
-    text-wrap: balance;
+    // text-wrap: pretty;
   }
 }

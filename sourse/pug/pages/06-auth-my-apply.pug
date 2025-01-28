@@ -1,0 +1,26 @@
+extends ../layout/main.pug
+include ../blocks/footer/_footer.pug
+
+
+include ../blocks/sAuth/_sAuth.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sNewsPage/_sNewsPage.pug
+include ../blocks/sContent/_sContent.pug
+ 
+
+block variables
+	- let  mainPage= 'main-page white-bg' 
+	- let  bg= null
+
+block title
+	- let  title= 'Моя заявка'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header-cabinet')
+	main
+		+sAuth4(title)
+	+modalMob() 
+	+footer

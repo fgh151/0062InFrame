@@ -1,0 +1,28 @@
+extends ../layout/main-preload.pug
+
+//- include ../blocks/preloader/_preloader.pug
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/sAbout/_sAbout.pug
+
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Прелоадер'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header-main')
+	main
+		+headerBlock 
+		+sContent3
+		+sAbout
+		+sContent2
+	+footer().--wide

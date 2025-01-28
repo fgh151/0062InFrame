@@ -387,7 +387,7 @@ ul.page-numbers {
     padding: rem(40) rem(20);
     padding-bottom: rem(46);
     @include media-breakpoint-up(sm) {
-      padding: rem(40);
+      padding: rem(40) rem(28);
       padding-bottom: rem(46);
     }
   }
@@ -408,6 +408,9 @@ ul.page-numbers {
 	}
 	.small {
 		line-height: 130%;
+    &:not(:last-child) {
+      margin-bottom: rem(6);
+    }
 	}
 
   position: fixed;

@@ -368,7 +368,6 @@ function eventHandler() {
       });
     }
 
-      
   const infoWindows = document.querySelectorAll('.info-window--js')
   if (infoWindows) {
     infoWindows.forEach(el => {
@@ -396,21 +395,35 @@ function eventHandler() {
   const consultBtn = document.querySelector('.consult--js')
   if (consultBtn) {
     consultBtn.addEventListener('click', (event) => {
-
-      const thanksWindow = document.querySelector('.info-window--js.hidden')
+      const thanksWindow = document.querySelector('.thanks-window.hidden')
 
       if (thanksWindow) {
         thanksWindow.classList.remove('hidden')
-      consultBtn.closest('.info-window--js').classList.add('hidden')
+        consultBtn.closest('.info-window--js').classList.add('hidden')
       }
     });
   }
 
+  let consultWindowIsShown = false
+
   const infoWindow = document.querySelector('.info-window--js.consult-info.hidden')
   if (infoWindow) {
     setTimeout(function () {
+      if (consultWindowIsShown) return
       infoWindow.classList.remove('hidden')
     }, 5000)
+  }
+
+  const questionBtn = document.querySelector('.consult-info-header-btn')
+  if (questionBtn) {
+    questionBtn.addEventListener('click', (event) => {
+      const consultWindow = document.querySelector('.consult-info.hidden')
+      consultWindowIsShown = true
+
+      if (consultWindow) {
+        consultWindow.classList.remove('hidden')
+      }
+    });
   }
 
   /* Form inputs */

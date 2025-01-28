@@ -90,7 +90,7 @@
   height: 100%;
   min-height: rem(390);
   border-radius: 32px 32px 0 0;
-  background: linear-gradient(130deg, #ffffff 0%, #ffffff64 100%);
+  background: linear-gradient(130deg, #ffffff 0%, #ffffff3a 100%);
   padding: rem(24);
 
   width: rem(270);
@@ -147,10 +147,6 @@
     }
   }
 
-  &__bottom {
-    // max-width: rem(440);
-  }
-
   &--primary {
     background: linear-gradient(49deg, #9664ff 0%, #5400b7 100%);
     color: white;
@@ -168,15 +164,18 @@
     bottom: 0;
     right: -20px;
     z-index: -1;
-    filter: blur(3px);
-    opacity: .6;
+    // filter: blur(3px);
+    // opacity: .8;
     // transform: translateY(10%);
     @include media-breakpoint-up(lg) {
-      width: rem(250px);
+      width: rem(290px);
       bottom: rem(-30);
     }
   }
   .stars_rotate {
-    transform: rotate(-20deg) translateY(10%) scale(-1, 1);
+    transform: translateY(10%);
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
   }
 }
