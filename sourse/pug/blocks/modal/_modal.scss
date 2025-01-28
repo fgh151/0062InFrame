@@ -345,6 +345,19 @@
     // }
   }
 
+  &__text-wrap {
+    max-width: rem(464);
+    margin: auto;
+    .text-large {
+      margin-bottom: rem(16);
+    }
+  }
+
+  .img-success {
+    width: rem(160) !important;
+    max-width: 40%;
+  }
+
   label:has(input[required]) .form-wrap__input-title {
     position: relative;
     &:after {

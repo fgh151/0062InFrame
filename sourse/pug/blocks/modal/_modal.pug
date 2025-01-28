@@ -103,7 +103,16 @@ mixin modal()
 			+e.img-top-wrap.text-center: +img(src="img/svg/success.svg", alt="")
 			+e.title-wrap.text-center
 				.h5 Благодарим за интерес к Премии Правительства Москвы в сфере управления персоналом «В кадре»!
-				p Пожалуйста, подтвердите регистрацию в письме, которое мы отправили вам на почту
+				p Пожалуйста, подтвердите регистрацию в письме, которое мы отправили вам на почту	
+	div(id="modal-partner-success"  style="display: none" )
+		+b.modal-win
+			+e.success-wrap.text-center
+				+e.img-top-wrap: +img(src="img/svg/success-1.svg", alt="").img-success
+				+e.text-wrap
+					.text-large Спасибо!
+					.text-large Мы скоро свяжемся с вами.
+					.text-large Пожалуйста, обратите внимание, что наша служба поддержки работает в будние дни с 8:00 до 19:00 МСК.
+
 	div(id="modal-mail-confirmed"  style="display: none" )
 		+b.modal-win
 			+e.img-top-wrap.smaller.text-center: +img(src="img/svg/success.svg", alt="")
