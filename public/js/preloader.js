@@ -1,5 +1,5 @@
 	/* preloader */
-  const preloaderAnimDuration = 4000
+  const preloaderAnimDuration = 1500
 	let body = document.querySelector("body");
 
   body.classList.add('fixed-preloader')
@@ -11,5 +11,5 @@
     setTimeout(() => {
       preloader.classList.add("hide");
       body.classList.remove("fixed-preloader");
-    }, preloaderAnimDuration);
+    }, preloaderAnimDuration + 50);
   });

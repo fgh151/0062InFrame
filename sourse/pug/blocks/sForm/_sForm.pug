@@ -17,21 +17,40 @@ mixin sForm()
 
 						.tabs__content.active
 							+form-wrap
-								+input("Ваше Ф.И.О.",'text')(required)
-								+input("Телефон",'tel')(required)
+								+input("Ф. И. О.",'text',"Ф. И. О.")(required)
+								+input("Телефон",'tel', "Телефон")(required)
 									.text.text-indigo.small Если вы вписываете рабочий телефон с добавочным номером, укажите его в поле ниже.
 								+input("Напишите сообщение",'textarea')
-								.title.text-secondary.required Введите символы с картинки
+								.title.text-secondary.required.small Подтвердите, что вы не робот, введите символы с картинки
 								.capture-wrap
 								+policy
 								+e.btn.btn.btn-primary(type="submit") Отправить
 						.tabs__content
 							+form-wrap
-								+input("Ваше Ф.И.О.",'text')(required)
-								+input("Адрес вашей почты",'email')(required)
+								+input("Ф. И. О.",'text',"Ф. И. О.")(required)
+								+input("Почта",'email', "Почта")(required)
+									.text.text-indigo.small Пожалуйста, указывайте только почтовый адрес с доменом .ru
 								+input("Напишите сообщение",'textarea')
-								.title.text-secondary.required Введите символы с картинки
+								.title.text-secondary.required.small Подтвердите, что вы не робот, введите символы с картинки
 								.capture-wrap
 								+policy
 								+e.btn.btn.btn-primary(type="submit") Отправить
+	// end sForm
+
+mixin sForm2()
+	// start sForm
+	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		.container
+			.inner-wrapper.inner-wrapper_white: +e.row.row
+				+e.col.col-lg-6 
+					+b.section-title
+						h2 Связаться с нами
+						.text-large Расскажем, как заполнить и подать заявку, проконсультируем по проекту и ответим на все вопросы
+					+img(src="img/sForm-bg.png", alt="").img.d-none.d-lg-block
+				+e.col.col-lg-6
+					+e.success-wrap.text-center
+						+e.img-top-wrap.smaller: +img(src="img/svg/success-1.svg", alt="").img-success
+						.text-large Спасибо!
+						.text-large Мы скоро свяжемся с вами.
+						.text-large Пожалуйста, обратите внимание, что наша служба поддержки работает в будние дни с 8:00 до 19:00 Мск.
 	// end sForm

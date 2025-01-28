@@ -49,33 +49,27 @@
 
   }
   
-  .span {
-    border-radius: 0 40px ;
+  span {
+    border-radius: 0 25px ;
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 110%;
-    background: linear-gradient(148deg, rgba(84, 0, 183, 0.7) 0%, rgba(0, 152, 227, 0.7) 100%);
-    
-    display: inline-block;
-    
-    padding: rem(18px) rem(20px);
-    @include media-breakpoint-up(xl) {
-      font-size: 32px;
+    // background: linear-gradient(148deg, rgba(84, 0, 183, 0.7) 0%, rgba(0, 152, 227, 0.7) 100%);
+
+    background: #651CDD;
+    padding: rem(20px) rem(37px);
+    @include media-breakpoint-up(md) {
       margin-top: rem(14);
-      margin-left: rem(12);
-      padding: rem(14px) rem(28px);
+      display: inline-block;
+      padding: rem(16px) rem(26px);
+      margin-left: rem(18);
     }
-    
-    @include media-breakpoint-down(lg) {
-      max-width: rem(370);
+    @include media-breakpoint-down(md) {
+      display: block;
+      margin-top: rem(20);
+      max-width: max-content;
     }
   }
-	&__col{
-		
-	}
-	&__item{
-		
-	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -100,7 +94,10 @@
     .ability-card {
       &__content {
         @include media-breakpoint-up(lg) {
-          width: 72%;
+          width: 68%;
+        }
+        @include media-breakpoint-up(xl) {
+          width: 61%;
         }
       }
     }
@@ -135,6 +132,6 @@
   }
 
   &__text {
-    text-wrap: balance;
+    // text-wrap: pretty;
   }
 }

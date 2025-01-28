@@ -12,27 +12,26 @@ mixin sAwards(data)
 						+img(src="img/award.png", alt="").award
 						+img(src="img/svg/stars-yellow.svg", alt="").stars-yellow
 						ul
-							li.span #[span 48 млн рублей — общий призовой фонд]
+							li Команды-победители получат денежные призы
 							li Диплом 1-й степени
-							li Фирменная статуэтка
-							li Приглашение на церемонию награждения
-							li Публикация видео и проекта
+							li Статуэтка Премии   
+							li Подарки от организаторов и партнеров
+							li 48 млн рублей — общий призовой фонд
 				+e.col(class= wrapClass)
 					+awardCard('Второе место', '')
-						+img(src="img/svg/stars.svg", alt="").stars
+						+img(src="img/svg/stars-1.svg", alt="").stars.stars-1
 						ul
 							li Диплом 2-й степени
 							li Статуэтка Премии
 							li Подарки от организаторов и партнеров
 				+e.col(class= wrapClass)
 					+awardCard('Третье место', '')
-						+img(src="img/svg/stars.svg", alt="").stars.stars_rotate.d-lg-none
-						+img(src="img/svg/star-big.svg", alt="").stars.star-big.d-none.d-lg-inline
+						+img(src="img/svg/stars-2.svg", alt="").stars.stars_rotate
 						ul
 							li Диплом 3-й степени
 							li Статуэтка Премии
 							li Подарки от организаторов и партнеров
-			.text-large Подробнее о распределении призового фонда можно узнать в разделе #[a(href='#') Правила].
+			.text-large Подробнее о распределении призового фонда можно узнать в разделе #[a(href='#') Правила]
 	// end sAwards
 
 mixin awardCard(t, img)

@@ -2,6 +2,30 @@
 <!-- start header-->
 <header class="header" id="header">
 	<!-- start top-nav-->
+	<div class="info-window info-window--js consult-info hidden">
+		<p>Готовы проконсультировать вас и помочь заполнить заявку.</p>
+		<p>Нажмите кнопку, и мы свяжемся с вами в ближайшее время.</p>
+		<button class="info-window__btn btn btn-outline-primary consult consult--js">Получить консультацию
+		</button><img class="info-bg" src="img/svg/question-i.svg" alt="" loading="lazy"/>
+		<div class="close-btn">
+			<svg class="icon icon-x ">
+				<use xlink:href="img/svg/sprite.svg#x"></use>
+			</svg>
+		</div>
+	</div>
+	<div class="info-window info-window--js thanks-window hidden">
+		<div class="info-window__content d-flex"><img src="img/svg/success.svg" alt="" loading="lazy"/>
+			<div class="info-window__wrap">
+				<div class="small">Спасибо, мы скоро свяжемся с вами по контактным данным, которые вы указали при регистрации личного кабинета</div>
+				<div class="small">Пожалуйста, обратите внимание, что наша служба поддержки работает в будние дни с 8:00 до 19:00 Мск.</div>
+			</div>
+			<div class="close-btn">
+				<svg class="icon icon-x ">
+					<use xlink:href="img/svg/sprite.svg#x"></use>
+				</svg>
+			</div>
+		</div>
+	</div>
 	<div class="top-nav top-nav--cabinet block-with-lazy">
 		<div class="container">
 			<div class="top-nav__row row">
@@ -29,29 +53,8 @@
 				</div>
 				<div class="col-auto">
 					<div class="top-nav__cabinet-nav">
-						<div class="top-nav__btn tinny-item-js consult-info-js"><img src="img/svg/question.svg" alt="" loading="lazy"/>
-							<div class="tinny-template consult-info">
-								<div class="mb-12 small">Если у вас возник вопрос о Премии, пожалуйста, задайте его здесь. Наши специалисты свяжутся с вами в ближайшее время.</div>
-								<div class="title text-secondary required">Как вы хотите получить консультацию?</div>
-								<div class="top-nav__radio-wrap mb-12">
-									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__text form-check-label">По телефону</span>
-									</label>
-									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Письмом на почту</span>
-									</label>
-								</div>
-								<div class="top-nav__input-wrap form-group"><textarea class="top-nav__input form-control mb-12" name="textarea" placeholder="Введите текст"></textarea>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="small">Также вы можете позвонить нам по телефону <a href="tel:+79999999999">+7 (999) 999-99-99</a> — мы работаем круглосуточно 24/7.</div>
-								<button class="top-nav__btn btn btn-outline-primary">Отправить
-								</button><img class="info-bg" src="img/svg/question-i.svg" alt="" loading="lazy"/>
-							</div>
+						<div class="top-nav__btn consult-info-header-btn"><img src="img/svg/question.svg" alt="" loading="lazy"/>
 						</div>
-						<a class="top-nav__btn link-modal-js" href="#modal-exit">
-							<svg class="icon icon-exit ">
-								<use xlink:href="img/svg/sprite.svg#exit"></use>
-							</svg>
-						</a>
 					</div>
 				</div>
 				<div class="col-auto d-xl-none">

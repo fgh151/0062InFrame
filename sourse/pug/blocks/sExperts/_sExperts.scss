@@ -223,7 +223,8 @@
   }
 
   &.partner-card--purple {
-    padding: rem(15) rem(20) rem(32) !important;
+    // padding: rem(15) rem(20) rem(32) !important;
+    gap: rem(10);
     border-radius: $border-radius $border-radius 0 $border-radius;
     background: linear-gradient(219deg, #b390ee 0%, #5400b7 100%);
   }

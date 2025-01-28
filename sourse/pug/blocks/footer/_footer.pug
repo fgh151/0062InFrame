@@ -14,16 +14,19 @@ mixin footer()
 					+linkItem('Адрес')
 						a(href="#") Москва, Тверская, 13
 					+linkItem('Контактный телефон')
-						a(href="tel:+74959577575") +7 (495) 957-75-75
+						a(href="tel:+78007071305") +7 (800) 707-13-05
+					+linkItem('Исходящие звонки')
+						a(href="tel:+74959297079") +7 (495) 929-70-79
 					+linkItem('Общие вопросы')
 						a(href="mailto:vkadre-info@mos.ru") vkadre-info@mos.ru
-					+linkItem('Пиар и партнерство')
+					+linkItem('PR и партнерство')
 						a(href="mailto:pr-vkadre@mos.ru") pr-vkadre@mos.ru
 
 			+e.bottom-row.row
 				+e.col.col-lg-6
 					+e.copyr.small © 2025 Управление кадровых сервисов Правительства Москвы
-				+e.col.col-lg-6
+				+e.col.col-lg-6: +e.item-wrap
+					.small Служба поддержки работает<br>в будние дни с 8:00 до 19:00 Мск
 					a(href="#").small Версия для слабовидящих
 						+icon('noun-glasses') 
 

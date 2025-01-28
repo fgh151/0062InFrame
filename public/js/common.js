@@ -243,17 +243,22 @@ function eventHandler() {
     }
   });
   
-  const addBtn = document.querySelector('.add-input-js')
-  if (addBtn) {
-    addBtn.addEventListener('click', (e) => {
+  const addBtns = document.querySelectorAll('.add-input-js')
+  if (addBtns.length) {
+    addBtns.forEach(addBtn => {
+      addBtn.addEventListener('click', (e) => {
       e.preventDefault()
-      const inputsContainer = document.querySelector('.inputs-js');
+      const inputsContainer = addBtn.parentElement.previousElementSibling;
+      const maxCount = inputsContainer.getAttribute('data-max');
+      const inputs = inputsContainer.querySelectorAll('input')
+      const firstPlaceholder = inputs[0].getAttribute('placeholder')
+      const secondPlaceholder = inputs[1].getAttribute('placeholder')
 
       if (inputsContainer) {
 
       const inputCount = inputsContainer.querySelectorAll('.input-wrap').length;
 
-      if (inputCount >= 5) {
+      if (inputCount >= maxCount) {
         return;
       }
         const newInputWrap = `
@@ -263,15 +268,17 @@ function eventHandler() {
                 <use xlink:href="img/svg/sprite.svg#x"></use>
               </svg>
             </button>
-            <input type="text" placeholder="Ф.И.О." class="form-control">
-            <input type="text" placeholder="Роль в проекте" class="form-control">
+            <input type="text" placeholder="${firstPlaceholder}" class="form-control">
+            <input type="text" placeholder="${secondPlaceholder}" class="form-control">
           </div>
         `;
 
         inputsContainer.insertAdjacentHTML('beforeend', newInputWrap);
       }
     })
+  })
   }
+
 
   /* file upload */
   const fileUploads = document.querySelectorAll('.file-container--js');
@@ -336,7 +343,10 @@ function eventHandler() {
 
   if (textareas.length) {
     textareas.forEach((textarea) => {
-      const maxLength = textarea.getAttribute('maxlength');
+      let maxLength = textarea.getAttribute('maxlength');
+      if (maxLength === 'maxlength') {
+        maxLength = 1000;
+      }
   
       const charCounter = document.createElement('div');
       const currentLength = textarea.value.length;
@@ -368,7 +378,6 @@ function eventHandler() {
       });
     }
 
-      
   const infoWindows = document.querySelectorAll('.info-window--js')
   if (infoWindows) {
     infoWindows.forEach(el => {
@@ -396,20 +405,62 @@ function eventHandler() {
   const consultBtn = document.querySelector('.consult--js')
   if (consultBtn) {
     consultBtn.addEventListener('click', (event) => {
-      const target = document.querySelector('.tinny-item-js.consult-info-js');
+      const thanksWindow = document.querySelector('.thanks-window.hidden')
 
-      if (target && target._tippy) {
-        target._tippy.show();
+      if (thanksWindow) {
+        thanksWindow.classList.remove('hidden')
         consultBtn.closest('.info-window--js').classList.add('hidden')
       }
     });
   }
 
+  let consultWindowIsShown = false
+
   const infoWindow = document.querySelector('.info-window--js.consult-info.hidden')
   if (infoWindow) {
     setTimeout(function () {
+      if (consultWindowIsShown) return
       infoWindow.classList.remove('hidden')
     }, 5000)
+  }
+
+  const questionBtn = document.querySelector('.consult-info-header-btn')
+  if (questionBtn) {
+    questionBtn.addEventListener('click', (event) => {
+      const consultWindow = document.querySelector('.consult-info.hidden')
+      consultWindowIsShown = true
+
+      if (consultWindow) {
+        consultWindow.classList.remove('hidden')
+      }
+    });
+  }
+
+  /* Form inputs */
+  const inputs = document.querySelectorAll('.sForm input[required]');
+
+  if (inputs.length) {
+    inputs.forEach((input) => {
+      const toggleVisibility = () => {
+        if (input.type !== 'tel') {
+          input.previousSibling.style.visibility = input.value.length > 0 ? 'hidden' : 'visible';
+        }
+      };
+
+      input.addEventListener('input', toggleVisibility);
+
+      if (input.type === 'tel') {
+        input.addEventListener('focus', () => {
+          input.previousSibling.style.visibility = 'hidden';
+        });
+
+        input.addEventListener('blur', () => {
+          if (input.value.length === 0) {
+            input.previousSibling.style.visibility = 'visible';
+          }
+        });
+      }
+    });
   }
 
 }

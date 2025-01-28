@@ -114,3 +114,18 @@ mixin infoSmall(text)
 			+img(src="img/svg/success.svg", alt="").img-icon
 			.small.text-secondary=text
 			//- .close-btn: +icon('x')
+
+mixin consultation
+	+b.info-window--js.consult-info.hidden
+		p Готовы проконсультировать вас и помочь заполнить заявку.
+		p Нажмите кнопку, и мы свяжемся с вами в ближайшее время.
+		+e.btn.btn.btn-outline-primary.consult--js.BUTTON Получить консультацию
+		+img(src="img/svg/question-i.svg", alt="").info-bg
+		.close-btn: +icon('x')
+	+b.info-window--js.thanks-window.hidden
+		+e.content.d-flex
+			+img(src="img/svg/success.svg", alt="")
+			+e.wrap
+				.small Спасибо, мы скоро свяжемся с вами по контактным данным, которые вы указали при регистрации личного кабинета
+				.small Пожалуйста, обратите внимание, что наша служба поддержки работает в будние дни с 8:00 до 19:00 Мск.
+			.close-btn: +icon('x')
