@@ -71,199 +71,200 @@ function eventHandler() {
 			swiper: prodCardThumb,
 		},
 		breakpoints: {
-      992: {
-        slidesPerView: 1,
-      }
-    }
+			992: {
+				slidesPerView: 1,
+			},
+		},
 	});
 
-  const cardsFlip = document.querySelectorAll('.item-nomin--js')
-  if (cardsFlip.length) {
-    cardsFlip.forEach(card => {
-      card.addEventListener('click', () => card.classList.toggle('active'))
-    })
-  }
+	const cardsFlip = document.querySelectorAll(".item-nomin--js");
+	if (cardsFlip.length) {
+		cardsFlip.forEach(card => {
+			card.addEventListener("click", () => card.classList.toggle("active"));
+		});
+	}
 
-  
 	new Swiper(".auto-slider--js", {
 		slidesPerView: "auto",
 		freeMode: true,
 		watchOverflow: true,
 	});
-  
+
 	new Swiper(".sFrameSlider__slider--js", {
 		slidesPerView: "auto",
 		freeMode: true,
 		watchOverflow: true,
-    speed: 600,
-    parallax: true,
-    breakpoints: {
-      
-    }
+		speed: 600,
+		parallax: true,
+		breakpoints: {},
 
-    // on: {
-    //   reachEnd: function () {
-    //     this.slideTo(0);
-    //   },
-    // },
+		// on: {
+		//   reachEnd: function () {
+		//     this.slideTo(0);
+		//   },
+		// },
 	});
 
-  $('.filter-btn-js').click(function () {
-    $(this).toggleClass('active');
-    $('.sidebar--js').slideToggle(function () {
-      $(this).toggleClass('active');
-    });
-  });
+	$(".filter-btn-js").click(function () {
+		$(this).toggleClass("active");
+		$(".sidebar--js").slideToggle(function () {
+			$(this).toggleClass("active");
+		});
+	});
 
-  $(".btn-toggle-type-input").click(function(){
-    let icon = $(this).find("svg.icon use")
-    let iconId = $(this).find("svg.icon use").attr("xlink:href").split("#")[1];
+	$(".btn-toggle-type-input").click(function () {
+		let icon = $(this).find("svg.icon use");
+		let iconId = $(this).find("svg.icon use").attr("xlink:href").split("#")[1];
 
 		let href = $(this).data('href');
 
     const opt = {
-      'eye-off':  ['eye','text'],
-      'eye':  ['eye-off','password'],
-    }
-    $(this).parent().find("input").attr("type", opt[iconId][1]);
-    icon.attr("xlink:href",`${href}img/svg/sprite.svg#${opt[iconId][0]}`)
-  })
+      "eye-off": ["eye", "text"],
+			eye: ["eye-off", "password"],
+		};
+		$(this).parent().find("input").attr("type", opt[iconId][1]);
+		icon.attr("xlink:href",`${href}img/svg/sprite.svg#${opt[iconId][0]}`);
+	});
 
+	/* hide btn after scroll main page */
+	// const firstSectionHeight = document.querySelector('.headerBlock')
 
-  /* hide btn after scroll main page */
-  // const firstSectionHeight = document.querySelector('.headerBlock')
+	// if(firstSectionHeight) {
+	//   const headerBlockHeight = firstSectionHeight.offsetHeight;
+	//   let btnElements = document.querySelectorAll('.btn-wr--js');
 
-  // if(firstSectionHeight) {
-  //   const headerBlockHeight = firstSectionHeight.offsetHeight;
-  //   let btnElements = document.querySelectorAll('.btn-wr--js');
+	//   document.addEventListener('scroll', () => {
+	//     if(btnElements.length < 2) {
+	//       btnElements = document.querySelectorAll('.btn-wr--js');
+	//     }
+	//     btnElements.forEach(btnElement => {
+	//       if (window.scrollY >= headerBlockHeight) {
+	//         btnElement.classList.add('show-btn');
+	//       } else {
+	//         btnElement.classList.remove('show-btn');
+	//       }
+	//     });
+	//   });
+	// }
 
-  //   document.addEventListener('scroll', () => {
-  //     if(btnElements.length < 2) {
-  //       btnElements = document.querySelectorAll('.btn-wr--js');
-  //     }
-  //     btnElements.forEach(btnElement => {
-  //       if (window.scrollY >= headerBlockHeight) {
-  //         btnElement.classList.add('show-btn');
-  //       } else {
-  //         btnElement.classList.remove('show-btn');
-  //       }
-  //     });
-  //   });
-  // }
+	/* hide btn after scroll main page */
 
+	gsap.registerPlugin(ScrollTrigger);
 
-  /* hide btn after scroll main page */
+	let requiredCountOfBtns = 3;
 
-  gsap.registerPlugin(ScrollTrigger);
+	let buttons = document.querySelectorAll(".btn-wr--js");
+	let headerSection = document.querySelector(".headerBlock");
 
-  let requiredCountOfBtns = 3;
+	if (buttons.length < requiredCountOfBtns) {
+		const onScroll = () => {
+			buttons = document.querySelectorAll(".btn-wr--js");
 
-  let buttons = document.querySelectorAll('.btn-wr--js');
-  let headerSection = document.querySelector(".headerBlock");
+			if (buttons.length >= requiredCountOfBtns) {
+				setBtnsTrigger();
+				document.removeEventListener("scroll", onScroll);
+			}
+		};
 
-  if (buttons.length < requiredCountOfBtns) {
-    const onScroll = () => {
-      buttons = document.querySelectorAll('.btn-wr--js');
+		document.addEventListener("scroll", onScroll);
+	}
 
-      if (buttons.length >= requiredCountOfBtns) {
-        setBtnsTrigger()
-        document.removeEventListener('scroll', onScroll);
-      }
-    };
+	setBtnsTrigger();
 
-    document.addEventListener('scroll', onScroll);
-  }
+	function setBtnsTrigger() {
+		if (headerSection && buttons.length) {
+			let sectionHeight = headerSection.offsetHeight;
 
-  setBtnsTrigger()
+			buttons.forEach(button => {
+				ScrollTrigger.create({
+					trigger: headerSection,
+					start: `top top+=${sectionHeight / 2}`,
+					end: "bottom top",
+					onEnter: () => button.classList.remove("show-btn"),
+					onEnterBack: () => button.classList.remove("show-btn"),
+					onLeaveBack: () => button.classList.add("show-btn"),
+					onLeave: () => button.classList.add("show-btn"),
+				});
+			});
+		}
+	}
 
-  function setBtnsTrigger() {
-    if (headerSection && buttons.length) {
+	function isMobile() {
+		return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+			navigator.userAgent
+		);
+	}
 
-    let sectionHeight = headerSection.offsetHeight;
+	let wasShown = false;
 
-    buttons.forEach(button => {
-      ScrollTrigger.create({
-        trigger: headerSection,
-        start: `top top+=${sectionHeight / 2}`,
-        end: "bottom top",
-        onEnter: () => button.classList.remove("show-btn"),
-        onEnterBack: () => button.classList.remove("show-btn"),
-        onLeaveBack: () => button.classList.add("show-btn"),
-        onLeave: () => button.classList.add("show-btn"),
-      });
-    });
-  }
-  }
+	if (isMobile() && document.getElementById("modal-mob") && !wasShown) {
+		wasShown = true;
 
-  function isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  }
+		Fancybox.show(
+			[
+				{
+					src: "#modal-mob",
+					type: "inline",
+				},
+			],
+			{
+				touch: false,
+				dragToClose: false,
+				autoFocus: false,
+				trapFocus: false,
+				placeFocusBack: false,
+				groupAll: false,
+				showClass: "fancybox-throwOutUp",
+				hideClass: "fancybox-throwOutDown",
+				compact: false,
+				arrows: false,
+			}
+		);
+	}
 
-  let wasShown = false
+	const activeItems = document.querySelectorAll(".parts-item.active");
 
-  if (isMobile() && document.getElementById('modal-mob') && !wasShown) {
-    wasShown = true
+	if (activeItems.length > 0) {
+		const lastActiveItem = activeItems[activeItems.length - 1];
 
-    Fancybox.show([{
-      src: "#modal-mob",
-      type: "inline"
-    }], {
-      touch: false,
-      dragToClose: false,
-      autoFocus: false,
-      trapFocus: false,
-      placeFocusBack: false,
-      groupAll: false,
-      showClass: "fancybox-throwOutUp",
-      hideClass: "fancybox-throwOutDown",
-      compact: false,
-      arrows: false
-    });
-  }
-
-  const activeItems = document.querySelectorAll('.parts-item.active');
-
-  if (activeItems.length > 0) {
-      const lastActiveItem = activeItems[activeItems.length - 1];
-
-      lastActiveItem.insertAdjacentHTML(
-          'beforeend',
-          `<div class="current">
+		lastActiveItem.insertAdjacentHTML(
+			"beforeend",
+			`<div class="current">
               <span>Текущий этап</span>
               <img src="img/svg/arr-top.svg" alt="">
           </div>`
-      );
-  }
+		);
+	}
 
-  /* input-wrap */
-  document.addEventListener('click', function (event) {
-    if (event.target.closest('.icon-delete')) {
-      const inputWrap = event.target.closest('.input-wrap');
-      if (inputWrap) {
-        inputWrap.remove();
-      }
-    }
-  });
-  
-  const addBtns = document.querySelectorAll('.add-input-js')
-  if (addBtns.length) {
-    addBtns.forEach(addBtn => {
-      addBtn.addEventListener('click', (e) => {
-      e.preventDefault()
-      const inputsContainer = addBtn.parentElement.previousElementSibling;
-      const maxCount = inputsContainer.getAttribute('data-max');
-      const inputs = inputsContainer.querySelectorAll('input')
-      const firstPlaceholder = inputs[0].getAttribute('placeholder')
-      const secondPlaceholder = inputs[1].getAttribute('placeholder')
+	/* input-wrap */
+	document.addEventListener("click", function (event) {
+		if (event.target.closest(".icon-delete")) {
+			const inputWrap = event.target.closest(".input-wrap");
+			if (inputWrap) {
+				inputWrap.remove();
+			}
+		}
+	});
 
-      if (inputsContainer) {
+	const addBtns = document.querySelectorAll(".add-input-js");
+	if (addBtns.length) {
+		addBtns.forEach(addBtn => {
+			addBtn.addEventListener("click", e => {
+				e.preventDefault();
+				const inputsContainer = addBtn.parentElement.previousElementSibling;
+				const maxCount = inputsContainer.getAttribute("data-max");
+				const inputs = inputsContainer.querySelectorAll("input");
+				const firstPlaceholder = inputs[0].getAttribute("placeholder");
+				const secondPlaceholder = inputs[1].getAttribute("placeholder");
 
-      const inputCount = inputsContainer.querySelectorAll('.input-wrap').length;
+				if (inputsContainer) {
+					const inputCount =
+						inputsContainer.querySelectorAll(".input-wrap").length;
 
-      if (inputCount >= maxCount) {
-        return;
-      }
-        const newInputWrap = `
+					if (inputCount >= maxCount) {
+						return;
+					}
+					const newInputWrap = `
           <div class="input-wrap">
             <button class="icon-delete">
               <svg class="icon icon-x ">
@@ -275,200 +276,205 @@ function eventHandler() {
           </div>
         `;
 
-        inputsContainer.insertAdjacentHTML('beforeend', newInputWrap);
-      }
-    })
-  })
-  }
+					inputsContainer.insertAdjacentHTML("beforeend", newInputWrap);
+				}
+			});
+		});
+	}
+
+	/* file upload */
+	const fileUploads = document.querySelectorAll(".file-container--js");
+
+	if (fileUploads.length) {
+		fileUploads.forEach(element => {
+			const fileInput = element.querySelector(".file-upload");
+			const filesContainer = element.querySelector(".files");
+
+			fileInput.addEventListener("change", () => {
+				const isMultiple = fileInput.hasAttribute("multiple");
+				const files = Array.from(fileInput.files);
+
+				if (!isMultiple) {
+					filesContainer.innerHTML = "";
+				}
+
+				files.forEach(file => {
+					const existingFile = Array.from(
+						filesContainer.querySelectorAll(".file-name")
+					).some(fileNameEl => fileNameEl.textContent === file.name);
+
+					if (!existingFile) {
+						const fileInfo = document.createElement("div");
+						fileInfo.classList.add("file-info");
+
+						const fileElement = document.createElement("span");
+						fileElement.classList.add("file-name");
+						fileElement.textContent = file.name;
+
+						const removeButton = document.createElement("span");
+						removeButton.classList.add("remove-file");
+						removeButton.innerHTML = `<svg class="icon icon-x"><use xlink:href="img/svg/sprite.svg#x"></use></svg>`;
+
+						removeButton.addEventListener("click", () => {
+							fileInfo.remove();
+						});
+
+						fileInfo.appendChild(fileElement);
+						fileInfo.appendChild(removeButton);
+
+						filesContainer.appendChild(fileInfo);
+					}
+				});
+			});
+		});
+	}
+
+	const allTextareas = document.querySelectorAll("textarea[data-value]");
+
+	if (allTextareas.length) {
+		allTextareas.forEach(textarea => {
+			const dataValue = textarea.getAttribute("data-value");
+			textarea.value = dataValue;
+		});
+	}
+
+	/* textarea maxlength */
+	const textareas = document.querySelectorAll("textarea[maxlength]");
+
+	if (textareas.length) {
+		textareas.forEach(textarea => {
+			let maxLength = textarea.getAttribute("maxlength");
+			if (maxLength === "maxlength") {
+				maxLength = 1000;
+			}
+
+			const charCounter = document.createElement("div");
+			const currentLength = textarea.value.length;
+			charCounter.classList.add("char-counter", "small", "text-secondary");
+			charCounter.textContent = `${currentLength}/${maxLength}`;
+
+			textarea.insertAdjacentElement("afterend", charCounter);
+
+			textarea.addEventListener("input", () => {
+				const currentLength = textarea.value.length;
+				charCounter.textContent = `${currentLength}/${maxLength}`;
+			});
+		});
+	}
+
+	/* video*/
+	const videoWrap = document.querySelector(".video-wrap");
+	if (videoWrap) {
+		videoWrap.addEventListener("click", function () {
+			const video = document.querySelector(".video");
+			if (video.paused) {
+				video.play();
+				video.classList.add("is-playing");
+			} else {
+				video.pause();
+				video.classList.remove("is-playing");
+			}
+		});
+	}
 
 
-  /* file upload */
-  const fileUploads = document.querySelectorAll('.file-container--js');
+  const infoWindows = document.querySelectorAll(".info-window--js");
+	if (infoWindows) {
+		infoWindows.forEach(el => {
+			const closeBtn = el.querySelector(".close-btn");
+			if (!closeBtn) return;
+			closeBtn.addEventListener("click", () => {
+				el.classList.add("hidden");
+			});
+		});
+	}
 
-  if (fileUploads.length) {
-    fileUploads.forEach((element) => {
-      const fileInput = element.querySelector('.file-upload');
-      const filesContainer = element.querySelector('.files');
-  
-      fileInput.addEventListener('change', () => {
-        const isMultiple = fileInput.hasAttribute('multiple');
-        const files = Array.from(fileInput.files);
-  
-        if (!isMultiple) {
-          filesContainer.innerHTML = '';
-        }
+	const tiny = document.querySelectorAll(".tinny-item-js");
+	tiny.forEach(el => {
+		const template = el.querySelector(".tinny-template");
 
-        files.forEach((file) => {
-          const existingFile = Array.from(filesContainer.querySelectorAll('.file-name'))
-            .some((fileNameEl) => fileNameEl.textContent === file.name);
-  
-          if (!existingFile) {
-            const fileInfo = document.createElement('div');
-            fileInfo.classList.add('file-info');
-  
-            const fileElement = document.createElement('span');
-            fileElement.classList.add('file-name');
-            fileElement.textContent = file.name;
-  
-            const removeButton = document.createElement('span');
-            removeButton.classList.add('remove-file');
-            removeButton.innerHTML = `<svg class="icon icon-x"><use xlink:href="img/svg/sprite.svg#x"></use></svg>`;
-  
-            removeButton.addEventListener('click', () => {
-              fileInfo.remove();
-            });
-  
-            fileInfo.appendChild(fileElement);
-            fileInfo.appendChild(removeButton);
-  
-            filesContainer.appendChild(fileInfo);
-          }
-        });
+		tippy(el, {
+			content: template.innerHTML,
+			allowHTML: true,
+			interactive: true,
+			placement: "bottom-start",
+		});
+	});
 
-      });
-    });
-  }
+	const consultBtn = document.querySelector(".consult--js");
+	if (consultBtn) {
+		consultBtn.addEventListener("click", event => {
+			const thanksWindow = document.querySelector(".thanks-window.hidden");
 
+			if (thanksWindow) {
+				thanksWindow.classList.remove("hidden");
+				consultBtn.closest(".info-window--js").classList.add("hidden");
+			}
+		});
+	}
 
-  const allTextareas = document.querySelectorAll('textarea[data-value]');
-  
-  if (allTextareas.length) {
-    allTextareas.forEach(textarea => {
+	let consultWindowIsShown = false;
 
-      const dataValue = textarea.getAttribute('data-value');
-      textarea.value = dataValue;
-    })
-  }
+	const infoWindow = document.querySelector(
+		".info-window--js.consult-info.hidden"
+	);
+	if (infoWindow) {
+		setTimeout(function () {
+			if (consultWindowIsShown) return;
+			infoWindow.classList.remove("hidden");
+		}, 5000);
+	}
 
-  /* textarea maxlength */
-  const textareas = document.querySelectorAll('textarea[maxlength]');
+	const questionBtns = document.querySelectorAll(".consult-info-header-btn");
+	if (questionBtns.length) {
+		questionBtns.forEach(btn => {
+			btn.addEventListener("click", event => {
+				event.preventDefault();
+				const consultWindow = document.querySelector(".consult-info.hidden");
+				consultWindowIsShown = true;
 
-  if (textareas.length) {
-    textareas.forEach((textarea) => {
-      let maxLength = textarea.getAttribute('maxlength');
-      if (maxLength === 'maxlength') {
-        maxLength = 1000;
-      }
-  
-      const charCounter = document.createElement('div');
-      const currentLength = textarea.value.length;
-      charCounter.classList.add('char-counter', 'small', 'text-secondary');
-      charCounter.textContent = `${currentLength}/${maxLength}`;
-  
-      textarea.insertAdjacentElement('afterend', charCounter);
-  
-      textarea.addEventListener('input', () => {
-        const currentLength = textarea.value.length;
-        charCounter.textContent = `${currentLength}/${maxLength}`;
-      });
-    });
-  }
+				if (consultWindow) {
+					consultWindow.classList.remove("hidden");
+				}
+			});
+		});
+	}
 
-    /* video*/
-    const videoWrap = document.querySelector('.video-wrap')
-    if (videoWrap) {
-      videoWrap.addEventListener('click', function() {
-  
-      const video = document.querySelector('.video');
-        if (video.paused) {
-          video.play();
-          video.classList.add('is-playing');
-      } else {
-          video.pause();
-          video.classList.remove('is-playing');
-      }
-      });
-    }
+	/* Form inputs */
+	const inputs = document.querySelectorAll(".sForm input[required]");
 
+	if (inputs.length) {
+		inputs.forEach(input => {
+			const toggleVisibility = () => {
+				if (input.type !== "tel") {
+					input.previousSibling.style.visibility =
+						input.value.length > 0 ? "hidden" : "visible";
+				}
+			};
 
-  const infoWindows = document.querySelectorAll('.info-window--js')
-  if (infoWindows) {
-    infoWindows.forEach(el => {
-      const closeBtn = el.querySelector('.close-btn')
-      if (!closeBtn) return
-      closeBtn.addEventListener('click', () => {
-        el.classList.add('hidden')
-      })
-    })
-  }
+			input.addEventListener("input", toggleVisibility);
 
+			if (input.type === "tel") {
+				input.addEventListener("focus", () => {
+					input.previousSibling.style.visibility = "hidden";
+				});
 
-  const tiny = document.querySelectorAll('.tinny-item-js');
-  tiny.forEach((el) => {
-    const template = el.querySelector('.tinny-template');
+				input.addEventListener("blur", () => {
+					if (input.value.length === 0) {
+						input.previousSibling.style.visibility = "visible";
+					}
+				});
+			}
+		});
+	}
 
-    tippy(el, {
-      content: template.innerHTML,
-      allowHTML: true,
-      interactive: true,
-      placement: 'bottom-start',
-    });
-  });
+	const template = document.getElementById("template");
 
-  const consultBtn = document.querySelector('.consult--js')
-  if (consultBtn) {
-    consultBtn.addEventListener('click', (event) => {
-      const thanksWindow = document.querySelector('.thanks-window.hidden')
-
-      if (thanksWindow) {
-        thanksWindow.classList.remove('hidden')
-        consultBtn.closest('.info-window--js').classList.add('hidden')
-      }
-    });
-  }
-
-  let consultWindowIsShown = false
-
-  const infoWindow = document.querySelector('.info-window--js.consult-info.hidden')
-  if (infoWindow) {
-    setTimeout(function () {
-      if (consultWindowIsShown) return
-      infoWindow.classList.remove('hidden')
-    }, 5000)
-  }
-
-  const questionBtns = document.querySelectorAll('.consult-info-header-btn')
-  if (questionBtns.length) {
-    questionBtns.forEach(btn => {
-      btn.addEventListener('click', (event) => {
-        event.preventDefault()
-        const consultWindow = document.querySelector('.consult-info.hidden')
-        consultWindowIsShown = true
-
-        if (consultWindow) {
-          consultWindow.classList.remove('hidden')
-        }
-      });
-    })
-  }
-
-  /* Form inputs */
-  const inputs = document.querySelectorAll('.sForm input[required]');
-
-  if (inputs.length) {
-    inputs.forEach((input) => {
-      const toggleVisibility = () => {
-        if (input.type !== 'tel') {
-          input.previousSibling.style.visibility = input.value.length > 0 ? 'hidden' : 'visible';
-        }
-      };
-
-      input.addEventListener('input', toggleVisibility);
-
-      if (input.type === 'tel') {
-        input.addEventListener('focus', () => {
-          input.previousSibling.style.visibility = 'hidden';
-        });
-
-        input.addEventListener('blur', () => {
-          if (input.value.length === 0) {
-            input.previousSibling.style.visibility = 'visible';
-          }
-        });
-      }
-    });
-  }
-
+	tippy(".tooltip-icon", {
+		content: template.innerHTML,
+		allowHTML: true,
+		theme: "light",
+	});
 }
 
 if (document.readyState !== "loading") {
