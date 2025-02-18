@@ -174,9 +174,9 @@ class JSCCommon {
 					.find("." + tab + "__btn.active")
 					.removeClass("active");
 
-				$(this).addClass("active");
-
 				$(this)
+					.addClass("active")
+
 					.parent()
 					.next()
 					.children()
