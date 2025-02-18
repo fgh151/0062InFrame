@@ -18,10 +18,10 @@ class JSCCommon {
 		Fancybox.defaults.autoFocus = false;
 		Fancybox.defaults.placeFocusBack = false;
 
-    Fancybox.bind("[data-fancybox]", {
-      autoFocus: false,
-      placeFocusBack: false,
-    });
+		Fancybox.bind("[data-fancybox]", {
+			autoFocus: false,
+			placeFocusBack: false,
+		});
 
 		Fancybox.bind(link, {
 			arrows: false,
@@ -53,8 +53,12 @@ class JSCCommon {
 			},
 		});
 		document.querySelectorAll(".modal-close-js").forEach(el => {
-			el.addEventListener("click", () => {
-				Fancybox.close();
+			el.addEventListener("click", event => {
+				event.preventDefault();
+				const instance = Fancybox.getInstance();
+				if (instance) {
+					instance.close();
+				}
 			});
 		});
 
@@ -76,7 +80,6 @@ class JSCCommon {
 			setValue(data.btn, ".btn");
 			setValue(data.order, ".order");
 		});
-
 	}
 	// /modalCall
 
@@ -197,19 +200,9 @@ class JSCCommon {
 			InputTel
 		);
 
-    
-		let InputFirm = [].slice.call(
-			document.querySelectorAll('input.mask-firm')
-		);
-		InputFirm.forEach(element =>
-			element.setAttribute(
-				"pattern",
-				"[0-9]"
-			)
-		);
-		Inputmask({mask: "9999999999", showMaskOnHover: false}).mask(
-			InputFirm
-		);
+		let InputFirm = [].slice.call(document.querySelectorAll("input.mask-firm"));
+		InputFirm.forEach(element => element.setAttribute("pattern", "[0-9]"));
+		Inputmask({mask: "9999999999", showMaskOnHover: false}).mask(InputFirm);
 	}
 	// /inputMask
 	static sendForm() {
@@ -304,7 +297,7 @@ class JSCCommon {
 	}
 	static animateScroll() {
 		$(document).on("click", " .menu li a, .scroll-link", function () {
-      JSCCommon.closeMenu()
+			JSCCommon.closeMenu();
 			const elementClick = $(this).attr("href");
 			if (!document.querySelector(elementClick)) {
 				$(this).attr("href", "/" + elementClick);
@@ -316,7 +309,7 @@ class JSCCommon {
 		});
 	}
 
-  static setCustomScrollbar() {
+	static setCustomScrollbar() {
 		$(".custom-scroll").mCustomScrollbar({
 			theme: "minimal-dark",
 			alwaysShowScrollbar: true,
@@ -442,7 +435,7 @@ class JSCCommon {
 
 	static init() {
 		this.modalCall();
-		this.tabsCostume('tabs');
+		this.tabsCostume("tabs");
 		this.mobileMenu();
 		this.inputMask();
 		// this.sendForm();

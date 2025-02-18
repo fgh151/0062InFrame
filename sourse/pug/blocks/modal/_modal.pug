@@ -162,7 +162,7 @@ mixin modal()
 	//- Пароль
 	div(id="modal-reset-1"  style="display: none" )
 		+b.modal-win
-			+e.back-link(href='#'): +icon('arr-back')
+			+e.back-link(href='#').modal-close-js: +icon('arr-back')
 			+e.title-wrap.text-center
 				+e.title.form-data.h2 Сброс пароля
 				p Пожалуйста, укажите почту, с которой вы создавали личный кабинет
@@ -379,7 +379,7 @@ mixin enterPart
 			+input('Заполните поле', 'password', 'Пароль')(required)&attributes(attributes)
 				+b.btn-toggle-type-input--js.SPAN
 					+icon("eye-off")
-			+e.forgot-passw: a(href="#") Не помню пароль
+			+e.forgot-passw: a(href="#modal-reset-1").link-modal-js Не помню пароль
 			if block 
 				block
 			if !block
