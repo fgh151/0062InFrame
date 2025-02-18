@@ -628,3 +628,19 @@ main.modal {
 		}
 	}
 }
+
+.error-feedback {
+	padding-right: 30px;
+	position: relative;
+	.tooltip-icon {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+.tippy-box {
+	background-color: #fff;
+	color: #818181;
+	border: 1px solid #818181;
+}
