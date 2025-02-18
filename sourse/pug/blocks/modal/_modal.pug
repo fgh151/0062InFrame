@@ -46,14 +46,15 @@ mixin modal()
 						+policy
 						+e.btn-wrap.text-center: +e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить
 	// #modal-call
-	div(id="modal-auth"  style="display: none" )
+	div(id="modal-auth"  )
 		+b.modal-win
 			.tabs.tabs-auth
 				.item.tabs__caption
 					.tabs__btn.active Войти
 					.tabs__btn Зарегистрироваться
-				+enterPart
-				+signUpPart
+				div
+					+enterPart
+					+signUpPart
 	div(id="modal-auth-invalid"  style="display: none" )
 		+b.modal-win
 			.tabs.tabs-auth
@@ -399,14 +400,15 @@ mixin signUpPart
 				span.error-feedback.text.text-indigo Пожалуйста, указывайте только почтовый адрес с доменом .ru
 			.tabs.tabs-form.tabs-form--phone
 				.item.tabs__caption.small
-					.tabs__btn Рабочий телефон
+					.tabs__btn.active Рабочий телефон
 					.tabs__btn Мобильный телефон
-				.tabs__content.active
-					+e.tel-wrap.row
-						+e.col.col: +input("+7 (___) ___-__-__",'tel',"Телефон")(required)
-						+e.col.col-sm-auto: +input("Доб.",'text').additional
-				.tabs__content
-					+input("+7 (___) ___-__-__",'tel',"Телефон")(required)
+				div
+					.tabs__content.active
+						+e.tel-wrap.row
+							+e.col.col: +input("+7 (___) ___-__-__",'tel',"Телефон")(required)
+							+e.col.col-sm-auto: +input("Доб.",'text').additional
+					.tabs__content
+						+input("+7 (___) ___-__-__",'tel',"Телефон")(required)
 			//- +e.radio-wrap.small
 			//- 	+in-c('radio', 'Рабочий телефон')
 			//- 	+in-c('radio', 'Мобильный телефон')

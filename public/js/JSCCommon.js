@@ -170,11 +170,16 @@ class JSCCommon {
 			"." + tab + "__btn:not(.active)",
 			function (e) {
 				$(this)
-					.addClass("active")
-					.siblings()
-					.removeClass("active")
-					.closest("." + tab)
-					.find("." + tab + "__content")
+					.parents("." + tab + "__caption")
+					.find("." + tab + "__btn.active")
+					.removeClass("active");
+
+				$(this).addClass("active");
+
+				$(this)
+					.parent()
+					.next()
+					.children()
 					.hide()
 					.removeClass("active")
 					.eq($(this).index())
