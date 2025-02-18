@@ -46,14 +46,15 @@ mixin modal()
 						+policy
 						+e.btn-wrap.text-center: +e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить
 	// #modal-call
-	div(id="modal-auth"  style="display: none" )
+	div(id="modal-auth"  )
 		+b.modal-win
 			.tabs.tabs-auth
 				.item.tabs__caption
 					.tabs__btn.active Войти
 					.tabs__btn Зарегистрироваться
-				+enterPart
-				+signUpPart
+				div
+					+enterPart
+					+signUpPart
 	div(id="modal-auth-invalid"  style="display: none" )
 		+b.modal-win
 			.tabs.tabs-auth
@@ -162,7 +163,7 @@ mixin modal()
 	//- Пароль
 	div(id="modal-reset-1"  style="display: none" )
 		+b.modal-win
-			+e.back-link(href='#'): +icon('arr-back')
+			+e.back-link(href='#').modal-close-js: +icon('arr-back')
 			+e.title-wrap.text-center
 				+e.title.form-data.h2 Сброс пароля
 				p Пожалуйста, укажите почту, с которой вы создавали личный кабинет
@@ -379,7 +380,7 @@ mixin enterPart
 			+input('Заполните поле', 'password', 'Пароль')(required)&attributes(attributes)
 				+b.btn-toggle-type-input--js.SPAN
 					+icon("eye-off")
-			+e.forgot-passw: a(href="#") Не помню пароль
+			+e.forgot-passw: a(href="#modal-reset-1").link-modal-js Не помню пароль
 			if block
 				block
 			if !block
@@ -399,14 +400,15 @@ mixin signUpPart
 				span.error-feedback.text.text-indigo Пожалуйста, указывайте только почтовый адрес с доменом .ru
 			.tabs.tabs-form.tabs-form--phone
 				.item.tabs__caption.small
-					.tabs__btn Рабочий телефон
+					.tabs__btn.active Рабочий телефон
 					.tabs__btn Мобильный телефон
-				.tabs__content.active
-					+e.tel-wrap.row
-						+e.col.col: +input("+7 (___) ___-__-__",'tel',"Телефон")(required)
-						+e.col.col-sm-auto: +input("Доб.",'text').additional
-				.tabs__content
-					+input("+7 (___) ___-__-__",'tel',"Телефон")(required)
+				div
+					.tabs__content.active
+						+e.tel-wrap.row
+							+e.col.col: +input("+7 (___) ___-__-__",'tel',"Телефон")(required)
+							+e.col.col-sm-auto: +input("Доб.",'text').additional
+					.tabs__content
+						+input("+7 (___) ___-__-__",'tel',"Телефон")(required)
 			//- +e.radio-wrap.small
 			//- 	+in-c('radio', 'Рабочий телефон')
 			//- 	+in-c('radio', 'Мобильный телефон')
