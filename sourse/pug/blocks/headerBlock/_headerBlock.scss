@@ -104,27 +104,36 @@
 		right: 0;
 		top: 0;
 		height: 100%;
-		&:before {
-			@include media-breakpoint-up(xl) {
-				content: "";
-				position: absolute;
-				bottom: 1px;
-				right: 90%;
-				width: 100vw;
-				height: 100%;
-				background: linear-gradient(
-					90deg,
-					var(--header-block-bg) 0%,
-					#881cf8 50%
-				);
-				z-index: 1;
-				// mix-blend-mode: lighten;
-				// filter: blur(2px);
-			}
-			@include media-breakpoint-up(xxl) {
-				// width: calc(100% - rem(1470) + 10%);
-			}
+		video {
+			mask-image: linear-gradient(
+				to right,
+				rgba(0, 0, 0, 0) 0%,
+				rgba(0, 0, 0, 0.1) 10%,
+				rgba(0, 0, 0, 1) 30%
+			);
 		}
+
+		// &:before {
+		// 	@include media-breakpoint-up(xl) {
+		// 		content: "";
+		// 		position: absolute;
+		// 		bottom: 1px;
+		// 		right: 90%;
+		// 		width: 100vw;
+		// 		height: 100%;
+		// 		background: linear-gradient(
+		// 			90deg,
+		// 			var(--header-block-bg) 0%,
+		// 			#881cf8 50%
+		// 		);
+		// 		z-index: 1;
+		// 		// mix-blend-mode: lighten;
+		// 		// filter: blur(2px);
+		// 	}
+		// 	@include media-breakpoint-up(xxl) {
+		// 		// width: calc(100% - rem(1470) + 10%);
+		// 	}
+		// }
 	}
 	.section-img-bg {
 		// position: absolute;
