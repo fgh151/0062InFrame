@@ -466,12 +466,13 @@ function eventHandler() {
 	}
 
 	const template = document.getElementById("template");
-
-	tippy(".tooltip-icon", {
-		content: template.innerHTML,
-		allowHTML: true,
-		theme: "light",
-	});
+	if (template) {
+		tippy(".tooltip-icon", {
+			content: template.innerHTML,
+			allowHTML: true,
+			theme: "light",
+		});
+	}
 }
 
 if (document.readyState !== "loading") {

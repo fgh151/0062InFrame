@@ -52,15 +52,6 @@ class JSCCommon {
 				IFRAME_ERROR: "Ошибка загрузки iframe",
 			},
 		});
-		document.querySelectorAll(".modal-close-js").forEach(el => {
-			el.addEventListener("click", event => {
-				event.preventDefault();
-				const instance = Fancybox.getInstance();
-				if (instance) {
-					instance.close();
-				}
-			});
-		});
 
 		document.addEventListener("click", event => {
 			let element = event.target.closest(link);
