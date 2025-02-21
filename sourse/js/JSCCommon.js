@@ -71,6 +71,16 @@ class JSCCommon {
 			setValue(data.btn, ".btn");
 			setValue(data.order, ".order");
 		});
+
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", event => {
+				event.preventDefault();
+				const instance = Fancybox.getInstance();
+				if (instance) {
+					instance.close();
+				}
+			});
+		});
 	}
 	// /modalCall
 
@@ -100,8 +110,9 @@ class JSCCommon {
 			event => {
 				let container = event.target.closest(".menu-mobile--js");
 				let toggle = event.target.closest(".toggle-menu-mobile--js");
+				let links = event.target.closest(".menu-mobile a");
 				if (toggle) this.toggleMenu();
-				if (!container && !toggle) this.closeMenu();
+				if ((!container && !toggle) || links) this.closeMenu();
 			},
 			{passive: true}
 		);
