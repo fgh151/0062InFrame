@@ -645,3 +645,7 @@ main.modal {
 	color: #818181;
 	border: 1px solid #818181;
 }
+
+.reset-pass-block:not(.active) {
+	display: none;
+}
