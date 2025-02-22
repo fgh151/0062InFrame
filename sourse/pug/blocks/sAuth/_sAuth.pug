@@ -563,22 +563,24 @@ mixin sAuth7(data)
 
 mixin legend 
 	+b.legend: .legend-row
-		+legendItem('Заявка не принята к рассмотрению, так как не заполнены обязательные поля')
-			+e.badge-wrap.text-end: .small.badge.text-bg-secondary Черновик
-		+legendItem('Все обязательные поля заполнены, но вы все еще можете вносить изменения до 11 июля')
-			+e.badge-wrap.text-end: .small.badge.text-bg-success На рассмотрении
-		+legendItem('Заявка соответствует критериям Премии и допущена к рассмотрению экспертами')
-			+e.badge-wrap.text-end: .small.badge.text-bg-info Номинант
-		+legendItem('Ваш проект прошел в финал в своей номинации')
-			+e.badge-wrap.text-end: .small.badge.text-bg-black Финалист
-		+legendItem('Ваш проект вошел в тройку лучших в своей номинации')
-			+e.badge-wrap.text-end: .small.badge.text-bg-dark Лауреат
-		+legendItem('Ваш проект занял первое место в своей номинации. Поздравляем!')
-			+e.badge-wrap.text-end: .small.badge.text-bg-gradient Победитель
-		+legendItem('Вы сняли заявку с рассмотрения')
-			+e.badge-wrap.text-end: .small.badge.text-bg-warning Отозвана
-		+legendItem('Заявка отклонена')
-			+e.badge-wrap.text-end: .small.badge.text-bg-danger Отклонена
+		div
+			+legendItem('Заявка не принята к рассмотрению, так как не заполнены обязательные поля')
+				+e.badge-wrap.text-end: .small.badge.text-bg-secondary Черновик
+			+legendItem('Все обязательные поля заполнены, но вы все еще можете вносить изменения до 11 июля Все обязательные поля заполнены, но вы все еще можете вносить изменения до 11 июля')
+				+e.badge-wrap.text-end: .small.badge.text-bg-success На рассмотрении
+			+legendItem('Заявка соответствует критериям Премии и допущена к рассмотрению экспертами')
+				+e.badge-wrap.text-end: .small.badge.text-bg-info Номинант
+			+legendItem('Ваш проект прошел в финал в своей номинации')
+				+e.badge-wrap.text-end: .small.badge.text-bg-black Финалист
+		div
+			+legendItem('Ваш проект вошел в тройку лучших в своей номинации')
+				+e.badge-wrap.text-end: .small.badge.text-bg-dark Лауреат
+			+legendItem('Ваш проект занял первое место в своей номинации. Поздравляем!')
+				+e.badge-wrap.text-end: .small.badge.text-bg-gradient Победитель
+			+legendItem('Вы сняли заявку с рассмотрения')
+				+e.badge-wrap.text-end: .small.badge.text-bg-warning Отозвана
+			+legendItem('Заявка отклонена')
+				+e.badge-wrap.text-end: .small.badge.text-bg-danger Отклонена
 		//- +e.col.col-lg-6 
 		//- 	+legendItem('Просматривайте и редактируйте заявки, вносите изменения до 11 июля.')
 		//- 		+e.badge-wrap.text-end: +icon('edit')

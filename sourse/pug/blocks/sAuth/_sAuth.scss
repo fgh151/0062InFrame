@@ -727,10 +727,11 @@
 }
 
 .legend-item {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	gap: rem(8);
 	margin-bottom: rem(16);
+	width: 100%;
 
 	@include media-breakpoint-up(md) {
 		gap: rem(18);
