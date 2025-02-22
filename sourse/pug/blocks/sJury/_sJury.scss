@@ -3,97 +3,104 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-    @include media-breakpoint-up(xl) {
-      --sTPB: #{rem(0)};
-      // --sPB: #{rem(96)};
-      --sPB: #{rem(0)};
-    }
+	@include media-breakpoint-up(xl) {
+		--sTPB: #{rem(0)};
+		// --sPB: #{rem(96)};
+		--sPB: #{rem(0)};
+	}
 
 	&__link {
 		margin-bottom: rem(16);
-    display: inline-block;
-    @include media-breakpoint-up(md) {
-      display: none;
-    }
+		display: inline-block;
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
 	}
 
-  .swiper-slide {
-    width: auto;
-    margin-right: rem(32);
+	.swiper-slide {
+		width: auto;
+		margin-right: rem(32);
 
-    // .jury-card__img-wrap:before {
-    //   border-radius:  0  0 var(--card-bord) 0;
-    //   --bg-before: #{$gradient-p-p};
-    // }
-    // &:nth-child(3n + 3) .jury-card__img-wrap:before {
-    //   border-radius: var(--card-bord) 0  var(--card-bord) 0;
-    //   --bg-before: #{$white};
-    // }
-  }
+		// .jury-card__img-wrap:before {
+		//   border-radius:  0  0 var(--card-bord) 0;
+		//   --bg-before: #{$gradient-p-p};
+		// }
+		// &:nth-child(3n + 3) .jury-card__img-wrap:before {
+		//   border-radius: var(--card-bord) 0  var(--card-bord) 0;
+		//   --bg-before: #{$white};
+		// }
+	}
 
-  .swiper {
-    overflow: visible;
-  }
+	.swiper {
+		overflow: visible;
+	}
 
-  .swiper-wrapper {
-    @include media-breakpoint-up(xl) {
-      transform: unset !important;
-      // display: grid;
-      // grid-template-columns: repeat(4, 1fr);
-      // column-gap: rem(32);
+	.swiper-wrapper {
+		@include media-breakpoint-up(xl) {
+			transform: unset !important;
+			// display: grid;
+			// grid-template-columns: repeat(4, 1fr);
+			// column-gap: rem(32);
 
-      display: block;
-      column-count: 4;
-      column-gap: rem(32);
+			display: block;
+			column-count: 4;
+			column-gap: rem(32);
 
-      .swiper-slide {
-        display: inline-block;
-        margin-bottom: rem(76);
-        margin-right: rem(0);
-        height: auto;
-      }
+			.swiper-slide {
+				display: inline-block;
+				margin-bottom: rem(76);
+				margin-right: rem(0);
+				height: auto;
+			}
 
-      .swiper-slide:nth-child(1) {
-        margin-top: rem(62);
-      }
-      .swiper-slide:nth-child(4) {
-        margin-top: rem(108);
-      }
-      .swiper-slide:nth-child(10) {
-        margin-top: rem(54);
-      }
+			.swiper-slide:nth-child(1) {
+				margin-top: rem(62);
+			}
+			.swiper-slide:nth-child(4) {
+				margin-top: rem(108);
+			}
+			.swiper-slide:nth-child(10) {
+				margin-top: rem(54);
+			}
 
-      // .swiper-slide {
-      //   @include media-breakpoint-up(xl) {
-      //     &:nth-child(4n + 1) {
-      //       transform: translateY(62px);
-      //     }
-      //     &:nth-child(4n + 2) {
-      //       transform: translateY(108px);
-      //     }
-      //     &:nth-child(4n + 4) {
-      //       transform: translateY(54px);
-      //     }
-      //   }
-      // }
-    }
-  }
+			// .swiper-slide {
+			//   @include media-breakpoint-up(xl) {
+			//     &:nth-child(4n + 1) {
+			//       transform: translateY(62px);
+			//     }
+			//     &:nth-child(4n + 2) {
+			//       transform: translateY(108px);
+			//     }
+			//     &:nth-child(4n + 4) {
+			//       transform: translateY(54px);
+			//     }
+			//   }
+			// }
+		}
+	}
 
-  .jury-card--gradient .jury-card__img-wrap:before {
-    border-radius:  0  0 var(--card-bord) 0;
-    --bg-before: #{$gradient-p-p};
-  }
+	.jury-card--gradient .jury-card__img-wrap:before {
+		border-radius: 0 0 var(--card-bord) 0;
+		--bg-before: #{$gradient-p-p};
+	}
 
-  .jury-card--white .jury-card__img-wrap:before {
-    border-radius: var(--card-bord) 0  var(--card-bord) 0;
-    --bg-before: #{$white};
-  }
+	.jury-card--white .jury-card__img-wrap:before {
+		border-radius: var(--card-bord) 0 var(--card-bord) 0;
+		--bg-before: #{$white};
+	}
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sJury
