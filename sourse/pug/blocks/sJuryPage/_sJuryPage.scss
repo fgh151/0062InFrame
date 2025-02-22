@@ -283,6 +283,7 @@
 	cursor: pointer;
 	position: relative;
 	width: 100%;
+	overflow: hidden;
 	z-index: 2;
 	border-radius: 0 0 22px 0;
 	@include media-breakpoint-up(lg) {
@@ -293,6 +294,7 @@
 
 	&__img-wrap {
 		position: relative;
+		// overflow: hidden;
 		height: rem(270);
 		@include media-breakpoint-up(lg) {
 			height: rem(372);
