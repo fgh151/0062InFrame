@@ -476,6 +476,23 @@ function eventHandler() {
 			theme: "light",
 		});
 	}
+
+	$(document).on("click", ".reset-pass-block-toggle", function (e) {
+		e.preventDefault();
+
+		console.log($(this).attr("href"));
+
+		$(this)
+			.parents(".modal-win")
+			.find(".reset-pass-block.active")
+			.hide()
+			.removeClass("active");
+		$(this)
+			.parents(".modal-win")
+			.find($(this).attr("href"))
+			.fadeIn()
+			.addClass("active");
+	});
 }
 
 if (document.readyState !== "loading") {

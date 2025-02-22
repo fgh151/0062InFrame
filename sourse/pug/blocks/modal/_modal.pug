@@ -48,13 +48,23 @@ mixin modal()
 	// #modal-call
 	div(id="modal-auth"  )
 		+b.modal-win
-			.tabs.tabs-auth
-				.item.tabs__caption
-					.tabs__btn.active Войти
-					.tabs__btn Зарегистрироваться
-				div
-					+enterPart
-					+signUpPart
+			#base-form.reset-pass-block.active
+				.tabs.tabs-auth
+					.item.tabs__caption
+						.tabs__btn.active Войти
+						.tabs__btn Зарегистрироваться
+					div
+						+enterPart
+						+signUpPart
+			#reset-form.reset-pass-block
+					+e.back-link(href='#base-form').reset-pass-block-toggle: +icon('arr-back')
+					+e.title-wrap.text-center
+						+e.title.form-data.h2 Сброс пароля
+						p Пожалуйста, укажите почту, с которой вы создавали личный кабинет
+					+form-wrap
+						+input("PM@mail.ru",'email',"Почта")
+						+e.bottom-wrap.text-center
+							+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Войти
 	div(id="modal-auth-invalid"  style="display: none" )
 		+b.modal-win
 			.tabs.tabs-auth
@@ -161,16 +171,7 @@ mixin modal()
 				+e.btn-wrap.text-center: +e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить
 
 	//- Пароль
-	div(id="modal-reset-1"  style="display: none" )
-		+b.modal-win
-			+e.back-link(href='#').modal-close-js: +icon('arr-back')
-			+e.title-wrap.text-center
-				+e.title.form-data.h2 Сброс пароля
-				p Пожалуйста, укажите почту, с которой вы создавали личный кабинет
-			+form-wrap
-				+input("PM@mail.ru",'email',"Почта")
-				+e.bottom-wrap.text-center
-					+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Войти
+
 
 	div(id="modal-reset-2"  style="display: none" )
 		+b.modal-win
@@ -380,7 +381,7 @@ mixin enterPart
 			+input('Заполните поле', 'password', 'Пароль')(required)&attributes(attributes)
 				+b.btn-toggle-type-input--js.SPAN
 					+icon("eye-off")
-			+e.forgot-passw: a(href="#modal-reset-1").link-modal-js Не помню пароль
+			+e.forgot-passw: a(href="#reset-form").reset-pass-block-toggle Не помню пароль
 			if block
 				block
 			if !block
