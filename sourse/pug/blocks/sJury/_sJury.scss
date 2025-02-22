@@ -18,7 +18,9 @@
 	}
 
 	.swiper-slide {
-		width: auto;
+		@include media-breakpoint-up(xl) {
+			width: auto;
+		}
 		margin-right: rem(32);
 
 		// .jury-card__img-wrap:before {
