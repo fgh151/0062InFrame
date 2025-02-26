@@ -1,16 +1,19 @@
 ### Preloader
+
 1. <https://megafronteam.github.io/0062InFrame/10-preloader.html>
 
 ### Pages
+
 1. <https://megafronteam.github.io/0062InFrame/>
 2. <https://megafronteam.github.io/0062InFrame/02-about-award.html>
 3. <https://megafronteam.github.io/0062InFrame/03-jury.html>
-5. <https://megafronteam.github.io/0062InFrame/04-article-1.html>
-2. <https://megafronteam.github.io/0062InFrame/04-article-2.html>
-4. <https://megafronteam.github.io/0062InFrame/05-news.html>
-1. <https://megafronteam.github.io/0062InFrame/11-organisation.html>
+4. <https://megafronteam.github.io/0062InFrame/04-article-1.html>
+5. <https://megafronteam.github.io/0062InFrame/04-article-2.html>
+6. <https://megafronteam.github.io/0062InFrame/05-news.html>
+7. <https://megafronteam.github.io/0062InFrame/11-organisation.html>
 
 #### Cabinet
+
 1. <https://megafronteam.github.io/0062InFrame/06-auth-profile.html>
 1. <https://megafronteam.github.io/0062InFrame/06-auth-success.html>
 1. <https://megafronteam.github.io/0062InFrame/06-auth-applies.html>
@@ -30,5 +33,9 @@
 1. <https://megafronteam.github.io/0062InFrame/07-steps-4.html>
 1. <https://megafronteam.github.io/0062InFrame/07-steps-5.html>
 
-
 1. <https://megafronteam.github.io/0062InFrame/08-rules.html>
+
+Ошибки
+
+1. <https://megafronteam.github.io/0062InFrame/404>
+2. <https://megafronteam.github.io/0062InFrame/12-pause>

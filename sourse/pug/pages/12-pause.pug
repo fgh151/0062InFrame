@@ -1,0 +1,38 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/footer/_footer.pug
+ 
+
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header-main')
+	main
+		+b.s404--pause.section.container
+			.row.g-4
+				+e.col-text.col
+					h1 Техническая пауза
+
+					p Сайт Премии Правительства Москвы «В кадре» временно недоступен, но мы уже работаем над тем, чтобы это исправить.
+
+					.panel-white
+						p #[strong Если у вас возник вопрос], пожалуйста, обратитесь в нашу службу поддержки по телефону #[a(href="tel:8(800)707-13-05") 8 (800) 707-13-05] или напишите на #[a(href="mailtovkadre-info@mos.ru") vkadre-info@mos.ru]. 
+						
+						p Мы обязательно поможем.
+					p Благодарим вас за желание делиться опытом в сфере управления персоналом и остаемся на связи!
+				.col-xxl-6.col-sm-5.text-center
+					img(src="img/tech_1.png", alt="").res-i.m-0
+		//- +sContent2
+	+footer().--wide
