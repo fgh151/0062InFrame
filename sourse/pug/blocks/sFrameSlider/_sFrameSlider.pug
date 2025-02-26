@@ -5,8 +5,7 @@ mixin sFrameSlider(data)
 			+b.section-title
 				h2 Раскадровка
 			+e.slider--js.swiper
-				.parallax-bg(style="background-image: url('img/svg/parallax.svg')" data-swiper-parallax="-10%").d-none.d-lg-block
-				.parallax-bg(style="background-image: url('img/svg/parallax-mob.svg')" data-swiper-parallax="-20%").d-lg-none
+				//- .parallax-bg(style="background-image: url('img/lenta2.jpg')" data-swiper-parallax="-100%"). 
 
 				.swiper-wrapper
 					.swiper-slide(data-swiper-parallax="-300"): +frameSlide('Кадр 1','13 февраля — 11 июля','Прием заявок','Участники вносят данные о проекте в личном кабинете на сайте Премии')
