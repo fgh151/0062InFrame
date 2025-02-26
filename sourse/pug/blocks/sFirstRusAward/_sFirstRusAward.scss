@@ -3,39 +3,54 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	
+
 	@include media-breakpoint-down(md) {
-    --sTPB: #{rem(20)};
-    }
-	&__row{
+		--sTPB: #{rem(20)};
+	}
+	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: #{rem(20)};
 	}
 
-  h2 span {
-    border-radius: 12px 12px 12px 0;
-    background: #fff;
-    font-size: 18px;
-    line-height: 100%;
-    color: $purple-400;
-    
-    display: inline-block;
-    
-    padding: rem(8px) rem(14px);
-    margin-top: rem(5);
-    @include media-breakpoint-up(md) {
-      margin-left: rem(10);
-    }
-    @include media-breakpoint-up(xl) {
-      transform: translateY(-10px);
-    }
-  }
+	h2 {
+		@include media-breakpoint-down(md) {
+			display: flex;
+			flex-direction: column;
+			align-items: baseline;
+		}
+	}
+	h2 span {
+		border-radius: 12px 12px 12px 0;
+		background: #fff;
+		font-size: 18px;
+		line-height: 100%;
+		color: $purple-400;
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+		display: inline-block;
+
+		padding: rem(8px) rem(14px);
+		margin-top: rem(5);
+
+		@include media-breakpoint-up(md) {
+			margin-left: rem(10);
+		}
+		@include media-breakpoint-up(xl) {
+			transform: translateY(-10px);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sFirstRusAward
