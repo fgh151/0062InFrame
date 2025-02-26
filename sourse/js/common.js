@@ -438,32 +438,32 @@ function eventHandler() {
 	}
 
 	/* Form inputs */
-	const inputs = document.querySelectorAll(".sForm input[required]");
+	// const inputs = document.querySelectorAll(".sForm input[required]");
 
-	if (inputs.length) {
-		inputs.forEach(input => {
-			const toggleVisibility = () => {
-				if (input.type !== "tel") {
-					input.previousSibling.style.visibility =
-						input.value.length > 0 ? "hidden" : "visible";
-				}
-			};
+	// if (inputs.length) {
+	// 	inputs.forEach(input => {
+	// 		const toggleVisibility = () => {
+	// 			if (input.type !== "tel") {
+	// 				input.previousSibling.style.visibility =
+	// 					input.value.length > 0 ? "hidden" : "visible";
+	// 			}
+	// 		};
 
-			input.addEventListener("input", toggleVisibility);
+	// 		input.addEventListener("input", toggleVisibility);
 
-			if (input.type === "tel") {
-				input.addEventListener("focus", () => {
-					input.previousSibling.style.visibility = "hidden";
-				});
+	// 		if (input.type === "tel") {
+	// 			input.addEventListener("focus", () => {
+	// 				input.previousSibling.style.visibility = "hidden";
+	// 			});
 
-				input.addEventListener("blur", () => {
-					if (input.value.length === 0) {
-						input.previousSibling.style.visibility = "visible";
-					}
-				});
-			}
-		});
-	}
+	// 			input.addEventListener("blur", () => {
+	// 				if (input.value.length === 0) {
+	// 					input.previousSibling.style.visibility = "visible";
+	// 				}
+	// 			});
+	// 		}
+	// 	});
+	// }
 
 	const template = document.getElementById("template");
 	if (template) {
