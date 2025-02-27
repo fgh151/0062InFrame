@@ -9,8 +9,8 @@ mixin sAwards(data)
 				- const wrapClass="col-lg-4"
 				+e.col(class= wrapClass)
 					+awardCard('Первое место', '').--yellow
-						+img(src="img/award.png", alt="").award
-						+img(src="img/svg/stars-yellow.svg", alt="").stars-yellow
+						img(src="img/award.png", alt="").award
+						img(src="img/stars-yellow.png", alt="").stars-yellow
 						ul
 							li Команды-победители получат денежные призы
 							li Диплом 1-й степени
@@ -19,14 +19,14 @@ mixin sAwards(data)
 							li 48 млн рублей — общий призовой фонд
 				+e.col(class= wrapClass)
 					+awardCard('Второе место', '')
-						+img(src="img/svg/stars-1.svg", alt="").stars.stars-1
+						img(src="img/stars-1.png", alt="").stars.stars-1
 						ul
 							li Диплом 2-й степени
 							li Статуэтка Премии
 							li Подарки от организаторов и партнеров
 				+e.col(class= wrapClass)
 					+awardCard('Третье место', '')
-						+img(src="img/svg/stars-2.svg", alt="").stars.stars_rotate
+						img(src="img/stars-2.png", alt="").stars.stars_rotate
 						ul
 							li Диплом 3-й степени
 							li Статуэтка Премии

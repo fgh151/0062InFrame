@@ -123,7 +123,8 @@
 		position: absolute;
 		top: 40%;
 		left: 50%;
-		transform: translate(-50%, -45%) rotate(5deg);
+		translate: -50% -45% 0;
+		rotate: 5deg;
 		background: $blue;
 		width: 300vw;
 		height: rem(500);

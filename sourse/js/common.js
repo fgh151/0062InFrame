@@ -92,11 +92,10 @@ function eventHandler() {
 
 	new Swiper(".sFrameSlider__slider--js", {
 		slidesPerView: "auto",
-		freeMode: true,
-		watchOverflow: true,
+		// freeMode: true,
+		// watchOverflow: true,
 		speed: 600,
-		parallax: true,
-		breakpoints: {},
+		// parallax: true,§
 
 		// on: {
 		//   reachEnd: function () {
