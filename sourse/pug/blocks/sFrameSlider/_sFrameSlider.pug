@@ -3,7 +3,12 @@ mixin sFrameSlider(data)
 	+b.SECTION.sFrameSlider.section#sFrameSlider&attributes(attributes)
 		.container
 			+b.section-title
-				h2 Раскадровка
+				.row.aling-items-center
+					.col
+						h2 Раскадровка
+					.col-auto
+						.control-wrap
+							+arrow2
 			+e.slider--js.swiper 
 				.swiper-wrapper
 					.swiper-slide(): +frameSlide('Кадр 1','13 февраля — 11 июля','Прием заявок','Участники вносят данные о проекте в личном кабинете на сайте Премии') 

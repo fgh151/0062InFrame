@@ -184,3 +184,67 @@
 		}
 	}
 }
+
+.control-wrap {
+	width: rem(184);
+	height: rem(44);
+	// margin-top: rem(20);
+	margin-bottom: 0.5rem;
+
+	.swiper-button-hand {
+		--swiperArrowSize: #{rem(44)};
+		width: rem(76);
+		--swiperArrowPosition: 0;
+		background-color: #d0eefd;
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0;
+		color: #fff;
+
+		/* Frame 2087329378 */
+		border-radius: 16px 0px;
+		z-index: 2;
+
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			border-radius: inherit;
+			opacity: var(--opacity, 0.8);
+			background: linear-gradient(
+					79.96deg,
+					rgba(84, 0, 183, 0.85) -240.59%,
+					rgba(0, 152, 227, 0.85) 73.22%
+				),
+				#d0eefd;
+			@include mt;
+		}
+
+		&.swiper-button-disabled {
+			--opacity: 0;
+			color: #75ceff;
+		}
+		&:not(.swiper-button-disabled):hover {
+			--opacity: 1;
+		}
+
+		.icon {
+			font-size: rem(30);
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 4;
+			position: relative;
+			rotate: 45deg;
+		}
+	}
+	.swiper-button-hand-prev {
+		border-radius: 0 16px;
+		.icon {
+			rotate: -135deg;
+		}
+	}
+}

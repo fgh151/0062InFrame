@@ -95,6 +95,10 @@ function eventHandler() {
 		// freeMode: true,
 		// watchOverflow: true,
 		speed: 600,
+		navigation: {
+			nextEl: ".sFrameSlider .swiper-button-next",
+			prevEl: ".sFrameSlider .swiper-button-prev",
+		},
 		// parallax: true,§
 
 		// on: {
