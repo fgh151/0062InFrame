@@ -77,6 +77,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-logout {
+	$h: 33;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(27 / #{$h} *1em );
+}
 .icon-next {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -108,6 +113,11 @@
 	width: calc(16 / #{$h} *1em );
 }
 .icon-upload {
+	$h: 32;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(32 / #{$h} *1em );
+}
+.icon-userCircle {
 	$h: 32;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(32 / #{$h} *1em );
