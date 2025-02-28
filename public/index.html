@@ -277,7 +277,7 @@
 						<div class="sAwards__row row">
 							<div class="sAwards__col col-lg-4">
 								<div class="award-card award-card--yellow">
-									<div class="h3 fw-500">Первое место</div><img class="award" src="img/award.png" alt="" loading="lazy"/><img class="stars-yellow" src="img/svg/stars-yellow.svg" alt="" loading="lazy"/>
+									<div class="h3 fw-500">Первое место</div><img class="award" src="img/award.png" alt=""/><img class="stars-yellow" src="img/stars-yellow.png" alt=""/>
 									<ul>
 										<li>Команды-победители получат денежные призы</li>
 										<li>Диплом 1-й степени</li>
@@ -289,7 +289,7 @@
 							</div>
 							<div class="sAwards__col col-lg-4">
 								<div class="award-card">
-									<div class="h3 fw-500">Второе место</div><img class="stars stars-1" src="img/svg/stars-1.svg" alt="" loading="lazy"/>
+									<div class="h3 fw-500">Второе место</div><img class="stars stars-1" src="img/stars-1.png" alt=""/>
 									<ul>
 										<li>Диплом 2-й степени</li>
 										<li>Статуэтка Премии</li>
@@ -299,7 +299,7 @@
 							</div>
 							<div class="sAwards__col col-lg-4">
 								<div class="award-card">
-									<div class="h3 fw-500">Третье место</div><img class="stars stars_rotate" src="img/svg/stars-2.svg" alt="" loading="lazy"/>
+									<div class="h3 fw-500">Третье место</div><img class="stars stars_rotate" src="img/stars-2.png" alt=""/>
 									<ul>
 										<li>Диплом 3-й степени</li>
 										<li>Статуэтка Премии</li>
@@ -316,11 +316,29 @@
 				<section class="sFrameSlider section" id="sFrameSlider">
 					<div class="container">
 						<div class="section-title">
-							<h2>Раскадровка</h2>
+							<div class="row aling-items-center">
+								<div class="col">
+									<h2>Раскадровка</h2>
+								</div>
+								<div class="col-auto">
+									<div class="control-wrap">
+										<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+											<svg class="icon icon-arrowUpRight ">
+												<use xlink:href="img/svg/sprite.svg#arrowUpRight"></use>
+											</svg>
+										</div>
+										<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+											<svg class="icon icon-arrowUpRight ">
+												<use xlink:href="img/svg/sprite.svg#arrowUpRight"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="sFrameSlider__slider sFrameSlider__slider--js swiper">
+						<div class="sFrameSlider__slider sFrameSlider__slider--js swiper"> 
 							<div class="swiper-wrapper">
-								<div class="swiper-slide" data-swiper-parallax="-300">
+								<div class="swiper-slide">
 									<div class="frame-slider">
 										<div class="frame-slider__top">
 											<div class="frame-slider__nav">
@@ -333,13 +351,13 @@
 											<div class="frame-slider__title h3">Прием заявок
 											</div>
 											<div class="frame-slider__text">Участники вносят данные о проекте в личном кабинете на сайте Премии
-											</div>
+											</div> 
 											<a class="frame-slider__btn btn btn-light" href="#">Подать заявку
 											</a>
 										</div>
 									</div>
 								</div>
-								<div class="swiper-slide" data-swiper-parallax="-300">
+								<div class="swiper-slide">
 									<div class="frame-slider">
 										<div class="frame-slider__top">
 											<div class="frame-slider__nav">
@@ -356,7 +374,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="swiper-slide" data-swiper-parallax="-300">
+								<div class="swiper-slide">
 									<div class="frame-slider">
 										<div class="frame-slider__top">
 											<div class="frame-slider__nav">
@@ -373,7 +391,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="swiper-slide" data-swiper-parallax="-300">
+								<div class="swiper-slide">
 									<div class="frame-slider">
 										<div class="frame-slider__top">
 											<div class="frame-slider__nav">
@@ -390,7 +408,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="swiper-slide" data-swiper-parallax="-300">
+								<div class="swiper-slide">
 									<div class="frame-slider frame-slider--primary">
 										<div class="frame-slider__top">
 											<div class="frame-slider__nav">
@@ -403,7 +421,7 @@
 											<div class="frame-slider__title h3">Премьера
 											</div>
 											<div class="frame-slider__text">Приветствуем финалистов, награждаем лауреатов и победителей на торжественной церемонии очно в Москве
-											</div><img class="stars stars_rotate" src="img/svg/stars-3.svg" alt="" loading="lazy"/>
+											</div><img class="stars stars_rotate" src="img/stars-3.png" alt="" loading="lazy"/>
 										</div>
 									</div>
 								</div>
@@ -767,6 +785,29 @@
 					</div>
 				</section>
 				<!-- end sNews-->
+				<!-- start sTg-->
+				<section class="sTg section" id="sTg">
+					<div class="container">
+						<div class="sTg__inner">
+							<div class="row">
+								<div class="sTg__col-text col">
+									<div class="sTg__title">Следите за новостями и яркими моментами Премии в нашем телеграм-канале
+									</div>
+									<picture>
+										<source srcset="img/tg-bg.png" media="(min-width: 768px)"/><img src="img/tg-bg-mobile.png" alt=""/>
+									</picture><a class="btn btn-white" href="#" target="_blank">Присоединиться</a>
+								</div>
+								<div class="sTg__col col-auto d-none d-md-block">
+									<a class="sTg__mockup" href="#" target="_blank"><img src="img/td-code.png" alt=""/>
+										<div class="sTg__mockup-text">@vkadre_media
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sTg-->
 				<!-- start sContent-->
 				<section class="sContent section" id="sContent">
 					<div class="container">

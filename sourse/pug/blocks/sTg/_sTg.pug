@@ -1,0 +1,19 @@
+mixin sTg(data)
+	// start sTg
+	+b.SECTION.sTg.section#sTg&attributes(attributes)
+		.container
+			+e.inner
+				.row
+					+e.col-text.col
+						+e.title Следите за новостями и яркими моментами Премии в нашем телеграм-канале
+
+						picture
+							source(srcset="img/tg-bg.png", media="(min-width: 768px)")
+							img(src="img/tg-bg-mobile.png", alt="") 
+						a.btn.btn-white(href="#" target="_blank") Присоединиться
+					+e.col.col-auto.d-none.d-md-block
+						+e.mockup(href="#" target="_blank")
+							
+							img(src="img/td-code.png", alt="")
+							+e.mockup-text @vkadre_media
+	// end sTg

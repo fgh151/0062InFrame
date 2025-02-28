@@ -3,19 +3,21 @@ mixin sFrameSlider(data)
 	+b.SECTION.sFrameSlider.section#sFrameSlider&attributes(attributes)
 		.container
 			+b.section-title
-				h2 Раскадровка
-			+e.slider--js.swiper
-				//- .parallax-bg(style="background-image: url('img/lenta2.jpg')" data-swiper-parallax="-100%"). 
-
+				.row.aling-items-center
+					.col
+						h2 Раскадровка
+					.col-auto
+						.control-wrap
+							+arrow2
+			+e.slider--js.swiper 
 				.swiper-wrapper
-					.swiper-slide(data-swiper-parallax="-300"): +frameSlide('Кадр 1','13 февраля — 11 июля','Прием заявок','Участники вносят данные о проекте в личном кабинете на сайте Премии')
-						//- +e.text Узнайте об этапах и правилах подачи заявок в #[a(href="#") чек-листе участника]
+					.swiper-slide(): +frameSlide('Кадр 1','13 февраля — 11 июля','Прием заявок','Участники вносят данные о проекте в личном кабинете на сайте Премии') 
 						+e.btn.btn.btn-light(href='#') Подать заявку
-					.swiper-slide(data-swiper-parallax="-300"): +frameSlide('Кадр 2','14 июля — 3 августа','Техническая экспертиза','Мы обрабатываем заявки в соответствии с критериями Премии и определяем номинантов')
-					.swiper-slide(data-swiper-parallax="-300"): +frameSlide('Кадр 3','4 августа — 7 сентября','Экспертная комиссия','Эксперты выбирают 60 финалистов — информацию о командах и их проектах мы публикуем на сайте Премии. Финалистов приглашаем на церемонию награждения')
-					.swiper-slide(data-swiper-parallax="-300"): +frameSlide('Кадр 4','8 сентября — 21 сентября','Голосование жюри','Жюри определяет 36 лауреатов — из них 12 победителей')
-					.swiper-slide(data-swiper-parallax="-300"): +frameSlide('Кадр 5','2 октября','Премьера','Приветствуем финалистов, награждаем лауреатов и победителей на торжественной церемонии очно в Москве').--primary
-						+img(src="img/svg/stars-3.svg", alt="").stars.stars_rotate
+					.swiper-slide(): +frameSlide('Кадр 2','14 июля — 3 августа','Техническая экспертиза','Мы обрабатываем заявки в соответствии с критериями Премии и определяем номинантов')
+					.swiper-slide(): +frameSlide('Кадр 3','4 августа — 7 сентября','Экспертная комиссия','Эксперты выбирают 60 финалистов — информацию о командах и их проектах мы публикуем на сайте Премии. Финалистов приглашаем на церемонию награждения')
+					.swiper-slide(): +frameSlide('Кадр 4','8 сентября — 21 сентября','Голосование жюри','Жюри определяет 36 лауреатов — из них 12 победителей')
+					.swiper-slide(): +frameSlide('Кадр 5','2 октября','Премьера','Приветствуем финалистов, награждаем лауреатов и победителей на торжественной церемонии очно в Москве').--primary
+						+img(src="img/stars-3.png", alt="").stars.stars_rotate
 	// end sFrameSlider
 
 mixin frameSlide(s1, date, t, p)

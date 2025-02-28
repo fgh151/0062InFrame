@@ -64,12 +64,18 @@
 	&__content {
 		.text-large {
 			margin-bottom: rem(20);
+			@include media-breakpoint-up(lg) {
+				margin-top: 10px;
+				transform: none;
+				margin-bottom: 0;
+			}
 			line-height: 110%;
 		}
 
 		display: grid;
 		grid-template-columns: 1fr;
 		@include media-breakpoint-up(lg) {
+			align-items: center;
 			grid-template-columns: max-content max-content;
 			// align-items: end;
 

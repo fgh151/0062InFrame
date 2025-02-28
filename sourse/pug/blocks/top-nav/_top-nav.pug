@@ -43,9 +43,13 @@ mixin top-nav(main)
 							+e.btn.btn.btn-light.small.btn-wr--js(href='#') Подать заявку
 						else
 							+e.btn.btn.btn-light.small(href='#') Подать заявку
-						+e.btn.btn.btn-outline-light.small(href='#') Личный кабинет
 				.col-auto.d-xl-none
 					+menu-toggle()
+				.col-auto
+						+e.btn-icon(href='#')
+							+icon("userCircle")
+						+e.btn-icon(href='#')
+							+icon("logout")
 	// end top-nav
 
 
