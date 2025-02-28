@@ -28,10 +28,11 @@
 		overflow: visible;
 		// position: relative;
 		// z-index: 1;
+		// margin-left: -34px;
 		// transform: translateX(-34px);
 	}
 	.swiper-wrapper {
-		padding: rem(42) rem(56);
+		padding: 64px rem(56);
 		padding-left: 0 !important;
 		&::before {
 			content: "";
@@ -43,7 +44,10 @@
 			background-image: url(../img/lenta2.jpg);
 			background-size: auto 100%;
 			z-index: -1;
-			width: calc(300% + 100vw);
+			@include media-breakpoint-up(sm) {
+				width: calc(300% + 100vw);
+			}
+			width: calc(600% + 100vw);
 			// width: 600%;
 			// min-width: 300;
 			height: 100%;
