@@ -22,14 +22,30 @@
 
 		&:nth-child(odd) .nomination-card {
 			border-radius: 0 var(--card-bord) 0 0;
-			--bg-before: #{$blue};
+			--bg-before: radial-gradient(
+				50% 50% at 50% 50%,
+				#0098e3 0%,
+				rgba(0, 152, 227, 0.910508) 42%,
+				rgba(0, 152, 227, 0.605) 64%,
+				rgba(0, 152, 227, 0.374524) 77.5%,
+				rgba(0, 152, 227, 0) 100%
+			);
+
 			&:before {
 			}
 		}
 
 		&:nth-child(even) .nomination-card {
 			border-radius: var(--card-bord) 0 0 0;
-			--bg-before: #7f30ff;
+			--bg-before: radial-gradient(
+				50% 50% at 50% 50%,
+				#7f30ff 0%,
+				rgba(127, 48, 255, 0.910508) 42%,
+				rgba(127, 48, 255, 0.605) 64%,
+				rgba(127, 48, 255, 0.374524) 77.5%,
+				rgba(127, 48, 255, 0) 100%
+			);
+
 			&:before {
 			}
 		}
@@ -140,12 +156,12 @@
 			content: "";
 			position: absolute;
 			z-index: -1;
-			top: -10%;
-			left: -5%;
+			top: -40%;
+			left: -35%;
 			border-radius: 100%;
-			filter: blur(48px);
-			width: 130%;
-			height: 150%;
+			// filter: blur(48px);
+			width: 180%;
+			height: 200%;
 			transform: translateZ(0) rotate(10deg);
 			background: var(--bg-before);
 			// @include mt;

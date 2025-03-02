@@ -5,17 +5,19 @@
 	// --sTPB: #{rem()};
 	position: relative;
 	z-index: 2;
-	&::before {
-		content: "";
-		@include a-cent1;
-		position: absolute;
-		width: 200%;
-		z-index: -1;
-		height: 100%;
+	&.bg-before.bg-before::before {
+		// background: $indigo;
+		/* Ellipse 631 */
+		height: 140%;
 
-		background: #5e17d3;
-		filter: blur(106.45px);
-		transform: rotate(14.41deg);
+		background: radial-gradient(
+			50% 50% at 50% 50%,
+			#5f11bc 0%,
+			rgba(127, 48, 255, 0.910508) 41%,
+			rgba(127, 48, 255, 0.605) 60.5%,
+			rgba(127, 48, 255, 0.374524) 73%,
+			rgba(127, 48, 255, 0) 100%
+		);
 	}
 
 	&__inner {

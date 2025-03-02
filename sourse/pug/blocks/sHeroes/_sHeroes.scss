@@ -126,20 +126,31 @@
 		translate: -50% -45% 0;
 		rotate: 5deg;
 		background: $blue;
-		width: 300vw;
-		height: rem(500);
+		pointer-events: none;
+		width: 500%;
+		height: 110%;
 		border-radius: 50%;
 		z-index: -1;
-		filter: blur(52px);
+		// filter: blur(52px);
+		/* Ellipse 631 */
+
+		background: radial-gradient(
+			50% 50% at 50% 50%,
+			#0098e3 0%,
+			rgba(0, 152, 227, 0.73) 41%,
+			rgba(0, 152, 227, 0.44) 60.5%,
+			rgba(0, 152, 227, 0.374524) 73%,
+			rgba(0, 152, 227, 0) 100%
+		);
 
 		@include media-breakpoint-up(sm) {
-			filter: blur(102px);
+			// filter: blur(102px);
 		}
 
-		@include media-breakpoint-up(lg) {
-			top: 50%;
-			width: 110vw;
-			height: 80%;
-		}
+		// @include media-breakpoint-up(lg) {
+		// 	top: 50%;
+		// 	width: 110vw;
+		// 	height: 80%;
+		// }
 	}
 }
