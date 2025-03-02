@@ -156,12 +156,12 @@
 			content: "";
 			position: absolute;
 			z-index: -1;
-			top: -40%;
+			top: -70%;
 			left: -35%;
 			border-radius: 100%;
 			// filter: blur(48px);
 			width: 180%;
-			height: 200%;
+			height: 300%;
 			transform: translateZ(0) rotate(10deg);
 			background: var(--bg-before);
 			// @include mt;
