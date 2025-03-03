@@ -1,5 +1,6 @@
 #sContent2 {
 	--sTPB: #{rem(26)};
+
 	// --sPB: #{rem(60)};
 	@include media-breakpoint-up(lg) {
 		--sTPB: #{rem(40)};
@@ -10,6 +11,8 @@
 .sContent {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
+	position: relative;
+	z-index: 4;
 	--sTPB: #{rem(20)};
 	@include media-breakpoint-up(lg) {
 		--sTPB: #{rem(8)};

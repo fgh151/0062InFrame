@@ -18,6 +18,7 @@
 			rgba(127, 48, 255, 0.374524) 73%,
 			rgba(127, 48, 255, 0) 100%
 		);
+		rotate: 7.73deg;
 	}
 
 	&__inner {
@@ -100,6 +101,12 @@
 
 	&__col-text {
 		position: relative;
+		@include media-breakpoint-up(md) {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
 		.btn {
 			@include media-breakpoint-up(md) {
 				margin-bottom: rem(60);

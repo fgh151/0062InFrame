@@ -121,14 +121,14 @@
 	&::before {
 		content: "";
 		position: absolute;
-		top: 40%;
+		top: 50%;
 		left: 50%;
 		translate: -50% -45% 0;
-		rotate: 5deg;
+		rotate: 0;
 		background: $blue;
 		pointer-events: none;
 		width: 500%;
-		height: 110%;
+		height: 120%;
 		border-radius: 50%;
 		z-index: -1;
 		// filter: blur(52px);
