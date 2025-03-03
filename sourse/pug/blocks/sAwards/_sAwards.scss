@@ -22,6 +22,103 @@
 				border-radius: var(--border-lg) 0 var(--border-lg) 0;
 			}
 		}
+		&:nth-child(2) {
+			.award-card {
+				background: linear-gradient(
+					133.35deg,
+					#5400b7 -126.55%,
+					#0098e3 167.09%
+				);
+				.h3::before,
+				&::after,
+				&::before {
+					content: "";
+					position: absolute;
+					width: calc(1028.25 / 400 * 100%);
+					height: calc(809.78 / 490 * 100%);
+					left: 0;
+					top: 0;
+					z-index: -1;
+
+					background: radial-gradient(
+						50% 50% at 50% 50%,
+						rgba(255, 255, 255, 0.5) 0%,
+						rgba(255, 255, 255, 0.45) 42%,
+						rgba(255, 255, 255, 0.3) 64%,
+						rgba(255, 255, 255, 0.15) 77.5%,
+						rgba(255, 255, 255, 0) 100%
+					);
+					transform: rotate(107.26deg);
+				}
+				&::before {
+					rotate: 15deg;
+					top: auto;
+					bottom: 66%;
+					left: -30%;
+
+					// translate: -100% -100%;
+				}
+
+				&::after {
+					left: -46%;
+					rotate: 7deg;
+					top: 89%;
+				}
+
+				.h3::before {
+					// left: -46%;
+					left: auto;
+					right: 1%;
+					rotate: 7deg;
+					top: 89%;
+					left: auto;
+					right: 1%;
+					rotate: 7deg;
+					top: 54%;
+				}
+			}
+		}
+
+		&:nth-child(3) {
+			.award-card {
+				background: linear-gradient(130.71deg, #5400b7 -331.48%, #0098e3 100%);
+
+				&::after,
+				&::before {
+					content: "";
+					position: absolute;
+					width: calc(1028.25 / 400 * 100%);
+					height: calc(809.78 / 490 * 100%);
+					left: 0;
+					top: 0;
+					z-index: -1;
+
+					background: radial-gradient(
+						50% 50% at 50% 50%,
+						rgba(255, 255, 255, 0.5) 0%,
+						rgba(255, 255, 255, 0.45) 42%,
+						rgba(255, 255, 255, 0.3) 64%,
+						rgba(255, 255, 255, 0.15) 77.5%,
+						rgba(255, 255, 255, 0) 100%
+					);
+					transform: rotate(107.26deg);
+				}
+				&::before {
+					bottom: 75%;
+					left: -98%;
+					rotate: 10deg;
+					top: auto;
+				}
+
+				&::after {
+					left: -94%;
+					rotate: 2deg;
+					top: 77%;
+					width: calc(742.25 / 400 * 100%);
+					height: calc(583.78 / 490 * 100%);
+				}
+			}
+		}
 	}
 
 	.text-large a {
