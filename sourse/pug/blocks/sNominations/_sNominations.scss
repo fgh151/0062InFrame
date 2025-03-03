@@ -166,8 +166,8 @@
 			background: var(--bg-before);
 			// @include mt;
 			transition: translate 0.3s ease;
+			left: -44%;
 			@include media-breakpoint-up(lg) {
-				left: -20%;
 			}
 		}
 	}
