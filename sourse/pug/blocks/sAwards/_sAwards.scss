@@ -55,14 +55,19 @@
 					top: auto;
 					bottom: 66%;
 					left: -30%;
+					width: calc(911.25 / 400 * 100%);
+					height: calc(630.78 / 490 * 100%);
 
 					// translate: -100% -100%;
 				}
 
 				&::after {
-					left: -46%;
-					rotate: 7deg;
-					top: 89%;
+					left: -7%;
+					rotate: 0deg;
+					top: 75%;
+
+					width: calc(742.25 / 400 * 100%);
+					height: calc(583.78 / 490 * 100%);
 				}
 
 				.h3::before {
