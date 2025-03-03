@@ -12,14 +12,25 @@
 		// --bs-gutter-y: #{rem()};
 	}
 	&.bg-before.bg-before::before {
-		background: $indigo;
+		// background: $indigo;
+		/* Ellipse 631 */
 
-		height: 90%;
-		backdrop-filter: blur(150px);
+		background: radial-gradient(
+			50% 50% at 50% 50%,
+			#5f11bc 0%,
+			rgba(127, 48, 255, 0.910508) 41%,
+			rgba(127, 48, 255, 0.605) 60.5%,
+			rgba(127, 48, 255, 0.374524) 73%,
+			rgba(127, 48, 255, 0) 100%
+		);
+		transform: rotate(7.73deg);
+
+		// height: 90%;
+		// backdrop-filter: blur(150px);
 		@include media-breakpoint-down(lg) {
-			backdrop-filter: blur(200px);
-			height: 100%;
-			top: 44%;
+			// backdrop-filter: blur(200px);
+			// height: 100%;
+			// top: 44%;
 		}
 	}
 
