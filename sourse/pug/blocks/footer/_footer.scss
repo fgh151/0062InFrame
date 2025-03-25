@@ -121,7 +121,7 @@
 	}
 
 	&__logo-wrap {
-		a {
+		span {
 			&:not(:last-child) {
 				margin-right: rem(16);
 				@include media-breakpoint-up(lg) {

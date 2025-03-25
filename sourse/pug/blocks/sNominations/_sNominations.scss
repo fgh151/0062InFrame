@@ -247,6 +247,25 @@
 				transform: translate(20%, 10%);
 			}
 		}
+
+		.sQuestion {
+			width: 390px;
+			height: 390px;
+			transform: none;
+			opacity: .8;
+			right: 0;
+
+			@include media-breakpoint-up(lg) {
+				height: 390px;
+				transform: translateY(5%);
+			}
+
+			@include media-breakpoint-down(md) {
+				width: 156px;
+				height: 145px;
+				top: 52px;
+			}
+		}
 	}
 	&__btn {
 		--bs-btn-padding-x: #{rem(32)};
