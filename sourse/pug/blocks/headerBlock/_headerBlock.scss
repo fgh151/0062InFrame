@@ -1,8 +1,16 @@
 // start .headerBlock
+
+.header-container {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
 .headerBlock {
 	--sPT: calc(14vh);
 	--sTPB: #{rem(16)};
 	--sPB: #{rem(0)};
+
 	@include media-breakpoint-up(lg) {
 		--sTPB: #{rem(40)};
 		--sPB: #{rem(100)};
@@ -29,6 +37,10 @@
 
 	&__row {
 		--bs-gutter-y: var(--bs-gutter-x);
+
+		display: flex;
+		flex-direction: column;
+		flex: 1;
 	}
 
 	&__apply {
@@ -269,4 +281,70 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.btn-subscribe-wrapper {
+	flex: 1;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	margin-bottom: -68px; // --sPB - 32px, где 32px отступ по макету
+
+	@include media-breakpoint-down(lg) {
+		margin-bottom: 16px;
+	}
+}
+
+.btn-subscribe {
+	width: 215px;
+	height: 52px;
+
+	background-color: white;
+	text-decoration: none;
+	border-radius: 40px;
+	padding: 0 20px;
+	cursor: pointer;
+	transition: background-color .15s ease-in-out;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 8px;
+
+	&:hover {
+		background-color: var(--bs-btn-hover-bg);
+		transition: background-color .15s ease-in-out;
+	}
+
+	@include media-breakpoint-down(lg) {
+		max-width: 148px;
+		height: 38px;
+		padding: 0 13px;
+	}
+}
+
+span.gradient {
+	background: linear-gradient(148deg, #5400b7, #0098e3);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.4;
+
+	@include media-breakpoint-down(lg) {
+		font-size: 14px;
+		line-height: 1.1;
+	}
+}
+
+.gradient-telegram-icon {
+	width: 36px;
+	height: 32px;
+
+	@include media-breakpoint-down(lg) {
+		width: 22px;
+		height: 20px;
+	}
 }
