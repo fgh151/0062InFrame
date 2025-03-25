@@ -250,20 +250,37 @@
 
 		.sQuestion {
 			width: 390px;
-			height: 390px;
-			transform: none;
+			height: 390px !important;
+			transform: none !important;
 			opacity: .8;
-			right: 0;
+			right: 15px;
+			top: -30px;
 
-			@include media-breakpoint-up(lg) {
-				height: 390px;
-				transform: translateY(5%);
+			@include media-breakpoint-down(xl) {
+				width: 50%;
+				top: -15%;
+				right: -5%;
 			}
 
-			@include media-breakpoint-down(md) {
-				width: 156px;
-				height: 145px;
-				top: 52px;
+			@media screen and (max-width: 976px) and (min-width: 576px) {
+				width: 40%;
+				top: -15%;
+				right: 0;
+			}
+
+			@media screen and (max-width: 575px) and (min-width: 422px) {
+				width: 50%;
+				top: -12%;
+			}
+
+			@media screen and (max-width: 421px) and (min-width: 320px) {
+				width: 65%;
+				top: -10%;
+			}
+
+			@media screen and (max-width: 319px) {
+				width: 70%;
+				top: -10%;
 			}
 		}
 	}
