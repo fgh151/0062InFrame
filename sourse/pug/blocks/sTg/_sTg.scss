@@ -59,6 +59,10 @@
 		}
 	}
 
+	.join-bnt {
+		position: relative;
+	}
+
 	&__title {
 		color: #fff;
 		@include rfs(40px);

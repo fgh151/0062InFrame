@@ -20,12 +20,12 @@ block pagecontent
 	
 	+parts('header-main')
 	main
-		+b.s404--pause.section.container
+		+b.s404--pause.section.container.unavailable-container
 			.row.g-4(style="position: relative; width: 100%;")
 				+e.col-text.col.settings-column-wrapper
 					h1.settings-pause Техническая пауза
 
-					p.settings-paragraph.settings-text-mw(style="margin-bottom: 32px;") Сайт Премии Правительства Москвы «В кадре» временно недоступен, но мы уже работаем над тем, чтобы это исправить.
+					p.settings-paragraph.settings-text-mw(style="margin-bottom: 32px;") Страница временно недоступна, но мы уже работаем над тем, чтобы устранить все неполадки.
 
 					.panel-white.settings-text-mw(style="margin-bottom: 20px; border-radius: 12px;")
 						p.settings-paragraph #[strong Если у вас возник вопрос], пожалуйста, 
@@ -35,8 +35,5 @@ block pagecontent
 							br
 							| на #[a(href="mailtovkadre-info@mos.ru") vkadre-info@mos.ru]. 
 						p.settings-paragraph(style="margin-top: 10px;") Мы обязательно поможем.
-					p.settings-paragraph.settings-text-mw Благодарим вас за желание делиться опытом в сфере управления персоналом и остаемся на связи!
 				.col-xxl-6.col-sm-5.text-center.settings-img
 					img(src="img/tech_1.png", alt="").res-i.m-0
-		//- +sContent2
-	+footer().--wide

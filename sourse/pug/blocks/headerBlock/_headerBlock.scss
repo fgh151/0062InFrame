@@ -24,6 +24,10 @@
 		margin-bottom: rem(60);
 	}
 
+	@include media-breakpoint-down(md) {
+		height: 672px;
+	}
+
 	background: var(--header-block-bg);
 	color: $white;
 	height: 100vh;
@@ -48,6 +52,15 @@
 			max-width: rem(200);
 			margin-left: rem(24);
 			transform: translateY(40%);
+		}
+
+		@include media-breakpoint-down(md) {
+			height: auto;
+			margin-bottom: 53px !important;
+
+			span {
+				font-weight: 400 !important;
+			}
 		}
 	}
 
@@ -174,6 +187,11 @@
 
 		img {
 			height: 45vh;
+			
+			@include media-breakpoint-down(md) {
+				width: 320px;
+				height: 284px;
+			}
 		}
 
 		.bg-gr {
@@ -234,7 +252,19 @@
 		line-height: 1;
 		--bs-btn-font-size: 16px;
 	}
+
 }
+
+.btn-apply {
+	@include media-breakpoint-down(md) {
+		height: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+	}
+}
+
 .vertical-move.btn-wr--js {
 	@include media-breakpoint-down(xl) {
 		transform: translateY(150%);
