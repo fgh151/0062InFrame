@@ -27,52 +27,8 @@
 	</head>
 	<body class="main-page">
 		<div class="main-wrapper">
-
-			<!-- start header-->
-			<header class="header" id="header">
-				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy">
-					<div class="container">
-						<div class="top-nav__row row">
-							<div class="col-lg-auto col">
-								<div class="top-nav__logo-wrap"><a href="#"><img src="img/svg/logo-white.svg" alt="" loading="lazy"/></a>
-								</div>
-							</div>
-							<div class="col-lg order-lg-0 order-last">
-								<div class="menu-mobile menu-mobile--js">
-									<div class="menu-mobile__inner">
-										<div class="menu-wrap d-xl-none">
-											<div class="top-nav__btns-wrap">
-												<a class="top-nav__btn btn btn-outline-light small" href="#">Личный кабинет
-												</a>
-												<a class="top-nav__btn btn btn-primary" href="#">Подать заявку
-												</a>
-											</div>
-											<div class="top-nav__apply text-center fw-600">Прием заявок до 11 июля
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-auto">
-								<div class="top-nav__btns-wrap wrap-header d-none d-xl-block">
-									<a class="top-nav__btn btn btn-light small btn-wr btn-wr--js" href="#">Подать заявку
-									</a>
-								</div>
-							</div>
-							<div class="col-auto d-xl-none">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js d-xl-none"><span></span>
-								</div>
-							</div>
-							<div class="col-auto">
-
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- end top-nav-->
-			</header>
-			<!-- end header-->
+			<script>addBlock(`header-main`)</script>
+			<div id="header-mainWrap"></div>
 			<main>
 				<div class="s404 s404--pause section container">
 					<div class="row g-4" style="position: relative; width: 100%;">
@@ -155,6 +111,1277 @@
 					</div>
 				</div>
 			</footer>
+		</div>
+		<!--  start modals-->
+		<div id="modal-call" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+							</div>
+							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+						</div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Ваше Имя" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Ваше телефон" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Ваше телефон" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn" type="submit">submit
+						</button>
+						<div class="form-wrap__policy">
+							<div class="small text text-secondary">Нажимая на кнопку, я подтверждаю, что ознакомлен с <a href="#">Положением о Премии</a>, условиями <a href="#">обработки персональных данных</a>, и <a href="#">соглашаюсь на их обработку.</a></div>
+						</div>
+						<div class="form-wrap__policy">
+							<div class="small text text-secondary">Нажимая на кнопку, я подтверждаю, что ознакомлен с <a href="#">Положением о Премии</a>, условиями <a href="#">обработки персональных данных</a>, и <a href="#">соглашаюсь на их обработку.</a></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-question" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__title-wrap text-center">
+					<div class="modal-win__title form-data h2">Задать вопрос
+					</div>
+					<div class="after-headline">Если у вас возник вопрос о Премии,<br>пожалуйста, заполните короткую форму ниже. Наши специалисты свяжутся с вами в ближайшее время.</div>
+				</div>
+				<div class="tabs tabs-form">
+					<div class="form-wrap__input-title title small text-secondary required">Как вы хотите получить консультацию?</div>
+					<div class="item tabs__caption small">
+						<div class="tabs__btn">По телефону</div>
+						<div class="tabs__btn active">Письмом на почту</div>
+					</div>
+					<div class="tabs__content">
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Ф. И. О.</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Телефон" required="required"/><span class="form-wrap__input-title small text-secondary">Телефон</span><span class="error-feedback text text-indigo">Если вы вписываете рабочий телефон с добавочным номером, укажите его в поле ниже.</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Введите текст" required="required"/><span class="form-wrap__input-title small text-secondary">Ваше сообщение</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="title text-secondary small required">Подтвердите, что вы не робот, введите символы с картинки</div>
+								<div class="capture-wrap"></div>
+								<div class="form-wrap__policy">
+									<div class="small text text-secondary">Нажимая на кнопку, я подтверждаю, что ознакомлен с <a href="#">Положением о Премии</a>, условиями <a href="#">обработки персональных данных</a>, и <a href="#">соглашаюсь на их обработку.</a></div>
+								</div>
+								<div class="form-wrap__btn-wrap text-center">
+									<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="tabs__content active">
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Ф. И. О.</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="form-wrap__input-title small text-secondary">Почта</span><span class="error-feedback text text-indigo">Пожалуйста, указывайте только почтовый адрес с доменом .ru</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Введите текст" required="required"/><span class="form-wrap__input-title small text-secondary">Ваше сообщение</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="title text-secondary small required">Подтвердите, что вы не робот, введите символы с картинки</div>
+								<div class="capture-wrap"></div>
+								<div class="form-wrap__policy">
+									<div class="small text text-secondary">Нажимая на кнопку, я подтверждаю, что ознакомлен с <a href="#">Положением о Премии</a>, условиями <a href="#">обработки персональных данных</a>, и <a href="#">соглашаюсь на их обработку.</a></div>
+								</div>
+								<div class="form-wrap__btn-wrap text-center">
+									<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-auth">
+			<div class="modal-win">
+				<div class="reset-pass-block active" id="base-form">
+					<div class="tabs tabs-auth">
+						<div class="item tabs__caption">
+							<div class="tabs__btn active">Войти</div>
+							<div class="tabs__btn">Зарегистрироваться</div>
+						</div>
+						<div>
+							<div class="tabs__content active">
+								<div class="modal-win__title-wrap text-center">
+									<div class="after-headline">Авторизуйтесь и управляйте заявками </div>
+								</div>
+								<div class="form-wrap">
+									<form>
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="form-wrap__input-title small text-secondary">Почта</span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Пароль</span><span class="btn-toggle-type-input btn-toggle-type-input--js">
+												<svg class="icon icon-eye-off ">
+													<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+												</svg></span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__forgot-passw"><a class="reset-pass-block-toggle" href="#reset-form">Не помню пароль</a>
+										</div>
+										<div class="form-wrap__bottom-wrap text-center">
+											<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="tabs__content">
+								<div class="modal-win__title-wrap text-center">
+									<div class="after-headline smaller">Создание личного кабинета — ваш первый шаг к подаче заявки</div>
+								</div>
+								<div class="form-wrap">
+									<form>
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Фамилия</span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Имя</span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Отчество</span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="form-wrap__input-title small text-secondary">Почта</span><span class="error-feedback text text-indigo">Пожалуйста, указывайте только почтовый адрес с доменом .ru</span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="tabs tabs-form tabs-form--phone">
+											<div class="item tabs__caption small">
+												<div class="tabs__btn active">Рабочий телефон</div>
+												<div class="tabs__btn">Мобильный телефон</div>
+											</div>
+											<div>
+												<div class="tabs__content active">
+													<div class="form-wrap__tel-wrap row">
+														<div class="form-wrap__col col">
+															<div class="form-wrap__input-wrap form-group">
+																<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/><span class="form-wrap__input-title small text-secondary">Телефон</span>
+																</label>
+															</div>
+															<!-- +e.input-wrap-->
+														</div>
+														<div class="form-wrap__col col-sm-auto">
+															<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control additional" inputmode="text" name="text" type="text" placeholder="Доб."/>
+															</div>
+															<!-- +e.input-wrap-->
+														</div>
+													</div>
+												</div>
+												<div class="tabs__content">
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/><span class="form-wrap__input-title small text-secondary">Телефон</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+											</div>
+										</div>
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Ваша организация</span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="error-feedback text text-indigo">Обратите внимание, что для номинирования проекта на Премию ваша организация должна относиться к госсектору.<span class="tooltip-icon">ⓘ </span></div>
+										<div id="template" style="display: none;"> 
+											<div class="form-wrap__tooltip-wrap">
+												<p>ФЕДЕРАЦИЯ<br/>Федеральные органы исполнительной власти и подведомственные им организации, госкорпорации и компании с госучастием</p><br/>
+												<p>РЕГИОН<br/>Органы исполнительной власти субъектов Российской Федерации и подведомственные им организации, а также органы местного самоуправления и подведомственные им организации</p><br/>
+												<p>СТОЛИЦА<br/> органы исполнительной власти города Москвы и подведомственные им организации</p>
+											</div>
+										</div>
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Должность</span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__policy">
+											<div class="small text text-secondary">Нажимая на кнопку, я подтверждаю, что ознакомлен с <a href="#">Положением о Премии</a>, условиями <a href="#">обработки персональных данных</a>, и <a href="#">соглашаюсь на их обработку.</a></div>
+										</div>
+										<div class="form-wrap__bottom-wrap text-center">
+											<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="reset-pass-block" id="reset-form">
+					<a class="modal-win__back-link reset-pass-block-toggle" href="#base-form">
+						<svg class="icon icon-arr-back ">
+							<use xlink:href="img/svg/sprite.svg#arr-back"></use>
+						</svg>
+					</a>
+					<div class="modal-win__title-wrap text-center">
+						<div class="modal-win__title form-data h2">Сброс пароля
+						</div>
+						<p>Пожалуйста, укажите почту, с которой вы создавали личный кабинет</p>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru"/><span class="form-wrap__input-title small text-secondary">Почта</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__bottom-wrap text-center">
+								<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-auth-invalid" style="display: none">
+			<div class="modal-win">
+				<div class="tabs tabs-auth">
+					<div class="item tabs__caption">
+						<div class="tabs__btn active">Войти</div>
+						<div class="tabs__btn">Зарегистрироваться</div>
+					</div>
+					<div class="tabs__content active">
+						<div class="modal-win__title-wrap text-center">
+							<div class="after-headline">Авторизуйтесь и управляйте заявками </div>
+						</div>
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control is-invalid" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="form-wrap__input-title small text-secondary">Почта</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Пароль</span><span class="btn-toggle-type-input btn-toggle-type-input--js">
+										<svg class="icon icon-eye-off ">
+											<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+										</svg></span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__forgot-passw"><a class="reset-pass-block-toggle" href="#reset-form">Не помню пароль</a>
+								</div>
+								<div class="form-wrap__bottom-wrap text-center">
+									<div class="error-feedback text-indigo text small">Пожалуйста, укажите данные для входа.</div>
+									<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="tabs__content">
+						<div class="modal-win__title-wrap text-center">
+							<div class="after-headline smaller">Создание личного кабинета — ваш первый шаг к подаче заявки</div>
+						</div>
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Фамилия</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Имя</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Отчество</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="form-wrap__input-title small text-secondary">Почта</span><span class="error-feedback text text-indigo">Пожалуйста, указывайте только почтовый адрес с доменом .ru</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="tabs tabs-form tabs-form--phone">
+									<div class="item tabs__caption small">
+										<div class="tabs__btn active">Рабочий телефон</div>
+										<div class="tabs__btn">Мобильный телефон</div>
+									</div>
+									<div>
+										<div class="tabs__content active">
+											<div class="form-wrap__tel-wrap row">
+												<div class="form-wrap__col col">
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/><span class="form-wrap__input-title small text-secondary">Телефон</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="form-wrap__col col-sm-auto">
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control additional" inputmode="text" name="text" type="text" placeholder="Доб."/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+											</div>
+										</div>
+										<div class="tabs__content">
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/><span class="form-wrap__input-title small text-secondary">Телефон</span>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+									</div>
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Ваша организация</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="error-feedback text text-indigo">Обратите внимание, что для номинирования проекта на Премию ваша организация должна относиться к госсектору.<span class="tooltip-icon">ⓘ </span></div>
+								<div id="template" style="display: none;"> 
+									<div class="form-wrap__tooltip-wrap">
+										<p>ФЕДЕРАЦИЯ<br/>Федеральные органы исполнительной власти и подведомственные им организации, госкорпорации и компании с госучастием</p><br/>
+										<p>РЕГИОН<br/>Органы исполнительной власти субъектов Российской Федерации и подведомственные им организации, а также органы местного самоуправления и подведомственные им организации</p><br/>
+										<p>СТОЛИЦА<br/> органы исполнительной власти города Москвы и подведомственные им организации</p>
+									</div>
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Должность</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__policy">
+									<div class="small text text-secondary">Нажимая на кнопку, я подтверждаю, что ознакомлен с <a href="#">Положением о Премии</a>, условиями <a href="#">обработки персональных данных</a>, и <a href="#">соглашаюсь на их обработку.</a></div>
+								</div>
+								<div class="form-wrap__bottom-wrap text-center">
+									<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-auth-invalid1" style="display: none">
+			<div class="modal-win">
+				<div class="tabs tabs-auth">
+					<div class="item tabs__caption">
+						<div class="tabs__btn active">Войти</div>
+						<div class="tabs__btn">Зарегистрироваться</div>
+					</div>
+					<div class="tabs__content active">
+						<div class="modal-win__title-wrap text-center">
+							<div class="after-headline">Авторизуйтесь и управляйте заявками </div>
+						</div>
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control is-invalid" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="form-wrap__input-title small text-secondary">Почта</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Пароль</span><span class="btn-toggle-type-input btn-toggle-type-input--js">
+										<svg class="icon icon-eye-off ">
+											<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+										</svg></span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__forgot-passw"><a class="reset-pass-block-toggle" href="#reset-form">Не помню пароль</a>
+								</div>
+								<div class="form-wrap__bottom-wrap text-center">
+									<div class="error-feedback text-indigo text small">Адрес электронной почты должен содержать символ “@”.</div>
+									<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="tabs__content">
+						<div class="modal-win__title-wrap text-center">
+							<div class="after-headline smaller">Создание личного кабинета — ваш первый шаг к подаче заявки</div>
+						</div>
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Фамилия</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Имя</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Отчество</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="form-wrap__input-title small text-secondary">Почта</span><span class="error-feedback text text-indigo">Пожалуйста, указывайте только почтовый адрес с доменом .ru</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="tabs tabs-form tabs-form--phone">
+									<div class="item tabs__caption small">
+										<div class="tabs__btn active">Рабочий телефон</div>
+										<div class="tabs__btn">Мобильный телефон</div>
+									</div>
+									<div>
+										<div class="tabs__content active">
+											<div class="form-wrap__tel-wrap row">
+												<div class="form-wrap__col col">
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/><span class="form-wrap__input-title small text-secondary">Телефон</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="form-wrap__col col-sm-auto">
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control additional" inputmode="text" name="text" type="text" placeholder="Доб."/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+											</div>
+										</div>
+										<div class="tabs__content">
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/><span class="form-wrap__input-title small text-secondary">Телефон</span>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+									</div>
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Ваша организация</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="error-feedback text text-indigo">Обратите внимание, что для номинирования проекта на Премию ваша организация должна относиться к госсектору.<span class="tooltip-icon">ⓘ </span></div>
+								<div id="template" style="display: none;"> 
+									<div class="form-wrap__tooltip-wrap">
+										<p>ФЕДЕРАЦИЯ<br/>Федеральные органы исполнительной власти и подведомственные им организации, госкорпорации и компании с госучастием</p><br/>
+										<p>РЕГИОН<br/>Органы исполнительной власти субъектов Российской Федерации и подведомственные им организации, а также органы местного самоуправления и подведомственные им организации</p><br/>
+										<p>СТОЛИЦА<br/> органы исполнительной власти города Москвы и подведомственные им организации</p>
+									</div>
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Должность</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__policy">
+									<div class="small text text-secondary">Нажимая на кнопку, я подтверждаю, что ознакомлен с <a href="#">Положением о Премии</a>, условиями <a href="#">обработки персональных данных</a>, и <a href="#">соглашаюсь на их обработку.</a></div>
+								</div>
+								<div class="form-wrap__bottom-wrap text-center">
+									<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-auth-invalid2" style="display: none">
+			<div class="modal-win">
+				<div class="tabs tabs-auth">
+					<div class="item tabs__caption">
+						<div class="tabs__btn active">Войти</div>
+						<div class="tabs__btn">Зарегистрироваться</div>
+					</div>
+					<div class="tabs__content active">
+						<div class="modal-win__title-wrap text-center">
+							<div class="after-headline">Авторизуйтесь и управляйте заявками </div>
+						</div>
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control is-invalid" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="form-wrap__input-title small text-secondary">Почта</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Пароль</span><span class="btn-toggle-type-input btn-toggle-type-input--js">
+										<svg class="icon icon-eye-off ">
+											<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+										</svg></span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__forgot-passw"><a class="reset-pass-block-toggle" href="#reset-form">Не помню пароль</a>
+								</div>
+								<div class="form-wrap__bottom-wrap text-center">
+									<div class="error-feedback text-indigo text small">Почта или пароль указаны неверно.</div>
+									<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="tabs__content">
+						<div class="modal-win__title-wrap text-center">
+							<div class="after-headline smaller">Создание личного кабинета — ваш первый шаг к подаче заявки</div>
+						</div>
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Фамилия</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Имя</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Отчество</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="form-wrap__input-title small text-secondary">Почта</span><span class="error-feedback text text-indigo">Пожалуйста, указывайте только почтовый адрес с доменом .ru</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="tabs tabs-form tabs-form--phone">
+									<div class="item tabs__caption small">
+										<div class="tabs__btn active">Рабочий телефон</div>
+										<div class="tabs__btn">Мобильный телефон</div>
+									</div>
+									<div>
+										<div class="tabs__content active">
+											<div class="form-wrap__tel-wrap row">
+												<div class="form-wrap__col col">
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/><span class="form-wrap__input-title small text-secondary">Телефон</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="form-wrap__col col-sm-auto">
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control additional" inputmode="text" name="text" type="text" placeholder="Доб."/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+											</div>
+										</div>
+										<div class="tabs__content">
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/><span class="form-wrap__input-title small text-secondary">Телефон</span>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+									</div>
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Ваша организация</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="error-feedback text text-indigo">Обратите внимание, что для номинирования проекта на Премию ваша организация должна относиться к госсектору.<span class="tooltip-icon">ⓘ </span></div>
+								<div id="template" style="display: none;"> 
+									<div class="form-wrap__tooltip-wrap">
+										<p>ФЕДЕРАЦИЯ<br/>Федеральные органы исполнительной власти и подведомственные им организации, госкорпорации и компании с госучастием</p><br/>
+										<p>РЕГИОН<br/>Органы исполнительной власти субъектов Российской Федерации и подведомственные им организации, а также органы местного самоуправления и подведомственные им организации</p><br/>
+										<p>СТОЛИЦА<br/> органы исполнительной власти города Москвы и подведомственные им организации</p>
+									</div>
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Должность</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__policy">
+									<div class="small text text-secondary">Нажимая на кнопку, я подтверждаю, что ознакомлен с <a href="#">Положением о Премии</a>, условиями <a href="#">обработки персональных данных</a>, и <a href="#">соглашаюсь на их обработку.</a></div>
+								</div>
+								<div class="form-wrap__bottom-wrap text-center">
+									<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-auth-invalid3" style="display: none">
+			<div class="modal-win">
+				<div class="tabs tabs-auth">
+					<div class="item tabs__caption">
+						<div class="tabs__btn active">Войти</div>
+						<div class="tabs__btn">Зарегистрироваться</div>
+					</div>
+					<div class="tabs__content active">
+						<div class="modal-win__title-wrap text-center">
+							<div class="after-headline">Авторизуйтесь и управляйте заявками </div>
+						</div>
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control is-invalid" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="form-wrap__input-title small text-secondary">Почта</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Пароль</span><span class="btn-toggle-type-input btn-toggle-type-input--js">
+										<svg class="icon icon-eye-off ">
+											<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+										</svg></span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__forgot-passw"><a class="reset-pass-block-toggle" href="#reset-form">Не помню пароль</a>
+								</div>
+								<div class="form-wrap__bottom-wrap text-center">
+									<div class="error-feedback text-indigo text small">Пожалуйста, убедитесь, что вы вводите адрес электронной почты в правильном формате</div>
+									<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="tabs__content">
+						<div class="modal-win__title-wrap text-center">
+							<div class="after-headline smaller">Создание личного кабинета — ваш первый шаг к подаче заявки</div>
+						</div>
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Фамилия</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Имя</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Отчество</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="form-wrap__input-title small text-secondary">Почта</span><span class="error-feedback text text-indigo">Пожалуйста, указывайте только почтовый адрес с доменом .ru</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="tabs tabs-form tabs-form--phone">
+									<div class="item tabs__caption small">
+										<div class="tabs__btn active">Рабочий телефон</div>
+										<div class="tabs__btn">Мобильный телефон</div>
+									</div>
+									<div>
+										<div class="tabs__content active">
+											<div class="form-wrap__tel-wrap row">
+												<div class="form-wrap__col col">
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/><span class="form-wrap__input-title small text-secondary">Телефон</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="form-wrap__col col-sm-auto">
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control additional" inputmode="text" name="text" type="text" placeholder="Доб."/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+											</div>
+										</div>
+										<div class="tabs__content">
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/><span class="form-wrap__input-title small text-secondary">Телефон</span>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+									</div>
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Ваша организация</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="error-feedback text text-indigo">Обратите внимание, что для номинирования проекта на Премию ваша организация должна относиться к госсектору.<span class="tooltip-icon">ⓘ </span></div>
+								<div id="template" style="display: none;"> 
+									<div class="form-wrap__tooltip-wrap">
+										<p>ФЕДЕРАЦИЯ<br/>Федеральные органы исполнительной власти и подведомственные им организации, госкорпорации и компании с госучастием</p><br/>
+										<p>РЕГИОН<br/>Органы исполнительной власти субъектов Российской Федерации и подведомственные им организации, а также органы местного самоуправления и подведомственные им организации</p><br/>
+										<p>СТОЛИЦА<br/> органы исполнительной власти города Москвы и подведомственные им организации</p>
+									</div>
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Должность</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__policy">
+									<div class="small text text-secondary">Нажимая на кнопку, я подтверждаю, что ознакомлен с <a href="#">Положением о Премии</a>, условиями <a href="#">обработки персональных данных</a>, и <a href="#">соглашаюсь на их обработку.</a></div>
+								</div>
+								<div class="form-wrap__bottom-wrap text-center">
+									<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-auth-success" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__img-top-wrap text-center"><img src="img/svg/success.svg" alt="" loading="lazy"/>
+				</div>
+				<div class="modal-win__title-wrap text-center">
+					<div class="h5">Благодарим за интерес к Премии Правительства Москвы в сфере управления персоналом «В кадре»!</div>
+					<p>Пожалуйста, подтвердите регистрацию в письме, которое мы отправили вам на почту</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-partner-success" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__success-wrap text-center">
+					<div class="modal-win__img-top-wrap"><img class="img-success" src="img/svg/success-1.svg" alt="" loading="lazy"/>
+					</div>
+					<div class="modal-win__text-wrap">
+						<div class="text-large">Спасибо!</div>
+						<div class="text-large">Мы скоро свяжемся с вами.</div>
+						<div class="text-large">Пожалуйста, обратите внимание, что наша служба поддержки работает в будние дни с 8:00 до 19:00 Мск.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-mail-confirmed" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__img-top-wrap smaller text-center"><img src="img/svg/success.svg" alt="" loading="lazy"/>
+				</div>
+				<div class="modal-win__title-wrap text-center">
+					<div class="modal-win__title form-data h2">Почта подтверждена!
+					</div>
+					<p>Вы создали личный кабинет участника Премии «В кадре». Пожалуйста, войдите с почтой и паролем, которые указали при регистрации.</p>
+				</div>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="form-wrap__input-title small text-secondary">Почта</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Пароль</span><span class="btn-toggle-type-input btn-toggle-type-input--js">
+								<svg class="icon icon-eye-off ">
+									<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+								</svg></span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__forgot-passw"><a href="#">Не помню пароль</a>
+						</div>
+						<div class="form-wrap__bottom-wrap text-center">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="modal-mail-confirmed1" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__img-top-wrap smaller text-center"><img src="img/svg/success.svg" alt="" loading="lazy"/>
+				</div>
+				<div class="modal-win__title-wrap text-center">
+					<div class="modal-win__title form-data h2">Почта подтверждена!
+					</div>
+					<p>Вы создали личный кабинет участника Премии «В кадре». Пожалуйста, войдите с почтой и паролем, которые указали при регистрации.</p>
+				</div>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control is-invalid" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="form-wrap__input-title small text-secondary">Почта</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Пароль</span><span class="btn-toggle-type-input btn-toggle-type-input--js">
+								<svg class="icon icon-eye-off ">
+									<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+								</svg></span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__forgot-passw"><a href="#">Не помню пароль</a>
+						</div>
+						<div class="form-wrap__bottom-wrap text-center">
+							<div class="error-feedback text-indigo text small">Почта или пароль указаны неверно.</div>
+							<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="modal-partner" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__title-wrap text-center">
+					<div class="modal-win__title form-data h2">Стать партнером Премии
+					</div>
+					<div class="after-headline">Пожалуйста, оставьте контактные данные —<br>мы свяжемся с вами в ближайшее время</div>
+				</div>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Ф. И. О.</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="form-wrap__input-title small text-secondary">Почта</span><span class="error-feedback text text-indigo">Пожалуйста, указывайте только почтовый адрес с доменом .ru</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/><span class="form-wrap__input-title small text-secondary">Телефон</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Ваша организация</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="title text-secondary small required">Подтвердите, что вы не робот, введите символы с картинки</div>
+						<div class="capture-wrap"></div>
+						<div class="form-wrap__policy">
+							<div class="small text text-secondary">Нажимая на кнопку, я подтверждаю, что ознакомлен с <a href="#">Положением о Премии</a>, условиями <a href="#">обработки персональных данных</a>, и <a href="#">соглашаюсь на их обработку.</a></div>
+						</div>
+						<div class="form-wrap__btn-wrap text-center">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="modal-reset-2" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__title-wrap text-center">
+					<div class="modal-win__title form-data h2">Сброс пароля
+					</div>
+					<p>Установите новый пароль для своего<br>личного&nbsp;кабинета</p>
+				</div>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Придумайте пароль</span><span class="btn-toggle-type-input btn-toggle-type-input--js">
+								<svg class="icon icon-eye-off ">
+									<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+								</svg></span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Повторите пароль</span><span class="btn-toggle-type-input btn-toggle-type-input--js">
+								<svg class="icon icon-eye-off ">
+									<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+								</svg></span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__bottom-wrap text-center">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="modal-reset-3" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__title-wrap text-center">
+					<div class="modal-win__title form-data h2">Сброс пароля
+					</div>
+					<p>Установите новый пароль для своего<br>личного&nbsp;кабинета</p>
+				</div>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Придумайте пароль</span><span class="btn-toggle-type-input btn-toggle-type-input--js">
+								<svg class="icon icon-eye-off ">
+									<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+								</svg></span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Повторите пароль</span><span class="btn-toggle-type-input btn-toggle-type-input--js">
+								<svg class="icon icon-eye-off ">
+									<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+								</svg></span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__bottom-wrap text-center">
+							<div class="error-feedback text-indigo text small">Пароли не совпадают</div>
+							<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="modal-reset-info" style="display: none">
+			<div class="modal-win">
+				<a class="modal-win__back-link" href="#">
+					<svg class="icon icon-arr-back ">
+						<use xlink:href="img/svg/sprite.svg#arr-back"></use>
+					</svg>
+				</a>
+				<div class="modal-win__img-top-wrap text-center"><img src="img/svg/success.svg" alt="" loading="lazy"/>
+				</div>
+				<div class="modal-win__title-wrap text-center">
+					<div class="h5">Мы направили на почту <span>PM@mail.ru</span> письмо с дальнейшими инструкциями для сброса пароля.</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-reset-success" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__img-top-wrap smaller text-center"><img src="img/svg/success.svg" alt="" loading="lazy"/>
+				</div>
+				<div class="modal-win__title-wrap text-center">
+					<div class="modal-win__title form-data h2">Пароль успешно изменен
+					</div>
+					<p>Вы можете авторизоваться на сайте Премии с&nbsp;новым&nbsp;паролем</p>
+				</div>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="form-wrap__input-title small text-secondary">Почта</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Пароль</span><span class="btn-toggle-type-input btn-toggle-type-input--js">
+								<svg class="icon icon-eye-off ">
+									<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+								</svg></span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__forgot-passw"><a href="#">Не помню пароль</a>
+						</div>
+						<div class="form-wrap__bottom-wrap text-center">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="modal-reset-success1" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__img-top-wrap smaller text-center"><img src="img/svg/success.svg" alt="" loading="lazy"/>
+				</div>
+				<div class="modal-win__title-wrap text-center">
+					<div class="modal-win__title form-data h2">Пароль успешно изменен
+					</div>
+					<p>Вы можете авторизоваться на сайте Премии с&nbsp;новым&nbsp;паролем</p>
+				</div>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control is-invalid" inputmode="email" name="email" type="email" placeholder="PM@mail.ru" required="required"/><span class="form-wrap__input-title small text-secondary">Почта</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control is-invalid" inputmode="password" name="password" type="password" placeholder="Заполните поле" required="required"/><span class="form-wrap__input-title small text-secondary">Пароль</span><span class="btn-toggle-type-input btn-toggle-type-input--js">
+								<svg class="icon icon-eye-off ">
+									<use xlink:href="img/svg/sprite.svg#eye-off"></use>
+								</svg></span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__forgot-passw"><a href="#">Не помню пароль</a>
+						</div>
+						<div class="form-wrap__bottom-wrap text-center">
+							<div class="error-feedback text-indigo text small">Почта или пароль указаны неверно.</div>
+							<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="modal-frames" style="display: none">
+			<div class="modal-win modal-win--big">
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h3">Раскадровка
+					</div>
+				</div>
+				<div class="wrapper-scroll">
+					<div class="frame-item">
+						<div class="frame-item__top">
+							<div class="frame-item__title text-gradient fw-700">Прием заявок
+							</div>
+							<div class="frame-item__date small text-secondary">13 февраля — 11 июля
+							</div>
+						</div>
+						<div class="frame-item__content">
+							<p>Чтобы подать заявку, нажмите на раздел «Подать заявку» в верхнем меню.</p>
+							<p>Формировать заявку можно постепенно — даже если вы не заполните все поля, черновик отобразится в этом разделе, и вы сможете продолжить заполнение в любой момент <span>до 11 июля.</span></p>
+						</div>
+					</div>
+					<div class="frame-item">
+						<div class="frame-item__top">
+							<div class="frame-item__title fw-700">Техническая экспертиза
+							</div>
+							<div class="frame-item__date small text-secondary">14 июля — 3 августа
+							</div>
+						</div>
+						<div class="frame-item__content">
+							<p>Мы проверим ваши заявки на соответствие  <span>критериям премии</span>. Вам в это время ничего делать не нужно. Если у нас возникнут вопросы или рекомендации по вашей заявке — мы свяжемся с вами.</p>
+						</div>
+					</div>
+					<div class="frame-item">
+						<div class="frame-item__top">
+							<div class="frame-item__title fw-700">Экспертная комиссия
+							</div>
+							<div class="frame-item__date small text-secondary">4 августа — 31 августа
+							</div>
+						</div>
+						<div class="frame-item__content">
+							<p>На этом этапе заявки будут изучать эксперты Премии. Они отберут топ-5 проектов в каждой номинации по каждой из 3-х категорий и сформируют <span>топ-60 для рассмотрения жюри</span>.</p>
+							<p>В целях безопасности все данные передаются экспертам в обобщенном виде, а участники не знают, кто из экспертов рассматривает их проект.</p>
+						</div>
+					</div>
+					<div class="frame-item">
+						<div class="frame-item__top">
+							<div class="frame-item__title fw-700">Голосование жюри
+							</div>
+							<div class="frame-item__date small text-secondary">8 сентября — 21 сентября 
+							</div>
+						</div>
+						<div class="frame-item__content">
+							<p>Жюри изучат топ-60 проектов, рекомендованных экспертами, и отберут <span>топ-3 в каждой номинации</span> по каждой из 3-категорий — именно эти проекты станут <span>победителями</span> Премии!</p>
+						</div>
+					</div>
+					<div class="frame-item">
+						<div class="frame-item__top">
+							<div class="frame-item__title fw-700">Премьера
+							</div>
+							<div class="frame-item__date small text-secondary">2 октября очно в Москве
+							</div>
+						</div>
+						<div class="frame-item__content">
+							<p><span class="text-gradient">Торжественная церемония</span> оглашения победителей пройдет в Москва-Сити, башня «Федерация».</p>
+							<p><span>Обратите внимание</span>, что организатор не оплачивает трансфер для участия в мероприятии.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-exit" style="display: none">
+			<div class="modal-win modal-win--big">
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">Вы действительно хотите выйти из личного кабинета?
+					</div>
+					<div class="after-headline">Вам нужно будет авторизоваться повторно</div>
+				</div>
+				<div class="modal-win__btns-wrap row">
+					<div class="modal-win__col col-sm-6">
+						<a class="modal-win__btn btn btn-outline-primary modal-close-js" href="#">Нет
+						</a>
+					</div>
+					<div class="modal-win__col col-sm-6">
+						<a class="modal-win__btn btn btn-primary" href="#">Выйти
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-cancel" style="display: none">
+			<div class="modal-win modal-win--big">
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">Вы не подтвердили изменения в заявке
+					</div>
+					<div class="after-headline">Хотите их сохранить?</div>
+				</div>
+				<div class="modal-win__btns-wrap row">
+					<div class="modal-win__col col-sm-6">
+						<a class="modal-win__btn btn btn-outline-primary" href="#">Не сохранять
+						</a>
+					</div>
+					<div class="modal-win__col col-sm-6">
+						<a class="modal-win__btn btn btn-primary" href="#">Войти
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-cancel-1" style="display: none">
+			<div class="modal-win modal-win--big">
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">Вы уверены, что хотите прервать заполнение заявки?
+					</div>
+					<div class="after-headline">Мы сохраним все заполненные поля в «черновике» — вы сможете найти его во вкладке «Мои заявки» и продолжить заполнение.</div>
+				</div>
+				<div class="modal-win__btns-wrap row">
+					<div class="modal-win__col col-sm-6">
+						<a class="modal-win__btn btn btn-outline-primary small" href="#">Сохранить как черновик
+						</a>
+					</div>
+					<div class="modal-win__col col-sm-6">
+						<a class="modal-win__btn btn btn-primary" href="#">Продолжить
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-cancel-2" style="display: none">
+			<div class="modal-win modal-win--big">
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">Вы не заполнили все обязательные поля
+					</div>
+					<p class="after-headline">Хотите сохранить черновик заявки и вернуться к заполнению позже?</p>
+				</div>
+				<div class="modal-win__btns-wrap row">
+					<div class="modal-win__col col-sm-6">
+						<a class="modal-win__btn btn btn-outline-primary small" href="#">Сохранить как черновик
+						</a>
+					</div>
+					<div class="modal-win__col col-sm-6">
+						<a class="modal-win__btn btn btn-primary" href="#">Продолжить
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-criteria-1" style="display: none">
+			<div class="modal-win modal-win--big">
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">Требования к презентации
+					</div>
+				</div>
+				<div class="modal-win__content">
+					<p>Допустимый объем текста на одном слайде <span>не более 1000 знаков без пробелов.</span></p>
+					<p>Предоставляется в формате PPT.</p>
+					<p>Объем презентации: от 10 до 15 слайдов, до 10 мб.</p>
+					<p>Соотношение сторон: 16:9.</p>
+					<p><span>Обязательная структура презентации:</span></p>
+					<ul>
+						<li>1–2 слайда об организации</li>
+						<li>1 слайд о роли заявителя</li>
+						<li>1–2 слайда о проблеме</li>
+						<li>1–2 слайда — идея и суть решения</li>
+						<li>1–2 слайда — команда, ресурсы</li>
+						<li>1–3 слайда — план проекта и яркие элементы реализации</li>
+						<li>1 слайд — количественные результаты</li>
+						<li>1 слайд — качественные результаты</li>
+						<li>1 слайд — дополнительные выгоды</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="modal-criteria-2" style="display: none">
+			<div class="modal-win modal-win--big">
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">Первичные критерии
+					</div>
+				</div>
+				<div class="modal-win__content">
+					<ol> 
+						<li>Проект соответствует номинации Премии.</li>
+						<li>Тип организации соответствует требованиям, описанным в положении Премии.</li>
+						<li>Проект был запущен или показал значимые результаты в 2024 году.</li>
+						<li>Заявка на участие заполнена корректно.</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<div id="modal-info-1" style="display: none">
+			<div class="modal-win modal-win--big"><img class="modal-img" src="img/svg/modal-bg.svg" alt="" loading="lazy"/>
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">Секрет удачного кадра: привлечение
+					</div>
+				</div>
+				<div class="modal-win__content content-img">
+					<p>Отмечаются проекты, которые помогли привлечь в организацию талантливых сотрудников. Поделитесь практическими решениями, благодаря которым вам удалось нанять лучшие кадры с комфортом как для команды, так и для кандидатов!</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-info-2" style="display: none">
+			<div class="modal-win modal-win--big"><img class="modal-img" src="img/svg/modal-bg.svg" alt="" loading="lazy"/>
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">В фокусе: удержание
+					</div>
+				</div>
+				<div class="modal-win__content content-img">
+					<p>Такой проект помогает организации стать местом, где сотрудникам действительно хочется работать. Расскажите, как именно вам удается вдохновлять ярких специалистов на работу именно в вашей команде.</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-info-3" style="display: none">
+			<div class="modal-win modal-win--big"><img class="modal-img" src="img/svg/modal-bg.svg" alt="" loading="lazy"/>
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">Академия талантов: развитие
+					</div>
+				</div>
+				<div class="modal-win__content content-img">
+					<p>Ваш проект должен быть направлен на обучение ваших сотрудников, на возможности их развития. Вы внедрили эффективную систему, которая помогает специалистам раскрыть потенциал? Тогда эта номинация для вас!</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-info-4" style="display: none">
+			<div class="modal-win modal-win--big"><img class="modal-img" src="img/svg/modal-bg.svg" alt="" loading="lazy"/>
+				<div class="modal-win__title-wrap">
+					<div class="modal-win__t h5">Новый ракурс: HR-инновации
+					</div>
+				</div>
+				<div class="modal-win__content content-img">
+					<p>Это номинация для первопроходцев в области работы с персоналом. Автоматизация и цифровизация, инновационный подход и уникальные решения в области HR — все это может быть признаком того, что эта номинация создана для вашего проекта!</p>
+				</div>
+			</div>
 		</div>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>

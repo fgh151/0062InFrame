@@ -119,12 +119,14 @@ function eventHandler() {
 		let icon = $(this).find("svg.icon use");
 		let iconId = $(this).find("svg.icon use").attr("xlink:href").split("#")[1];
 
-		const opt = {
-			"eye-off": ["eye", "text"],
+		let href = $(this).data('href');
+
+    const opt = {
+      "eye-off": ["eye", "text"],
 			eye: ["eye-off", "password"],
 		};
 		$(this).parent().find("input").attr("type", opt[iconId][1]);
-		icon.attr("xlink:href", `img/svg/sprite.svg#${opt[iconId][0]}`);
+		icon.attr("xlink:href",`${href}img/svg/sprite.svg#${opt[iconId][0]}`);
 	});
 
 	/* hide btn after scroll main page */
@@ -378,7 +380,8 @@ function eventHandler() {
 		});
 	}
 
-	const infoWindows = document.querySelectorAll(".info-window--js");
+
+  const infoWindows = document.querySelectorAll(".info-window--js");
 	if (infoWindows) {
 		infoWindows.forEach(el => {
 			const closeBtn = el.querySelector(".close-btn");
