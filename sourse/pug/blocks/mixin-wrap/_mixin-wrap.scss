@@ -479,9 +479,11 @@ ul.page-numbers {
 	min-height: rem(214);
 
 	.info-bg {
-		bottom: -15px;
+		bottom: -6px;
 		position: absolute;
-		right: -11px;
+		right: -6px;
 		z-index: -1;
+		width: 96px;
+		height: 96px;
 	}
 }
