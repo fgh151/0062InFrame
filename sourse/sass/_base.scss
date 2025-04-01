@@ -518,6 +518,14 @@ h2,
 	}
 }
 
+@media screen and (min-width: 1200px) {
+	h2,
+	.h2 {
+		font-size: 3.5rem;
+	}
+}
+
+
 h3,
 .h3 {
 	@include media-breakpoint-down(md) {
