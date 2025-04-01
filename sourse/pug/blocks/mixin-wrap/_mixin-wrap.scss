@@ -423,6 +423,14 @@ ul.page-numbers {
 
 	z-index: 100;
 
+	@media screen and (min-width: 1320px) {
+		right: calc(50vw - 628px);
+	}
+
+	@media screen and (min-width: 1200px) {
+		right: calc(50vw - 549px);
+	}
+
 	.close-btn {
 		position: absolute;
 		top: rem(10);
