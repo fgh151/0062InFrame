@@ -20,6 +20,7 @@ mixin aggressiveModal()
   script.
     const aggressiveModal = document.querySelector('#aggressiveModalInner');
     const aggressiveCloseBtn = document.querySelector('#aggressive-close-btn');
+    const aggressiveModalContentBtn = document.querySelector('.aggressiveModalContent');
 
     window.onload = () => {
       setTimeout(() => {
@@ -29,6 +30,10 @@ mixin aggressiveModal()
 
     aggressiveCloseBtn.addEventListener('click', () => {
       aggressiveModal.style.display = 'none';
+    })
+
+    aggressiveModalContentBtn.addEventListener('click', () => {
+      window.open('https://t.me/+WaTSRBDeY_tiZjIy', '_blank')
     })
 
 mixin aggressiveMobileTgBanner() 
@@ -49,6 +54,7 @@ mixin aggressiveMobileTgBanner()
   script. 
     const aggressiveMobileTgBanner = document.querySelector('#aggressiveMobileTgBanner');
     const aggressiveCloseBtn = document.querySelector('.aggressiveMobileTgBannerTop-closeBtn');
+    const aggressiveBtnJoin = document.querySelector('.aggressiveBtnJoin');
 
     window.onload = () => {
       setTimeout(() => {
@@ -58,4 +64,8 @@ mixin aggressiveMobileTgBanner()
 
     aggressiveCloseBtn.addEventListener('click', () => {
       aggressiveMobileTgBanner.style.display = 'none';
+    })
+
+    aggressiveBtnJoin.addEventListener('click', () => {
+      window.open('https://t.me/+WaTSRBDeY_tiZjIy', '_blank')
     })
