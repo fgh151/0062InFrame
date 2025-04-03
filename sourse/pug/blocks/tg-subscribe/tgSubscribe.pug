@@ -1,0 +1,66 @@
+mixin tgSubscribe()
+  .mobileTgSubscribtionButton
+    +img(src=`img/svg/tg-white-subscribe.svg`, alt="").mobile-tg-white-subscribe
+    .mobileTgSubscribtionButton-text Следите за новостями
+    +img(src='img/svg/close-tg-qr.svg').mobile-close-tg-qr
+
+  .tgSubscribeButton#tgSubscribeButton
+    .subscribeText Подписаться
+    +img(src=`img/svg/tg-white-subscribe.svg`, alt="").tg-white-subscribe
+
+    .subscribeButtonHiddenContent
+      +img(src='img/svg/blur-tg-qr.svg').blur-tg-qr
+      +img(src='img/svg/bg-tg-qr.svg').bg-tg-qr
+      .subscribeButtonContentLeftColumn
+        p.subscribeButtonContentLeftColumn-title 
+          | Следите за новостями и яркими
+          br
+          | моментами Премии в нашем 
+          br
+          | телеграм-канале «В кадре»
+        button.subscribeButtonContentLeftColumn-button Присоединиться
+      +img(src='img/vkadre-tg-qr.png').vkadre-tg-qr
+      +img(src='img/svg/close-tg-qr.svg').close-tg-qr
+
+  script. 
+    const tgSubscribeButton = document.querySelector('#tgSubscribeButton');
+    const subscribeButtonHiddenContent = document.querySelector('.subscribeButtonHiddenContent');
+    const closeTgQr = document.querySelector('.close-tg-qr');
+    const subscribeButtonContentLeftColumnButton = document.querySelector('.subscribeButtonContentLeftColumn-button');
+    const mobileTgSubscribtionButton = document.querySelector('.mobileTgSubscribtionButton');
+    const mobileCloseTgQr = document.querySelector('.mobile-close-tg-qr');
+
+    tgSubscribeButton.addEventListener('click', () => {
+      tgSubscribeButton.classList.add('subscribeButtonOpened');
+      subscribeButtonHiddenContent.classList.add('subscribeButtonHiddenContent-open')
+    })
+    
+    closeTgQr.addEventListener('click', () => {
+      setTimeout(() => {
+        tgSubscribeButton.classList.remove('subscribeButtonOpened');
+        subscribeButtonHiddenContent.classList.remove('subscribeButtonHiddenContent-open');
+      }, 0);
+    });
+
+    subscribeButtonContentLeftColumnButton.addEventListener('click', () => {
+      window.open('https://t.me/+WaTSRBDeY_tiZjIy', '_blank')
+    });
+
+    mobileTgSubscribtionButton.addEventListener('click', () => {
+      window.open('https://t.me/+WaTSRBDeY_tiZjIy', '_blank')
+    });
+
+    mobileCloseTgQr.addEventListener('click', (e) => {
+      e.stopPropagation();
+      mobileTgSubscribtionButton.style.display = 'none';
+    })
+
+    document.addEventListener('click', (event) => {
+      if (
+        !tgSubscribeButton.contains(event.target) && 
+        !subscribeButtonHiddenContent.contains(event.target)
+      ) {
+        tgSubscribeButton.classList.remove('subscribeButtonOpened');
+        subscribeButtonHiddenContent.classList.remove('subscribeButtonHiddenContent-open');
+      }
+    });

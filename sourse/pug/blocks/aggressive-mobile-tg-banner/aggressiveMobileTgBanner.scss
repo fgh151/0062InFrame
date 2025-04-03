@@ -1,0 +1,149 @@
+
+
+.aggressiveModalInner {
+	display: none;
+	width: 616px;
+	height: 728px;
+	background-image: linear-gradient(#5400B7, #0098E3);
+	border-radius: 18px;
+	overflow: hidden;
+	position: relative;
+
+	&-bg-tg-qr {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 213px;
+		height: 213px;
+	}
+
+	&-blur-tg-qr {
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		width: 110px;
+		height: 110px;
+	}
+
+	&-close {
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+
+		& > img {
+			margin-top: 16px;
+			margin-right: 16px;
+		}
+	}
+}
+
+.aggressiveModalContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+
+	&-title {
+		font-size: 32px;
+		font-weight: 400;
+		color: #fff;
+		line-height: 1.2;
+		text-align: center;
+		margin-bottom: 48px;
+	}
+
+	&-button {
+		width: 260px;
+		height: 46px;
+		display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+		color: #1A1230;
+    font-size: 16px;
+    border-radius: 32px;
+    line-height: 1.2;
+		margin-bottom: 14px;
+		background-color: #fff;
+	}
+
+	&-qr {
+		height: 424px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.aggressiveModalInner {
+		display: none;
+	}
+}
+
+.aggressiveMobileTgBanner {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .aggressiveMobileTgBanner {
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    display: none;
+    width: 100%;
+    height: 236px;
+    background-image: linear-gradient(#5400B7, #0098E3);
+    padding: 12px 12px 28px 12px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+
+    &-blur-tg-qr {
+      position: absolute;
+      width: 71px;
+      height: 71px;
+      top: 20%;
+      right: 20%;
+      z-index: -1;
+    }
+
+    &-bg-tg-qr {
+      position: absolute;
+      width: 146px;
+      height: 146px;
+      top: 20%;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  .aggressiveMobileTgBannerTop {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 74px;
+
+    &-text {
+      font-size: 16px;
+      color: #fff;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+
+    &-closeBtn {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .aggressiveBtnJoin {
+    width: 100%;
+    height: 46px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,243 @@
+.tgSubscribeButton {
+  position: fixed;
+  top: 448px;
+  right: -124px;
+  z-index: 10;
+  width: 320px;
+  height: 72px;
+  border-top-left-radius: 16px;
+  background-image : linear-gradient(90deg, #2b4acc, #0198e3 70%);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  transform: rotate(-90deg);
+  user-select: none;
+  overflow: hidden;
+  transition: background-image 0.3s ease; /* Плавное изменение фона */
+
+  &:hover {
+    cursor: pointer;
+    background-image: linear-gradient(90deg, #2b4acc 60%, #0198e3);
+  }
+
+  .subscribeText {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  
+  .tg-white-subscribe {
+    transform: rotate(90deg);
+  }
+}
+
+
+.subscribeButtonOpened {
+  width: 1020px;
+  height: 320px;
+  transform: rotate(0deg);
+  justify-content: flex-start;
+  right: 0;
+  top: 324px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 56px;
+  
+  .subscribeText,
+  .tg-white-subscribe {
+    display: none;
+  }
+}
+
+.subscribeButtonHiddenContent {
+  display: none;
+  padding: 40px 40px 0 40px;
+  position: relative;
+
+  &:hover {
+    cursor: default;
+    background-image : linear-gradient(90deg, #2b4acc, #0198e3 70%);
+  }
+
+  .blur-tg-qr {
+    position: absolute;
+    right: 40%;
+    top: 70px;
+    width: 103px;
+    height: 103px;
+  }
+
+  .bg-tg-qr {
+    position: absolute;
+    right: 35%;
+    bottom: -10%;
+    width: 245px;
+    height: 245px;
+  }
+}
+
+.subscribeButtonContentLeftColumn {
+  flex-grow: 1;
+
+  &-title {
+    font-weight: 400;
+    color: #fff;
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 78px;
+    max-width: 593px;
+  }
+
+  &-button {
+    outline: none;
+    border: none;
+    width: 352px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    color: #1A1230;
+    font-size: 24px;
+    border-radius: 50px;
+    line-height: 32px;
+  }
+}
+
+.subscribeButtonHiddenContent-open {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.close-tg-qr {
+  cursor: pointer;
+}
+
+.vkadre-tg-qr {
+  margin-right: -30px;
+}
+
+@media screen and (max-width: 576px) {
+  .tgSubscribeButton {
+    display: none;
+  }
+
+  .mobileTgSubscribtionButton {
+    position: fixed;
+    top: 65px;
+    z-index: 10;
+    padding: 0 19px 0 16px;
+    display: flex;
+    width: 100%;
+    height: 42px;
+    background-color: #0C84DE;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+    &-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.2;
+      flex: 1;
+    }
+
+    .mobile-tg-white-subscribe {
+      width: 24px;
+      height: 20px;
+      margin-right: 8px;
+      transform: rotate(90deg);
+    }
+
+    .mobile-close-tg-qr {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .subscribeButtonOpened {
+    width: 90%;
+    height: auto;
+  }
+
+  .subscribeButtonHiddenContent {
+    padding: 30px 30px 0 30px;
+
+    .blur-tg-qr {
+      width: 103px;
+      height: 103px;
+      z-index: -1;
+    }
+  
+    .bg-tg-qr {
+      width: 200px;
+      height: 200px;
+      z-index: -1;
+    }
+  }
+
+  .subscribeButtonContentLeftColumn {
+    &-title {
+      font-size: 24px;
+      margin-bottom: 48px;
+    }
+
+    &-button {
+      width: 300px;
+      font-size: 20px;
+    } 
+  }
+
+  .vkadre-tg-qr {
+    width: 300px;
+    margin: 0 -45px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .subscribeButtonOpened {
+    width: 90%;
+    height: auto;
+  }
+
+  .subscribeButtonHiddenContent {
+    padding: 20px 20px 0 20px;
+
+    .blur-tg-qr {
+      width: 103px;
+      height: 103px;
+      z-index: -1;
+      top: 50px ;
+    }
+  
+    .bg-tg-qr {
+      width: 150px;
+      height: 150px;
+      z-index: -1;
+    }
+  }
+
+  .subscribeButtonContentLeftColumn {
+    &-title {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    &-button {
+      width: 200px;
+      font-size: 18px;
+      height: 50px;
+    } 
+  }
+
+  .vkadre-tg-qr {
+    width: 200px;
+  }
+}

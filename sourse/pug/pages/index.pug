@@ -20,10 +20,14 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sTg/_sTg.pug
 include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/tg-subscribe/tgSubscribe.pug
+include ../blocks/aggressive-mobile-tg-banner/aggressiveMobileTgBanner.pug
 
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= null
+	- let showTgSubscribe = Math.random() < 0.5  // 50% шанс для tgSubscribe
+	- let showAggressiveBanner = !showTgSubscribe  // остальная вероятность для aggressiveMobileTgBanner
 
 block title
 	- let  title= index.head.title
@@ -35,6 +39,11 @@ block pagecontent
 	+parts('header-main')
 	main
 		+headerBlock 
+		// Показываем один из блоков в зависимости от значения переменной
+		if showTgSubscribe
+			+tgSubscribe
+		else
+			+aggressiveMobileTgBanner
 		+b.head-line
 			.container
 				img(src="img/svg/emblem.svg", alt="")

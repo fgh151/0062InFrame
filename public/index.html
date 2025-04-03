@@ -67,6 +67,29 @@
 				<a class="question-wrap vertical-move fw-700 btn-wr btn-wr--js link-modal-js" href="#modal-question">?
 				</a>
 				<!-- end headerBlock-->
+				<!-- Показываем один из блоков в зависимости от значения переменной-->
+				<div class="aggressiveMobileTgBanner" id="aggressiveMobileTgBanner">
+					<div class="aggressiveMobileTgBannerTop"> 
+						<p class="aggressiveMobileTgBannerTop-text">
+							 Следите за новостями <br/>и яркими моментами Премии <br/>в нашем телеграм-канале <br/>«В кадре»</p><img class="aggressiveMobileTgBannerTop-closeBtn" src="img/svg/close-tg-qr.svg" alt="" loading="lazy"/>
+					</div>
+					<div class="aggressiveBtnJoin">Присоединиться<img class="aggressiveMobileTgBanner-blur-tg-qr" src="img/svg/blur-tg-qr.svg" alt="" loading="lazy"/><img class="aggressiveMobileTgBanner-bg-tg-qr" src="img/svg/bg-tg-qr.svg" alt="" loading="lazy"/>
+					</div>
+				</div>
+				<script>
+					const aggressiveMobileTgBanner = document.querySelector('#aggressiveMobileTgBanner');
+					const aggressiveCloseBtn = document.querySelector('.aggressiveMobileTgBannerTop-closeBtn');
+					
+					window.onload = () => {
+						setTimeout(() => {
+							aggressiveMobileTgBanner.style.display = 'block';
+						}, 30000);
+					}
+					
+					aggressiveCloseBtn.addEventListener('click', () => {
+						aggressiveMobileTgBanner.style.display = 'none';
+					})
+				</script>
 				<div class="head-line">
 					<div class="container"><img src="img/svg/emblem.svg" alt="">
 						<p>Премия учреждена по решению Мэра Москвы постановлением Правительства Москвы от 11 февраля 2025 года № 192-ПП «Об учреждении премии Правительства Москвы в сфере управления персоналом «В кадре»</p>
