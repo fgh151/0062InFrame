@@ -116,8 +116,10 @@ body {
 		flex-direction: column;
 	}
 }
+
+// Добавить этот блок кода для фикса задачи #558 
 main .section:last-child {
-	background: var(--bg, $body-bg); // #558 Фикс
+	background: var(--bg, $body-bg); 
 	@include media-breakpoint-up(xl) {
 		border-radius: 0 0 rem(80) rem(80);
 		&:after {
