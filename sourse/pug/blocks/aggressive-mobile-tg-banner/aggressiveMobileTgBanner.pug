@@ -1,41 +1,3 @@
-mixin aggressiveModal()
-  div(id="modal-aggressive-tg")
-    .aggressiveModalInner#aggressiveModalInner
-      .aggressiveModalInner-close
-        +img(src="img/svg/close-tg-qr.svg")#aggressive-close-btn
-      .aggressiveModalContent 
-        p.aggressiveModalContent-title 
-          | Следите за новостями
-          br
-          | и яркими моментами
-          br
-          | Премии в нашем телеграм-
-          br
-          | канале «В кадре»
-        .aggressiveModalContent-button Присоединиться
-        +img(src='img/vkadre-bg-tg-aggressive.png').aggressiveModalContent-qr
-      +img(src='img/svg/blur-tg-qr.svg').aggressiveModalInner-blur-tg-qr
-      +img(src='img/svg/bg-tg-qr.svg').aggressiveModalInner-bg-tg-qr
-
-  script.
-    const aggressiveModal = document.querySelector('#aggressiveModalInner');
-    const aggressiveCloseBtn = document.querySelector('#aggressive-close-btn');
-    const aggressiveModalContentBtn = document.querySelector('.aggressiveModalContent');
-
-    window.onload = () => {
-      setTimeout(() => {
-        aggressiveModal.style.display = 'block';
-      }, 30000);
-    }
-
-    aggressiveCloseBtn.addEventListener('click', () => {
-      aggressiveModal.style.display = 'none';
-    })
-
-    aggressiveModalContentBtn.addEventListener('click', () => {
-      window.open('https://t.me/+WaTSRBDeY_tiZjIy', '_blank')
-    })
-
 mixin aggressiveMobileTgBanner() 
   .aggressiveMobileTgBanner#aggressiveMobileTgBanner
     .aggressiveMobileTgBannerTop 
@@ -51,21 +13,4 @@ mixin aggressiveMobileTgBanner()
     .aggressiveBtnJoin Присоединиться
       +img(src='img/svg/blur-tg-qr.svg').aggressiveMobileTgBanner-blur-tg-qr
       +img(src='img/svg/bg-tg-qr.svg').aggressiveMobileTgBanner-bg-tg-qr
-  script. 
-    const aggressiveMobileTgBanner = document.querySelector('#aggressiveMobileTgBanner');
-    const aggressiveCloseBtn = document.querySelector('.aggressiveMobileTgBannerTop-closeBtn');
-    const aggressiveBtnJoin = document.querySelector('.aggressiveBtnJoin');
-
-    window.onload = () => {
-      setTimeout(() => {
-        aggressiveMobileTgBanner.style.display = 'block';
-      }, 30000);
-    }
-
-    aggressiveCloseBtn.addEventListener('click', () => {
-      aggressiveMobileTgBanner.style.display = 'none';
-    })
-
-    aggressiveBtnJoin.addEventListener('click', () => {
-      window.open('https://t.me/+WaTSRBDeY_tiZjIy', '_blank')
-    })
+    

@@ -117,7 +117,7 @@ body {
 	}
 }
 main .section:last-child {
-	background: var(--bg, $body-bg);
+	background: var(--bg, $body-bg); // #558 Фикс
 	@include media-breakpoint-up(xl) {
 		border-radius: 0 0 rem(80) rem(80);
 		&:after {

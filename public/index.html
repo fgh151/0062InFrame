@@ -67,7 +67,19 @@
 				<a class="question-wrap vertical-move fw-700 btn-wr btn-wr--js link-modal-js" href="#modal-question">?
 				</a>
 				<!-- end headerBlock-->
-				<!-- Показываем один из блоков в зависимости от значения переменной-->
+				<div class="mobileTgSubscribtionButton"><img class="mobile-tg-white-subscribe" src="img/svg/tg-white-subscribe.svg" alt="" loading="lazy"/>
+					<div class="mobileTgSubscribtionButton-text">Следите за новостями</div><img class="mobile-close-tg-qr" src="img/svg/close-tg-qr.svg" alt="" loading="lazy"/>
+				</div>
+				<div class="tgSubscribeButton" id="tgSubscribeButton">
+					<div class="subscribeText">Подписаться</div><img class="tg-white-subscribe" src="img/svg/tg-white-subscribe.svg" alt="" loading="lazy"/>
+					<div class="subscribeButtonHiddenContent"><img class="blur-tg-qr" src="img/svg/blur-tg-qr.svg" alt="" loading="lazy"/><img class="bg-tg-qr" src="img/svg/bg-tg-qr.svg" alt="" loading="lazy"/>
+						<div class="subscribeButtonContentLeftColumn">
+							<p class="subscribeButtonContentLeftColumn-title">
+								 Следите за новостями и яркими<br/>моментами Премии в нашем <br/>телеграм-канале «В кадре»</p>
+							<button class="subscribeButtonContentLeftColumn-button">Присоединиться</button>
+						</div><img class="vkadre-tg-qr" src="img/vkadre-tg-qr.png" alt="" loading="lazy"/><img class="close-tg-qr" src="img/svg/close-tg-qr.svg" alt="" loading="lazy"/>
+					</div>
+				</div>
 				<div class="aggressiveMobileTgBanner" id="aggressiveMobileTgBanner">
 					<div class="aggressiveMobileTgBannerTop"> 
 						<p class="aggressiveMobileTgBannerTop-text">
@@ -76,25 +88,6 @@
 					<div class="aggressiveBtnJoin">Присоединиться<img class="aggressiveMobileTgBanner-blur-tg-qr" src="img/svg/blur-tg-qr.svg" alt="" loading="lazy"/><img class="aggressiveMobileTgBanner-bg-tg-qr" src="img/svg/bg-tg-qr.svg" alt="" loading="lazy"/>
 					</div>
 				</div>
-				<script>
-					const aggressiveMobileTgBanner = document.querySelector('#aggressiveMobileTgBanner');
-					const aggressiveCloseBtn = document.querySelector('.aggressiveMobileTgBannerTop-closeBtn');
-					const aggressiveBtnJoin = document.querySelector('.aggressiveBtnJoin');
-					
-					window.onload = () => {
-						setTimeout(() => {
-							aggressiveMobileTgBanner.style.display = 'block';
-						}, 30000);
-					}
-					
-					aggressiveCloseBtn.addEventListener('click', () => {
-						aggressiveMobileTgBanner.style.display = 'none';
-					})
-					
-					aggressiveBtnJoin.addEventListener('click', () => {
-						window.open('https://t.me/+WaTSRBDeY_tiZjIy', '_blank')
-					})
-				</script>
 				<div class="head-line">
 					<div class="container"><img src="img/svg/emblem.svg" alt="">
 						<p>Премия учреждена по решению Мэра Москвы постановлением Правительства Москвы от 11 февраля 2025 года № 192-ПП «Об учреждении премии Правительства Москвы в сфере управления персоналом «В кадре»</p>
@@ -1224,6 +1217,19 @@
 							<div class="small text text-secondary">Нажимая на кнопку, я подтверждаю, что ознакомлен с <a href="#">Положением о Премии</a>, условиями <a href="#">обработки персональных данных</a>, и <a href="#">соглашаюсь на их обработку.</a></div>
 						</div>
 					</form>
+				</div>
+			</div>
+		</div>
+		<div id="modal-aggressive-tg">
+			<div class="modal-win aggressive-modal-win">
+				<div class="aggressiveModalInner" id="aggressiveModalInner">
+					<div class="aggressiveModalInner-close"><img src="img/svg/close-tg-qr.svg" alt="" loading="lazy" id="aggressive-close-btn"/>
+					</div>
+					<div class="aggressiveModalContent"> 
+						<p class="aggressiveModalContent-title">
+							 Следите за новостями<br/>и яркими моментами<br/>Премии в нашем телеграм-<br/>канале «В кадре»</p>
+						<div class="aggressiveModalContent-button">Присоединиться</div><img class="aggressiveModalContent-qr" src="img/vkadre-bg-tg-aggressive.png" alt="" loading="lazy"/>
+					</div><img class="aggressiveModalInner-blur-tg-qr" src="img/svg/blur-tg-qr.svg" alt="" loading="lazy"/><img class="aggressiveModalInner-bg-tg-qr" src="img/svg/bg-tg-qr.svg" alt="" loading="lazy"/>
 				</div>
 			</div>
 		</div>

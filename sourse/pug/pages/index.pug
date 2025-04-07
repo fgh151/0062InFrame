@@ -26,8 +26,6 @@ include ../blocks/aggressive-mobile-tg-banner/aggressiveMobileTgBanner.pug
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= null
-	- let showTgSubscribe = Math.random() < 0.5  // 50% шанс для tgSubscribe
-	- let showAggressiveBanner = !showTgSubscribe  // остальная вероятность для aggressiveMobileTgBanner
 
 block title
 	- let  title= index.head.title
@@ -35,15 +33,11 @@ block title
 block pagecontent
 	//- +mob-mnu()
 	
-	
 	+parts('header-main')
 	main
 		+headerBlock 
-		// Показываем один из блоков в зависимости от значения переменной
-		if showTgSubscribe
-			+tgSubscribe
-		else
-			+aggressiveMobileTgBanner
+		+tgSubscribe
+		+aggressiveMobileTgBanner
 		+b.head-line
 			.container
 				img(src="img/svg/emblem.svg", alt="")
