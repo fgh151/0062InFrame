@@ -1,6 +1,10 @@
+.mobileTgSubscribtionButton {
+  display: none;
+}
+
 .tgSubscribeButton {
   position: fixed;
-  top: 448px;
+  top: calc(49.8vh - 50px);
   right: -124px;
   z-index: 10;
   width: 320px;

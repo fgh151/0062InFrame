@@ -678,6 +678,7 @@ main.modal {
     line-height: 1.2;
 		margin-bottom: 14px;
 		background-color: #fff;
+		cursor: pointer;
 	}
 
 	&-qr {
@@ -685,8 +686,11 @@ main.modal {
 	}
 }
 
+#aggressive-close-btn {
+	cursor: pointer;
+}
+
 .aggressiveModalInner {
-	display: none;
 	width: 616px;
 	height: 728px;
 	background-image: linear-gradient(#5400B7, #0098E3);
@@ -726,6 +730,9 @@ main.modal {
 	padding: 0 !important;
 }
 
+#modal-aggressive-tg.fancybox__content .f-button.is-close-btn {
+  display: none !important;
+}
 
 @media screen and (max-width: 576px) {
 	.aggressiveModalInner {
