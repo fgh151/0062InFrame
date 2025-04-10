@@ -558,11 +558,11 @@ function eventHandler() {
 		})
 
 		aggressiveModalContentBtn.addEventListener('click', () => {
-			window.open('https://t.me/+WaTSRBDeY_tiZjIy', '_blank')
+			window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank')
 		})
 
 		aggressiveBtnJoin.addEventListener('click', () => {
-			window.open('https://t.me/+WaTSRBDeY_tiZjIy', '_blank')
+			window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank')
 		})
 	} 
 	
@@ -599,11 +599,11 @@ function eventHandler() {
 		});
 
 		subscribeButtonContentLeftColumnButton.addEventListener('click', () => {
-			window.open('https://t.me/+WaTSRBDeY_tiZjIy', '_blank')
+			window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank')
 		});
 
 		mobileTgSubscribtionButton.addEventListener('click', () => {
-			window.open('https://t.me/+WaTSRBDeY_tiZjIy', '_blank')
+			window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank')
 		});
 
 		mobileCloseTgQr.addEventListener('click', (e) => {
