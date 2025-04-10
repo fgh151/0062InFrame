@@ -545,7 +545,7 @@ function eventHandler() {
 					}
 				 );
 			} else {
-				aggressiveMobileTgBanner.style.display = 'block';
+				aggressiveMobileTgBanner.style.display = 'flex';
 			}
 		}, 30000);
 

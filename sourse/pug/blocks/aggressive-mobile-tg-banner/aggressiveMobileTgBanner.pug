@@ -1,16 +1,12 @@
 mixin aggressiveMobileTgBanner() 
   .aggressiveMobileTgBanner#aggressiveMobileTgBanner
     .aggressiveMobileTgBannerTop 
-      p.aggressiveMobileTgBannerTop-text 
-        | Следите за новостями 
-        br
-        | и яркими моментами Премии 
-        br 
-        | в нашем телеграм-канале 
-        br
-        | «В кадре»
+      p.aggressiveMobileTgBannerTop-text Следите за новостями и яркими моментами Премии в нашем телеграм-канале «В кадре»
       +img(src="img/svg/close-tg-qr.svg").aggressiveMobileTgBannerTop-closeBtn
-    .aggressiveBtnJoin Присоединиться
-      +img(src='img/svg/blur-tg-qr.svg').aggressiveMobileTgBanner-blur-tg-qr
-      +img(src='img/svg/bg-tg-qr.svg').aggressiveMobileTgBanner-bg-tg-qr
+    .aggressiveBtnJoinWrapper
+      .aggressiveBtnJoin Присоединиться
+    +img(src='img/svg/tg-blur-medium.svg').aggressiveMobileTgBanner-tg-blur-medium
+    +img(src='img/svg/bg-tg-qr.svg').aggressiveMobileTgBanner-bg-tg-qr
+    +img(src='img/svg/tg-blur-small.svg').aggressiveMobileTgBanner-tg-blur-small
+
     

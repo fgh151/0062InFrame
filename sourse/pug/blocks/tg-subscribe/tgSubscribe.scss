@@ -14,7 +14,7 @@
   border-bottom-left-radius: 56px;
   background: linear-gradient(150deg, #0098E3, #5400B7 60%);
 
-  z-index: 2;
+  z-index: 10;
   transition: transform .3s ease, border-bottom-left-radius .3s ease;
   transform: translateX(0);
   user-select: none;
@@ -160,7 +160,7 @@
 
   .mobileTgSubscribtionButton {
     position: fixed;
-    top: 65px;
+    top: 68px;
     z-index: 10;
     padding: 0 19px 0 16px;
     display: flex;
