@@ -2,88 +2,121 @@
   display: none;
 }
 
-.tgSubscribeButton {
-  position: fixed;
-  top: calc(49.8vh - 50px);
-  right: -124px;
-  z-index: 10;
-  width: 320px;
-  height: 72px;
-  border-top-left-radius: 16px;
-  background-image : linear-gradient(90deg, #2b4acc, #0198e3 70%);
-  
+// V2 with trasition
+.tgSubscribeButtonV2 {
   display: none;
-  align-items: center;
-  justify-content: center;
-  column-gap: 20px;
-  transform: rotate(-90deg);
+  position: fixed;
+  top: 33.7vh;
+  right: 0;
+  max-width: 1020px;
+  width: 100%;
+  height: 320px;
+  border-bottom-left-radius: 56px;
+  background: linear-gradient(150deg, #0098E3, #5400B7 60%);
+
+  z-index: 2;
+  transition: transform .3s ease, border-bottom-left-radius .3s ease;
+  transform: translateX(0);
   user-select: none;
   overflow: hidden;
-  transition: background-image 0.3s ease; /* Плавное изменение фона */
-
+  
   &:hover {
     cursor: pointer;
-    background-image: linear-gradient(90deg, #2b4acc 60%, #0198e3);
   }
 
-  .subscribeText {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.2;
+  .tgButtonClosedContentV2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    position: relative;
+    z-index: 2;
+
+    .subscribeTextV2 {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
   }
+
+  .tgButtonOpenedContentV2 {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    opacity: 1;
+    padding: 40px 40px 0 40px;
+    background-image: linear-gradient(90deg, #2b4acc, #0198e3 70%);
+
+    &:hover {
+      cursor: default;
+    }
   
-  .tg-white-subscribe {
-    transform: rotate(90deg);
+    .blur-tg-qr {
+      position: absolute;
+      right: 40%;
+      top: 70px;
+      width: 103px;
+      height: 103px;
+    }
+  
+    .bg-tg-qr {
+      position: absolute;
+      right: 35%;
+      bottom: -10%;
+      width: 245px;
+      height: 245px;
+    }
   }
 }
 
+.tgSubscribeButtonV2-closed {
+  transform: translateX(948px);
+  border-bottom-left-radius: 16px;
 
-.subscribeButtonOpened {
-  width: 1020px;
-  height: 320px;
-  transform: rotate(0deg);
-  justify-content: flex-start;
-  right: 0;
-  top: calc(49.8vh - 174px);
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 56px;
+  .tgButtonClosedContentV2 {
+    height: 100%;
+    width: 72px;
+    transform: rotate(-90deg);
+    opacity: 1;
+    transition: opacity .3s ease;
+    transition-delay: .2s;
+
+    .tg-white-subscribeV2 {
+      transform: rotate(90deg);
+    }
+  }
+
+  .tgButtonOpenedContentV2 {
+    opacity: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#0098E3, #5400B7);
   
-  .subscribeText,
-  .tg-white-subscribe {
-    display: none;
+    opacity: 0;
+    transition: opacity .3s ease;
+    z-index: 1;
   }
-}
-
-.subscribeButtonHiddenContent {
-  display: none;
-  padding: 40px 40px 0 40px;
-  position: relative;
-
-  &:hover {
-    cursor: default;
-    background-image : linear-gradient(90deg, #2b4acc, #0198e3 70%);
-  }
-
-  .blur-tg-qr {
-    position: absolute;
-    right: 40%;
-    top: 70px;
-    width: 103px;
-    height: 103px;
-  }
-
-  .bg-tg-qr {
-    position: absolute;
-    right: 35%;
-    bottom: -10%;
-    width: 245px;
-    height: 245px;
+  
+  &:hover::before {
+    opacity: 1;
   }
 }
 
 .subscribeButtonContentLeftColumn {
   flex-grow: 1;
+  position: relative;
+  z-index: 2;
 
   &-title {
     font-weight: 400;
@@ -92,6 +125,7 @@
     line-height: 1.2;
     margin-bottom: 78px;
     max-width: 593px;
+   
   }
 
   &-button {
@@ -110,22 +144,17 @@
   }
 }
 
-.subscribeButtonHiddenContent-open {
-  display: flex;
-  align-items: flex-start;
-  flex: 1;
-}
-
 .close-tg-qr {
   cursor: pointer;
 }
 
 .vkadre-tg-qr {
-  margin-right: -30px;
+  margin-right: -20px;
+  margin-top: -35px;
 }
 
 @media screen and (max-width: 576px) {
-  .tgSubscribeButton {
+  .tgSubscribeButtonV2 {
     display: none;
   }
 
@@ -166,24 +195,21 @@
 }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
-  .subscribeButtonOpened {
+  .tgSubscribeButtonV2 {
     width: 90%;
-    height: auto;
   }
 
-  .subscribeButtonHiddenContent {
+  .tgButtonOpenedContentV2 {
     padding: 30px 30px 0 30px;
 
     .blur-tg-qr {
       width: 103px;
       height: 103px;
-      z-index: -1;
     }
   
     .bg-tg-qr {
       width: 200px;
       height: 200px;
-      z-index: -1;
     }
   }
 
@@ -201,47 +227,47 @@
 
   .vkadre-tg-qr {
     width: 300px;
-    margin: 0 -45px;
+    margin: 10px -40px 0;
   }
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
-  .subscribeButtonOpened {
+  .tgSubscribeButtonV2 {
     width: 90%;
     height: auto;
   }
 
-  .subscribeButtonHiddenContent {
+  .tgSubscribeButtonV2 .tgButtonOpenedContentV2 {
     padding: 20px 20px 0 20px;
 
     .blur-tg-qr {
-      width: 103px;
-      height: 103px;
-      z-index: -1;
-      top: 50px ;
+      width: 70px;
+      height: 70px;
+      top: 25px;
     }
   
     .bg-tg-qr {
-      width: 150px;
-      height: 150px;
-      z-index: -1;
+      width: 120px;
+      height: 120px;
     }
   }
 
   .subscribeButtonContentLeftColumn {
     &-title {
-      font-size: 18px;
+      font-size: 16px;
       margin-bottom: 20px;
     }
 
     &-button {
-      width: 200px;
-      font-size: 18px;
-      height: 50px;
+      width: 160px;
+      font-size: 14px;
+      height: 4%;
     } 
   }
 
   .vkadre-tg-qr {
-    width: 200px;
+    width: 160px;
+    margin-top: -10px;
+    margin-right: -8px;
   }
 }

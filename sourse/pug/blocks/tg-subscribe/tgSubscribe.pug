@@ -4,11 +4,11 @@ mixin tgSubscribe()
     .mobileTgSubscribtionButton-text Следите за новостями
     +img(src='img/svg/close-tg-qr.svg').mobile-close-tg-qr
 
-  .tgSubscribeButton#tgSubscribeButton
-    .subscribeText Подписаться
-    +img(src=`img/svg/tg-white-subscribe.svg`, alt="").tg-white-subscribe
-
-    .subscribeButtonHiddenContent
+  .tgSubscribeButtonV2.tgSubscribeButtonV2-closed
+    .tgButtonClosedContentV2
+      .subscribeTextV2 Подписаться
+      +img(src=`img/svg/tg-white-subscribe.svg`, alt="").tg-white-subscribeV2
+    .tgButtonOpenedContentV2 
       +img(src='img/svg/blur-tg-qr.svg').blur-tg-qr
       +img(src='img/svg/bg-tg-qr.svg').bg-tg-qr
       .subscribeButtonContentLeftColumn
