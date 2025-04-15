@@ -119,14 +119,12 @@ function eventHandler() {
 		let icon = $(this).find("svg.icon use");
 		let iconId = $(this).find("svg.icon use").attr("xlink:href").split("#")[1];
 
-		let href = $(this).data('href');
-
-    const opt = {
-      "eye-off": ["eye", "text"],
+		const opt = {
+			"eye-off": ["eye", "text"],
 			eye: ["eye-off", "password"],
 		};
 		$(this).parent().find("input").attr("type", opt[iconId][1]);
-		icon.attr("xlink:href",`${href}img/svg/sprite.svg#${opt[iconId][0]}`);
+		icon.attr("xlink:href", `${assetsPath}img/svg/sprite.svg#${opt[iconId][0]}`);
 	});
 
 	/* hide btn after scroll main page */
@@ -198,10 +196,23 @@ function eventHandler() {
 		);
 	}
 
-	let wasShown = false;
+	function getFirstVisitCookie() {
+		var name = "firstVisit";
+		var value = "; " + document.cookie;
+		var parts = value.split("; " + name + "=");
+		if (parts.length == 2) return parts.pop().split(";").shift();
+	}
 
-	if (isMobile() && document.getElementById("modal-mob") && !wasShown) {
-		wasShown = true;
+	function setFirstVisitCookie() {
+		var d = new Date();
+		d.setTime(d.getTime() + (24*60*60*1000)); // Срок хранения cookie - 1 день
+		var expires = "expires=" + d.toUTCString();
+		document.cookie = "firstVisit=true; " + expires;
+	}
+
+
+	if (isMobile() && !getFirstVisitCookie() && document.getElementById("modal-mob")) {
+		setFirstVisitCookie();
 
 		Fancybox.show(
 			[
@@ -234,7 +245,7 @@ function eventHandler() {
 			"beforeend",
 			`<div class="current">
               <span>Текущий этап</span>
-              <img src="img/svg/arr-top.svg" alt="">
+              <img src="${assetsPath}img/svg/arr-top.svg" alt="">
           </div>`
 		);
 	}
@@ -271,7 +282,7 @@ function eventHandler() {
           <div class="input-wrap">
             <button class="icon-delete">
               <svg class="icon icon-x ">
-                <use xlink:href="img/svg/sprite.svg#x"></use>
+                <use xlink:href="${assetsPath}img/svg/sprite.svg#x"></use>
               </svg>
             </button>
             <input type="text" placeholder="${firstPlaceholder}" class="form-control">
@@ -316,11 +327,11 @@ function eventHandler() {
 
 						const removeButton = document.createElement("span");
 						removeButton.classList.add("remove-file");
-						removeButton.innerHTML = `<svg class="icon icon-x"><use xlink:href="img/svg/sprite.svg#x"></use></svg>`;
+						removeButton.innerHTML = `<svg class="icon icon-x"><use xlink:href="${assetsPath}img/svg/sprite.svg#x"></use></svg>`;
 
-						removeButton.addEventListener("click", () => {
-							fileInfo.remove();
-						});
+						// removeButton.addEventListener("click", () => {
+						// 	fileInfo.remove();
+						// });
 
 						fileInfo.appendChild(fileElement);
 						fileInfo.appendChild(removeButton);
@@ -399,7 +410,7 @@ function eventHandler() {
 		tippy(el, {
 			content: template.innerHTML,
 			allowHTML: true,
-			interactive: true,
+			// interactive: true,
 			placement: "bottom-start",
 		});
 	});
@@ -558,11 +569,13 @@ function eventHandler() {
 		})
 
 		aggressiveModalContentBtn.addEventListener('click', () => {
-			window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank')
+			window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank');
+			ym(100082807,'reachGoal','tg_experiment');
 		})
 
 		aggressiveBtnJoin.addEventListener('click', () => {
-			window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank')
+			window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank');
+			ym(100082807,'reachGoal','tg_experiment');
 		})
 	} 
 	
@@ -599,11 +612,13 @@ function eventHandler() {
 		});
 
 		subscribeButtonContentLeftColumnButton.addEventListener('click', () => {
-			window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank')
+			window.open('https://t.me/+Tt84y_aDRx44ODky', '_blank'); // left
+			ym(100082807,'reachGoal','tg_experiment');
 		});
 
 		mobileTgSubscribtionButton.addEventListener('click', () => {
-			window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank')
+			window.open('https://t.me/+Tt84y_aDRx44ODky', '_blank'); //modal
+			ym(100082807,'reachGoal','tg_experiment');
 		});
 
 		mobileCloseTgQr.addEventListener('click', (e) => {
