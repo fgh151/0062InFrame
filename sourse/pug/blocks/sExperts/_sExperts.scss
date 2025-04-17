@@ -64,10 +64,6 @@
 	&__additional-partners {
 		margin-top: rem(0);
 		--bs-gutter-y: var(--bs-gutter-x);
-
-		@include media-breakpoint-down(lg) {
-			display: none;
-		}
 	}
 
 	@include media-breakpoint-up(xl) {
