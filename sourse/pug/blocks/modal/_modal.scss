@@ -739,3 +739,9 @@ main.modal {
 		display: none;
 	}
 }
+
+@media screen and (min-width: 1200px) {
+	.parterH2 {
+		font-size: 40px !important;
+	}
+}
