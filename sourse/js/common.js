@@ -621,6 +621,26 @@ function eventHandler() {
 			}
 		});
 	}
+
+	const applyHoverBlock = document.querySelector('.applyHoverBlock');
+	const applicationPopup = document.querySelector('.applicationPopup');
+	const voskl_znak = document.querySelector('.voskl_znak');
+
+	applyHoverBlock.addEventListener('mouseenter', () => {
+		applicationPopup.classList.add('applicationPopupHover');
+	})
+	
+	applyHoverBlock.addEventListener('mouseleave', () => {
+		applicationPopup.classList.remove('applicationPopupHover');
+	})
+
+	voskl_znak.addEventListener('mouseenter', () => {
+		applicationPopup.classList.add('applicationPopupHover');
+	})
+	
+	voskl_znak.addEventListener('mouseleave', () => {
+		applicationPopup.classList.remove('applicationPopupHover');
+	})
 }
 
 if (document.readyState !== "loading") {
