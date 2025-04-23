@@ -393,12 +393,17 @@ span.gradient {
 	line-height: 140%;
 
 	position: absolute;
-	top: 76px;
+	top: 78px;
 	right: 7.5%;
 
 	opacity: 0;
 	pointer-events: none;
 	transition: opacity .2s ease;
+}
+
+.applyHoverBlock {
+	max-width: 166px;
+	width: 100%;
 }
 
 .applicationPopupHover {
@@ -409,73 +414,93 @@ span.gradient {
 .voskl_znak {
 	position: absolute;
 	top: 48px;
-	left: 49.3%;
+	left: 55.3%;
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1320px)  {
 	.voskl_znak {
-		left: 56.3%;
+		left: 63.3%;
 	}
 	
 	.applicationPopup {
-		right: 1.5%;
+		right: -5.5%;
 	}
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px)  {
 	.voskl_znak {
-		left: 66.3%;
+		left: 75.3%;
 	}
 
 	.applicationPopup {
-		right: -16.5%;
+		right: -25.5%;
 	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px)  {
 	.voskl_znak {
-		left: 45.3%;
-		top: 5px;
+		left: 43.3%;
+		top: 6px;
 	}
 
 	.applicationPopup {
-		right: 9.5%;
-		top: 32px;
+		right: 11.5%;
+		top: 34px;
+	}
+
+	.applyHoverBlock {
+		max-width: 100%;
+		width: 100%;
 	}
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px)  {
 	.voskl_znak {
-		left: 40.3%;
+		left: 39.3%;
 		top: 1px;
 	}
 
 	.applicationPopup {
 		top: 28px;
-		right: -1.5%;
+		right: 23.5%;
+	}
+
+	.applyHoverBlock {
+		max-width: 100%;
+		width: 100%;
 	}
 }
 
 @media screen and (min-width: 391px) and (max-width: 575px)  {
 	.voskl_znak {
-		left: 202px;
-		top: 1px;
+		left: 197px;
+		top: 0px;
 	}
 
 	.applicationPopup {
-		right: 3%;
+		right: 20%;
 		top: 25px;
+	}
+
+	.applyHoverBlock {
+		max-width: 100%;
+		width: 100%;
 	}
 }
 
 @media screen and (max-width: 391px)  {
 	.voskl_znak {
-		left: 202px;
-		top: 1px;
+		left: 197px;
+		top: 0px;
 	}
 
 	.applicationPopup {
-		right: 3%;
+		right: -2%;
 		top: 25px;
+	}
+
+	.applyHoverBlock {
+		max-width: 100%;
+		width: 100%;
 	}
 }
