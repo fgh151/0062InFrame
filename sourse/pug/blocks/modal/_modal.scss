@@ -650,84 +650,137 @@ main.modal {
 	display: none;
 }
 
-.aggressiveModalContent {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: 20px;
-
-	&-title {
-		font-size: 32px;
-		font-weight: 400;
-		color: #fff;
-		line-height: 1.2;
-		text-align: center;
-		margin-bottom: 48px;
-	}
-
-	&-button {
-		width: 260px;
-		height: 46px;
-		display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 400;
-		color: #1A1230;
-    font-size: 16px;
-    border-radius: 32px;
-    line-height: 1.2;
-		margin-bottom: 14px;
-		background-color: #fff;
-		cursor: pointer;
-	}
-
-	&-qr {
-		height: 424px;
-	}
-}
 
 #aggressive-close-btn {
 	cursor: pointer;
 }
 
+.aggressive-modal-win {
+	width: 660px !important;
+	height: 645px !important;
+}
+
 .aggressiveModalInner {
-	width: 616px;
-	height: 728px;
-	background-image: linear-gradient(#5400B7, #0098E3);
-	border-radius: 18px;
-	overflow: hidden;
 	position: relative;
+}
 
-	&-bg-tg-qr {
+.kontur-img {
+	position: absolute;
+	top: -20px;
+	left: -14px;
+}
+
+.aggressiveHeaderModal {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 42px;
+	margin-right: 67px;
+}
+
+.aggressiveDontWasteTime {
+	font-size: 40px;
+	font-weight: 400;
+	color: #1A1230;
+	line-height: 100%;
+	width: 244px;
+	height: auto;
+	background-color: #EAE3FF;
+	border-radius: 12px;
+	transform: rotate(-11deg);
+	position: absolute;
+	left: 42px;
+	top: 127px;
+	padding: 11px;
+	z-index: 3;
+	box-shadow: 0 0 10px #26184CB2;
+}
+
+.aggressiveDontWasteTimeMini {
+	width: 366px;
+	height: auto;
+	font-size: 19px;
+	font-weight: 400;
+	color: #1A1230;
+	line-height: 100%;
+	transform: rotate(11deg);
+	position: absolute;
+	right: 78px;
+	top: 60px;
+	background-color: #EAE3FF;
+	border-radius: 12px;
+	padding: 18px;
+	box-shadow: 0 0 10px #26184CB2;
+	z-index: 4;
+
+	&::after {
+		content: '';
+		width: 10px;
+		height: 10px;
+		border-radius: 2px;
+		background-color: #EAE3FF;
+		transform: rotate(45deg);
 		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 213px;
-		height: 213px;
+		bottom: -5px;
+		left: 95px;
 	}
+}
 
-	&-blur-tg-qr {
-		position: absolute;
-		top: 50%;
-		right: 10px;
-		width: 110px;
-		height: 110px;
-	}
+.aggressiveModalInner-close {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: #EAE3FF;
+	cursor: pointer;
+	position: absolute;
+	top: 37px;
+	right: 75px;
+	z-index: 10;
+}
 
-	&-close {
-		display: flex;
-		justify-content: flex-end;
-		width: 100%;
+.aggressiveModalBody {
+	margin-top: 170px;
+	height: 380px;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
 
-		& > img {
-			margin-top: 16px;
-			margin-right: 16px;
-		}
-	}
+.aggressive-person {
+	width: 407px;
+	height: 524px;
+	position: absolute;
+	top: -8px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 5;
+}
+
+.aggressiveApplyButton {
+	width: 260px;
+	height: 46px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 400;
+	color: #1A1230;
+	font-size: 16px;
+	border-radius: 32px;
+	line-height: 1.2;
+	background-color: #fff;
+	cursor: pointer;
+	position: relative;
+	z-index: 6;
 }
 
 .aggressive-modal-win {
 	padding: 0 !important;
+	background-color: transparent !important;
+	overflow: hidden !important;
 }
 
 #modal-aggressive-tg.fancybox__content .f-button.is-close-btn {
@@ -740,8 +793,28 @@ main.modal {
 	}
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (min-width: 1200px) {
 	.parterH2 {
 		font-size: 40px !important;
 	}
 }
+

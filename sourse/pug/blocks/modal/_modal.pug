@@ -18,21 +18,17 @@ mixin modal()
 	div(id="modal-aggressive-tg")
 		+b.modal-win.aggressive-modal-win
 			.aggressiveModalInner#aggressiveModalInner
-				.aggressiveModalInner-close
-					+img(src="img/svg/close-tg-qr.svg")#aggressive-close-btn
-				.aggressiveModalContent 
-					p.aggressiveModalContent-title 
-						| Следите за новостями
-						br
-						| и яркими моментами
-						br
-						| Премии в нашем телеграм-
-						br
-						| канале «В кадре»
-					.aggressiveModalContent-button Присоединиться
-					+img(src='img/vkadre-bg-tg-aggressive.png').aggressiveModalContent-qr
-				+img(src='img/svg/blur-tg-qr.svg').aggressiveModalInner-blur-tg-qr
-				+img(src='img/svg/bg-tg-qr.svg').aggressiveModalInner-bg-tg-qr
+				.aggressiveHeaderModal
+					.aggressiveModalInner-close
+						+img(src="img/svg/aggressive-close-icon.svg")#aggressive-close-btn
+				+img(src="img/application-aggressive.png").kontur-img
+				.aggressiveDontWasteTime Не теряйте время!
+				.aggressiveDontWasteTimeMini Отправьте заявку прямо сейчас — увеличьте шанс доработать ее по рекомендациям эксперта.
+
+				.aggressiveModalBody
+					+img(src="img/aggressive-person.png").aggressive-person
+					.aggressiveApplyButton Подать заявку
+				
 
 	// #modal-call
 	div(id="modal-question"  style="display: none" )

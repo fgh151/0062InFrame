@@ -497,130 +497,106 @@ function eventHandler() {
 			.addClass("active");
 	});
 
-	let tgBannerVersion = localStorage.getItem('tgBannerVersion'); // type = 'agressive' | 'intelligent';
+	const aggressiveBtnJoin = document.querySelector('.aggressiveBtnJoin');
+	const aggressiveCloseBtn = document.querySelector('#aggressive-close-btn');
+	const aggressiveModalContentBtn = document.querySelector('.aggressiveModalContent-button');
+	const aggressiveMobileTgBanner = document.querySelector('#aggressiveMobileTgBanner');
+	const aggressiveCloseBtnMobile = document.querySelector('.aggressiveMobileTgBannerTop-closeBtn');
 
-	if(!tgBannerVersion) {
-		const randomNum = Math.random() * 100;
-		tgBannerVersion = randomNum < 50 ? 'intelligent' : 'agressive';
-		localStorage.setItem('tgBannerVersion', tgBannerVersion);
-	} 
-
-	if(tgBannerVersion === 'agressive') {
-		const aggressiveBtnJoin = document.querySelector('.aggressiveBtnJoin');
-		const tgSubscribeButton = document.querySelector('.tgSubscribeButtonV2');
-		const mobileTgSubscribtionButton = document.querySelector('.mobileTgSubscribtionButton');
-		const aggressiveCloseBtn = document.querySelector('#aggressive-close-btn');
-		const aggressiveModalContentBtn = document.querySelector('.aggressiveModalContent-button');
-		const aggressiveMobileTgBanner = document.querySelector('#aggressiveMobileTgBanner');
-		const aggressiveCloseBtnMobile = document.querySelector('.aggressiveMobileTgBannerTop-closeBtn');
-
-		// Отключаем интеллигентный баннер
-		mobileTgSubscribtionButton.style.display = 'none';
-		tgSubscribeButton.style.display = 'none';
-
-		setTimeout(() => {
-			if(window.innerWidth > 576) {
-				Fancybox.show(
-					[
-					 {
-						src: "#modal-aggressive-tg",
-						type: "inline",
-					 },
-					],
-					{
-					 touch: false,
-					 dragToClose: false,
-					 autoFocus: false,
-					 trapFocus: false,
-					 placeFocusBack: false,
-					 groupAll: false,
-					 showClass: "fancybox-throwOutUp",
-					 hideClass: "fancybox-throwOutDown",
-					 compact: false,
-					 arrows: false,
-					 buttons: [],
-					 template: {
-						closeButton: null,
-					},
-					}
-				 );
-			} else {
-				aggressiveMobileTgBanner.style.display = 'flex';
-			}
-		}, 30000);
-
-		aggressiveCloseBtn.addEventListener('click', () => {
-			Fancybox.close();
-		})
-
-		aggressiveCloseBtnMobile.addEventListener('click', () => {
-			aggressiveMobileTgBanner.style.display = 'none';
-		})
-
-		aggressiveModalContentBtn.addEventListener('click', () => {
-			window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank')
-		})
-
-		aggressiveBtnJoin.addEventListener('click', () => {
-			window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank')
-		})
-	} 
-	
-	if(tgBannerVersion === 'intelligent'){
-		const tgSubscribeButton = document.querySelector('.tgSubscribeButtonV2');
-		const closeTgBanner = document.querySelector('.close-tg-qr');
-		const mobileCloseTgQr = document.querySelector('.mobile-close-tg-qr');
-		const aggressiveModal = document.querySelector('#aggressiveModalInner');
-		const aggressiveMobileTgBanner = document.querySelector('#aggressiveMobileTgBanner');
-		const mobileTgSubscribtionButton = document.querySelector('.mobileTgSubscribtionButton');
-		const subscribeButtonContentLeftColumnButton = document.querySelector('.subscribeButtonContentLeftColumn-button');
-
-		// Отключаем агрессивный баннер
-		aggressiveMobileTgBanner.style.display = 'none';
-		aggressiveModal.style.display = 'none';
-
-		// Включаем интеллигентный баннер
+	setTimeout(() => {
 		if(window.innerWidth > 576) {
-			tgSubscribeButton.style.display = 'flex';
+			Fancybox.show(
+				[
+					{
+					src: "#modal-aggressive-tg",
+					type: "inline",
+					},
+				],
+				{
+					touch: false,
+					dragToClose: false,
+					autoFocus: false,
+					trapFocus: false,
+					placeFocusBack: false,
+					groupAll: false,
+					showClass: "fancybox-throwOutUp",
+					hideClass: "fancybox-throwOutDown",
+					compact: false,
+					arrows: false,
+					buttons: [],
+					template: {
+					closeButton: null,
+				},
+				}
+				);
 		} else {
-			mobileTgSubscribtionButton.style.display = 'flex';
+			aggressiveMobileTgBanner.style.display = 'flex';
 		}
+	}, 1000);
 
-		tgSubscribeButton.addEventListener('click', () => {
-			if(tgSubscribeButton.classList.contains('tgSubscribeButtonV2-closed')) {
-				tgSubscribeButton.classList.remove('tgSubscribeButtonV2-closed');
-			}
-		})
-			
-		closeTgBanner.addEventListener('click', () => {
+	aggressiveCloseBtn.addEventListener('click', () => {
+		Fancybox.close();
+	})
+
+	aggressiveCloseBtnMobile.addEventListener('click', () => {
+		aggressiveMobileTgBanner.style.display = 'none';
+	})
+
+	aggressiveModalContentBtn.addEventListener('click', () => {
+		window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank')
+	})
+
+	aggressiveBtnJoin.addEventListener('click', () => {
+		window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank')
+	})
+	
+	const tgSubscribeButton = document.querySelector('.tgSubscribeButtonV2');
+	const closeTgBanner = document.querySelector('.close-tg-qr');
+	const mobileCloseTgQr = document.querySelector('.mobile-close-tg-qr');
+	const mobileTgSubscribtionButton = document.querySelector('.mobileTgSubscribtionButton');
+	const subscribeButtonContentLeftColumnButton = document.querySelector('.subscribeButtonContentLeftColumn-button');
+
+	// Включаем интеллигентный баннер
+	if(window.innerWidth > 576) {
+		tgSubscribeButton.style.display = 'flex';
+	} else {
+		mobileTgSubscribtionButton.style.display = 'flex';
+	}
+
+	tgSubscribeButton.addEventListener('click', () => {
+		if(tgSubscribeButton.classList.contains('tgSubscribeButtonV2-closed')) {
+			tgSubscribeButton.classList.remove('tgSubscribeButtonV2-closed');
+		}
+	})
+		
+	closeTgBanner.addEventListener('click', () => {
+		setTimeout(() => {
+			tgSubscribeButton.classList.add('tgSubscribeButtonV2-closed');
+		}, 0);
+	});
+
+	subscribeButtonContentLeftColumnButton.addEventListener('click', () => {
+		window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank')
+	});
+
+	mobileTgSubscribtionButton.addEventListener('click', () => {
+		window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank')
+	});
+
+	mobileCloseTgQr.addEventListener('click', (e) => {
+		e.stopPropagation();
+		mobileTgSubscribtionButton.style.display = 'none';
+	})
+
+	document.addEventListener('click', (event) => {
+		if (
+			!tgSubscribeButton.contains(event.target)
+		) {
 			setTimeout(() => {
 				tgSubscribeButton.classList.add('tgSubscribeButtonV2-closed');
 			}, 0);
-		});
-
-		subscribeButtonContentLeftColumnButton.addEventListener('click', () => {
-			window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank')
-		});
-
-		mobileTgSubscribtionButton.addEventListener('click', () => {
-			window.open('https://t.me/+LOtAty8EbRM0OGEy', '_blank')
-		});
-
-		mobileCloseTgQr.addEventListener('click', (e) => {
-			e.stopPropagation();
-			mobileTgSubscribtionButton.style.display = 'none';
-		})
-
-		document.addEventListener('click', (event) => {
-			if (
-				!tgSubscribeButton.contains(event.target)
-			) {
-				setTimeout(() => {
-					tgSubscribeButton.classList.add('tgSubscribeButtonV2-closed');
-				}, 0);
-			}
-		});
-	}
+		}
+	});
 
 	const applyHoverBlock = document.querySelector('.applyHoverBlock');
 	const applicationPopup = document.querySelector('.applicationPopup');
