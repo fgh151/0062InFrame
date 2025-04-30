@@ -533,7 +533,7 @@ function eventHandler() {
 		} else {
 			aggressiveMobileTgBanner.style.display = 'flex';
 		}
-	}, 1000);
+	}, 30000);
 
 	function getCookie(name) {
 		const value = `; ${document.cookie}`;
