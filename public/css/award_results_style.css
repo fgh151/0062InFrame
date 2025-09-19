@@ -2,7 +2,9 @@ html {
     min-width: 320px;
 }
 
-#modal-auth {
+#modal-auth,
+#modal-aggressive-tg
+{
     display: none;
 }
 
