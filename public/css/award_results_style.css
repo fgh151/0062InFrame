@@ -1,7 +1,9 @@
 html {
     min-width: 320px;
 }
-
+#modal-auth {
+    display: none ;
+}
 .headerBlock {
     background-image: url('../img/bg_head.png');
     background-size: cover;
@@ -216,7 +218,7 @@ a.slider-control-telegram-link {
     display: block;
 }
 
-a.btn.show-more-btn.juri-btn.hide-more svg {
+a.btn.show-more-btn.hide-more svg {
     rotate: 90deg;
 }
 
