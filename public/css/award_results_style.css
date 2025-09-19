@@ -13,7 +13,7 @@ html {
 }
 
 a.btn.show-more-btn.juri-btn:active {
-    border: 1px solid #dadada;
+    border: 1px solid #dadada !important;
 }
 
 .video-prev-img {
