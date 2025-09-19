@@ -130,7 +130,7 @@
 										class="gradient-small slider-control-telegram-link"><img
 											src="img/svg/telegram-link.svg" alt="" loading="lazy" /> <span>Посмотреть
 											все фотографии</span> <svg class="icon icon-arrowUpRight ">
-											<use xlink:href="/img/svg/sprite.svg#arrowUpRight"></use>
+											<use xlink:href="img/svg/sprite.svg#arrowUpRight"></use>
 										</svg>
 									</a>
 								</div>
@@ -139,12 +139,12 @@
 								<div class="control-wrap" style="margin-top: 1.7rem">
 									<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
 										<svg class="icon icon-arrowUpRight ">
-											<use xlink:href="/img/svg/sprite.svg#arrowUpRight"></use>
+											<use xlink:href="img/svg/sprite.svg#arrowUpRight"></use>
 										</svg>
 									</div>
 									<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
 										<svg class="icon icon-arrowUpRight ">
-											<use xlink:href="/img/svg/sprite.svg#arrowUpRight"></use>
+											<use xlink:href="img/svg/sprite.svg#arrowUpRight"></use>
 										</svg>
 									</div>
 								</div>
@@ -3845,7 +3845,7 @@
 	</div>
 	<!-- END infoModal-->
 
-	<!-- START Всякие модалки
+	<!-- START Всякие модалки -->
 
 		<div id="modal-call" style="display: none">
 			<div class="modal-win">
@@ -5022,7 +5022,7 @@
 			</div>
 		</div>
 
-END Всякие модалки -->
+<!-- END Всякие модалки -->
 
 
 
@@ -5043,56 +5043,6 @@ END Всякие модалки -->
 	<script src="js/JSCCommon.js"></script>
 	<script src="js/common.js"></script>
 
-	<!--script>
-		$(document).ready(function () {
-			// Инициализация всех контейнеров
-			$('.winners-container, .focus-container, .academy-container, .hr-container').each(function () {
-				const $container = $(this);
-				const $cards = $container.find('.winner-card-wrap');
-				const $button = $container.find('.show-more-btn');
-
-				// Изначально скрываем все карточки, кроме первых 3
-				$cards.slice(3).hide();
-
-				// Если карточек меньше или равно 3, скрываем кнопку
-				if ($cards.length <= 3) {
-					$button.hide();
-				}
-			});
-
-			// Обработчик клика по кнопкам
-			$('.show-more-btn').on('click', function () {
-				const $button = $(this);
-				const $container = $button.closest('.winners-container, .focus-container, .academy-container, .hr-container');
-				const $cards = $container.find('.winner-card-wrap');
-				const hiddenCards = $cards.filter(':hidden');
-				const visibleCards = $cards.filter(':visible');
-
-				// Если есть скрытые карточки - показываем следующие 3
-				if (hiddenCards.length > 0) {
-					hiddenCards.slice(0, 3).slideDown(300);
-
-					// Если после этого скрытых карточек не осталось, меняем текст кнопки
-					if (hiddenCards.length <= 3) {
-						$button.text('Скрыть');
-						$button.append('<svg class="icon icon-prev "><use xlink:href="img/svg/sprite.svg#prev"></use></svg>');
-						$button.addClass("hide-more");
-					}
-				}
-				// Если все карточки видны - скрываем все кроме первых 3
-				else {
-					$cards.slice(3).slideUp(300, function () {
-						// После завершения анимации скрытия
-						if ($cards.filter(':visible').length === 3) {
-							$button.text('Показать еще');
-							$button.removeClass("hide-more");
-							$button.append('<svg class="icon icon-prev "><use xlink:href="img/svg/sprite.svg#prev"></use></svg>');
-						}
-					});
-				}
-			});
-		});
-	</script-->
 	<script>
 		$(document).ready(function () {
 			// Инициализация всех контейнеров
