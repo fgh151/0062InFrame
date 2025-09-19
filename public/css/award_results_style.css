@@ -3,8 +3,7 @@ html {
 }
 
 #modal-auth,
-#modal-aggressive-tg
-{
+#modal-aggressive-tg {
     display: none;
 }
 
@@ -1204,6 +1203,10 @@ section.section.Second_season img {
     .winner-card-content.jury-card-content,
     .winner-card-content.jury-card-content.jury-card-content--hide {
         height: 370px;
+    }
+
+    .headerBlock {
+        height: 70vh;
     }
 
 }
