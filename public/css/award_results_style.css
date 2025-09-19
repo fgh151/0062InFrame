@@ -1,13 +1,19 @@
 html {
     min-width: 320px;
 }
+
 #modal-auth {
-    display: none ;
+    display: none;
 }
+
 .headerBlock {
     background-image: url('../img/bg_head.png');
     background-size: cover;
     margin-bottom: 0;
+}
+
+a.btn.show-more-btn.juri-btn:active {
+    border: 1px solid #dadada;
 }
 
 .video-prev-img {
