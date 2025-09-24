@@ -21,6 +21,7 @@ a.btn.show-more-btn.juri-btn:active {
     width: 100%;
     height: auto;
 }
+
 .jury-card-content--hide {
     box-shadow: none;
 }
@@ -251,6 +252,7 @@ a.show-more-btn.winners-btn.hide-more svg {
 .winner-card-content.jury-card-content:hover {
     box-shadow: 0px 0px 28px 4px rgba(54, 0, 124, 0.3);
 }
+
 .winner-card-content.jury-card-content:hover svg.icon {
     stroke: #117EDE;
 }
@@ -269,6 +271,29 @@ a.btn.btn-primary.finalists-btn:hover {
 a.btn.show-more-btn.juri-btn:hover {
     background: rgba(255, 255, 255, 0.7);
 
+}
+.header-share div#tippy-1 {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(202, 161, 255, 1);
+}
+
+.header-share div#tippy-1 .tippy-box,
+.header-share div#tippy-1 .tippy-box .tippy-content
+{
+    border: none;
+    padding: 0;
+}
+
+.header-share span.i {
+    font-size: 19px;
+    background: linear-gradient(92.24deg, #5400B7 0%, #0098E3 112.93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.header-share span.i:hover {
+    cursor: pointer;
 }
 
 a.btn.btn-primary {
