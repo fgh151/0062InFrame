@@ -566,8 +566,8 @@ a.gradient-small.slider-control-telegram-link:hover {
     color: rgba(82, 4, 184, 1);
 }
 
-.sJuryPage__item.item-nomin.item-nomin--js .jury-card-content__content:hover .icon-x {
-    color: #4a04af;
+.sJuryPage__item.item-nomin.item-nomin--js.active:hover svg.icon.icon-x {
+    stroke: #4a04af;
 }
 
 a.gradient-small.slider-control-telegram-link:hover span {
