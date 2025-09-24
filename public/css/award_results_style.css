@@ -11,6 +11,8 @@ html {
     background-image: url('../img/bg_head.png');
     background-size: cover;
     margin-bottom: 0;
+    background-repeat: no-repeat;
+    background-position-y: center;
 }
 
 a.btn.show-more-btn.juri-btn:active {
@@ -83,11 +85,12 @@ a.slider-control-telegram-link {
 }
 
 .section.winners_block {
-    background-color: rgb(121, 22, 247);
+    background-color: #7409EF;
     background-image: url(../img/bg.png);
+    background-size: auto;
     background-position-y: 0;
     background-repeat: repeat-y;
-    background-size: cover;
+    /* background-size: cover; */
     color: white;
 }
 
@@ -272,6 +275,7 @@ a.btn.show-more-btn.juri-btn:hover {
     background: rgba(255, 255, 255, 0.7);
 
 }
+
 .header-share div#tippy-1 {
     background: white;
     padding: 16px;
@@ -280,8 +284,7 @@ a.btn.show-more-btn.juri-btn:hover {
 }
 
 .header-share div#tippy-1 .tippy-box,
-.header-share div#tippy-1 .tippy-box .tippy-content
-{
+.header-share div#tippy-1 .tippy-box .tippy-content {
     border: none;
     padding: 0;
 }
@@ -292,6 +295,7 @@ a.btn.show-more-btn.juri-btn:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .header-share span.i:hover {
     cursor: pointer;
 }
@@ -739,6 +743,10 @@ section.section.Second_season img {
 @media (min-width: 991.98px) and (max-width: 991.98px) {}
 
 @media (max-width: 991.98px) {
+
+    .section.winners_block {
+        background-size: cover;
+    }
 
     .col-xs-12.col-sm-6.col-md-6.col-lg-3.col-xl-3 {
         text-align: center;
