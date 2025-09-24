@@ -643,7 +643,7 @@ a.gradient-small.slider-control-telegram-link svg {
 }
 
 .Second_season_text_block .btn:hover {
-    background: rgba(44, 21, 81, 1);
+    background: linear-gradient(102.97deg, #5400B7 30.09%, #0098E3 179.08%);
 }
 
 .visible-xs {
