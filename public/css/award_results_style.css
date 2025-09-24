@@ -248,6 +248,9 @@ a.show-more-btn.winners-btn.hide-more svg {
 .winner-card-content.jury-card-content:hover {
     box-shadow: 0px 0px 28px 4px rgba(54, 0, 124, 0.3);
 }
+.winner-card-content.jury-card-content:hover svg.icon {
+    stroke: #117EDE;
+}
 
 .btn.btn-primary.show-more-btn:hover {
     background: linear-gradient(102.97deg, #5400B7 30.09%, #0098E3 179.08%);
@@ -563,8 +566,8 @@ a.gradient-small.slider-control-telegram-link:hover {
     color: rgba(82, 4, 184, 1);
 }
 
-.jury-card-content .icon-x {
-    stroke: #5400B7;
+.sJuryPage__item.item-nomin.item-nomin--js .jury-card-content__content:hover .icon-x {
+    color: #4a04af;
 }
 
 a.gradient-small.slider-control-telegram-link:hover span {
